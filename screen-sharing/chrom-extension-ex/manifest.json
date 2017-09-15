@@ -1,0 +1,53 @@
+﻿{
+  "name": "Ericsson C3 Extension",
+  "description": "Enables screen sharing for C3 applications. This extension has no user interface.",
+  "version": "2.0.4",
+  "manifest_version": 2,
+  "icons": {
+    "48" : "icon48.png",
+    "128" : "icon128.png"
+  },
+  "externally_connectable": {
+    // Extension and app IDs. If this field is not specified, no
+    // extensions or apps can connect.
+    "ids": [
+      // Alternatively, to match all extensions and apps, specify only
+      // "*".
+      "*"
+    ],
+    // Match patterns for web pages. Does not affect content scripts.
+    // If this field is not specified, no webpages can connect.
+    "matches": [
+      "*://*.ericsson.com/*",
+      "*://*.ericsson.net/*",
+      "*://c3.development.net/*",
+      "*://147.214.168.101/*"
+    ],
+    // Indicates that the extension would like to make use of the TLS
+    // channel ID of the web page connecting to it. The web page must
+    // also opt to send the TLS channel ID to the extension via setting
+    // includeTlsChannelId to true in runtime.connect's connectInfo
+    // or runtime.sendMessage's options.
+    "accepts_tls_channel_id": false
+  },
+  "background": {
+    "scripts": [
+      "cct.js",
+      "chrome-extension.js",
+      "background.js"
+    ]
+  },
+  "permissions": [
+    "http://*/*",
+    "https://*/*",
+    "tabs",
+    "activeTab",
+    "tabCapture",
+    "desktopCapture",
+    "notifications",
+    "declarativeContent"
+  ],
+  "page_action": {
+    "default_title": "Start sharing this tab"
+  }
+}

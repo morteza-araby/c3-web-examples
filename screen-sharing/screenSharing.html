@@ -16,25 +16,33 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Screen sharing</title>
   <link rel="stylesheet" type="text/css" href="../resources/main.css">
   <link rel="icon" href="../resources/favicon.ico">
   <script type="text/javascript" src="https://get.cct.ericsson.net/latest/cct.js"></script>
+  <script type="text/javascript" src="../exampleUtils.js"></script>
+  <script src="tSource.js"></script>
+  <script src="tSink.js"></script>
   <style>
     #error-display {
       color: #f00;
     }
+
     video {
       width: 100%;
     }
+
     select {
       margin: 20px 20px 0 0;
       font-size: 0.8em;
     }
+
     button {
       margin: 0 10px;
     }
+
     .modal {
       position: absolute;
       top: 0;
@@ -49,6 +57,7 @@
 
       background: rgba(0, 0, 0, 0.5);
     }
+
     .dialog {
       flex: 0 1 auto;
       padding: 15px 20px;
@@ -61,6 +70,7 @@
       border: 1px solid #466493;
       border-radius: 5px;
     }
+
     #source-selection {
       margin: 0;
       margin-bottom: 20px;
@@ -68,13 +78,17 @@
     }
   </style>
 </head>
+
 <body>
   <header></header>
   <main>
     <section>
       <div class="about">
         <h3>Screen sharing example</h3>
-        This example shows how to use a <a href="https://get.cct.ericsson.net/latest/docs/reference/ScreenSource.html" target="_blank">ScreenSource</a>. The code for the Chrome extension can be found <a href="https://github.com/Ericsson/c3-web-examples/tree/gh-pages/screen-sharing/chrome-extension" target="_blank">here</a>, and Firefox <a href="https://github.com/Ericsson/c3-web-examples/tree/gh-pages/screen-sharing/firefox-extension" target="_blank">here</a>.
+        This example shows how to use a <a href="https://get.cct.ericsson.net/latest/docs/reference/ScreenSource.html" target="_blank">ScreenSource</a>.
+        The code for the Chrome extension can be found <a href="https://github.com/Ericsson/c3-web-examples/tree/gh-pages/screen-sharing/chrome-extension"
+          target="_blank">here</a>, and Firefox <a href="https://github.com/Ericsson/c3-web-examples/tree/gh-pages/screen-sharing/firefox-extension"
+          target="_blank">here</a>.
       </div>
     </section>
     <div class="margins">
@@ -88,16 +102,35 @@
           Firefox extension
         </a>
       </div>
-      <select id="source-type-selection"></select>
-      <button id="sharing-button" disabled>Start screen sharing</button>
+
+      <div style="display:flex; flex-direction:column">
+        <div style="display:flex; ">
+          <select id="source-type-selection"></select>
+          <button id="sharing-button" disabled>Start screen sharing</button>
+        </div>
+        <button id="tab-sharing-button" disabled style="align-self:left; margin: 20px;margin-left:100px; padding: 1rem;">Start tab sharing</button>
+        <br />
+        <button id="tab-sharing-Receive-button" disabled style="align-self:left; margin: 20px;margin-left:100px; padding: 1rem;">Receive tab sharing</button>
+        <br />        
+        <div class="margins">
+            <div id="result" style="border:1px solid black"></div>
+            <h1 id="exampleStatus">Waiting for peer to join</h1>
+          <div class="peer-link">
+            <h3 class="peer-link-title"></h3>
+            <input class="peer-link-input" type="url" value="" size="55">
+            <div class="peer-link-connection-state"></div>
+          </div>
+        </div>
+      </div>
       <div id="error-display"></div>
       <br>
       <video autoplay muted></video>
+      <video id="tab-sharing-video" autoplay muted/>
     </div>
     <footer></footer>
   </main>
 
-  <div id='html-selection-popup' class='modal' style='display: none;'">
+  <div id='html-selection-popup' class='modal' style='display: none;'>
     <div class='dialog'>
       <h1>Select source</h1>
       <select id="source-selection"></select>
@@ -108,161 +141,195 @@
     </div>
   </div>
   <script type="application/javascript">
-'use strict'
+    'use strict'
 
-cct.log.setLogLevel(cct.log.ALL)
-cct.log.color = true
+    cct.log.setLogLevel(cct.log.ALL)
+    cct.log.color = true
 
-var el = {
-  sourceTypeSelection: document.getElementById('source-type-selection'),
-  button: document.getElementById('sharing-button'),
-  error: document.getElementById('error-display'),
-  video: document.querySelector('video'),
-  htmlSelectionPopup: document.getElementById('html-selection-popup'),
-  sourceSelection: document.getElementById('source-selection'),
-  acceptSourceButton: document.getElementById('accept-source-button'),
-  rejectSourceButton: document.getElementById('reject-source-button'),
-}
-
-var START_SHARING_TEXT = 'Start screen sharing'
-var STOP_SHARING_TEXT = 'Stop screen sharing'
-
-var screenSource
-
-cct.webRtcReady().then(function () {
-  setupTypeSelectionOptions()
-  el.button.disabled = false
-
-  el.button.addEventListener('click', function () {
-    if (screenSource) {
-      screenSource.stop()
-      return
+    var el = {
+      sourceTypeSelection: document.getElementById('source-type-selection'),
+      button: document.getElementById('sharing-button'),
+      tabButton: document.getElementById('tab-sharing-button'),
+      tabReceiveButton: document.getElementById('tab-sharing-Receive-button'),
+      error: document.getElementById('error-display'),
+      video: document.querySelector('video'),
+      tabSharingVideo: document.getElementById('tab-sharing-video'),
+      htmlSelectionPopup: document.getElementById('html-selection-popup'),
+      sourceSelection: document.getElementById('source-selection'),
+      acceptSourceButton: document.getElementById('accept-source-button'),
+      rejectSourceButton: document.getElementById('reject-source-button'),
+      exampleStatus: document.getElementById('exampleStatus'),	
     }
 
-    el.button.disabled = true
+var iceServers = EXAMPLE_UTILS_ICE_SERVERS
+// [{
+//   url: 'turn:turn.demo.c3.ericsson.net:443?transport=tcp',
+//   username: 'c3-turn',
+//   credential: 'see-three',
+// }, {
+//   url: 'turn:turn.demo.c3.ericsson.net:443?transport=udp',
+//   username: 'c3-turn',
+//   credential: 'see-three',
+// }]
 
-    var type = el.sourceTypeSelection.value || null
-    if (type === 'html') {
-      return showHtmlPicker()
-    }
 
-    startScreenSharing({
-      chromeExtensionId: 'epajpkbdigdpepgncdpmilaoamkjgoah',
-      type: type,
-      video: {
-        frameRate: 5,
-      },
+    var START_SHARING_TEXT = 'Start screen sharing'
+    var STOP_SHARING_TEXT = 'Stop screen sharing'
+    var START_TAB_SHARING = 'Start tab sharing'
+    var STOP_TAB_SHARING = 'Stop tab sharing'
+    var RECEIVE_TAB_SHARING = 'Receive tab sharing'
+    var STOP_RECEIVE_TAB_SHARING = 'Stop receive tab sharing'
+
+    var screenSource
+
+    cct.webRtcReady().then(function () {
+      setupTypeSelectionOptions()
+      el.button.disabled = false
+      el.tabButton.disabled = false
+      el.tabReceiveButton.disabled = false
+
+      el.button.addEventListener('click', function () {
+        if (screenSource) {
+          screenSource.stop()
+          return
+        }
+        el.video.style.display = 'block'
+
+        el.button.disabled = true
+
+        var type = el.sourceTypeSelection.value || null
+        if (type === 'html') {
+          return showHtmlPicker()
+        }
+
+        startScreenSharing({
+          //chromeExtensionId: 'enociikpbdiefjpghmhlmclglncfphep',
+          chromeExtensionId: 'cpjomenkhiimfonpdjpknpocklmldldd',
+          type: type,
+          video: {
+            frameRate: 5,
+          },
+        })
+      })
+
+      el.tabButton.addEventListener('click', function () {
+        handleTabButtonClick();
+      })
+
+      el.tabReceiveButton.addEventListener('click', function () {
+        handleReceiveTabButtonClick();
+      })
+
+
     })
-  })
-})
 
-function startScreenSharing(constraints) {
-  screenSource = new cct.ScreenSource(constraints)
-  screenSource.connect(el.video)
+    function startScreenSharing(constraints) {
+      screenSource = new cct.ScreenSource(constraints)
+      screenSource.connect(el.video)
 
-  screenSource.promise.then(function () {
-    cct.log.info('example', 'screen sharing started successfully')
-    el.button.textContent = STOP_SHARING_TEXT
-    el.button.disabled = false
-    el.error.textContent = ''
+      screenSource.promise.then(function () {
+        cct.log.info('example', 'screen sharing started successfully')
+        el.button.textContent = STOP_SHARING_TEXT
+        el.button.disabled = false
+        el.error.textContent = ''
 
-    screenSource.connect(new cct.StreamSink({
-      onStream: function (stream) {
-        // Stream was removed
-        if (!stream) {
-          screenSource = null
+        screenSource.connect(new cct.StreamSink({
+          onStream: function (stream) {
+            // Stream was removed
+            if (!stream) {
+              screenSource = null
+              el.button.textContent = START_SHARING_TEXT
+              el.button.disabled = false
+            }
+          },
+        }))
+      }, function (error) {
+        cct.log.info('example', 'screen sharing failed, ' + error)
+        el.button.textContent = START_SHARING_TEXT
+        el.button.disabled = false
+        el.error.textContent = error.toString()
+        screenSource = null
+      })
+
+      return screenSource
+    }
+
+    // This populates the dropdown menu where you can select the different screen sharing types
+    function setupTypeSelectionOptions() {
+      var options = {}
+
+      if (cct.ScreenSource.implementation === 'chrome') {
+        options = {
+          '': 'Any', // Both screen and window are allowed, actual type constraint ends up being null
+          screen: 'Screen',
+          window: 'Window',
+        }
+      } else if (cct.ScreenSource.implementation === 'firefox') {
+        options = {
+          screen: 'Screen',
+          window: 'Window',
+          application: 'Application',
+        }
+      } else if (cct.ScreenSource.implementation === 'temasys') {
+        options = {
+          '': 'Native dialog', // Will pass null as type constraint
+          html: 'HTML dialog',
+        }
+      } else {
+        el.error.textContent = 'Screen sharing is not available in this browser'
+      }
+
+      // Add browser-specific options to dropdown menu
+      Object.keys(options).forEach(function (key) {
+        var option = el.sourceTypeSelection.appendChild(document.createElement('option'))
+        option.textContent = options[key]
+        option.value = key
+      })
+    }
+
+    // Show a source picker with JS, only used for temasys (Safari, Internet Explorer)
+    function showHtmlPicker() {
+      el.button.disabled = true
+
+      cct.ScreenSource.enumerateSources().then(function (sourceInfos) {
+        el.htmlSelectionPopup.style.display = null
+
+        // Clear out old entries and populate dropdown with the new source type list
+        el.sourceSelection.innerHTML = ''
+        sourceInfos.forEach(function (sourceInfo, index) {
+          var option = el.sourceSelection.appendChild(document.createElement('option'))
+          option.textContent = sourceInfo.type + ': ' + sourceInfo.label
+          // the value is the index in the sourceInfos list, so it's simple to lookup the selected source
+          option.value = index
+        })
+
+        el.acceptSourceButton.onclick = function () {
+          var sourceInfo = sourceInfos[el.sourceSelection.value]
+
+          screenSource = startScreenSharing({
+            video: {
+              frameRate: 5,
+              source: sourceInfo,
+            },
+          })
+
+          el.htmlSelectionPopup.style.display = 'none'
+        }
+
+        el.rejectSourceButton.onclick = function () {
+          el.htmlSelectionPopup.style.display = 'none'
           el.button.textContent = START_SHARING_TEXT
           el.button.disabled = false
         }
-      },
-    }))
-  }, function (error) {
-    cct.log.info('example', 'screen sharing failed, ' + error)
-    el.button.textContent = START_SHARING_TEXT
-    el.button.disabled = false
-    el.error.textContent = error.toString()
-    screenSource = null
-  })
-
-  return screenSource
-}
-
-// This populates the dropdown menu where you can select the different screen sharing types
-function setupTypeSelectionOptions() {
-  var options = {}
-
-  if (cct.ScreenSource.implementation === 'chrome') {
-    options = {
-      '': 'Any', // Both screen and window are allowed, actual type constraint ends up being null
-      screen: 'Screen',
-      window: 'Window',
-    }
-  } else if (cct.ScreenSource.implementation === 'firefox') {
-    options = {
-      screen: 'Screen',
-      window: 'Window',
-      application: 'Application',
-    }
-  } else if (cct.ScreenSource.implementation === 'temasys') {
-    options = {
-      '': 'Native dialog', // Will pass null as type constraint
-      html: 'HTML dialog',
-    }
-  } else {
-    el.error.textContent = 'Screen sharing is not available in this browser'
-  }
-
-  // Add browser-specific options to dropdown menu
-  Object.keys(options).forEach(function (key) {
-    var option = el.sourceTypeSelection.appendChild(document.createElement('option'))
-    option.textContent = options[key]
-    option.value = key
-  })
-}
-
-// Show a source picker with JS, only used for temasys (Safari, Internet Explorer)
-function showHtmlPicker() {
-  el.button.disabled = true
-
-  cct.ScreenSource.enumerateSources().then(function (sourceInfos) {
-    el.htmlSelectionPopup.style.display = null
-
-    // Clear out old entries and populate dropdown with the new source type list
-    el.sourceSelection.innerHTML = ''
-    sourceInfos.forEach(function (sourceInfo, index) {
-      var option = el.sourceSelection.appendChild(document.createElement('option'))
-      option.textContent = sourceInfo.type + ': ' + sourceInfo.label
-      // the value is the index in the sourceInfos list, so it's simple to lookup the selected source
-      option.value = index
-    })
-
-    el.acceptSourceButton.onclick = function () {
-      var sourceInfo = sourceInfos[el.sourceSelection.value]
-
-      screenSource = startScreenSharing({
-        video: {
-          frameRate: 5,
-          source: sourceInfo,
-        },
+      }).catch(function (error) {
+        cct.log.info('example', 'source enumeration failed, ' + error)
+        el.htmlSelectionPopup.style.display = 'none'
+        el.button.textContent = START_SHARING_TEXT
+        el.button.disabled = false
+        el.error.textContent = 'Source enumeration failed, ' + error
       })
-
-      el.htmlSelectionPopup.style.display = 'none'
     }
-
-    el.rejectSourceButton.onclick = function () {
-      el.htmlSelectionPopup.style.display = 'none'
-      el.button.textContent = START_SHARING_TEXT
-      el.button.disabled = false
-    }
-  }).catch(function (error) {
-    cct.log.info('example', 'source enumeration failed, ' + error)
-    el.htmlSelectionPopup.style.display = 'none'
-    el.button.textContent = START_SHARING_TEXT
-    el.button.disabled = false
-    el.error.textContent = 'Source enumeration failed, ' + error
-  })
-}
-
   </script>
 </body>
+
 </html>
