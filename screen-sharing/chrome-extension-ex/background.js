@@ -1,4 +1,4 @@
 'use strict'
 
-//-->cct.startScreenSharing();
+cct.startScreenSharing();
 cct.startTabSharing();

@@ -4,7 +4,7 @@ var _scroller = null
 var _contentSize = null
 var port = null
 //var extensionId = 'cecejnhbkmfgeealnbgbmgfcpdllgaao' // Spaces Tab Sharing
-var extensionId = 'cpjomenkhiimfonpdjpknpocklmldldd' // My test extension 
+//var extensionId = extensionId // My test extension 
 let pageActionConditions = [{
 	pageUrl: { hostEquals: '*', schemes: ['https'] },
 }]
@@ -300,7 +300,7 @@ function fetchChromeScreenSource () {
 
 function sendChromeMessage (message) {
 	//let extensionId = 'cecejnhbkmfgeealnbgbmgfcpdllgaao' // Spaces Tab Sharing
-	let extensionId = 'cpjomenkhiimfonpdjpknpocklmldldd' // My test extension
+	//let extensionId = extensionId // My test extension
 	return new Promise((resolve, reject) => {
 		chrome.runtime.sendMessage(extensionId, message, response => {
 			if (response) {
