@@ -240,7 +240,7 @@ function stopTabSharing () {
 }
 
 
-
+/** This part is for screen sharing */
 function startTabSharingXX (constraints) {
 	let tabSink = new cct.HtmlSink()
 	tabSink.target = el.tabSharingVideo

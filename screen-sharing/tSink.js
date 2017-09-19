@@ -1,8 +1,8 @@
 var sinkSource = null
-var _proxySourceForwarder = null
+var _tabSourceForwarder = null
 var _mediaSourceForwarder = null
 var haveStream = false
-var tabSharingSink = null
+var call = null
 
 function connectCall () {
 	return PeerConnecter.clientInCall(client).then(function (connecter) {
@@ -19,7 +19,7 @@ function connectCall () {
 		})
 
 		//call.attach('data', data)
-		window.call = call;
+		//window.call = call;
 		console.log('### Call is : ', call)
 		return call
 
@@ -31,23 +31,15 @@ function connectCall () {
 
 function handleReceiveTabButtonClick () {
 	console.log('tab sharing Received started')
-	// if (sinkSource) {
-	// 	el.tabReceiveButton.textContent = RECEIVE_TAB_SHARING
-	// 	sinkWillUnmount()
-	// 	sinkSource = null
-	// 	call.getRemoteSource('media').disconnect()
-	// 	call.hangup()
-	// 	return
-	// }
-	if(tabSharingSink){
+	if (sinkSource) {
 		el.tabReceiveButton.textContent = RECEIVE_TAB_SHARING
 		sinkWillUnmount()
-		tabSharingSink = null
+		sinkSource = null
 		call.getRemoteSource('media').disconnect()
 		call.hangup()
-		call = null
 		return
 	}
+	
 
 	el.tabReceiveButton.textContent = STOP_RECEIVE_TAB_SHARING
 	el.tabReceiveButton.disabled = false
@@ -59,113 +51,87 @@ function handleReceiveTabButtonClick () {
 	})
 }
 
-
-
-
 function sinkWillMount ({ extensionId, call }) {
-	let target = el.tabSharingVideo
-	sinkSource = new cct.StreamSource()
-	let tabSink = new cct.HtmlSink()
-	tabSink.target = target
-	el.video.style.display = 'none'
-	tabSharingSink = new cct.TabSharingSink()
 
-	tabSharingSink.connectSink({ iceServers, call })
-	tabSharingSink.on('stream', function (stream) {	
-		if(!stream){
-			el.tabReceiveButton.textContent = RECEIVE_TAB_SHARING
-			sinkWillUnmount()
-			tabSharingSink = null
-			return
-		}	
+sinkSource = new cct.StreamSource()
+	let tabSink = new cct.HtmlSink()
+	tabSink.target = el.tabSharingVideo
+	el.video.style.display = 'none'
+
+	const onStream = () => {
+		let stream1 = _tabSourceForwarder.stream
+		let stream2 = _mediaSourceForwarder.stream
+		let stream = stream1 || stream2 || null
 		el.button.textContent = START_SHARING_TEXT
 		el.button.disabled = false
 		sinkSource.setStream(stream)
 		sinkSource.connect(tabSink)
 		haveStream = !!stream
+	}
+
+	_tabSource = new cct.TabSharingSource({
+		connectionConfig: {
+			iceServers,
+			iceCandidateFilter (info) {
+				return info.type === 'relay'
+			},
+		},
 	})
-	return;
 
+	_tabSourceForwarder = new cct.StreamSink({ onStream })
+	_tabSource.connect(_tabSourceForwarder)
+	call.attach('content-proxy', _tabSource)
 
-	// sinkSource = new cct.StreamSource()
-	// let tabSink = new cct.HtmlSink()
-	// tabSink.target = el.tabSharingVideo
-	// el.video.style.display = 'none'
+	_streamSource = new cct.PeerMediaPipe()
+	//if (isChrome) {
+	_dummySource = new cct.DummySource({ video: true }) // So that recvonly chrome -> firefox works
+	_dummySource.connect(_streamSource)
+	//}
+	_mediaSourceForwarder = new cct.StreamSink({ onStream })
+	_streamSource.connect(_mediaSourceForwarder)
+	call.attach('content-stream', _streamSource)
 
-	// const onStream = () => {
-	// 	let stream1 = _proxySourceForwarder.stream
-	// 	let stream2 = _mediaSourceForwarder.stream
-	// 	let stream = stream1 || stream2 || null
-	// 	el.button.textContent = START_SHARING_TEXT
-	// 	el.button.disabled = false
-	// 	sinkSource.setStream(stream)
-	// 	sinkSource.connect(tabSink)
-	// 	haveStream = !!stream
-	// }
+	_remoteVideoSizer = new cct.DataShare()
+	_remoteVideoSizer.on('update:size', _onRemoteVideoSize)
+	call.attach('content-size', _remoteVideoSizer)
 
-	// _proxySource = new cct.ProxySource({
-	// 	connectionConfig: {
-	// 		iceServers,
-	// 		iceCandidateFilter (info) {
-	// 			return info.type === 'relay'
-	// 		},
-	// 	},
-	// })
+	_scroller = new cct.DataShare()
+	call.attach('scroller', _scroller)
+	_scroller.set('scroll', { x: 0, y: 0 })
 
-	// _proxySourceForwarder = new cct.StreamSink({ onStream })
-	// _proxySource.connect(_proxySourceForwarder)
-	// call.attach('content-proxy', _proxySource)
+	window.addEventListener('resize', _handleWindowResize)
 
-	// _streamSource = new cct.PeerMediaPipe()
-	// //if (isChrome) {
-	// _dummySource = new cct.DummySource({ video: true }) // So that recvonly chrome -> firefox works
-	// _dummySource.connect(_streamSource)
-	// //}
-	// _mediaSourceForwarder = new cct.StreamSink({ onStream })
-	// _streamSource.connect(_mediaSourceForwarder)
-	// call.attach('content-stream', _streamSource)
-
-	// _remoteVideoSizer = new cct.DataShare()
-	// _remoteVideoSizer.on('update:size', _onRemoteVideoSize)
-	// call.attach('content-size', _remoteVideoSizer)
-
-	// _scroller = new cct.DataShare()
-	// call.attach('scroller', _scroller)
-	// _scroller.set('scroll', { x: 0, y: 0 })
-
-	// window.addEventListener('resize', _handleWindowResize)
 }
 
 function sinkWillUnmount () {
 	el.video.style.display = 'block'
-	
-	tabSharingSink.cleanSink()
-	return;
+	el.button.textContent = START_SHARING_TEXT
+	el.button.disabled = false	
 
-	// window.removeEventListener('resize', _handleWindowResize)
-	// if (_dummySource) {
-	// 	_dummySource.disconnect(_streamSource)
-	// 	try {
-	// 		_dummySource.stop()
-	// 	} catch (error) { /* libcct 0.18.7 is a bit broken */ }
-	// 	_dummySource = null
-	// }
-	// _proxySource.disconnect(_proxySourceForwarder)
-	// _streamSource.disconnect(_mediaSourceForwarder)
-	// if (!call.closed) {
-	// 	call.detach('scroller', _scroller)
-	// 	call.detach('content-proxy', _proxySource)
-	// 	call.detach('content-stream', _streamSource)
-	// 	call.detach('content-size', _remoteVideoSizer)
-	// }
-	// _remoteVideoSizer.off('update:size', _onRemoteVideoSize)
-	// _remoteVideoSizer = null
-	// _source = null
-	// _scroller = null
-	// _proxySource = null
-	// _streamSource = null
-	// _proxySourceForwarder = null
-	// _mediaSourceForwarder = null
+	window.removeEventListener('resize', _handleWindowResize)
+	if (_dummySource) {
+		_dummySource.disconnect(_streamSource)
+		try {
+			_dummySource.stop()
+		} catch (error) { /* libcct 0.18.7 is a bit broken */ }
+		_dummySource = null
+	}
+	_tabSource.disconnect(_tabSourceForwarder)
+	_streamSource.disconnect(_mediaSourceForwarder)
+	if (!call.closed) {
+		call.detach('scroller', _scroller)
+		call.detach('content-proxy', _tabSource)
+		call.detach('content-stream', _streamSource)
+		call.detach('content-size', _remoteVideoSizer)
+	}
+	_remoteVideoSizer.off('update:size', _onRemoteVideoSize)
+	_remoteVideoSizer = null
+	_source = null
+	_scroller = null
+	_tabSource = null
+	_streamSource = null
+	_tabSourceForwarder = null
+	_mediaSourceForwarder = null
 }
 
 function _handleWindowResize () {

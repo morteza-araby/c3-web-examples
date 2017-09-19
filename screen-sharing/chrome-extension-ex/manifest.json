@@ -32,7 +32,6 @@
   },
   "background": {
     "scripts": [
-      "cct.js",
       "chrome-extension.js",
       "background.js"
     ]
