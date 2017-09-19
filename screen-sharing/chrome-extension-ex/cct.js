@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 254);
+/******/ 	return __webpack_require__(__webpack_require__.s = 255);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -452,7 +452,7 @@ log.defaultHandler = defaultHandler;
 /***/ (function(module, exports, __webpack_require__) {
 
 var store      = __webpack_require__(53)('wks')
-  , uid        = __webpack_require__(37)
+  , uid        = __webpack_require__(38)
   , Symbol     = __webpack_require__(5).Symbol
   , USE_SYMBOL = typeof Symbol == 'function';
 
@@ -474,6 +474,12 @@ if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
 
 /***/ }),
 /* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(101), __esModule: true };
+
+/***/ }),
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var global    = __webpack_require__(5)
@@ -539,34 +545,7 @@ $export.R = 128; // real proto method for `library`
 module.exports = $export;
 
 /***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(101), __esModule: true };
-
-/***/ }),
 /* 8 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var anObject       = __webpack_require__(14)
-  , IE8_DOM_DEFINE = __webpack_require__(70)
-  , toPrimitive    = __webpack_require__(55)
-  , dP             = Object.defineProperty;
-
-exports.f = __webpack_require__(11) ? Object.defineProperty : function defineProperty(O, P, Attributes){
-  anObject(O);
-  P = toPrimitive(P, true);
-  anObject(Attributes);
-  if(IE8_DOM_DEFINE)try {
-    return dP(O, P, Attributes);
-  } catch(e){ /* empty */ }
-  if('get' in Attributes || 'set' in Attributes)throw TypeError('Accessors not supported!');
-  if('value' in Attributes)O[P] = Attributes.value;
-  return O;
-};
-
-/***/ }),
-/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -605,7 +584,7 @@ exports.default = function (subClass, superClass) {
 };
 
 /***/ }),
-/* 10 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -625,6 +604,27 @@ exports.default = function (self, call) {
   }
 
   return call && ((typeof call === "undefined" ? "undefined" : (0, _typeof3.default)(call)) === "object" || typeof call === "function") ? call : self;
+};
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var anObject       = __webpack_require__(14)
+  , IE8_DOM_DEFINE = __webpack_require__(70)
+  , toPrimitive    = __webpack_require__(55)
+  , dP             = Object.defineProperty;
+
+exports.f = __webpack_require__(11) ? Object.defineProperty : function defineProperty(O, P, Attributes){
+  anObject(O);
+  P = toPrimitive(P, true);
+  anObject(Attributes);
+  if(IE8_DOM_DEFINE)try {
+    return dP(O, P, Attributes);
+  } catch(e){ /* empty */ }
+  if('get' in Attributes || 'set' in Attributes)throw TypeError('Accessors not supported!');
+  if('value' in Attributes)O[P] = Attributes.value;
+  return O;
 };
 
 /***/ }),
@@ -928,23 +928,23 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (immutable) */ __webpack_exports__["errorForwarder"] = errorForwarder;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_map__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_get__ = __webpack_require__(69);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_get___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_get__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_babel_runtime_helpers_typeof__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_babel_runtime_helpers_typeof___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_babel_runtime_helpers_typeof__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_babel_runtime_core_js_object_create__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_babel_runtime_core_js_object_create___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_babel_runtime_core_js_object_create__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_babel_runtime_core_js_promise__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_babel_runtime_core_js_promise__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_babel_runtime_core_js_promise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_babel_runtime_core_js_object_define_property__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_babel_runtime_core_js_object_define_property___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_babel_runtime_core_js_object_define_property__);
@@ -1705,7 +1705,7 @@ module.exports = function(it){
 
 // to indexed object, toObject with fallback for non-array-like ES3 strings
 var IObject = __webpack_require__(67)
-  , defined = __webpack_require__(34);
+  , defined = __webpack_require__(35);
 module.exports = function(it){
   return IObject(defined(it));
 };
@@ -1714,7 +1714,7 @@ module.exports = function(it){
 /* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var dP         = __webpack_require__(8)
+var dP         = __webpack_require__(10)
   , createDesc = __webpack_require__(27);
 module.exports = __webpack_require__(11) ? function(object, key, value){
   return dP.f(object, key, createDesc(1, value));
@@ -1782,12 +1782,6 @@ module.exports = function(exec){
 /* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(136), __esModule: true };
-
-/***/ }),
-/* 23 */
-/***/ (function(module, exports, __webpack_require__) {
-
 "use strict";
 
 var $at  = __webpack_require__(117)(true);
@@ -1806,6 +1800,12 @@ __webpack_require__(49)(String, 'String', function(iterated){
   this._i += point.length;
   return {value: point, done: false};
 });
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(136), __esModule: true };
 
 /***/ }),
 /* 24 */
@@ -1830,7 +1830,7 @@ module.exports = Object.keys || function keys(O){
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.13 ToObject(argument)
-var defined = __webpack_require__(34);
+var defined = __webpack_require__(35);
 module.exports = function(it){
   return Object(defined(it));
 };
@@ -1852,7 +1852,7 @@ module.exports = function(bitmap, value){
 /* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var def = __webpack_require__(8).f
+var def = __webpack_require__(10).f
   , has = __webpack_require__(19)
   , TAG = __webpack_require__(4)('toStringTag');
 
@@ -1934,7 +1934,7 @@ var _iterator = __webpack_require__(94);
 
 var _iterator2 = _interopRequireDefault(_iterator);
 
-var _symbol = __webpack_require__(87);
+var _symbol = __webpack_require__(86);
 
 var _symbol2 = _interopRequireDefault(_symbol);
 
@@ -1950,106 +1950,28 @@ exports.default = typeof _symbol2.default === "function" && _typeof(_iterator2.d
 
 /***/ }),
 /* 34 */
-/***/ (function(module, exports) {
-
-// 7.2.1 RequireObjectCoercible(argument)
-module.exports = function(it){
-  if(it == undefined)throw TypeError("Can't call method on  " + it);
-  return it;
-};
-
-/***/ }),
-/* 35 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
-var anObject    = __webpack_require__(14)
-  , dPs         = __webpack_require__(95)
-  , enumBugKeys = __webpack_require__(48)
-  , IE_PROTO    = __webpack_require__(52)('IE_PROTO')
-  , Empty       = function(){ /* empty */ }
-  , PROTOTYPE   = 'prototype';
-
-// Create object with fake `null` prototype: use iframe Object with cleared prototype
-var createDict = function(){
-  // Thrash, waste and sodomy: IE GC bug
-  var iframe = __webpack_require__(60)('iframe')
-    , i      = enumBugKeys.length
-    , lt     = '<'
-    , gt     = '>'
-    , iframeDocument;
-  iframe.style.display = 'none';
-  __webpack_require__(83).appendChild(iframe);
-  iframe.src = 'javascript:'; // eslint-disable-line no-script-url
-  // createDict = iframe.contentWindow.Object;
-  // html.removeChild(iframe);
-  iframeDocument = iframe.contentWindow.document;
-  iframeDocument.open();
-  iframeDocument.write(lt + 'script' + gt + 'document.F=Object' + lt + '/script' + gt);
-  iframeDocument.close();
-  createDict = iframeDocument.F;
-  while(i--)delete createDict[PROTOTYPE][enumBugKeys[i]];
-  return createDict();
-};
-
-module.exports = Object.create || function create(O, Properties){
-  var result;
-  if(O !== null){
-    Empty[PROTOTYPE] = anObject(O);
-    result = new Empty;
-    Empty[PROTOTYPE] = null;
-    // add "__proto__" for Object.getPrototypeOf polyfill
-    result[IE_PROTO] = O;
-  } else result = createDict();
-  return Properties === undefined ? result : dPs(result, Properties);
-};
-
-
-/***/ }),
-/* 36 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 7.1.15 ToLength
-var toInteger = __webpack_require__(54)
-  , min       = Math.min;
-module.exports = function(it){
-  return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
-};
-
-/***/ }),
-/* 37 */
-/***/ (function(module, exports) {
-
-var id = 0
-  , px = Math.random();
-module.exports = function(key){
-  return 'Symbol('.concat(key === undefined ? '' : key, ')_', (++id + px).toString(36));
-};
-
-/***/ }),
-/* 38 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_map__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_object_get_prototype_of__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_classCallCheck__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_createClass__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_babel_runtime_core_js_object_assign__ = __webpack_require__(163);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_babel_runtime_core_js_object_assign___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_babel_runtime_core_js_object_assign__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_babel_runtime_core_js_object_get_own_property_names__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_babel_runtime_core_js_object_get_own_property_names__ = __webpack_require__(170);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_babel_runtime_core_js_object_get_own_property_names___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_babel_runtime_core_js_object_get_own_property_names__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_babel_runtime_core_js_object_create__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_babel_runtime_core_js_object_create___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_babel_runtime_core_js_object_create__);
@@ -2347,6 +2269,84 @@ function EmitterMixin() {
 /* harmony default export */ __webpack_exports__["a"] = (EmitterMixin);
 
 /***/ }),
+/* 35 */
+/***/ (function(module, exports) {
+
+// 7.2.1 RequireObjectCoercible(argument)
+module.exports = function(it){
+  if(it == undefined)throw TypeError("Can't call method on  " + it);
+  return it;
+};
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
+var anObject    = __webpack_require__(14)
+  , dPs         = __webpack_require__(95)
+  , enumBugKeys = __webpack_require__(48)
+  , IE_PROTO    = __webpack_require__(52)('IE_PROTO')
+  , Empty       = function(){ /* empty */ }
+  , PROTOTYPE   = 'prototype';
+
+// Create object with fake `null` prototype: use iframe Object with cleared prototype
+var createDict = function(){
+  // Thrash, waste and sodomy: IE GC bug
+  var iframe = __webpack_require__(60)('iframe')
+    , i      = enumBugKeys.length
+    , lt     = '<'
+    , gt     = '>'
+    , iframeDocument;
+  iframe.style.display = 'none';
+  __webpack_require__(83).appendChild(iframe);
+  iframe.src = 'javascript:'; // eslint-disable-line no-script-url
+  // createDict = iframe.contentWindow.Object;
+  // html.removeChild(iframe);
+  iframeDocument = iframe.contentWindow.document;
+  iframeDocument.open();
+  iframeDocument.write(lt + 'script' + gt + 'document.F=Object' + lt + '/script' + gt);
+  iframeDocument.close();
+  createDict = iframeDocument.F;
+  while(i--)delete createDict[PROTOTYPE][enumBugKeys[i]];
+  return createDict();
+};
+
+module.exports = Object.create || function create(O, Properties){
+  var result;
+  if(O !== null){
+    Empty[PROTOTYPE] = anObject(O);
+    result = new Empty;
+    Empty[PROTOTYPE] = null;
+    // add "__proto__" for Object.getPrototypeOf polyfill
+    result[IE_PROTO] = O;
+  } else result = createDict();
+  return Properties === undefined ? result : dPs(result, Properties);
+};
+
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 7.1.15 ToLength
+var toInteger = __webpack_require__(54)
+  , min       = Math.min;
+module.exports = function(it){
+  return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
+};
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports) {
+
+var id = 0
+  , px = Math.random();
+module.exports = function(key){
+  return 'Symbol('.concat(key === undefined ? '' : key, ')_', (++id + px).toString(36));
+};
+
+/***/ }),
 /* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2359,7 +2359,7 @@ var _isIterable2 = __webpack_require__(154);
 
 var _isIterable3 = _interopRequireDefault(_isIterable2);
 
-var _getIterator2 = __webpack_require__(151);
+var _getIterator2 = __webpack_require__(152);
 
 var _getIterator3 = _interopRequireDefault(_getIterator2);
 
@@ -2411,7 +2411,7 @@ var ctx         = __webpack_require__(18)
   , call        = __webpack_require__(73)
   , isArrayIter = __webpack_require__(71)
   , anObject    = __webpack_require__(14)
-  , toLength    = __webpack_require__(36)
+  , toLength    = __webpack_require__(37)
   , getIterFn   = __webpack_require__(65)
   , BREAK       = {}
   , RETURN      = {};
@@ -2490,7 +2490,7 @@ module.exports = { "default": __webpack_require__(103), __esModule: true };
 /***/ (function(module, exports, __webpack_require__) {
 
 // most Object methods by ES6 should accept primitives
-var $export = __webpack_require__(6)
+var $export = __webpack_require__(7)
   , core    = __webpack_require__(0)
   , fails   = __webpack_require__(21);
 module.exports = function(KEY, exec){
@@ -2522,7 +2522,7 @@ module.exports = (
 "use strict";
 
 var LIBRARY        = __webpack_require__(41)
-  , $export        = __webpack_require__(6)
+  , $export        = __webpack_require__(7)
   , redefine       = __webpack_require__(78)
   , hide           = __webpack_require__(16)
   , has            = __webpack_require__(19)
@@ -2595,10 +2595,10 @@ module.exports = function(Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCED
 /* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var META     = __webpack_require__(37)('meta')
+var META     = __webpack_require__(38)('meta')
   , isObject = __webpack_require__(17)
   , has      = __webpack_require__(19)
-  , setDesc  = __webpack_require__(8).f
+  , setDesc  = __webpack_require__(10).f
   , id       = 0;
 var isExtensible = Object.isExtensible || function(){
   return true;
@@ -2675,7 +2675,7 @@ exports.f = __webpack_require__(11) ? gOPD : function getOwnPropertyDescriptor(O
 /***/ (function(module, exports, __webpack_require__) {
 
 var shared = __webpack_require__(53)('keys')
-  , uid    = __webpack_require__(37);
+  , uid    = __webpack_require__(38);
 module.exports = function(key){
   return shared[key] || (shared[key] = uid(key));
 };
@@ -2727,7 +2727,7 @@ var global         = __webpack_require__(5)
   , core           = __webpack_require__(0)
   , LIBRARY        = __webpack_require__(41)
   , wksExt         = __webpack_require__(57)
-  , defineProperty = __webpack_require__(8).f;
+  , defineProperty = __webpack_require__(10).f;
 module.exports = function(name){
   var $Symbol = core.Symbol || (core.Symbol = LIBRARY ? {} : global.Symbol || {});
   if(name.charAt(0) != '_' && !(name in $Symbol))defineProperty($Symbol, name, {value: wksExt.f(name)});
@@ -2838,9 +2838,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_toConsumableArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_toConsumableArray__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_set__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_set___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_set__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_promise__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_promise__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_promise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_exports_loader_AdapterJS_adapterjs__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_exports_loader_AdapterJS_adapterjs__ = __webpack_require__(205);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_exports_loader_AdapterJS_adapterjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_exports_loader_AdapterJS_adapterjs__);
 /* harmony reexport (default from non-hamory) */ __webpack_require__.d(__webpack_exports__, "AdapterJS", function() { return __WEBPACK_IMPORTED_MODULE_5_exports_loader_AdapterJS_adapterjs___default.a; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_log__ = __webpack_require__(3);
@@ -3133,7 +3133,7 @@ exports.f = Object.getOwnPropertySymbols;
 
 exports.__esModule = true;
 
-var _getPrototypeOf = __webpack_require__(7);
+var _getPrototypeOf = __webpack_require__(6);
 
 var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
 
@@ -3294,12 +3294,12 @@ module.exports = { "default": __webpack_require__(97), __esModule: true };
 
 "use strict";
 
-var dP          = __webpack_require__(8).f
-  , create      = __webpack_require__(35)
+var dP          = __webpack_require__(10).f
+  , create      = __webpack_require__(36)
   , redefineAll = __webpack_require__(61)
   , ctx         = __webpack_require__(18)
   , anInstance  = __webpack_require__(59)
-  , defined     = __webpack_require__(34)
+  , defined     = __webpack_require__(35)
   , forOf       = __webpack_require__(40)
   , $iterDefine = __webpack_require__(49)
   , step        = __webpack_require__(74)
@@ -3457,7 +3457,7 @@ module.exports = function(NAME){
 "use strict";
 
 var global         = __webpack_require__(5)
-  , $export        = __webpack_require__(6)
+  , $export        = __webpack_require__(7)
   , meta           = __webpack_require__(50)
   , fails          = __webpack_require__(21)
   , hide           = __webpack_require__(16)
@@ -3466,7 +3466,7 @@ var global         = __webpack_require__(5)
   , anInstance     = __webpack_require__(59)
   , isObject       = __webpack_require__(17)
   , setToStringTag = __webpack_require__(28)
-  , dP             = __webpack_require__(8).f
+  , dP             = __webpack_require__(10).f
   , each           = __webpack_require__(109)(0)
   , DESCRIPTORS    = __webpack_require__(11);
 
@@ -3555,7 +3555,7 @@ module.exports = function(exec, skipClosing){
 
 var global      = __webpack_require__(5)
   , core        = __webpack_require__(0)
-  , dP          = __webpack_require__(8)
+  , dP          = __webpack_require__(10)
   , DESCRIPTORS = __webpack_require__(11)
   , SPECIES     = __webpack_require__(4)('species');
 
@@ -3569,6 +3569,12 @@ module.exports = function(KEY){
 
 /***/ }),
 /* 86 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(104), __esModule: true };
+
+/***/ }),
+/* 87 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3576,11 +3582,11 @@ module.exports = function(KEY){
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return OutputMap; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_get__ = __webpack_require__(69);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_get___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_get__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_set__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_set___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_set__);
@@ -4058,12 +4064,6 @@ var OutputMap = function (_PortMap2) {
 }(PortMap);
 
 /***/ }),
-/* 87 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(104), __esModule: true };
-
-/***/ }),
 /* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4229,20 +4229,20 @@ module.exports.f = function getOwnPropertyNames(it){
 /* harmony export (immutable) */ __webpack_exports__["e"] = doesntSupportPlugin;
 /* unused harmony export OverconstrainedError */
 /* harmony export (immutable) */ __webpack_exports__["f"] = getUserMedia;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_symbol__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_symbol__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_symbol___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_symbol__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_queue__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_errors__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_errors__ = __webpack_require__(146);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_webrtc_utils__ = __webpack_require__(66);
 
 
@@ -4365,7 +4365,7 @@ module.exports = { "default": __webpack_require__(105), __esModule: true };
 /* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var dP       = __webpack_require__(8)
+var dP       = __webpack_require__(10)
   , anObject = __webpack_require__(14)
   , getKeys  = __webpack_require__(25);
 
@@ -4389,7 +4389,7 @@ module.exports = { "default": __webpack_require__(102), __esModule: true };
 /* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(23);
+__webpack_require__(22);
 __webpack_require__(119);
 module.exports = __webpack_require__(0).Array.from;
 
@@ -4442,7 +4442,7 @@ module.exports = __webpack_require__(0).Object.setPrototypeOf;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(42);
-__webpack_require__(23);
+__webpack_require__(22);
 __webpack_require__(29);
 __webpack_require__(126);
 __webpack_require__(128);
@@ -4462,7 +4462,7 @@ module.exports = __webpack_require__(0).Symbol;
 /* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(23);
+__webpack_require__(22);
 __webpack_require__(29);
 module.exports = __webpack_require__(57).f('iterator');
 
@@ -4492,7 +4492,7 @@ module.exports = function(iter, ITERATOR){
 // false -> Array#indexOf
 // true  -> Array#includes
 var toIObject = __webpack_require__(15)
-  , toLength  = __webpack_require__(36)
+  , toLength  = __webpack_require__(37)
   , toIndex   = __webpack_require__(118);
 module.exports = function(IS_INCLUDES){
   return function($this, el, fromIndex){
@@ -4525,7 +4525,7 @@ module.exports = function(IS_INCLUDES){
 var ctx      = __webpack_require__(18)
   , IObject  = __webpack_require__(67)
   , toObject = __webpack_require__(26)
-  , toLength = __webpack_require__(36)
+  , toLength = __webpack_require__(37)
   , asc      = __webpack_require__(111);
 module.exports = function(TYPE, $create){
   var IS_MAP        = TYPE == 1
@@ -4598,7 +4598,7 @@ module.exports = function(original, length){
 
 "use strict";
 
-var $defineProperty = __webpack_require__(8)
+var $defineProperty = __webpack_require__(10)
   , createDesc      = __webpack_require__(27);
 
 module.exports = function(object, index, value){
@@ -4632,7 +4632,7 @@ module.exports = function(it){
 
 "use strict";
 
-var create         = __webpack_require__(35)
+var create         = __webpack_require__(36)
   , descriptor     = __webpack_require__(27)
   , setToStringTag = __webpack_require__(28)
   , IteratorPrototype = {};
@@ -4695,7 +4695,7 @@ module.exports = {
 /***/ (function(module, exports, __webpack_require__) {
 
 var toInteger = __webpack_require__(54)
-  , defined   = __webpack_require__(34);
+  , defined   = __webpack_require__(35);
 // true  -> String#at
 // false -> String#codePointAt
 module.exports = function(TO_STRING){
@@ -4731,11 +4731,11 @@ module.exports = function(index, length){
 "use strict";
 
 var ctx            = __webpack_require__(18)
-  , $export        = __webpack_require__(6)
+  , $export        = __webpack_require__(7)
   , toObject       = __webpack_require__(26)
   , call           = __webpack_require__(73)
   , isArrayIter    = __webpack_require__(71)
-  , toLength       = __webpack_require__(36)
+  , toLength       = __webpack_require__(37)
   , createProperty = __webpack_require__(112)
   , getIterFn      = __webpack_require__(65);
 
@@ -4812,17 +4812,17 @@ addToUnscopables('entries');
 /* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var $export = __webpack_require__(6)
+var $export = __webpack_require__(7)
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
-$export($export.S, 'Object', {create: __webpack_require__(35)});
+$export($export.S, 'Object', {create: __webpack_require__(36)});
 
 /***/ }),
 /* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var $export = __webpack_require__(6);
+var $export = __webpack_require__(7);
 // 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
-$export($export.S + $export.F * !__webpack_require__(11), 'Object', {defineProperty: __webpack_require__(8).f});
+$export($export.S + $export.F * !__webpack_require__(11), 'Object', {defineProperty: __webpack_require__(10).f});
 
 /***/ }),
 /* 123 */
@@ -4857,7 +4857,7 @@ __webpack_require__(46)('getPrototypeOf', function(){
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.3.19 Object.setPrototypeOf(O, proto)
-var $export = __webpack_require__(6);
+var $export = __webpack_require__(7);
 $export($export.S, 'Object', {setPrototypeOf: __webpack_require__(116).set});
 
 /***/ }),
@@ -4888,13 +4888,13 @@ module.exports = __webpack_require__(82)('Set', function(get){
 var global         = __webpack_require__(5)
   , has            = __webpack_require__(19)
   , DESCRIPTORS    = __webpack_require__(11)
-  , $export        = __webpack_require__(6)
+  , $export        = __webpack_require__(7)
   , redefine       = __webpack_require__(78)
   , META           = __webpack_require__(50).KEY
   , $fails         = __webpack_require__(21)
   , shared         = __webpack_require__(53)
   , setToStringTag = __webpack_require__(28)
-  , uid            = __webpack_require__(37)
+  , uid            = __webpack_require__(38)
   , wks            = __webpack_require__(4)
   , wksExt         = __webpack_require__(57)
   , wksDefine      = __webpack_require__(56)
@@ -4905,10 +4905,10 @@ var global         = __webpack_require__(5)
   , toIObject      = __webpack_require__(15)
   , toPrimitive    = __webpack_require__(55)
   , createDesc     = __webpack_require__(27)
-  , _create        = __webpack_require__(35)
+  , _create        = __webpack_require__(36)
   , gOPNExt        = __webpack_require__(91)
   , $GOPD          = __webpack_require__(51)
-  , $DP            = __webpack_require__(8)
+  , $DP            = __webpack_require__(10)
   , $keys          = __webpack_require__(25)
   , gOPD           = $GOPD.f
   , dP             = $DP.f
@@ -5124,7 +5124,7 @@ setToStringTag(global.JSON, 'JSON', true);
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://github.com/DavidBruant/Map-Set.prototype.toJSON
-var $export  = __webpack_require__(6);
+var $export  = __webpack_require__(7);
 
 $export($export.P + $export.R, 'Set', {toJSON: __webpack_require__(81)('Set')});
 
@@ -5361,11 +5361,11 @@ var MediaNodeInput = function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_set__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_set___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_set__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_object_get_prototype_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_toConsumableArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_toConsumableArray__);
@@ -5641,11 +5641,11 @@ var Votes = function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return OpEntry; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_slicedToArray__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_slicedToArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_slicedToArray__);
@@ -5889,7 +5889,7 @@ var OpEntry = function (_RaftLogEntry2) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(42);
-__webpack_require__(23);
+__webpack_require__(22);
 __webpack_require__(29);
 __webpack_require__(140);
 __webpack_require__(143);
@@ -5907,7 +5907,7 @@ module.exports = __webpack_require__(0).Object.keys;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(42);
-__webpack_require__(23);
+__webpack_require__(22);
 __webpack_require__(29);
 __webpack_require__(142);
 module.exports = __webpack_require__(0).Promise;
@@ -6066,7 +6066,7 @@ var LIBRARY            = __webpack_require__(41)
   , global             = __webpack_require__(5)
   , ctx                = __webpack_require__(18)
   , classof            = __webpack_require__(44)
-  , $export            = __webpack_require__(6)
+  , $export            = __webpack_require__(7)
   , isObject           = __webpack_require__(17)
   , aFunction          = __webpack_require__(63)
   , anInstance         = __webpack_require__(59)
@@ -6366,7 +6366,7 @@ $export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(84)(function
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://github.com/DavidBruant/Map-Set.prototype.toJSON
-var $export  = __webpack_require__(6);
+var $export  = __webpack_require__(7);
 
 $export($export.P + $export.R, 'Map', {toJSON: __webpack_require__(81)('Map')});
 
@@ -6375,312 +6375,23 @@ $export($export.P + $export.R, 'Map', {toJSON: __webpack_require__(81)('Map')});
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_media_mediaNode__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_media_mediaNodeOutput__ = __webpack_require__(149);
-
-
-
-
-
-
-
-
-
-
-/**
- * A base class for media nodes with a single output and no input. Typically used to represent nodes
- * that generate streams, or as a base for nodes with multiple inputs.
- *
- * The subclass should call the `setStream` method to update the output stream.
- *
- * @class MediaSource
- * @extends MediaNode
- * @extends ConnectMixin
- */
-
-var MediaSource = function (_MediaNode$connectMix) {
-  __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default()(MediaSource, _MediaNode$connectMix);
-
-  function MediaSource() {
-    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, MediaSource);
-
-    var _this = __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (MediaSource.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(MediaSource)).call(this));
-
-    _this._output = new __WEBPACK_IMPORTED_MODULE_6_media_mediaNodeOutput__["a" /* default */]({
-      name: 'default',
-      parent: _this
-    });
-    return _this;
-  }
-
-  /**
-   * The current output stream.
-   *
-   * @readonly
-   * @member {MediaStream} MediaSource#stream
-   */
-
-
-  __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(MediaSource, [{
-    key: 'setStream',
-
-
-    /**
-     * Sets the current output stream.
-     *
-     * This should only be called by the subclass implementation, not from outside the media node.
-     *
-     * @param {?MediaStream} stream - The new output stream, or null.
-     */
-    value: function setStream(stream) {
-      this._output.setStream(stream);
-    }
-  }, {
-    key: 'stream',
-    get: function get() {
-      return this._output.stream;
-    }
-
-    /**
-     * The output.
-     *
-     * @readonly
-     * @member {MediaNodeOutput} MediaSource#output
-     */
-
-  }, {
-    key: 'output',
-    get: function get() {
-      return this._output;
-    }
-  }]);
-
-  return MediaSource;
-}(__WEBPACK_IMPORTED_MODULE_5_media_mediaNode__["a" /* default */].connectMixin(__WEBPACK_IMPORTED_MODULE_5_media_mediaNode__["a" /* default */]));
-
-/* harmony default export */ __webpack_exports__["a"] = (MediaSource);
-
-/***/ }),
-/* 145 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = CctError;
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return NotAllowedError; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return NotFoundError; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return UnknownError; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_object_create__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_object_create___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_object_create__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_define_properties__ = __webpack_require__(183);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_define_properties___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_define_properties__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_argCheck__ = __webpack_require__(12);
-
-
-
-
-
-
-
-
-
-
-/**
- * Base class for all custom errors in the library.
- *
- * The main purpose of this class is to provide a cross-browser way to
- * subclass errors and have proper stack traces.
- *
- * It is safe to subclass this error in a babel environment, as opposed
- * to subclassing the `Error` builtin.
- *
- * The static `errorName` property is used to determine the default name
- * for instances of each subclass. The property is used to avoid problems
- * minification and should be set by all subclasses.
- *
- * @class CctError
- * @extends Error
- *
- * @example
- * class MyError extends CctError {
- *   constructor() {
- *     super('This is my error')
- *   }
- * }
- * MyError.errorName = 'MyError'
- */
-
-// Need to do some trickery here to allow subclassing later on
-// http://stackoverflow.com/questions/33870684
-function CctError(message) {
-  __WEBPACK_IMPORTED_MODULE_6_common_argCheck__["a" /* default */].stringOrEmpty('CctError constructor', 'message', message);
-  __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_define_properties___default()(this, {
-    message: {
-      configurable: true,
-      enumerable: true,
-      value: message
-    }
-  });
-  if (Error.captureStackTrace) {
-    Error.captureStackTrace(this, this.constructor);
-  } else {
-    var stack = new Error(message).stack;
-    // IE11 does not initialize 'Error.stack' until the object is thrown.
-    if (!stack) {
-      try {
-        throw new Error();
-      } catch (e) {
-        stack = e.stack;
-      }
-    }
-    Object.defineProperty(this, 'stack', {
-      configurable: true,
-      enumerable: false,
-      value: stack
-    });
-  }
-}
-CctError.errorName = 'CctError';
-
-CctError.prototype = __WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_object_create___default()(Error.prototype, {
-  constructor: { value: CctError },
-
-  /**
-   * The name of the error. Will always be set to the name of the class
-   * unless something else is indicated.
-   *
-   * @readonly
-   * @member {string} CctError#name
-   */
-  name: {
-    get: function get() {
-      return this.constructor.errorName;
-    }
-  },
-
-  /**
-   * Error objects are by default JSON serialized as `{"name":<name>,"message":<message>}`
-   *
-   * @method CctError#toJson
-   * @returns {Object} - JSON representation of the error.
-   */
-  toJSON: {
-    value: function value() {
-      return {
-        name: this.name,
-        message: this.message
-      };
-    }
-  },
-  toString: {
-    value: function value() {
-      return this.name + ': ' + this.message;
-    }
-  }
-});
-
-/**
- * The requested action could not be performed because it is not allowed, e.g. the
- * authenticated user doesn't have enough power level, or a user media request was denied.
- *
- * Actions that are not allowed because the user has a guest account result in a
- * {@link GuestAccessError} instead of this.
- *
- * @class NotAllowedError
- * @extends CctError
- */
-var NotAllowedError = function (_CctError) {
-  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(NotAllowedError, _CctError);
-
-  function NotAllowedError() {
-    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, NotAllowedError);
-
-    return __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (NotAllowedError.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(NotAllowedError)).apply(this, arguments));
-  }
-
-  return NotAllowedError;
-}(CctError);
-NotAllowedError.errorName = 'NotAllowedError';
-
-/**
- * The requested resource could not be found, e.g. when looking up a room by alias
- * or requesting a media source.
- *
- * @class NotFoundError
- * @extends CctError
- */
-var NotFoundError = function (_CctError2) {
-  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(NotFoundError, _CctError2);
-
-  function NotFoundError() {
-    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, NotFoundError);
-
-    return __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (NotFoundError.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(NotFoundError)).apply(this, arguments));
-  }
-
-  return NotFoundError;
-}(CctError);
-NotFoundError.errorName = 'NotFoundError';
-
-/**
- * The cause of the error could not be determined. Seeing this error is in itself an error
- * because the real error reason should always be possible to determine.
- *
- * @class UnknownError
- * @extends CctError
- */
-var UnknownError = function (_CctError3) {
-  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(UnknownError, _CctError3);
-
-  function UnknownError() {
-    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, UnknownError);
-
-    return __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (UnknownError.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(UnknownError)).apply(this, arguments));
-  }
-
-  return UnknownError;
-}(CctError);
-UnknownError.errorName = 'UnknownError';
-
-/***/ }),
-/* 146 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_core_js_symbol__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_core_js_symbol__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_core_js_symbol___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_babel_runtime_core_js_symbol__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_log__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_media_mediaSink__ = __webpack_require__(153);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_media_mediaSink__ = __webpack_require__(150);
 
 
 
@@ -6858,6 +6569,295 @@ var HtmlSink = function (_MediaSink) {
 /* harmony default export */ __webpack_exports__["default"] = (HtmlSink);
 
 /***/ }),
+/* 145 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_media_mediaNode__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_media_mediaNodeOutput__ = __webpack_require__(149);
+
+
+
+
+
+
+
+
+
+
+/**
+ * A base class for media nodes with a single output and no input. Typically used to represent nodes
+ * that generate streams, or as a base for nodes with multiple inputs.
+ *
+ * The subclass should call the `setStream` method to update the output stream.
+ *
+ * @class MediaSource
+ * @extends MediaNode
+ * @extends ConnectMixin
+ */
+
+var MediaSource = function (_MediaNode$connectMix) {
+  __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default()(MediaSource, _MediaNode$connectMix);
+
+  function MediaSource() {
+    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, MediaSource);
+
+    var _this = __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (MediaSource.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(MediaSource)).call(this));
+
+    _this._output = new __WEBPACK_IMPORTED_MODULE_6_media_mediaNodeOutput__["a" /* default */]({
+      name: 'default',
+      parent: _this
+    });
+    return _this;
+  }
+
+  /**
+   * The current output stream.
+   *
+   * @readonly
+   * @member {MediaStream} MediaSource#stream
+   */
+
+
+  __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(MediaSource, [{
+    key: 'setStream',
+
+
+    /**
+     * Sets the current output stream.
+     *
+     * This should only be called by the subclass implementation, not from outside the media node.
+     *
+     * @param {?MediaStream} stream - The new output stream, or null.
+     */
+    value: function setStream(stream) {
+      this._output.setStream(stream);
+    }
+  }, {
+    key: 'stream',
+    get: function get() {
+      return this._output.stream;
+    }
+
+    /**
+     * The output.
+     *
+     * @readonly
+     * @member {MediaNodeOutput} MediaSource#output
+     */
+
+  }, {
+    key: 'output',
+    get: function get() {
+      return this._output;
+    }
+  }]);
+
+  return MediaSource;
+}(__WEBPACK_IMPORTED_MODULE_5_media_mediaNode__["a" /* default */].connectMixin(__WEBPACK_IMPORTED_MODULE_5_media_mediaNode__["a" /* default */]));
+
+/* harmony default export */ __webpack_exports__["a"] = (MediaSource);
+
+/***/ }),
+/* 146 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = CctError;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return NotAllowedError; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return NotFoundError; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return UnknownError; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_object_create__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_object_create___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_object_create__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_define_properties__ = __webpack_require__(185);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_define_properties___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_define_properties__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_argCheck__ = __webpack_require__(12);
+
+
+
+
+
+
+
+
+
+
+/**
+ * Base class for all custom errors in the library.
+ *
+ * The main purpose of this class is to provide a cross-browser way to
+ * subclass errors and have proper stack traces.
+ *
+ * It is safe to subclass this error in a babel environment, as opposed
+ * to subclassing the `Error` builtin.
+ *
+ * The static `errorName` property is used to determine the default name
+ * for instances of each subclass. The property is used to avoid problems
+ * minification and should be set by all subclasses.
+ *
+ * @class CctError
+ * @extends Error
+ *
+ * @example
+ * class MyError extends CctError {
+ *   constructor() {
+ *     super('This is my error')
+ *   }
+ * }
+ * MyError.errorName = 'MyError'
+ */
+
+// Need to do some trickery here to allow subclassing later on
+// http://stackoverflow.com/questions/33870684
+function CctError(message) {
+  __WEBPACK_IMPORTED_MODULE_6_common_argCheck__["a" /* default */].stringOrEmpty('CctError constructor', 'message', message);
+  __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_define_properties___default()(this, {
+    message: {
+      configurable: true,
+      enumerable: true,
+      value: message
+    }
+  });
+  if (Error.captureStackTrace) {
+    Error.captureStackTrace(this, this.constructor);
+  } else {
+    var stack = new Error(message).stack;
+    // IE11 does not initialize 'Error.stack' until the object is thrown.
+    if (!stack) {
+      try {
+        throw new Error();
+      } catch (e) {
+        stack = e.stack;
+      }
+    }
+    Object.defineProperty(this, 'stack', {
+      configurable: true,
+      enumerable: false,
+      value: stack
+    });
+  }
+}
+CctError.errorName = 'CctError';
+
+CctError.prototype = __WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_object_create___default()(Error.prototype, {
+  constructor: { value: CctError },
+
+  /**
+   * The name of the error. Will always be set to the name of the class
+   * unless something else is indicated.
+   *
+   * @readonly
+   * @member {string} CctError#name
+   */
+  name: {
+    get: function get() {
+      return this.constructor.errorName;
+    }
+  },
+
+  /**
+   * Error objects are by default JSON serialized as `{"name":<name>,"message":<message>}`
+   *
+   * @method CctError#toJson
+   * @returns {Object} - JSON representation of the error.
+   */
+  toJSON: {
+    value: function value() {
+      return {
+        name: this.name,
+        message: this.message
+      };
+    }
+  },
+  toString: {
+    value: function value() {
+      return this.name + ': ' + this.message;
+    }
+  }
+});
+
+/**
+ * The requested action could not be performed because it is not allowed, e.g. the
+ * authenticated user doesn't have enough power level, or a user media request was denied.
+ *
+ * Actions that are not allowed because the user has a guest account result in a
+ * {@link GuestAccessError} instead of this.
+ *
+ * @class NotAllowedError
+ * @extends CctError
+ */
+var NotAllowedError = function (_CctError) {
+  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(NotAllowedError, _CctError);
+
+  function NotAllowedError() {
+    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, NotAllowedError);
+
+    return __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (NotAllowedError.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(NotAllowedError)).apply(this, arguments));
+  }
+
+  return NotAllowedError;
+}(CctError);
+NotAllowedError.errorName = 'NotAllowedError';
+
+/**
+ * The requested resource could not be found, e.g. when looking up a room by alias
+ * or requesting a media source.
+ *
+ * @class NotFoundError
+ * @extends CctError
+ */
+var NotFoundError = function (_CctError2) {
+  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(NotFoundError, _CctError2);
+
+  function NotFoundError() {
+    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, NotFoundError);
+
+    return __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (NotFoundError.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(NotFoundError)).apply(this, arguments));
+  }
+
+  return NotFoundError;
+}(CctError);
+NotFoundError.errorName = 'NotFoundError';
+
+/**
+ * The cause of the error could not be determined. Seeing this error is in itself an error
+ * because the real error reason should always be possible to determine.
+ *
+ * @class UnknownError
+ * @extends CctError
+ */
+var UnknownError = function (_CctError3) {
+  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(UnknownError, _CctError3);
+
+  function UnknownError() {
+    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, UnknownError);
+
+    return __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (UnknownError.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(UnknownError)).apply(this, arguments));
+  }
+
+  return UnknownError;
+}(CctError);
+UnknownError.errorName = 'UnknownError';
+
+/***/ }),
 /* 147 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -6874,11 +6874,11 @@ var HtmlSink = function (_MediaSink) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return StateOpResponse; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_toConsumableArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_toConsumableArray__);
@@ -6891,7 +6891,7 @@ var HtmlSink = function (_MediaSink) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_common_argCheck__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_conference_raftConfiguration__ = __webpack_require__(132);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_conference_raftLogEntry__ = __webpack_require__(133);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_conference_meshTopology__ = __webpack_require__(152);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_conference_meshTopology__ = __webpack_require__(153);
 
 
 
@@ -7672,7 +7672,7 @@ var MediaNodeOutput = function () {
 
       if (target instanceof HTMLElement) {
         // require here to avoid circular dependency
-        var HtmlSink = __webpack_require__(146).default;
+        var HtmlSink = __webpack_require__(144).default;
         var sink = new HtmlSink({ target: target });
         this.connect(sink);
         return;
@@ -7723,7 +7723,7 @@ var MediaNodeOutput = function () {
         // Iterate through the targets and find html sinks with the input as target
         this._targets.forEach(function (possibleSinkInput) {
           // require here to avoid circular dependency
-          var HtmlSink = __webpack_require__(146).default;
+          var HtmlSink = __webpack_require__(144).default;
           var isHtmlSink = possibleSinkInput._parent instanceof HtmlSink;
           var sinkHasTargetAsTarget = possibleSinkInput._parent._hasTarget(target);
           if (isHtmlSink && sinkHasTargetAsTarget) {
@@ -7866,14 +7866,129 @@ var MediaNodeOutput = function () {
 /* harmony default export */ __webpack_exports__["a"] = (MediaNodeOutput);
 
 /***/ }),
-/* 150 */,
-/* 151 */
+/* 150 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_common_log__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_media_mediaNode__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_media_mediaNodeInput__ = __webpack_require__(131);
+
+
+
+
+
+
+
+
+
+
+
+
+var TAG = 'media-input';
+
+/**
+ * A base class for media nodes with a single input and no output. Typically used to render
+ * the stream, or as a base for nodes with multiple outputs.
+ *
+ * The subclass should override the `onStream` method.
+ *
+ * @class MediaSink
+ * @extends MediaNode
+ */
+
+var MediaSink = function (_MediaNode) {
+  __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default()(MediaSink, _MediaNode);
+
+  function MediaSink() {
+    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, MediaSink);
+
+    var _this = __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (MediaSink.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(MediaSink)).call(this));
+
+    _this._input = new __WEBPACK_IMPORTED_MODULE_7_media_mediaNodeInput__["a" /* default */]({
+      name: 'default',
+      parent: _this,
+      onStream: function onStream(stream, oldStream) {
+        return _this.onStream(stream, oldStream);
+      }
+    });
+    return _this;
+  }
+
+  /**
+   * The current input stream.
+   *
+   * @readonly
+   * @member {MediaStream} MediaSink#stream
+   */
+
+
+  __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(MediaSink, [{
+    key: 'onStream',
+
+
+    /**
+     * Abstract method that is called whenever the input stream is updated, this should
+     * be overridden by the subclass.
+     *
+     * This will only ever be called if the stream has changed, been added, or removed,
+     * i.e. stream and oldStream will never be equal.
+     *
+     * The `onStream` method will not be called when the backing tracks of a stream is changed.
+     * If the subclass needs to be notified of track updates this has to be done manually using
+     * the MediaStream listeners.
+     *
+     * @abstract
+     * @param {?MediaStream} stream - The new media stream, or null.
+     * @param {?MediaStream} oldStream - The old media stream, or null.
+     */
+    value: function onStream(stream, oldStream) {
+      __WEBPACK_IMPORTED_MODULE_5_common_log__["default"].warning(TAG, this.constructor.name + '.onStream should be overridden');
+    }
+  }, {
+    key: 'stream',
+    get: function get() {
+      return this._input.stream;
+    }
+
+    /**
+     * The input.
+     *
+     * @readonly
+     * @member {MediaNodeInput} MediaSink#input
+     */
+
+  }, {
+    key: 'input',
+    get: function get() {
+      return this._input;
+    }
+  }]);
+
+  return MediaSink;
+}(__WEBPACK_IMPORTED_MODULE_6_media_mediaNode__["a" /* default */]);
+
+/* harmony default export */ __webpack_exports__["a"] = (MediaSink);
+
+/***/ }),
+/* 151 */,
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = { "default": __webpack_require__(155), __esModule: true };
 
 /***/ }),
-/* 152 */
+/* 153 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8369,121 +8484,6 @@ var MeshTopology = function () {
 /* harmony default export */ __webpack_exports__["c"] = (MeshTopology);
 
 /***/ }),
-/* 153 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_common_log__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_media_mediaNode__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_media_mediaNodeInput__ = __webpack_require__(131);
-
-
-
-
-
-
-
-
-
-
-
-
-var TAG = 'media-input';
-
-/**
- * A base class for media nodes with a single input and no output. Typically used to render
- * the stream, or as a base for nodes with multiple outputs.
- *
- * The subclass should override the `onStream` method.
- *
- * @class MediaSink
- * @extends MediaNode
- */
-
-var MediaSink = function (_MediaNode) {
-  __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default()(MediaSink, _MediaNode);
-
-  function MediaSink() {
-    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, MediaSink);
-
-    var _this = __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (MediaSink.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(MediaSink)).call(this));
-
-    _this._input = new __WEBPACK_IMPORTED_MODULE_7_media_mediaNodeInput__["a" /* default */]({
-      name: 'default',
-      parent: _this,
-      onStream: function onStream(stream, oldStream) {
-        return _this.onStream(stream, oldStream);
-      }
-    });
-    return _this;
-  }
-
-  /**
-   * The current input stream.
-   *
-   * @readonly
-   * @member {MediaStream} MediaSink#stream
-   */
-
-
-  __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(MediaSink, [{
-    key: 'onStream',
-
-
-    /**
-     * Abstract method that is called whenever the input stream is updated, this should
-     * be overridden by the subclass.
-     *
-     * This will only ever be called if the stream has changed, been added, or removed,
-     * i.e. stream and oldStream will never be equal.
-     *
-     * The `onStream` method will not be called when the backing tracks of a stream is changed.
-     * If the subclass needs to be notified of track updates this has to be done manually using
-     * the MediaStream listeners.
-     *
-     * @abstract
-     * @param {?MediaStream} stream - The new media stream, or null.
-     * @param {?MediaStream} oldStream - The old media stream, or null.
-     */
-    value: function onStream(stream, oldStream) {
-      __WEBPACK_IMPORTED_MODULE_5_common_log__["default"].warning(TAG, this.constructor.name + '.onStream should be overridden');
-    }
-  }, {
-    key: 'stream',
-    get: function get() {
-      return this._input.stream;
-    }
-
-    /**
-     * The input.
-     *
-     * @readonly
-     * @member {MediaNodeInput} MediaSink#input
-     */
-
-  }, {
-    key: 'input',
-    get: function get() {
-      return this._input;
-    }
-  }]);
-
-  return MediaSink;
-}(__WEBPACK_IMPORTED_MODULE_6_media_mediaNode__["a" /* default */]);
-
-/* harmony default export */ __webpack_exports__["a"] = (MediaSink);
-
-/***/ }),
 /* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8494,7 +8494,7 @@ module.exports = { "default": __webpack_require__(156), __esModule: true };
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(29);
-__webpack_require__(23);
+__webpack_require__(22);
 module.exports = __webpack_require__(157);
 
 /***/ }),
@@ -8502,7 +8502,7 @@ module.exports = __webpack_require__(157);
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(29);
-__webpack_require__(23);
+__webpack_require__(22);
 module.exports = __webpack_require__(158);
 
 /***/ }),
@@ -8537,7 +8537,7 @@ module.exports = __webpack_require__(0).isIterable = function(it){
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return AsyncPipe; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
@@ -8917,15 +8917,15 @@ var RtcComponent = function () {
 /* unused harmony export ChannelTimeoutError */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return FileTransferError; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return TransferInterruptedError; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_common_errors__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_common_errors__ = __webpack_require__(146);
 
 
 
@@ -9187,7 +9187,7 @@ TransferInterruptedError.errorName = 'TransferInterruptedError';
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray__);
@@ -9197,15 +9197,15 @@ TransferInterruptedError.errorName = 'TransferInterruptedError';
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_sdp_interop__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_sdp_interop__ = __webpack_require__(207);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_sdp_interop___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_sdp_interop__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_log__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_emitter__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_emitter__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_common_utils__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_webrtc_peerConnectionMonitor__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_media_dummySource__ = __webpack_require__(178);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_webrtc_peerConnectionMonitor__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_media_dummySource__ = __webpack_require__(165);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_webrtc_utils__ = __webpack_require__(66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_webrtc_sdpTransform__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_webrtc_sdpTransform__ = __webpack_require__(200);
 
 
 
@@ -9924,28 +9924,28 @@ function makeError(funcName, message, reason) {
 /* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(170), __esModule: true };
+module.exports = { "default": __webpack_require__(171), __esModule: true };
 
 /***/ }),
 /* 164 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_get__ = __webpack_require__(69);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_get___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_get__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_log__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_utils__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_media_mediaSource__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_media_mediaSource__ = __webpack_require__(145);
 
 
 
@@ -10124,6 +10124,146 @@ var ConcreteMediaSource = function (_MediaSource) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_media_mediaSource__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_webrtc_utils__ = __webpack_require__(66);
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * A dummy source that can generate a silent audio stream and a 1x1 black video stream.
+ *
+ * Useful for testing and working around browser bugs where streams have to be present.
+ *
+ * @class DummySource
+ * @extends MediaSource
+ * @param {Object} [options] - Optional options object
+ * @param {boolean} [options.video=true] - Whether to generate dummy video.
+ * @param {boolean} [options.audio=true] - Whether to generate dummy audio.
+ */
+
+var DummySource = function (_MediaSource) {
+  __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default()(DummySource, _MediaSource);
+
+  function DummySource() {
+    var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : { audio: true, video: true },
+        audio = _ref.audio,
+        video = _ref.video;
+
+    __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default()(this, DummySource);
+
+    var _this = __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn___default()(this, (DummySource.__proto__ || __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default()(DummySource)).call(this));
+
+    var tracks = [];
+    if (audio) {
+      _this._audioContext = __WEBPACK_IMPORTED_MODULE_7_webrtc_utils__["audioContextUtil"].get();
+      _this._destination = _this._audioContext.createMediaStreamDestination();
+
+      var _this$_destination$st = _this._destination.stream.getTracks(),
+          _this$_destination$st2 = __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray___default()(_this$_destination$st, 1),
+          track = _this$_destination$st2[0];
+      // track.enabled = false
+
+
+      tracks.push(track);
+
+      _this._silence = _this._audioContext.createBufferSource();
+      _this._silence.connect(_this._destination, 0, 0);
+    }
+    if (video) {
+      _this._canvas = document.createElement('canvas');
+      _this._canvas.style.width = '1px';
+      _this._canvas.style.height = '1px';
+      _this._canvas.width = 1;
+      _this._canvas.height = 1;
+
+      // Otherwise Firefox will complain about the canvas not being initialized
+      _this._canvas.getContext('2d');
+
+      var stream = _this._canvas.captureStream(1);
+
+      var _stream$getTracks = stream.getTracks(),
+          _stream$getTracks2 = __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray___default()(_stream$getTracks, 1),
+          _track = _stream$getTracks2[0];
+      // track.enabled = false
+
+
+      tracks.push(_track);
+    }
+    _this._stream = new MediaStream(tracks);
+    _this.setStream(_this._stream);
+    return _this;
+  }
+
+  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass___default()(DummySource, [{
+    key: 'stop',
+
+
+    /**
+     * Stops the source and cleans up all resources. This has to be called once the source
+     * is no longer used in order to clean up resources.
+     *
+     * Calling this method multiple times has no effect.
+     */
+    value: function stop() {
+      if (this._stream) {
+        this.setStream(null);
+        this._stream.getTracks().forEach(function (track) {
+          return track.stop();
+        });
+        this._stream = null;
+        this._canvas = null;
+        if (this._audioContext) {
+          __WEBPACK_IMPORTED_MODULE_7_webrtc_utils__["audioContextUtil"].release();
+          this._audioContext = null;
+          this._destination = null;
+          this._silence.stop();
+          this._silence = null;
+        }
+      }
+    }
+
+    /**
+     * @private
+     * @function DummySource#setStream
+     */
+
+  }, {
+    key: 'output',
+    get: function get() {
+      return this._output;
+    }
+  }]);
+
+  return DummySource;
+}(__WEBPACK_IMPORTED_MODULE_6_media_mediaSource__["a" /* default */]);
+
+/* harmony default export */ __webpack_exports__["a"] = (DummySource);
+
+/***/ }),
+/* 166 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (immutable) */ __webpack_exports__["b"] = createImageResourceFactory;
 /* harmony export (immutable) */ __webpack_exports__["a"] = ImageResource;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_common_argCheck__ = __webpack_require__(12);
@@ -10239,7 +10379,7 @@ ImageResource.prototype.toString = function () {
  */
 
 /***/ }),
-/* 166 */
+/* 167 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10252,22 +10392,22 @@ ImageResource.prototype.toString = function () {
 /* harmony export (immutable) */ __webpack_exports__["a"] = SerializedJsonRetryClient;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_keys__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_keys___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_keys__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_object_get_prototype_of__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_classCallCheck__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_log__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_common_errors__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_common_errors__ = __webpack_require__(146);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_common_utils__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_common_emitter__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_common_emitter__ = __webpack_require__(34);
 
 
 
@@ -10708,7 +10848,7 @@ SerializedJsonRetryClient.prototype = {
 Request.DEFAULT_CLIENT = new JsonRetryClient();
 
 /***/ }),
-/* 167 */
+/* 168 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10728,13 +10868,13 @@ Request.DEFAULT_CLIENT = new JsonRetryClient();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_set___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_set__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_map__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_possibleConstructorReturn__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_babel_runtime_helpers_get__ = __webpack_require__(69);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_babel_runtime_helpers_get___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_babel_runtime_helpers_get__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_classCallCheck__);
@@ -11789,7 +11929,7 @@ var JoinerState = function (_RaftState4) {
 }(RaftState);
 
 /***/ }),
-/* 168 */
+/* 169 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11888,30 +12028,30 @@ function toMatrixIdForServer(context, id, serverName, type) {
 }
 
 /***/ }),
-/* 169 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(171), __esModule: true };
-
-/***/ }),
 /* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(173);
-module.exports = __webpack_require__(0).Object.assign;
+module.exports = { "default": __webpack_require__(172), __esModule: true };
 
 /***/ }),
 /* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(174);
+module.exports = __webpack_require__(0).Object.assign;
+
+/***/ }),
+/* 172 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(175);
 var $Object = __webpack_require__(0).Object;
 module.exports = function getOwnPropertyNames(it){
   return $Object.getOwnPropertyNames(it);
 };
 
 /***/ }),
-/* 172 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11950,16 +12090,16 @@ module.exports = !$assign || __webpack_require__(21)(function(){
 } : $assign;
 
 /***/ }),
-/* 173 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.3.1 Object.assign(target, source)
-var $export = __webpack_require__(6);
+var $export = __webpack_require__(7);
 
-$export($export.S + $export.F, 'Object', {assign: __webpack_require__(172)});
+$export($export.S + $export.F, 'Object', {assign: __webpack_require__(173)});
 
 /***/ }),
-/* 174 */
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.7 Object.getOwnPropertyNames(O)
@@ -11968,7 +12108,7 @@ __webpack_require__(46)('getOwnPropertyNames', function(){
 });
 
 /***/ }),
-/* 175 */
+/* 176 */
 /***/ (function(module, exports) {
 
 var grammar = module.exports = {
@@ -12231,164 +12371,24 @@ Object.keys(grammar).forEach(function (key) {
 
 
 /***/ }),
-/* 176 */,
 /* 177 */,
-/* 178 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_media_mediaSource__ = __webpack_require__(144);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_webrtc_utils__ = __webpack_require__(66);
-
-
-
-
-
-
-
-
-
-
-
-/**
- * A dummy source that can generate a silent audio stream and a 1x1 black video stream.
- *
- * Useful for testing and working around browser bugs where streams have to be present.
- *
- * @class DummySource
- * @extends MediaSource
- * @param {Object} [options] - Optional options object
- * @param {boolean} [options.video=true] - Whether to generate dummy video.
- * @param {boolean} [options.audio=true] - Whether to generate dummy audio.
- */
-
-var DummySource = function (_MediaSource) {
-  __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default()(DummySource, _MediaSource);
-
-  function DummySource() {
-    var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : { audio: true, video: true },
-        audio = _ref.audio,
-        video = _ref.video;
-
-    __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default()(this, DummySource);
-
-    var _this = __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn___default()(this, (DummySource.__proto__ || __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default()(DummySource)).call(this));
-
-    var tracks = [];
-    if (audio) {
-      _this._audioContext = __WEBPACK_IMPORTED_MODULE_7_webrtc_utils__["audioContextUtil"].get();
-      _this._destination = _this._audioContext.createMediaStreamDestination();
-
-      var _this$_destination$st = _this._destination.stream.getTracks(),
-          _this$_destination$st2 = __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray___default()(_this$_destination$st, 1),
-          track = _this$_destination$st2[0];
-      // track.enabled = false
-
-
-      tracks.push(track);
-
-      _this._silence = _this._audioContext.createBufferSource();
-      _this._silence.connect(_this._destination, 0, 0);
-    }
-    if (video) {
-      _this._canvas = document.createElement('canvas');
-      _this._canvas.style.width = '1px';
-      _this._canvas.style.height = '1px';
-      _this._canvas.width = 1;
-      _this._canvas.height = 1;
-
-      // Otherwise Firefox will complain about the canvas not being initialized
-      _this._canvas.getContext('2d');
-
-      var stream = _this._canvas.captureStream(1);
-
-      var _stream$getTracks = stream.getTracks(),
-          _stream$getTracks2 = __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray___default()(_stream$getTracks, 1),
-          _track = _stream$getTracks2[0];
-      // track.enabled = false
-
-
-      tracks.push(_track);
-    }
-    _this._stream = new MediaStream(tracks);
-    _this.setStream(_this._stream);
-    return _this;
-  }
-
-  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass___default()(DummySource, [{
-    key: 'stop',
-
-
-    /**
-     * Stops the source and cleans up all resources. This has to be called once the source
-     * is no longer used in order to clean up resources.
-     *
-     * Calling this method multiple times has no effect.
-     */
-    value: function stop() {
-      if (this._stream) {
-        this.setStream(null);
-        this._stream.getTracks().forEach(function (track) {
-          return track.stop();
-        });
-        this._stream = null;
-        this._canvas = null;
-        if (this._audioContext) {
-          __WEBPACK_IMPORTED_MODULE_7_webrtc_utils__["audioContextUtil"].release();
-          this._audioContext = null;
-          this._destination = null;
-          this._silence.stop();
-          this._silence = null;
-        }
-      }
-    }
-
-    /**
-     * @private
-     * @function DummySource#setStream
-     */
-
-  }, {
-    key: 'output',
-    get: function get() {
-      return this._output;
-    }
-  }]);
-
-  return DummySource;
-}(__WEBPACK_IMPORTED_MODULE_6_media_mediaSource__["a" /* default */]);
-
-/* harmony default export */ __webpack_exports__["a"] = (DummySource);
-
-/***/ }),
+/* 178 */,
 /* 179 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_common_log__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_media_mediaNode__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_media_mediaNode__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_media_mediaNodeInput__ = __webpack_require__(131);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_media_mediaNodeOutput__ = __webpack_require__(149);
 
@@ -12513,15 +12513,15 @@ var MediaFilter = function (_MediaNode$connectMix) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_typeof__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_typeof___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_typeof__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_log__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_media_mediaFilter__ = __webpack_require__(179);
@@ -12680,18 +12680,18 @@ var MuteFilter = function (_MediaFilter) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_common_log__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_emitter__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_emitter__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_media_mediaFilter__ = __webpack_require__(179);
 
 
@@ -12785,6 +12785,158 @@ var Passthrough = function (_EmitterMixin) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_common_emitter__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_media_mediaSink__ = __webpack_require__(150);
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * A callback that will be called whenever the input stream is changed.
+ *
+ * @callback StreamSink~OnStreamCallback
+ * @param {MediaStream} stream - The new stream.
+ */
+
+/**
+ * A simple media sink that emits a stream event and provides a stream property. Mainly useful for testing.
+ *
+ * @class StreamSink
+ * @extends MediaSink
+ * @extends EventEmitter
+ * @param {Object} [options] - Optional options object.
+ * @param {StreamSink~OnStreamCallback} [options.onStream] - Callback that will be called whenever the stream changes.
+ */
+
+var StreamSink = function (_EmitterMixin) {
+  __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default()(StreamSink, _EmitterMixin);
+
+  function StreamSink() {
+    var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+        onStream = _ref.onStream;
+
+    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, StreamSink);
+
+    var _this = __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (StreamSink.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(StreamSink)).call(this));
+
+    if (onStream) {
+      _this._onStream = onStream;
+    }
+    return _this;
+  }
+
+  /**
+   * Emitted whenever the stream is changed.
+   *
+   * @event MediaTee#stream
+   * @param {?MediaStream} stream - The media stream, or null.
+   */
+
+  // eslint-disable-next-line
+  /**
+   * @private
+   */
+
+
+  __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(StreamSink, [{
+    key: 'onStream',
+    value: function onStream(stream) {
+      if (this._onStream) {
+        this._onStream(stream);
+      }
+      this._emit('stream', stream);
+    }
+  }]);
+
+  return StreamSink;
+}(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_common_emitter__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_6_media_mediaSink__["a" /* default */]));
+
+/* harmony default export */ __webpack_exports__["a"] = (StreamSink);
+
+/***/ }),
+/* 183 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_media_mediaSource__ = __webpack_require__(145);
+
+
+
+
+
+
+
+
+/**
+ * A simple media node that forwards a single media stream. Useful for testing and bridging with other libraries.
+ *
+ * @class StreamSource
+ * @extends MediaSource
+ * @param {Object} [options] - Optional options object.
+ * @param {?MediaStream} [options.stream] - The media stream.
+ */
+
+var StreamSource = function (_MediaSource) {
+  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(StreamSource, _MediaSource);
+
+  function StreamSource() {
+    var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+        stream = _ref.stream;
+
+    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, StreamSource);
+
+    var _this = __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (StreamSource.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(StreamSource)).call(this));
+
+    if (stream) {
+      _this.setStream(stream);
+    }
+    return _this;
+  }
+
+  // Override superclass docs
+  /**
+   * Sets the current media stream.
+   *
+   * @function StreamSource#setStream
+   * @param {?MediaStream} stream - The media stream.
+   */
+
+
+  return StreamSource;
+}(__WEBPACK_IMPORTED_MODULE_4_media_mediaSource__["a" /* default */]);
+
+/* harmony default export */ __webpack_exports__["a"] = (StreamSource);
+
+/***/ }),
+/* 184 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return MT_OPEN; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return MT_OPEN_ACK; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return MT_DECLARE; });
@@ -12822,17 +12974,17 @@ var M_SEP = ':';
 var ID_BASE = 36; // The radix of the serialized channel IDs
 
 /***/ }),
-/* 183 */
+/* 185 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(202), __esModule: true };
+module.exports = { "default": __webpack_require__(203), __esModule: true };
 
 /***/ }),
-/* 184 */
+/* 186 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_set__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_set___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_set__);
@@ -12844,12 +12996,12 @@ module.exports = { "default": __webpack_require__(202), __esModule: true };
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_common_argCheck__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_log__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_conference_raftLog__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_conference_raftLog__ = __webpack_require__(195);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_conference_raftLogEntry__ = __webpack_require__(133);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_conference_raftConfiguration__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_conference_meshTopology__ = __webpack_require__(152);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_conference_raftStateMachine__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_conference_raftState__ = __webpack_require__(167);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_conference_meshTopology__ = __webpack_require__(153);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_conference_raftStateMachine__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_conference_raftState__ = __webpack_require__(168);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_conference_raftMessages__ = __webpack_require__(147);
 
 
@@ -13417,24 +13569,24 @@ var Raft = function () {
 /* harmony default export */ __webpack_exports__["a"] = (Raft);
 
 /***/ }),
-/* 185 */
+/* 187 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_keys__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_keys___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_keys__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_argCheck__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_emitter__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_emitter__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_common_utils__ = __webpack_require__(13);
 
 
@@ -13610,7 +13762,7 @@ var AccountData = function (_EmitterMixin) {
 AccountData.tag = 'account-data';
 
 /***/ }),
-/* 186 */
+/* 188 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13624,8 +13776,8 @@ AccountData.tag = 'account-data';
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_json_stringify___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_json_stringify__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_common_argCheck__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_common_utils__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_matrix_ids__ = __webpack_require__(168);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_matrix_userRegistry__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_matrix_ids__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_matrix_userRegistry__ = __webpack_require__(198);
 
 
 
@@ -14170,32 +14322,32 @@ PowerLevelsReader.fromRaw = function (object, options) {
 };
 
 /***/ }),
-/* 187 */
+/* 189 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = Room;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_map__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_keys__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_keys___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_keys__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_common_log__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_common_argCheck__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_common_emitter__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_request__ = __webpack_require__(166);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_common_emitter__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_request__ = __webpack_require__(167);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_queue__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_common_errors__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_common_errors__ = __webpack_require__(146);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_common_utils__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_matrix_accountData__ = __webpack_require__(185);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_matrix_resources__ = __webpack_require__(165);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_matrix_roomState__ = __webpack_require__(217);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_matrix_user__ = __webpack_require__(188);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_matrix_ids__ = __webpack_require__(168);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_matrix_errors__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_matrix_powerLevels__ = __webpack_require__(186);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_matrix_userRegistry__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_matrix_accountData__ = __webpack_require__(187);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_matrix_resources__ = __webpack_require__(166);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_matrix_roomState__ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_matrix_user__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_matrix_ids__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_matrix_errors__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_matrix_powerLevels__ = __webpack_require__(188);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_matrix_userRegistry__ = __webpack_require__(198);
 
 
 
@@ -16055,15 +16207,15 @@ __WEBPACK_IMPORTED_MODULE_5_common_emitter__["a" /* default */].call(Room.protot
  */
 
 /***/ }),
-/* 188 */
+/* 190 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = User;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_common_emitter__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_common_emitter__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_common_log__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_common_utils__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_matrix_ids__ = __webpack_require__(168);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_matrix_ids__ = __webpack_require__(169);
 
 
 
@@ -16260,175 +16412,23 @@ User.prototype = {
 __WEBPACK_IMPORTED_MODULE_0_common_emitter__["a" /* default */].call(User.prototype);
 
 /***/ }),
-/* 189 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_common_emitter__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_media_mediaSink__ = __webpack_require__(153);
-
-
-
-
-
-
-
-
-
-
-
-/**
- * A callback that will be called whenever the input stream is changed.
- *
- * @callback StreamSink~OnStreamCallback
- * @param {MediaStream} stream - The new stream.
- */
-
-/**
- * A simple media sink that emits a stream event and provides a stream property. Mainly useful for testing.
- *
- * @class StreamSink
- * @extends MediaSink
- * @extends EventEmitter
- * @param {Object} [options] - Optional options object.
- * @param {StreamSink~OnStreamCallback} [options.onStream] - Callback that will be called whenever the stream changes.
- */
-
-var StreamSink = function (_EmitterMixin) {
-  __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default()(StreamSink, _EmitterMixin);
-
-  function StreamSink() {
-    var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
-        onStream = _ref.onStream;
-
-    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, StreamSink);
-
-    var _this = __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (StreamSink.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(StreamSink)).call(this));
-
-    if (onStream) {
-      _this._onStream = onStream;
-    }
-    return _this;
-  }
-
-  /**
-   * Emitted whenever the stream is changed.
-   *
-   * @event MediaTee#stream
-   * @param {?MediaStream} stream - The media stream, or null.
-   */
-
-  // eslint-disable-next-line
-  /**
-   * @private
-   */
-
-
-  __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(StreamSink, [{
-    key: 'onStream',
-    value: function onStream(stream) {
-      if (this._onStream) {
-        this._onStream(stream);
-      }
-      this._emit('stream', stream);
-    }
-  }]);
-
-  return StreamSink;
-}(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_common_emitter__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_6_media_mediaSink__["a" /* default */]));
-
-/* harmony default export */ __webpack_exports__["a"] = (StreamSink);
-
-/***/ }),
-/* 190 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_media_mediaSource__ = __webpack_require__(144);
-
-
-
-
-
-
-
-
-/**
- * A simple media node that forwards a single media stream. Useful for testing and bridging with other libraries.
- *
- * @class StreamSource
- * @extends MediaSource
- * @param {Object} [options] - Optional options object.
- * @param {?MediaStream} [options.stream] - The media stream.
- */
-
-var StreamSource = function (_MediaSource) {
-  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(StreamSource, _MediaSource);
-
-  function StreamSource() {
-    var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
-        stream = _ref.stream;
-
-    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, StreamSource);
-
-    var _this = __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (StreamSource.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(StreamSource)).call(this));
-
-    if (stream) {
-      _this.setStream(stream);
-    }
-    return _this;
-  }
-
-  // Override superclass docs
-  /**
-   * Sets the current media stream.
-   *
-   * @function StreamSource#setStream
-   * @param {?MediaStream} stream - The media stream.
-   */
-
-
-  return StreamSource;
-}(__WEBPACK_IMPORTED_MODULE_4_media_mediaSource__["a" /* default */]);
-
-/* harmony default export */ __webpack_exports__["a"] = (StreamSource);
-
-/***/ }),
 /* 191 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_webrtc_utils__ = __webpack_require__(66);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_media_mediaNodeOutput__ = __webpack_require__(149);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_media_mediaSink__ = __webpack_require__(153);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_media_mediaSink__ = __webpack_require__(150);
 
 
 
@@ -16539,28 +16539,28 @@ var StreamSplitter = function (_MediaSink) {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RtcPeer; });
 /* unused harmony export AttachPoint */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_values__ = __webpack_require__(289);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_values__ = __webpack_require__(290);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_values___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_values__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_map__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_set__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_set___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_set__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_object_get_prototype_of__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_classCallCheck__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_createClass__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_possibleConstructorReturn__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_babel_runtime_helpers_get__ = __webpack_require__(69);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_babel_runtime_helpers_get___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_babel_runtime_helpers_get__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_common_argCheck__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_common_log__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_common_utils__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_media_mediaNode__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_media_mediaNode__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_webrtc_rtcComponent__ = __webpack_require__(160);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_webrtc_channelControllers__ = __webpack_require__(231);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_webrtc_utils__ = __webpack_require__(66);
@@ -17463,6516 +17463,6 @@ var AttachmentManager = function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export OP_SET */
-/* unused harmony export OP_DELETE */
-/* unused harmony export OP_NAME */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AttachData; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_entries__ = __webpack_require__(234);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_entries___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_entries__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_defineProperty__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_defineProperty___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_defineProperty__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_slicedToArray__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_slicedToArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_slicedToArray__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_symbol_iterator__ = __webpack_require__(94);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_symbol_iterator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_symbol_iterator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_map__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_classCallCheck__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_babel_runtime_helpers_createClass__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_babel_runtime_helpers_inherits__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_babel_runtime_helpers_inherits__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_common_log__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_common_argCheck__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_common_utils__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_webrtc_channelControllers__ = __webpack_require__(231);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function randomSeq() {
-  return Math.random() * 1000000000 | 0;
-}
-
-var OP_SET = 1;
-var OP_DELETE = 2;
-var OP_NAME = [undefined, 'set', 'delete'];
-
-/**
- * A class which provides a way to read and modify a set of data that is synchronized between all
- * the peers of an {@link RtcComponent}.
- *
- * @abstract
- * @class AttachData
- * @extends Map
- */
-var AttachData = function (_Map) {
-  __WEBPACK_IMPORTED_MODULE_10_babel_runtime_helpers_inherits___default()(AttachData, _Map);
-
-  function AttachData(_ref) {
-    var onUpdate = _ref.onUpdate,
-        onSendUpdate = _ref.onSendUpdate;
-
-    __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_classCallCheck___default()(this, AttachData);
-
-    var _this = __WEBPACK_IMPORTED_MODULE_8_babel_runtime_helpers_possibleConstructorReturn___default()(this, (AttachData.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData)).call(this));
-
-    _this.tag = 'attach-data';
-    _this._seqs = new __WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_map___default.a();
-    _this._ownerIds = new __WEBPACK_IMPORTED_MODULE_13_common_utils__["ReadOnlyMap"]();
-    _this._ownOwnerIds = new __WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_map___default.a();
-
-    _this._onUpdate = onUpdate;
-    _this._onSendUpdate = onSendUpdate;
-    return _this;
-  }
-
-  /**
-   * A collection of all owner ids for the data in this map. If an owner id exists for a given key
-   * a entry must exist in the map as well, although the opposite is not always true.
-   *
-   * See {@link AttachData#setWithOwnership} for more information about ownership.
-   *
-   * @readonly
-   * @member {ReadOnlyMap<string,string>} AttachData#owners
-   */
-
-
-  __WEBPACK_IMPORTED_MODULE_7_babel_runtime_helpers_createClass___default()(AttachData, [{
-    key: 'keys',
-
-
-    /**
-     * @returns {Iterator<string>} An iterator of all the keys in the map.
-     */
-    value: function keys() {
-      this._checkValid();
-      return __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), 'keys', this).call(this);
-    }
-
-    /**
-     * @returns {Iterator<JsonTypes>} An iterator of all the values in the map.
-     */
-
-  }, {
-    key: 'values',
-    value: function values() {
-      this._checkValid();
-      return __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), 'values', this).call(this);
-    }
-
-    /**
-     * @returns {Iterator<Array<*>>} An iterator of all the values in the map.
-     */
-
-  }, {
-    key: 'entries',
-    value: function entries() {
-      this._checkValid();
-      return __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), 'entries', this).call(this);
-    }
-
-    /**
-     * @param {string} key - The key to look for.
-     * @returns {boolean} True if there is an entry for the given key.
-     */
-
-  }, {
-    key: 'has',
-    value: function has(key) {
-      __WEBPACK_IMPORTED_MODULE_12_common_argCheck__["a" /* default */].string('AttachData.has', 'key', key);
-      this._checkValid();
-      return __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), 'has', this).call(this, key);
-    }
-
-    /**
-     * @param {string} key - The key of the value to retrive.
-     * @returns {JsonTypes} Returns the value for the given key.
-     */
-
-  }, {
-    key: 'get',
-    value: function get(key) {
-      __WEBPACK_IMPORTED_MODULE_12_common_argCheck__["a" /* default */].string('AttachData.get', 'key', key);
-      this._checkValid();
-      return __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), 'get', this).call(this, key);
-    }
-
-    /**
-     * Sets set value for the given key.
-     *
-     * Setting a local value will **not** trigger a {@link RtcComponent#rtcComponentUpdatedData} call,
-     * that only happens for remote updates.
-     *
-     * @param {string} key - The key of the value.
-     * @param {JsonTypes} value - The value to set.
-     */
-
-  }, {
-    key: 'set',
-    value: function set(key, value) {
-      __WEBPACK_IMPORTED_MODULE_12_common_argCheck__["a" /* default */].count('AttachData.set', 2, arguments.length);
-      __WEBPACK_IMPORTED_MODULE_12_common_argCheck__["a" /* default */].string('AttachData.set', 'key', key);
-      return this.setWithOwnership(key, value, null);
-    }
-
-    /**
-     * Sets set value for the given key, along with an ownership id.
-     *
-     * Setting the ownership allows data to be transparently overridden by users that are joining or
-     * rejoining the data synchronization network. Usually the `ownerId` will be set to the id of the user,
-     * but it can sometimes be useful to use other values, such as the role of the user, e.g. `'moderator'`.
-     *
-     * Since values can be updated while a call is not connected, the values that are set when disconnected
-     * may be updated once you are connected with the rest of the users. When relaying some kind of state
-     * to other peers this can cause problems, as the updates that you sent out before a reconnect will
-     * cause an update to your local values. By tagging data with an owner id, it is possible to rejoin
-     * a data synchronization group and transparently update your exsting values with the new state, without
-     * causing a local update to trigger.
-     *
-     * Setting a local value will not trigger a {@link RtcComponent#rtcComponentUpdatedData} call,
-     * that only happens for remote updates.
-     *
-     * @param {string} key - The key of the value.
-     * @param {JsonTypes} value - The value to set.
-     * @param {?string} ownerId - The owner id to use when setting the value.
-     */
-
-  }, {
-    key: 'setWithOwnership',
-    value: function setWithOwnership(key, value, ownerId) {
-      __WEBPACK_IMPORTED_MODULE_12_common_argCheck__["a" /* default */].count('AttachData.setWithOwnership', 3, arguments.length);
-      __WEBPACK_IMPORTED_MODULE_12_common_argCheck__["a" /* default */].string('AttachData.setWithOwnership', 'key', key);
-      __WEBPACK_IMPORTED_MODULE_12_common_argCheck__["a" /* default */].optString('AttachData.setWithOwnership', 'ownerId', ownerId);
-      this._checkValid();
-      var ret = __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), 'set', this).call(this, key, value);
-
-      var seq = this._seqs.get(key) || 0;
-      seq += randomSeq();
-      this._seqs.set(key, seq);
-      if (ownerId) {
-        this._ownerIds._set(key, ownerId);
-        this._ownOwnerIds.set(key, ownerId);
-      }
-      this._onSendUpdate(this._toSetMessage(seq, ownerId, key, value));
-      return ret;
-    }
-
-    /**
-     * Deletes an existing value of the corresponding key.
-     *
-     * Deleting a local value will not trigger a {@link RtcComponent#rtcComponentUpdatedData} call,
-     * that only happens for remote updates.
-     *
-     * @param {string} key - The key to delete the value for.
-     * @returns {boolean} True if a value existed.
-     */
-
-  }, {
-    key: 'delete',
-    value: function _delete(key) {
-      __WEBPACK_IMPORTED_MODULE_12_common_argCheck__["a" /* default */].count('AttachData.delete', 1, arguments.length);
-      __WEBPACK_IMPORTED_MODULE_12_common_argCheck__["a" /* default */].string('AttachData.delete', 'key', key);
-      return this.deleteWithOwnership(key, null);
-    }
-
-    /**
-     * Deletes an existing value of the corresponding key, using an ownership id.
-     *
-     * See {@link AttachData#setWithOwnership} for more information about ownership.
-     *
-     * Deleting a local value will not trigger a {@link RtcComponent#rtcComponentUpdatedData} call,
-     * that only happens for remote updates.
-     *
-     * @param {string} key - The key to delete the value for.
-     * @param {?string} ownerId - The owner id to use when deleting the value.
-     * @returns {boolean} True if a value existed.
-     */
-
-  }, {
-    key: 'deleteWithOwnership',
-    value: function deleteWithOwnership(key, ownerId) {
-      __WEBPACK_IMPORTED_MODULE_12_common_argCheck__["a" /* default */].count('AttachData.deleteWithOwnership', 2, arguments.length);
-      __WEBPACK_IMPORTED_MODULE_12_common_argCheck__["a" /* default */].string('AttachData.deleteWithOwnership', 'key', key);
-      __WEBPACK_IMPORTED_MODULE_12_common_argCheck__["a" /* default */].optString('AttachData.deleteWithOwnership', 'ownerId', ownerId);
-      this._checkValid();
-      var ret = __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), 'delete', this).call(this, key);
-
-      var seq = this._seqs.get(key) || 0;
-      seq += randomSeq();
-      this._seqs.set(key, seq);
-      if (ownerId) {
-        this._ownerIds._set(key, ownerId);
-        this._ownOwnerIds.set(key, ownerId);
-      }
-      this._onSendUpdate(this._toDeleteMessage(seq, ownerId, key));
-      return ret;
-    }
-
-    /**
-     * Clears all the data in the map.
-     *
-     * Clearing the map locally will not trigger a {@link RtcComponent#rtcComponentUpdatedData} call,
-     * that only happens for remote updates.
-     */
-
-  }, {
-    key: 'clear',
-    value: function clear() {
-      var _this2 = this;
-
-      // TODO: This could be more efficient
-      this._checkValid();
-      __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), 'forEach', this).call(this, function (key) {
-        return _this2.delete(key);
-      });
-    }
-
-    /**
-     * Clears all the data in the map, using an ownership.
-     *
-     * See {@link AttachData#setWithOwnership} for more information about ownership.
-     *
-     * Clearing the map locally will not trigger a {@link RtcComponent#rtcComponentUpdatedData} call,
-     * that only happens for remote updates.
-     *
-     * @param {?string} ownerId - The owner id to use when clearing the map.
-     */
-
-  }, {
-    key: 'clearWithOwnership',
-    value: function clearWithOwnership(ownerId) {
-      var _this3 = this;
-
-      this._checkValid();
-      __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), 'forEach', this).call(this, function (key) {
-        return _this3.deleteWithOwnership(key, ownerId);
-      });
-    }
-
-    /**
-     * The iterator function passed to {@link ReadOnlyMap#forEach}.
-     *
-     * @callback AttachData~ForEachCallback
-     * @param {*} key - The key of the current entry.
-     * @param {JsonTypes} value - The value of the current entry.
-     * @param {AttachData} map - The map itself.
-     */
-
-    /**
-     * Synchronously calls an interator function once for each entry in the map.
-     *
-     * Errors thrown inside the iterator function will cancel the iteration.
-     *
-     * @param {AttachData~ForEachCallback} func - The iterator function.
-     * @param {*} [thisArg] - The value to use as `this` inside the iterator function.
-     */
-
-  }, {
-    key: 'forEach',
-    value: function forEach(func, thisArg) {
-      this._checkValid();
-      return __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), 'forEach', this).call(this, func, thisArg);
-    }
-
-    /**
-     * This symbol allows the map to be used directly inside a `for..of` loop.
-     *
-     * @function AttachData#@@iterator
-     * @returns {Object} An iterator for all the entries in this map.
-     */
-
-  }, {
-    key: __WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_symbol_iterator___default.a,
-    value: function value() {
-      this._checkValid();
-      return __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), __WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_symbol_iterator___default.a, this).call(this);
-    }
-
-    // A local update uses the form {key, value, oldValue, ownerId}
-    // An update that is sent over the wire uses an array to keep the json form more compact
-    //   [op, key, value, seq] | [op, key, value, seq, ownerId]
-    //   where op is either 1 for set
-
-  }, {
-    key: '_toDeleteMessage',
-    value: function _toDeleteMessage(seq, ownerId, key) {
-      return [OP_DELETE, seq, ownerId || 0, key];
-    }
-  }, {
-    key: '_toSetMessage',
-    value: function _toSetMessage(seq, ownerId, key, value) {
-      return [OP_SET, seq, ownerId || 0, key, value];
-    }
-
-    // returns an array of updates
-
-  }, {
-    key: '_getCurrentState',
-    value: function _getCurrentState() {
-      var _this4 = this;
-
-      var states = [];
-      this._seqs.forEach(function (seq, key) {
-        var value = __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), 'get', _this4).call(_this4, key);
-        var ownerId = _this4._ownerIds.get(key);
-        states.push(_this4._toSetMessage(seq, ownerId, key, value));
-      });
-      return states;
-    }
-
-    // Handles a received update
-
-  }, {
-    key: '_onReceiveUpdate',
-    value: function _onReceiveUpdate(peerId, _ref2) {
-      var _ref3 = __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_slicedToArray___default()(_ref2, 5),
-          op = _ref3[0],
-          seq = _ref3[1],
-          ownerId = _ref3[2],
-          key = _ref3[3],
-          value = _ref3[4];
-
-      __WEBPACK_IMPORTED_MODULE_11_common_log__["default"].verbose(this.tag, 'message from \'' + peerId + '\' op=' + OP_NAME[op] + ' key=\'' + key + '\' seq=' + seq + ' ownerId=\'' + ownerId + '\'');
-      if (!(op === OP_SET || op === OP_DELETE)) {
-        __WEBPACK_IMPORTED_MODULE_11_common_log__["default"].error(this.tag, 'update had invalid op code: \'' + op + '\', ignoring');
-        return;
-      }
-      var localSeq = this._seqs.get(key) || 0;
-      var ownOwnerId = this._ownOwnerIds.get(key);
-      var receivedOwnValue = ownerId && ownOwnerId && ownerId === ownOwnerId;
-      var receivedIsNewer = localSeq < seq;
-
-      if (receivedOwnValue && receivedIsNewer) {
-        // Own value, so we increment seq and send update without signaling a local change
-        seq += randomSeq();
-        this._seqs.set(key, seq);
-        if (__WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), 'has', this).call(this, key)) {
-          var _value = __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), 'get', this).call(this, key);
-          this._onSendUpdate(this._toSetMessage(seq, ownerId, key, _value));
-        } else {
-          // If key is not present in main map, then it's been deleted
-          this._onSendUpdate(this._toDeleteMessage(seq, ownerId, key));
-        }
-      } else if (receivedIsNewer) {
-        this._seqs.set(key, seq);
-        if (ownerId) {
-          this._ownerIds._set(key, ownerId);
-        }
-        var oldValue = __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), 'get', this).call(this, key);
-        if (op === OP_SET) {
-          __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), 'set', this).call(this, key, value);
-        } else {
-          __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), 'delete', this).call(this, key);
-          value = undefined;
-        }
-        this._onUpdate({ key: key, value: value, oldValue: oldValue, ownerId: ownerId });
-      }
-    }
-  }, {
-    key: '_invalidate',
-    value: function _invalidate() {
-      this._seqs.clear();
-      this._ownerIds._clear();
-      this._seqs = null;
-      this._ownerIds = null;
-    }
-  }, {
-    key: '_checkValid',
-    value: function _checkValid() {
-      if (!this._seqs) {
-        throw new TypeError('AttachData was accessed after the component was detached.');
-      }
-    }
-  }, {
-    key: 'owners',
-    get: function get() {
-      return this._ownerIds;
-    }
-
-    /**
-     * The number of entries in the map.
-     *
-     * @readonly
-     * @member {number} AttachData#size
-     */
-
-  }, {
-    key: 'size',
-    get: function get() {
-      this._checkValid();
-      return __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), 'size', this);
-    }
-  }]);
-
-  return AttachData;
-}(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_map___default.a);
-
-/**
- * A class that keeps track of a set of {@link AttachData}. Used by {@link AttachmentManager}.
- *
- * @private
- * @class DataHub
- */
-
-var DataHub = function () {
-  function DataHub() {
-    __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_classCallCheck___default()(this, DataHub);
-
-    this.attachDatas = new __WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_map___default.a();
-
-    this.onUpdateListener = null;
-
-    this.controller = new __WEBPACK_IMPORTED_MODULE_14_webrtc_channelControllers__["a" /* JsonChannelBroadcastController */]({
-      onPeerChannelOpen: this.onPeerChannelOpen.bind(this),
-      onMessageFromPeer: this.onMessageFromPeer.bind(this)
-    });
-  }
-
-  __WEBPACK_IMPORTED_MODULE_7_babel_runtime_helpers_createClass___default()(DataHub, [{
-    key: 'get',
-    value: function get(name) {
-      var _this5 = this;
-
-      var attachData = this.attachDatas.get(name);
-      if (!attachData) {
-        attachData = new AttachData({
-          onUpdate: function onUpdate(update) {
-            return _this5.onUpdate(name, update);
-          },
-          onSendUpdate: function onSendUpdate(update) {
-            return _this5.onSendUpdate(name, update);
-          }
-        });
-        this.attachDatas.set(name, attachData);
-      }
-      return attachData;
-    }
-  }, {
-    key: 'setOnUpdateListener',
-    value: function setOnUpdateListener(listener) {
-      this.onUpdateListener = listener;
-    }
-  }, {
-    key: 'onUpdate',
-    value: function onUpdate(name, update) {
-      if (this.onUpdateListener) {
-        this.onUpdateListener(name, update);
-      }
-    }
-  }, {
-    key: 'onSendUpdate',
-    value: function onSendUpdate(name, update) {
-      var updatesMap = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_defineProperty___default()({}, name, [update]);
-      this.controller.sendMessage({ map: updatesMap });
-    }
-  }, {
-    key: 'setChannelForPeer',
-    value: function setChannelForPeer(peerId, channel) {
-      if (channel) {
-        this.controller.addPeer(peerId, channel);
-      } else {
-        this.controller.removePeer(peerId);
-      }
-    }
-  }, {
-    key: 'onPeerChannelOpen',
-    value: function onPeerChannelOpen(peerId) {
-      var updatesMap = {};
-      this.attachDatas.forEach(function (attachData, name) {
-        var updates = attachData._getCurrentState();
-        updatesMap[name] = updates;
-      });
-      this.controller.sendMessageToPeer(peerId, { map: updatesMap });
-    }
-  }, {
-    key: 'onMessageFromPeer',
-    value: function onMessageFromPeer(peerId, message) {
-      var _this6 = this;
-
-      var updatesMap = message.map;
-      if (updatesMap) {
-        __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_entries___default()(updatesMap).forEach(function (_ref4) {
-          var _ref5 = __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_slicedToArray___default()(_ref4, 2),
-              name = _ref5[0],
-              updates = _ref5[1];
-
-          var attachData = _this6.get(name);
-          updates.forEach(function (update) {
-            return attachData._onReceiveUpdate(peerId, update);
-          });
-        });
-      }
-    }
-  }, {
-    key: 'cleanup',
-    value: function cleanup() {
-      this.onUpdateListener = null;
-      this.controller.cleanup();
-      this.controller = null;
-      this.attachDatas.forEach(function (attachData) {
-        attachData._invalidate();
-      });
-      this.attachDatas.clear();
-      this.attachDatas = null;
-    }
-  }]);
-
-  return DataHub;
-}();
-
-/* harmony default export */ __webpack_exports__["b"] = (DataHub);
-
-/***/ }),
-/* 194 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_common_argCheck__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_common_log__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_conference_raftConfiguration__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_conference_raftMessages__ = __webpack_require__(147);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_conference_raftLogEntry__ = __webpack_require__(133);
-
-
-
-
-
-
-
-
-
-
-
-
-var TAG = 'raft';
-
-var RaftLog = function () {
-  function RaftLog(_ref) {
-    var stateMachine = _ref.stateMachine,
-        meshTopology = _ref.meshTopology,
-        configuration = _ref.configuration;
-
-    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, RaftLog);
-
-    this._stateMachine = stateMachine;
-    this._meshTopology = meshTopology;
-    this._configuration = configuration;
-
-    this._entries = [];
-    this._offset = 0;
-    this._commitIndex = 0;
-    this._lastApplied = 0;
-    this._snapshot = null;
-    this._configurationIndex = 0;
-  }
-
-  __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(RaftLog, [{
-    key: 'toString',
-    value: function toString() {
-      var entries = this._entries.slice(this._lastApplied - this._offset).join(',');
-      return 'log{lli=' + this.lastLogIndex + ',llt=' + this.lastLogTerm + ',ci=' + this.commitIndex + (',la=' + this._lastApplied + ',' + this._configuration + ',es=[' + entries + ']}');
-    }
-  }, {
-    key: 'entryAtIndex',
-    value: function entryAtIndex(index) {
-      if (index === 0) {
-        return null;
-      }
-      return this._entries[index - 1 - this._offset] || null;
-    }
-  }, {
-    key: 'entryTermAtIndex',
-    value: function entryTermAtIndex(index) {
-      if (this._snapshot) {
-        if (index < this._snapshot.lastIndex) {
-          throw new Error("can't get term for entry ahead of local snapshot");
-        } else if (index === this._snapshot.lastIndex) {
-          return this._snapshot.lastTerm;
-        }
-      }
-      if (index > this._entries.length + this._offset || index < 1) {
-        return 0;
-      }
-      return this.entryAtIndex(index).term;
-    }
-
-    // from fromIndex, to, but not including toIndex
-
-  }, {
-    key: 'sliceEntries',
-    value: function sliceEntries(fromIndex, toIndex) {
-      fromIndex = Math.max(fromIndex - 1 - this._offset, 0);
-      toIndex = Math.max(toIndex - 1 - this._offset, 0);
-      return this._entries.slice(fromIndex, toIndex);
-    }
-  }, {
-    key: 'handleAppendEntriesRequest',
-    value: function handleAppendEntriesRequest(message) {
-      if (message.prevIndex > this.lastLogIndex) {
-        // Appending these entries would leave a gap
-        return message.response({ meshTopology: this._meshTopology });
-      }
-
-      // Check if we have a snapshot installed and and the request is older, in that
-      // case we just ignore it since it must be a delayed/repeated message and the leader
-      // should know to send a post-snapshot append
-      if (this._snapshot && message.prevIndex < this._offset) {
-        return;
-      }
-
-      var localPrevTerm = this.entryTermAtIndex(message.prevIndex);
-      var remoteEntries = message.entries;
-      if (localPrevTerm === message.prevTerm) {
-        // Loop through remote entries until we don't have a local one or find a term mismatch
-        for (var index = 0; index < remoteEntries.length; index += 1) {
-          var remoteEntry = remoteEntries[index];
-          // +1 since prevIndex is the entry before the one we want to match against
-          var localIndex = message.prevIndex + index + 1;
-          if (localIndex > this.lastLogIndex) {
-            // We've run out of local entires to match against, append the rest
-            this._pushEntries(remoteEntries.slice(index));
-            break;
-          }
-          var localTerm = this.entryTermAtIndex(localIndex);
-          if (localTerm !== remoteEntry.term) {
-            // if an entry term doesn't match, delete the rest and append all
-            this._revertEntries(localIndex);
-            this._pushEntries(remoteEntries.slice(index));
-            break;
-          }
-        }
-        var matchIndex = message.prevIndex + remoteEntries.length;
-        if (message.commitIndex > this._commitIndex) {
-          // increase commit index to the remote one, but not higher than the last entry we received
-          var newCommitIndex = Math.min(message.commitIndex, matchIndex);
-          this._incrementCommitIndex(newCommitIndex);
-        }
-        return message.response({ success: true, matchIndex: matchIndex, meshTopology: this._meshTopology });
-      } else {
-        return message.response({ meshTopology: this._meshTopology });
-      }
-    }
-  }, {
-    key: 'getCommittedConfigurationData',
-    value: function getCommittedConfigurationData() {
-      var committedEntries = this.sliceEntries(0, this.commitIndex + 1);
-      for (var index = committedEntries.length - 1; index >= 0; index -= 1) {
-        var entry = committedEntries[index];
-        if (entry instanceof __WEBPACK_IMPORTED_MODULE_7_conference_raftLogEntry__["b" /* ConfigurationEntry */]) {
-          return entry.data;
-        }
-      }
-      if (this._snapshot) {
-        return this._snapshot.configuration;
-      }
-      return new __WEBPACK_IMPORTED_MODULE_5_conference_raftConfiguration__["b" /* ConfigurationData */](new __WEBPACK_IMPORTED_MODULE_5_conference_raftConfiguration__["c" /* Members */]());
-    }
-  }, {
-    key: 'tryCommitIndexForTerm',
-    value: function tryCommitIndexForTerm(newCommitIndex, expectedTerm) {
-      if (newCommitIndex <= this._commitIndex) {
-        return [];
-      }
-      var actualTerm = this.entryTermAtIndex(newCommitIndex);
-      if (actualTerm !== expectedTerm) {
-        __WEBPACK_IMPORTED_MODULE_4_common_log__["default"].debug(TAG, 'Commit index ' + newCommitIndex + ' rejected, expected term was ' + expectedTerm + ', got ' + actualTerm);
-        return [];
-      }
-      return this._incrementCommitIndex(newCommitIndex);
-    }
-  }, {
-    key: 'createConfigurationEntry',
-    value: function createConfigurationEntry(_ref2) {
-      var term = _ref2.term,
-          data = _ref2.data;
-
-      var index = this.lastLogIndex + 1;
-      var entry = new __WEBPACK_IMPORTED_MODULE_7_conference_raftLogEntry__["b" /* ConfigurationEntry */]({ term: term, index: index, data: data });
-      this._configuration.set(data);
-      this._configurationIndex = index;
-      this._entries.push(entry);
-      return entry;
-    }
-  }, {
-    key: 'createOpEntry',
-    value: function createOpEntry(_ref3) {
-      var term = _ref3.term,
-          id = _ref3.id,
-          op = _ref3.op,
-          args = _ref3.args;
-
-      var index = this.lastLogIndex + 1;
-      var entry = new __WEBPACK_IMPORTED_MODULE_7_conference_raftLogEntry__["d" /* OpEntry */]({ term: term, index: index, id: id, op: op, args: args });
-      this._entries.push(entry);
-      return entry;
-    }
-  }, {
-    key: '_incrementCommitIndex',
-    value: function _incrementCommitIndex(newCommitIndex) {
-      this._commitIndex = newCommitIndex;
-      var fromApplied = this._lastApplied;
-      if (this._lastApplied < newCommitIndex) {
-        this._lastApplied = newCommitIndex;
-      }
-      var committed = this.sliceEntries(fromApplied + 1, newCommitIndex + 1);
-      this._stateMachine.commitEntries(committed);
-      return committed;
-    }
-  }, {
-    key: '_revertEntries',
-    value: function _revertEntries(fromIncludingIndex) {
-      if (fromIncludingIndex <= this.commitIndex) {
-        throw new Error('tried to revert committed entries, ci=' + this.commitIndex + ', revert=' + fromIncludingIndex);
-      }
-      if (fromIncludingIndex <= this._lastApplied) {
-        throw new Error('tried to revert applied entries, la=' + this._lastApplied + ', revert=' + fromIncludingIndex);
-      }
-      var reverted = this._entries.splice(fromIncludingIndex - 1 - this._offset);
-      reverted.reverse(); // newest first
-      this._stateMachine.revertEntries(reverted);
-
-      if (this._configurationIndex < fromIncludingIndex) {
-        return; // no need to revert configuration
-      }
-
-      for (var index = fromIncludingIndex - 1; index > 0; index -= 1) {
-        if (this._snapshot && this._snapshot.lastIndex === index) {
-          this._configuration.set(this._snapshot.configuration);
-          this._configurationIndex = index;
-          return;
-        }
-        var entry = this.entryAtIndex(index);
-        if (entry instanceof __WEBPACK_IMPORTED_MODULE_7_conference_raftLogEntry__["b" /* ConfigurationEntry */]) {
-          this._configuration.set(entry.data);
-          this._configurationIndex = index;
-          return;
-        }
-      }
-
-      // no configuration found
-      this._configuration.set(new __WEBPACK_IMPORTED_MODULE_5_conference_raftConfiguration__["b" /* ConfigurationData */](new __WEBPACK_IMPORTED_MODULE_5_conference_raftConfiguration__["c" /* Members */]()));
-      this._configurationIndex = 0;
-    }
-  }, {
-    key: '_pushEntries',
-    value: function _pushEntries(entries) {
-      var _entries;
-
-      (_entries = this._entries).push.apply(_entries, __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray___default()(entries));
-
-      for (var index = entries.length - 1; index >= 0; index -= 1) {
-        var entry = entries[index];
-        if (entry instanceof __WEBPACK_IMPORTED_MODULE_7_conference_raftLogEntry__["b" /* ConfigurationEntry */]) {
-          this._configuration.set(entry.data);
-          this._configurationIndex = index;
-          break;
-        }
-      }
-    }
-  }, {
-    key: 'createSnapshot',
-    value: function createSnapshot(term) {
-      return __WEBPACK_IMPORTED_MODULE_6_conference_raftMessages__["h" /* SnapshotRequest */].create({
-        term: term,
-        lastTerm: this.entryTermAtIndex(this._lastApplied),
-        lastIndex: this._lastApplied,
-        configuration: this._configuration.get(),
-        state: this._stateMachine.state
-      });
-    }
-  }, {
-    key: 'loadSnapshot',
-    value: function loadSnapshot(snapshot) {
-      __WEBPACK_IMPORTED_MODULE_3_common_argCheck__["a" /* default */].instance('RaftLog.loadSnapshot', 'snapshot', snapshot, __WEBPACK_IMPORTED_MODULE_6_conference_raftMessages__["h" /* SnapshotRequest */]);
-      var lastIndex = snapshot.lastIndex,
-          configuration = snapshot.configuration;
-
-
-      this._entries = [];
-      this._offset = lastIndex;
-      this._commitIndex = lastIndex;
-      this._lastApplied = lastIndex;
-      this._configurationIndex = lastIndex;
-      this._configuration.set(configuration);
-      this._snapshot = snapshot;
-
-      this._stateMachine.loadSnapshot(snapshot);
-    }
-  }, {
-    key: 'clear',
-    value: function clear() {
-      this._stateMachine.clear();
-      this._entries = [];
-      this._offset = 0;
-      this._commitIndex = 0;
-      this._lastApplied = 0;
-      this._snapshot = null;
-      this._configurationIndex = 0;
-    }
-  }, {
-    key: 'meshTopology',
-    get: function get() {
-      return this._meshTopology;
-    }
-  }, {
-    key: 'configuration',
-    get: function get() {
-      return this._configuration;
-    }
-  }, {
-    key: 'lastEntry',
-    get: function get() {
-      return this.entryAtIndex(this.lastLogIndex);
-    }
-  }, {
-    key: 'lastLogIndex',
-    get: function get() {
-      return this._offset + this._entries.length;
-    }
-  }, {
-    key: 'lastLogTerm',
-    get: function get() {
-      return this.entryTermAtIndex(this.lastLogIndex);
-    }
-  }, {
-    key: 'commitIndex',
-    get: function get() {
-      return this._commitIndex;
-    }
-  }]);
-
-  return RaftLog;
-}();
-
-/* harmony default export */ __webpack_exports__["a"] = (RaftLog);
-
-/***/ }),
-/* 195 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_map__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_common_log__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_common_utils__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_conference_raftLogEntry__ = __webpack_require__(133);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_conference_raftMessages__ = __webpack_require__(147);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_conference_raftState__ = __webpack_require__(167);
-
-
-
-
-
-
-
-
-
-
-
-
-
-var TAG = 'raft';
-
-var TICK_INTERVAL = 100;
-var TICK_APPLIED_FACTOR = 10;
-var STATE_OP_APPLY_TTL_MS = 30 * 1000;
-var RESEND_RTT_FACTOR = 6;
-
-// The StateMachine keeps the local state of the Raft cluster, and applies
-// committed entries to that state after deduplication. It is also responsible
-// for keeping track of operations that have been requested by the local
-// client, and to retry them if needed.
-//
-// This diagram describes the flow of a successful state operation where the
-// local client is the leader.
-//
-//      Raft --3-> LeaderState --4b-> ...
-//      |  ^            |
-//      1  2            4a
-//      v  |            v
-// StateMachine <-5-- RaftLog
-//
-// 1. An operation is requested.
-// 2. The state machine sends a request via the onStateOpRequest callback.
-// 3. Raft forwards the request to the current state.
-// 4a. Append the OpEntry to the log.
-// 4b. Raft algorithm in action, which ends up committing the entry.
-// 5. The log forwards committed entries to the state machine.
-//
-// And now a diagram for if we're a follower.
-//
-//      Raft --3-> FollowerState --4-> LeaderState --5a->
-//      |  ^                                |
-//      1  2                                5a
-//      v  |                                v
-// StateMachine <-7-- RaftLog <- - 6 - - RaftLog
-//
-// 1-3. Same as above.
-// 4. Send StateOpRequest to the current leader.
-// 5a 5b. Same as 4a 4b above.
-// 6. Raft algorithm ends up committing the entry in the follower's log.
-// 7. Same as 5 above.
-//
-
-var StateMachine = function () {
-  function StateMachine(_ref) {
-    var onStateChange = _ref.onStateChange,
-        onStateOpRequest = _ref.onStateOpRequest,
-        onConfigurationCommitted = _ref.onConfigurationCommitted;
-
-    __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default()(this, StateMachine);
-
-    this._tick = this._tick.bind(this);
-
-    this._state = {};
-    this._tickMod = 0;
-
-    // Client requests are tracked here, type is Map<opId, [expiryMs, deferred, StateOpRequest]>
-    this._tuples = new __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_map___default.a();
-
-    // All members keep track of all op entry IDs that have been applied.
-    this._appliedIds = new __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_map___default.a();
-    this._onStateChange = onStateChange;
-    this._onStateOpRequest = onStateOpRequest;
-    this._onConfigurationCommitted = onConfigurationCommitted;
-  }
-
-  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass___default()(StateMachine, [{
-    key: 'toString',
-    value: function toString() {
-      return 'stateMachine{' + __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default()(this.state) + '}';
-    }
-  }, {
-    key: 'start',
-    value: function start() {
-      this.stop();
-      this._tickMod = 0;
-      this._intervalId = setInterval(this._tick, TICK_INTERVAL);
-    }
-  }, {
-    key: 'stop',
-    value: function stop() {
-      this.clear();
-      if (this._intervalId) {
-        clearInterval(this._intervalId);
-        this._intervalId = null;
-      }
-    }
-  }, {
-    key: 'clear',
-    value: function clear() {
-      this._state = {};
-      this._tuples.clear();
-      this._appliedIds.clear();
-    }
-  }, {
-    key: 'requestStateOp',
-    value: function requestStateOp(_ref2) {
-      var op = _ref2.op,
-          args = _ref2.args,
-          retryTtlMs = _ref2.retryTtlMs;
-
-      var id = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_common_utils__["randomString"])(__WEBPACK_IMPORTED_MODULE_6_conference_raftLogEntry__["d" /* OpEntry */].idSize);
-      var request = __WEBPACK_IMPORTED_MODULE_7_conference_raftMessages__["j" /* StateOpRequest */].create({ id: id, op: op, args: args });
-      var now = Date.now();
-      var expiry = now + retryTtlMs;
-      var nextResend = now + __WEBPACK_IMPORTED_MODULE_8_conference_raftState__["d" /* EXPECTED_RTT_MS */] * RESEND_RTT_FACTOR;
-      var deferred = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_common_utils__["defer"])();
-      this._tuples.set(id, { expiry: expiry, nextResend: nextResend, deferred: deferred, request: request });
-      this._onStateOpRequest(request);
-      return deferred.promise;
-    }
-  }, {
-    key: 'handleStateOpResponse',
-    value: function handleStateOpResponse(peerId, message) {
-      var id = message.id,
-          errorCode = message.errorCode;
-
-      var tuple = this._tuples.get();
-      if (!tuple) {
-        __WEBPACK_IMPORTED_MODULE_4_common_log__["default"].info(TAG, this, ' got StateOpResponse for unknown tuple, ' + id);
-        return;
-      }
-      if (errorCode) {
-        if (errorCode === __WEBPACK_IMPORTED_MODULE_7_conference_raftMessages__["k" /* StateOpResponse */].NOT_LEADER) {
-          this._onStateOpRequest(tuple.request);
-          tuple.nextResend = Date.now() + __WEBPACK_IMPORTED_MODULE_8_conference_raftState__["d" /* EXPECTED_RTT_MS */] * RESEND_RTT_FACTOR;
-        } else {
-          __WEBPACK_IMPORTED_MODULE_4_common_log__["default"].error(TAG, this, ' got unknown StateOpResponse errorCode for ' + id + ', ' + errorCode);
-        }
-      } else {
-        // Success, reset resend timeout
-        tuple.nextResend = Date.now() + __WEBPACK_IMPORTED_MODULE_8_conference_raftState__["d" /* EXPECTED_RTT_MS */] * RESEND_RTT_FACTOR;
-      }
-    }
-  }, {
-    key: '_tick',
-    value: function _tick() {
-      var _this = this;
-
-      var now = Date.now();
-      // Applied ids don't need to be checked nearly as often as tuple resends, so
-      // only do it every nth tick.
-      this._tickMod = (this._tickMod + 1) % TICK_APPLIED_FACTOR;
-      if (this._tickMod === 0) {
-        this._appliedIds.forEach(function (expiry, entryId) {
-          if (expiry < now) {
-            _this._appliedIds.delete(entryId);
-          }
-        });
-      }
-      this._tuples.forEach(function (tuple, entryId) {
-        if (tuple.expiry < now) {
-          _this._tuples.delete(entryId);
-          tuple.deferred.reject(new Error('Timed out'));
-        } else if (tuple.nextResend < now) {
-          _this._onStateOpRequest(tuple.request);
-          tuple.nextResend = now + __WEBPACK_IMPORTED_MODULE_8_conference_raftState__["d" /* EXPECTED_RTT_MS */] * RESEND_RTT_FACTOR;
-        }
-      });
-    }
-  }, {
-    key: 'commitEntries',
-    value: function commitEntries(entries) {
-      var _this2 = this;
-
-      var updated = false;
-      entries.forEach(function (entry) {
-        if (entry instanceof __WEBPACK_IMPORTED_MODULE_6_conference_raftLogEntry__["d" /* OpEntry */]) {
-          if (_this2._appliedIds.has(entry.id)) {
-            __WEBPACK_IMPORTED_MODULE_4_common_log__["default"].debug(TAG, _this2, 'ignored duplicate entry, ' + entry);
-          } else {
-            var expiry = Date.now() + STATE_OP_APPLY_TTL_MS;
-            if (entry.id) {
-              _this2._appliedIds.set(entry.id, expiry);
-            }
-            var newState = entry.apply(_this2._state);
-            if (newState) {
-              updated = true;
-              _this2._state = newState;
-            }
-          }
-          var tuple = _this2._tuples.get(entry.id);
-          if (tuple) {
-            tuple.deferred.resolve();
-            _this2._tuples.delete(entry.id);
-          }
-        } else if (entry instanceof __WEBPACK_IMPORTED_MODULE_6_conference_raftLogEntry__["b" /* ConfigurationEntry */]) {
-          _this2._onConfigurationCommitted && _this2._onConfigurationCommitted(entry.data);
-        }
-      });
-      if (updated) {
-        this._onStateChange && this._onStateChange();
-      }
-    }
-  }, {
-    key: 'revertEntries',
-    value: function revertEntries(entries) {
-      var _this3 = this;
-
-      entries.forEach(function (entry) {
-        var tuple = _this3._tuples.get(entry.id);
-        if (tuple) {
-          _this3._onStateOpRequest(tuple.request);
-          tuple.nextResend = Date.now() + __WEBPACK_IMPORTED_MODULE_8_conference_raftState__["d" /* EXPECTED_RTT_MS */] * RESEND_RTT_FACTOR;
-        }
-      });
-    }
-  }, {
-    key: 'loadSnapshot',
-    value: function loadSnapshot(snapshot) {
-      this._state = snapshot.state;
-
-      this._onStateChange && this._onStateChange();
-      this._onConfigurationCommitted && this._onConfigurationCommitted(snapshot.configuration);
-    }
-  }, {
-    key: 'state',
-    get: function get() {
-      return this._state;
-    }
-  }]);
-
-  return StateMachine;
-}();
-
-/* harmony default export */ __webpack_exports__["a"] = (StateMachine);
-
-/***/ }),
-/* 196 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export BadRequestError */
-/* unused harmony export TooLargeError */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return AuthenticationError; });
-/* unused harmony export InvalidCaptchaError */
-/* unused harmony export GuestAccessError */
-/* unused harmony export ConflictError */
-/* unused harmony export InvalidUsernameError */
-/* unused harmony export InvalidPasswordError */
-/* unused harmony export InvalidAliasError */
-/* unused harmony export RateLimitError */
-/* unused harmony export InternalServerError */
-/* harmony export (immutable) */ __webpack_exports__["a"] = parseSynapseErrorResponse;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_common_errors__ = __webpack_require__(145);
-
-
-
-
-
-
-
-
-/**
- * The request was malformed. This error shouldn't be encountered since input is validated
- * on the client-side.
- *
- * @class BadRequestError
- * @extends CctError
- */
-var BadRequestError = function (_CctError) {
-  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(BadRequestError, _CctError);
-
-  function BadRequestError() {
-    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, BadRequestError);
-
-    return __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (BadRequestError.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(BadRequestError)).apply(this, arguments));
-  }
-
-  return BadRequestError;
-}(__WEBPACK_IMPORTED_MODULE_4_common_errors__["a" /* default */]);
-BadRequestError.errorName = 'BadRequestError';
-
-/**
- * The request was too large, encountered e.g. when sending messages in a room.
- *
- * @class TooLargeError
- * @extends CctError
- */
-var TooLargeError = function (_CctError2) {
-  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(TooLargeError, _CctError2);
-
-  function TooLargeError() {
-    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, TooLargeError);
-
-    return __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (TooLargeError.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(TooLargeError)).apply(this, arguments));
-  }
-
-  return TooLargeError;
-}(__WEBPACK_IMPORTED_MODULE_4_common_errors__["a" /* default */]);
-TooLargeError.errorName = 'TooLargeError';
-
-/**
- * Authentication failed, or authentication is required to perform the action.
- *
- * @class AuthenticationError
- * @extends CctError
- */
-var AuthenticationError = function (_CctError3) {
-  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(AuthenticationError, _CctError3);
-
-  function AuthenticationError() {
-    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, AuthenticationError);
-
-    return __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (AuthenticationError.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(AuthenticationError)).apply(this, arguments));
-  }
-
-  return AuthenticationError;
-}(__WEBPACK_IMPORTED_MODULE_4_common_errors__["a" /* default */]);
-AuthenticationError.errorName = 'AuthenticationError';
-
-/* placeholder */
-var InvalidCaptchaError = function (_CctError4) {
-  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(InvalidCaptchaError, _CctError4);
-
-  function InvalidCaptchaError() {
-    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, InvalidCaptchaError);
-
-    return __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (InvalidCaptchaError.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(InvalidCaptchaError)).apply(this, arguments));
-  }
-
-  return InvalidCaptchaError;
-}(__WEBPACK_IMPORTED_MODULE_4_common_errors__["a" /* default */]);
-InvalidCaptchaError.errorName = 'InvalidCaptchaError';
-
-/**
- * The requested action could not be performed because the authenticated user has a guest account.
- *
- * @class GuestAccessError
- * @extends CctError
- */
-var GuestAccessError = function (_CctError5) {
-  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(GuestAccessError, _CctError5);
-
-  function GuestAccessError() {
-    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, GuestAccessError);
-
-    return __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (GuestAccessError.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(GuestAccessError)).apply(this, arguments));
-  }
-
-  return GuestAccessError;
-}(__WEBPACK_IMPORTED_MODULE_4_common_errors__["a" /* default */]);
-GuestAccessError.errorName = 'GuestAccessError';
-
-/**
- * The requested action would result in a conflict, such as trying to create a room with an
- * alias that already exists, or registering a user with an existing username.
- *
- * @class ConflictError
- * @extends CctError
- */
-var ConflictError = function (_CctError6) {
-  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(ConflictError, _CctError6);
-
-  function ConflictError() {
-    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, ConflictError);
-
-    return __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (ConflictError.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(ConflictError)).apply(this, arguments));
-  }
-
-  return ConflictError;
-}(__WEBPACK_IMPORTED_MODULE_4_common_errors__["a" /* default */]);
-ConflictError.errorName = 'ConflictError';
-
-/**
- * The requested username is invalid. Usernames must at most be 512 characters long
- * and may only contain `a-z`, `0-9`, and `_-./`.
- *
- * @class InvalidUsernameError
- * @extends CctError
- */
-var InvalidUsernameError = function (_CctError7) {
-  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(InvalidUsernameError, _CctError7);
-
-  function InvalidUsernameError() {
-    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, InvalidUsernameError);
-
-    return __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (InvalidUsernameError.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(InvalidUsernameError)).apply(this, arguments));
-  }
-
-  return InvalidUsernameError;
-}(__WEBPACK_IMPORTED_MODULE_4_common_errors__["a" /* default */]);
-InvalidUsernameError.errorName = 'InvalidUsernameError';
-
-/**
- * The requested password is invalid. Passwords must at most be 512 characters long.
- *
- * @class InvalidPasswordError
- * @extends CctError
- */
-var InvalidPasswordError = function (_CctError8) {
-  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(InvalidPasswordError, _CctError8);
-
-  function InvalidPasswordError() {
-    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, InvalidPasswordError);
-
-    return __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (InvalidPasswordError.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(InvalidPasswordError)).apply(this, arguments));
-  }
-
-  return InvalidPasswordError;
-}(__WEBPACK_IMPORTED_MODULE_4_common_errors__["a" /* default */]);
-InvalidPasswordError.errorName = 'InvalidPasswordError';
-
-/**
- * The requested room alias is invalid because it contains forbidden characters. Aliases are
- * not allowed to contain whitespace characters.
- *
- * @class InvalidAliasError
- * @extends CctError
- */
-var InvalidAliasError = function (_CctError9) {
-  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(InvalidAliasError, _CctError9);
-
-  function InvalidAliasError() {
-    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, InvalidAliasError);
-
-    return __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (InvalidAliasError.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(InvalidAliasError)).apply(this, arguments));
-  }
-
-  return InvalidAliasError;
-}(__WEBPACK_IMPORTED_MODULE_4_common_errors__["a" /* default */]);
-InvalidAliasError.errorName = 'InvalidAliasError';
-
-/**
- * The action could not be performed because it hit the rate limit of the server. This is
- * currently only used internally since requests are automatically retried if they hit the
- * rate limit.
- *
- * @class RateLimitError
- * @extends CctError
- */
-var RateLimitError = function (_CctError10) {
-  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(RateLimitError, _CctError10);
-
-  function RateLimitError(message, body) {
-    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, RateLimitError);
-
-    var _this10 = __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (RateLimitError.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(RateLimitError)).call(this, message));
-
-    if (body && 'retry_after_ms' in body) {
-      _this10.retryAfterMs = body.retry_after_ms;
-    } else {
-      _this10.retryAfterMs = RateLimitError.defaultRetryTimeoutMs;
-    }
-    return _this10;
-  }
-
-  return RateLimitError;
-}(__WEBPACK_IMPORTED_MODULE_4_common_errors__["a" /* default */]);
-RateLimitError.errorName = 'RateLimitError';
-RateLimitError.defaultRetryTimeoutMs = 1000;
-
-/**
- * The server encountered an error because of an unexpected code path or an invalid state.
- *
- * @class InternalServerError
- * @extends CctError
- */
-var InternalServerError = function (_CctError11) {
-  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(InternalServerError, _CctError11);
-
-  function InternalServerError() {
-    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, InternalServerError);
-
-    return __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (InternalServerError.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(InternalServerError)).apply(this, arguments));
-  }
-
-  return InternalServerError;
-}(__WEBPACK_IMPORTED_MODULE_4_common_errors__["a" /* default */]);
-InternalServerError.errorName = 'InternalServerError';
-
-var errorParsers = {
-  M_UNKNOWN: {
-    parse: function parse(message) {
-      if (message.indexOf('Room alias') === 0 && message.indexOf('already exists') !== -1) {
-        return ConflictError;
-      } else if (message.indexOf('Room') === 0 && message.indexOf('does not exist') !== -1) {
-        return __WEBPACK_IMPORTED_MODULE_4_common_errors__["b" /* NotFoundError */];
-      }
-    },
-
-    exact: {
-      'Room alias already taken': ConflictError,
-      'HMAC incorrect': AuthenticationError,
-      'Invalid username': InvalidUsernameError,
-      'Invalid password': InvalidPasswordError,
-      'Invalid characters in room alias': InvalidAliasError,
-      'Registration has been disabled': __WEBPACK_IMPORTED_MODULE_4_common_errors__["c" /* NotAllowedError */],
-      'Guest access is disabled': GuestAccessError,
-      'Upload request body is too large': TooLargeError
-    },
-    Default: __WEBPACK_IMPORTED_MODULE_4_common_errors__["d" /* UnknownError */]
-  },
-  M_FORBIDDEN: {
-    parse: function parse(message) {
-      if (message.indexOf('is already in the room.') !== -1) {
-        return ConflictError;
-      }
-    },
-
-    exact: {
-      'Guest access not allowed': GuestAccessError,
-      'Invalid password': AuthenticationError,
-      'Invalid token': AuthenticationError
-    },
-    Default: __WEBPACK_IMPORTED_MODULE_4_common_errors__["c" /* NotAllowedError */]
-  },
-  M_NOT_FOUND: { Default: __WEBPACK_IMPORTED_MODULE_4_common_errors__["b" /* NotFoundError */] },
-  M_LIMIT_EXCEEDED: { Default: RateLimitError },
-  M_UNAUTHORIZED: { Default: __WEBPACK_IMPORTED_MODULE_4_common_errors__["c" /* NotAllowedError */] },
-  M_MISSING_TOKEN: { Default: BadRequestError },
-  M_UNKNOWN_TOKEN: { Default: AuthenticationError },
-  M_UNRECOGNIZED: { Default: BadRequestError },
-  M_BAD_JSON: { Default: BadRequestError },
-  M_NOT_JSON: { Default: BadRequestError },
-  M_USER_IN_USE: { Default: ConflictError },
-  M_ROOM_IN_USE: { Default: ConflictError },
-  M_BAD_PAGINATION: { Default: BadRequestError },
-  M_BAD_STATE: { Default: ConflictError }, // only for trying to ban/unban users
-  M_GUEST_ACCESS_FORBIDDEN: { Default: GuestAccessError },
-  M_CAPTCHA_NEEDED: { Default: BadRequestError },
-  M_CAPTCHA_INVALID: { Default: InvalidCaptchaError },
-  M_MISSING_PARAM: { Default: BadRequestError },
-  M_TOO_LARGE: { Default: TooLargeError },
-  M_EXCLUSIVE: { Default: ConflictError },
-  M_THREEPID_AUTH_FAILED: { Default: __WEBPACK_IMPORTED_MODULE_4_common_errors__["d" /* UnknownError */] },
-  M_THREEPID_IN_USE: { Default: __WEBPACK_IMPORTED_MODULE_4_common_errors__["d" /* UnknownError */] },
-  M_THREEPID_NOT_FOUND: { Default: __WEBPACK_IMPORTED_MODULE_4_common_errors__["d" /* UnknownError */] },
-  M_INVALID_USERNAME: { Default: InvalidUsernameError },
-  M_SERVER_NOT_TRUSTED: { Default: AuthenticationError }
-};
-
-function parseSynapseErrorResponse(error) {
-  if (error instanceof Error) {
-    return error;
-  }
-
-  var status = error.status;
-  var name = error.body && error.body.errcode;
-  var message = error.body && error.body.error;
-
-  if (!message && !name && typeof error.body === 'string') {
-    name = 'M_UNKNOWN';
-    message = error.body;
-  }
-
-  // console.error(`Synapse error: [${status}] ${name}: ${message}`)
-  if (status === 404) {
-    return new __WEBPACK_IMPORTED_MODULE_4_common_errors__["b" /* NotFoundError */](message || 'Not Found', error.body);
-  }
-  message = message || 'No message';
-  if (status === 500) {
-    return new InternalServerError(message, error.body);
-  }
-
-  var parser = errorParsers[name];
-  if (!parser) {
-    return new __WEBPACK_IMPORTED_MODULE_4_common_errors__["d" /* UnknownError */]('[' + name + '] ' + message, error.body);
-  }
-  var ExactMatch = parser.exact && parser.exact[message];
-
-  if (ExactMatch) {
-    return new ExactMatch(message, error.body);
-  } else {
-    if (parser.parse) {
-      var Match = parser.parse(message);
-      if (Match) {
-        return new Match(message, error.body);
-      }
-    }
-    if (parser.Default) {
-      return new parser.Default(message, error.body);
-    }
-  }
-  return new __WEBPACK_IMPORTED_MODULE_4_common_errors__["d" /* UnknownError */]('[' + name + '] ' + message, error.body);
-}
-
-/***/ }),
-/* 197 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["b"] = UserRegistry;
-/* harmony export (immutable) */ __webpack_exports__["a"] = toUserId;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_common_log__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_common_argCheck__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_common_utils__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_matrix_ids__ = __webpack_require__(168);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_matrix_user__ = __webpack_require__(188);
-
-
-
-
-
-
-
-
-function UserRegistry() {
-  this._dependencies = null;
-  this._users = {};
-}
-
-UserRegistry.prototype = {
-  constructor: UserRegistry,
-  tag: 'user-registry',
-  toString: function toString() {
-    return 'userRegistry{}';
-  },
-  getUser: function getUser(arg) {
-    var matrixId = toUserId('UserRegistry.get', arg, this._dependencies.serverName);
-    var user = this._users[matrixId];
-    if (!user) {
-      user = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_common_utils__["priv"])(__WEBPACK_IMPORTED_MODULE_4_matrix_user__["a" /* default */], {
-        matrixId: matrixId,
-        serverName: this._dependencies.serverName
-      }, this._dependencies.imageResourceFactory);
-      this._users[matrixId] = user;
-    }
-    return user;
-  },
-
-  // dependencies.ownUserId
-  // dependencies.imageResourceFactory
-  init: function init(dependencies) {
-    this._dependencies = dependencies;
-    return this;
-  },
-  clear: function clear() {
-    this._dependencies = null;
-    this._users = {};
-  },
-
-  _handlePresenceSync: function _handlePresenceSync(presenceEvents) {
-    for (var i in presenceEvents) {
-      var event = presenceEvents[i];
-      var content = event.content;
-      var matrixId = event.sender;
-      var user = this.getUser(matrixId);
-      user._update(content);
-      __WEBPACK_IMPORTED_MODULE_0_common_log__["default"].verbose('events', 'got presence event for user ' + matrixId, user);
-    }
-  }
-};
-
-function toUserId(context, user, serverName) {
-  var id;
-  if (user instanceof __WEBPACK_IMPORTED_MODULE_4_matrix_user__["a" /* default */]) {
-    id = user._matrixId;
-  } else if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_common_utils__["isObject"])(user)) {
-    id = user.user_id || user.userId || user.id;
-  } else {
-    id = user;
-  }
-  __WEBPACK_IMPORTED_MODULE_1_common_argCheck__["a" /* default */].string(context, 'id', id);
-  return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_matrix_ids__["b" /* toMatrixIdForServer */])(context, id, serverName, 'user');
-}
-
-/***/ }),
-/* 198 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = attachPeerConnectionMonitor;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_keys__ = __webpack_require__(64);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_keys___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_keys__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_common_log__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_common_utils__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_webrtc_statsNormalizer__ = __webpack_require__(201);
-
-
-
-
-
-
-
-
-// function MediaStreamTrackMonitor(pc, mst) {
-//     this.pc = pc;
-//     this.mst = mst;
-//     mst.addEventListener('started', function () {
-//         log.verbose('stats-monitor', 'mst: onstarted');
-//     });
-//     mst.addEventListener('mute', function () {
-//         log.verbose('stats-monitor', 'mst: onmute');
-//     });
-//     mst.addEventListener('unmute', function () {
-//         log.verbose('stats-monitor', 'mst: onunmute');
-//     });
-//     mst.addEventListener('overconstrained', function () {
-//         log.verbose('stats-monitor', 'mst: onoverconstrained: ' + JSON.stringify(mst.getConstraints()));
-//     });
-//     mst.addEventListener('ended', function () {
-//         log.verbose('stats-monitor', 'mst: onended');
-//     });
-// }
-//
-// function MediaStreamMonitor(pc, ms) {
-//     var self = this;
-//     this.pc = pc;
-//     this.ms = ms;
-//     this.mediaStreamTracks = {};
-//     ms.addEventListener('active', function () {
-//         log.verbose('stats-monitor', 'ms: onactive');
-//     });
-//     ms.addEventListener('addtrack', function (e) {
-//         log.verbose('stats-monitor', 'ms: onaddtrack: ' + e.track.id);
-//         self.mediaStreamTracks[e.track.id] = new MediaStreamTrackMonitor(self, e.track);
-//     });
-//     ms.addEventListener('ended', function () {
-//         log.verbose('stats-monitor', 'ms: onended');
-//     });
-//     ms.addEventListener('inactive', function () {
-//         log.verbose('stats-monitor', 'ms: oninactive');
-//     });
-//     ms.addEventListener('removetrack', function (e) {
-//         log.verbose('stats-monitor', 'ms: onremovetrack: ' + e.track.id);
-//         delete self.mediaStreamTracks[e.track.id];
-//     });
-// }
-
-var WEBRTC_MONITOR_REGEX_MSID_CHROME = /^a=ssrc:(\d+) msid:([-a-zA-Z0-9]+) ([-a-zA-Z0-9]+)$/;
-var WEBRTC_MONITOR_REGEX_MSID_FIREFOX = /^a=msid:{([-a-zA-Z0-9]+)} {([-a-zA-Z0-9]+)}$/;
-var WEBRTC_MONITOR_REGEX_MSLABEL = /^a=ssrc:(\d+) mslabel:([-a-zA-Z0-9]+)$/;
-var WEBRTC_MONITOR_REGEX_LABEL = /^a=ssrc:(\d+) label:(?:{)([-a-zA-Z0-9]+)(?:})$/;
-var WEBRTC_MONITOR_REGEX_CNAME = /^a=ssrc:(\d+) cname:(?:{)([-a-zA-Z0-9]+)(?:})$/;
-
-function parseIdentities(sdp, identities) {
-  var ids = {};
-  ids.ssrcs = [];
-  var blocks = sdp.split(/(?=^m=)/mig);
-  for (var block in blocks) {
-    var lines = blocks[block].split(/\r?\n/);
-    var msidTemp = {};
-    for (var line = 0; line < lines.length; line += 1) {
-      var sdpMsIdC = lines[line].match(WEBRTC_MONITOR_REGEX_MSID_CHROME);
-      if (sdpMsIdC) {
-        if (!(sdpMsIdC[1] in ids.ssrcs)) {
-          ids.ssrcs.push(sdpMsIdC[1]);
-        }
-        ids.msid = sdpMsIdC[2];
-        ids.mstid = sdpMsIdC[3];
-      }
-      var sdpMsIdF = lines[line].match(WEBRTC_MONITOR_REGEX_MSID_FIREFOX);
-      if (sdpMsIdF) {
-        if (ids.ssrc) {
-          ids.msid = sdpMsIdF[1];
-          ids.mstid = sdpMsIdF[2];
-        } else {
-          msidTemp.msid = sdpMsIdF[1];
-          msidTemp.mstid = sdpMsIdF[2];
-        }
-      }
-      var sdpMsLabel = lines[line].match(WEBRTC_MONITOR_REGEX_MSLABEL);
-      if (sdpMsLabel) {
-        if (!(sdpMsLabel[1] in ids.ssrcs)) {
-          ids.ssrcs.push(sdpMsLabel[1]);
-        }
-        ids.msid = sdpMsLabel[2];
-      }
-      var sdpLabel = lines[line].match(WEBRTC_MONITOR_REGEX_LABEL);
-      if (sdpLabel) {
-        if (!(sdpLabel[1] in ids.ssrcs)) {
-          ids.ssrcs.push(sdpLabel[1]);
-        }
-        ids.mstid = sdpLabel[2];
-      }
-      var sdpCname = lines[line].match(WEBRTC_MONITOR_REGEX_CNAME);
-      if (sdpCname) {
-        if (!(sdpCname[1] in ids.ssrcs)) {
-          ids.ssrcs.push(sdpCname[1]);
-        }
-        ids.cname = sdpCname[2];
-        if (__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_keys___default()(msidTemp).length) {
-          ids.msid = msidTemp.msid;
-          ids.mstid = msidTemp.mstid;
-          msidTemp = {};
-        }
-      }
-    }
-    if (__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_keys___default()(ids.ssrcs).length) {
-      for (var ssrc in ids.ssrcs) {
-        identities[ids.ssrcs[ssrc]] = {};
-        for (var id in ids) {
-          if (id === 'ssrcs') {
-            continue;
-          }
-          identities[ids.ssrcs[ssrc]][id] = ids[id];
-        }
-      }
-    }
-    ids = {};
-    ids.ssrcs = [];
-  }
-  return identities;
-}
-
-function reportGenericStat(formatter, identities, stat) {
-  var sample = {
-    timestamp: Date.now(),
-    pcId: identities.pcId
-  };
-
-  sample = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_common_utils__["assign"])(sample, stat);
-
-  formatter.handleStats([sample]);
-}
-
-var PEER_CONNECTION_MONITOR_CANDIDATE_RE = new RegExp('' + '^candidate:(\\d+) (\\d) (UDP|TCP) ([\\d\\.]*) ([\\d\\.a-f\\:]*) (\\d*) ' + 'typ ([a-z]*)( raddr ([\\d\\.a-f\\:]*) rport (\\d*))?( tcptype (active|passive|so))?.*$', 'mi');
-
-function parseCandidateString(candidateString) {
-  var candidate = null;
-  var candidateMatches = candidateString.match(PEER_CONNECTION_MONITOR_CANDIDATE_RE);
-  if (candidateMatches) {
-    candidate = {
-      'foundation': candidateMatches[1],
-      'componentId': parseInt(candidateMatches[2]),
-      'transport': candidateMatches[3].toUpperCase(),
-      'priority': parseInt(candidateMatches[4]),
-      'address': candidateMatches[5],
-      'port': parseInt(candidateMatches[6]),
-      'type': candidateMatches[7]
-    };
-    if (candidateMatches[9]) {
-      candidate.relatedAddress = candidateMatches[9];
-    }
-    if (!isNaN(candidateMatches[10])) {
-      candidate.relatedPort = parseInt(candidateMatches[10]);
-    }
-    if (candidateMatches[12]) {
-      candidate.tcpType = candidateMatches[12];
-    } else if (candidate.transport === 'TCP') {
-      if (candidate.port === 0 || candidate.port === 9) {
-        candidate.tcpType = 'active';
-        candidate.port = 9;
-      } else {
-        return;
-      }
-    }
-  }
-  return candidate;
-}
-
-function reportCandidate(formatter, identities, rtcicecandidate, localOrRemote) {
-  var candidate = parseCandidateString(rtcicecandidate.candidate);
-  if (!candidate) {
-    return;
-  }
-  var report = {
-    sourceId: 'candidates',
-    localOrRemote: localOrRemote
-  };
-  report = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_common_utils__["assign"])(report, candidate);
-  reportGenericStat(formatter, identities, report);
-}
-
-var PEER_CONNECTION_MONITOR_INTERNAL_MS = 1000;
-var PEER_CONNECTION_MONITOR_ICE_CHECKING_TIMEOUT_MS = 15000;
-
-function attachPeerConnectionMonitor(pc, formatter, reportIntervalMs) {
-  var tag = 'stats-monitor';
-  var callSucceeded = null;
-
-  var reportInterval = 0;
-  reportIntervalMs = reportIntervalMs || PEER_CONNECTION_MONITOR_INTERNAL_MS;
-
-  var identities = {
-    isRelay: false,
-    pcId: pc.id
-  };
-
-  pc.addEventListener('signalingstatechange', function () {
-    if (pc.signalingState === 'closed') {
-      __WEBPACK_IMPORTED_MODULE_1_common_log__["default"].debug(tag, 'stopped gather stats for ' + pc.id);
-      return clearInterval(reportInterval);
-    }
-
-    if (pc._pc.localDescription) {
-      identities = parseIdentities(pc._pc.localDescription.sdp, identities);
-    }
-    if (pc._pc.remoteDescription) {
-      identities = parseIdentities(pc._pc.remoteDescription.sdp, identities);
-    }
-  });
-
-  var normalizePeerConnectionStats = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_webrtc_statsNormalizer__["a" /* default */])();
-  var iceCheckingTimeout;
-
-  pc.addEventListener('iceconnectionstatechange', function () {
-    var iceConnectionState = pc.iceConnectionState;
-    reportGenericStat(formatter, identities, {
-      sourceId: 'iceConnectionState',
-      iceConnectionState: iceConnectionState
-    });
-    if (iceCheckingTimeout) {
-      clearTimeout(iceCheckingTimeout);
-      iceCheckingTimeout = null;
-    }
-    if (callSucceeded === null) {
-      if (iceConnectionState === 'connected' || iceConnectionState === 'completed') {
-        callSucceeded = true;
-        reportGenericStat(formatter, identities, {
-          sourceId: 'events',
-          eventType: 'callSetupResult',
-          callSucceeded: true
-        });
-
-        pc.getStats(null).then(function (stats) {
-          var normalizedStats = normalizePeerConnectionStats(stats, identities);
-          for (var i in normalizedStats) {
-            var stat = normalizedStats[i];
-            if ('localIpAddress' in stat) {
-              reportGenericStat(formatter, identities, stat);
-              if ('localCandidateType' in stat) {
-                identities.isRelay = stat.localCandidateType === 'relayed';
-              }
-            }
-          }
-        }).catch(function (error) {
-          __WEBPACK_IMPORTED_MODULE_1_common_log__["default"].warning(tag, 'getStats error:', error);
-        });
-      }
-      if (iceConnectionState === 'failed') {
-        callSucceeded = false;
-        reportGenericStat(formatter, identities, {
-          sourceId: 'events',
-          eventType: 'callSetupResult',
-          callSucceeded: false
-        });
-      }
-      if (iceConnectionState === 'checking' && !iceCheckingTimeout) {
-        iceCheckingTimeout = setTimeout(function () {
-          callSucceeded = false;
-          reportGenericStat(formatter, identities, {
-            sourceId: 'events',
-            eventType: 'callSetupResult',
-            callSucceeded: false
-          });
-        }, PEER_CONNECTION_MONITOR_ICE_CHECKING_TIMEOUT_MS);
-      }
-    }
-  });
-
-  pc.addEventListener('icecandidate', function (event) {
-    if (!event.candidate) {
-      return;
-    }
-    reportCandidate(formatter, identities, event.candidate, 'local');
-  });
-
-  var realAddIceCandidate = pc.addIceCandidate;
-  function addIceCandidate(candidate) {
-    reportCandidate(formatter, identities, candidate, 'remote');
-    return realAddIceCandidate.call(pc, candidate);
-  }
-  pc.addIceCandidate = addIceCandidate;
-
-  reportInterval = setInterval(function () {
-    pc.getStats(null).then(function (stats) {
-      var normalizedStats = normalizePeerConnectionStats(stats, identities);
-      formatter.handleStats(normalizedStats);
-    }).catch(function (error) {
-      __WEBPACK_IMPORTED_MODULE_1_common_log__["default"].warning(tag, 'getStats error:', error);
-    });
-  }, reportIntervalMs);
-}
-
-/***/ }),
-/* 199 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = parseCandidateInfo;
-/* harmony export (immutable) */ __webpack_exports__["c"] = filterSdpCandidates;
-/* harmony export (immutable) */ __webpack_exports__["d"] = workaroundSdpBundleBug;
-/* harmony export (immutable) */ __webpack_exports__["e"] = extractApplicationBlock;
-/* harmony export (immutable) */ __webpack_exports__["i"] = injectApplicationBlock;
-/* harmony export (immutable) */ __webpack_exports__["f"] = readMediaModeUnions;
-/* harmony export (immutable) */ __webpack_exports__["g"] = overrideMediaModes;
-/* harmony export (immutable) */ __webpack_exports__["h"] = rewriteBundleAttribute;
-/* harmony export (immutable) */ __webpack_exports__["b"] = disableSendBandwidthEstimation;
-/* harmony export (immutable) */ __webpack_exports__["j"] = removeChromeRetransmission;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_toArray__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_toArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_toArray__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_common_log__ = __webpack_require__(3);
-
-
-
-
-
-
-var TAG = 'peer-connection';
-
-var candidateRegExp = new RegExp('^candidate:(\\d+) (\\d) (UDP|TCP) ([\\d\\.]*) ([\\d\\.a-f\\:]*) (\\d*)' + ' typ ([a-z]*)( raddr ([\\d\\.a-f\\:]*) rport (\\d*))?' + '( tcptype (active|passive|so))?(.*)$', 'i');
-var bundleAttributeRegExp = new RegExp('^a=group:BUNDLE (.*)$', 'mi');
-
-/**
- * @typedef IceCandidateInfo
- *
- * An object containing information about an ICE candidate.
- *
- * More information can be found in [RFC 5245](https://tools.ietf.org/html/rfc5245) and
- * [RFC 6544](https://tools.ietf.org/html/rfc6544).
- *
- * @property {string} foundation - The candidate foundation.
- * @property {number} componentId - The candidate component id, will almost always be 1 because of RTCP multiplexing.
- * @property {string} transport - The transport used, `'TCP'` or `'UDP'`.
- * @property {number} priority - The candidate priority.
- * @property {string} address - The candidate address.
- * @property {number} port - The candidate port.
- * @property {string} type - The candidate type, `'host'`, `'srflx'`, `'prflx'`, or `'relay'`.
- * @property {string} candidate - The original candidate line, always without attribute prefix (`a=`).
- * @property {string} origin - The origin of the candidate, `'local'` or `'remote'`.
- * @property {string} [relatedAddress] - The candidate related address, not used in host candidates.
- * @property {number} [relatedPort] - The candidate related port, not used in host candidates.
- * @property {string} [tcpType] - The candidate tcp type, `'active'`, `'passive'`, simultaneous-open, `'so'`.
- */
-
-function parseCandidateInfo(line, origin) {
-  var match = line.match(candidateRegExp);
-  if (!match) {
-    throw new Error('Could not parse ' + origin + ' ice candidate: ' + line);
-  }
-  var info = {
-    foundation: match[1],
-    componentId: parseInt(match[2]),
-    transport: match[3].toUpperCase(),
-    priority: parseInt(match[4]),
-    address: match[5],
-    port: parseInt(match[6]),
-    type: match[7],
-    candidate: line,
-    origin: origin
-  };
-  if (match[9]) {
-    info.relatedAddress = match[9];
-  }
-  if (!isNaN(match[10])) {
-    info.relatedPort = parseInt(match[10]);
-  }
-  if (match[12]) {
-    info.tcpType = match[12];
-  } else if (info.transport === 'TCP') {
-    if (info.port === 0 || info.port === 9) {
-      info.tcpType = 'active';
-      info.port = 9;
-    } else {
-      return;
-    }
-  }
-  return info;
-}
-
-function filterSdpCandidates(sdp, filter, origin) {
-  if (!sdp) {
-    return sdp;
-  }
-  return sdp.split(/\r\n/).filter(function (line) {
-    if (line.indexOf('a=candidate:') === 0) {
-      try {
-        var candidate = line.slice(2);
-        var info = parseCandidateInfo(candidate, origin);
-        if (!filter(info)) {
-          __WEBPACK_IMPORTED_MODULE_3_common_log__["default"].verbose(TAG, 'ignored candidate due to being filtered out: ' + candidate);
-          return false;
-        }
-      } catch (error) {
-        __WEBPACK_IMPORTED_MODULE_3_common_log__["default"].error(TAG, 'ignoring candidate, error was thrown in candidate filter: ' + error);
-        return false;
-      }
-    }
-    return true;
-  }).join('\r\n');
-}
-
-function workaroundSdpBundleBug(sdp) {
-  if (sdp.match(bundleAttributeRegExp)) {
-    // If the SDP already has a group attribute, we don't need to do anything
-    return sdp;
-  }
-  return rewriteBundleAttribute(sdp);
-}
-
-function extractApplicationBlock(sdp) {
-  var _sdp$split = sdp.split(blockSplitRegExp),
-      _sdp$split2 = __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_toArray___default()(_sdp$split),
-      sessionBlock = _sdp$split2[0],
-      mediaBlocks = _sdp$split2.slice(1);
-
-  var applicationMBlockIndex = -1;
-  for (var index in mediaBlocks) {
-    if (mediaBlocks[index].indexOf('m=application') === 0) {
-      applicationMBlockIndex = +index;
-      break;
-    }
-  }
-
-  if (applicationMBlockIndex === -1) {
-    return [sdp, null];
-  }
-
-  var _ref = mediaBlocks[applicationMBlockIndex].match(/a=mid:(.*)/mi) || [],
-      _ref2 = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray___default()(_ref, 2),
-      applicationMId = _ref2[1];
-
-  if (!applicationMId) {
-    throw new Error('sdp application block does not have an mId');
-  }
-
-  var newSessionBlock = sessionBlock.replace(bundleAttributeRegExp, function (_, mIdsStr) {
-    var mIds = mIdsStr.split(' ');
-    var index = mIds.indexOf(applicationMId);
-    if (index === -1) {
-      throw new Error('sdp group:BUNDLE attribute did not contain application block mId');
-    }
-    mIds.splice(index, 1);
-    return 'a=group:BUNDLE ' + mIds.join(' ');
-  });
-
-  var applicationMBlock = mediaBlocks.splice(applicationMBlockIndex, 1)[0];
-  var newSdp = newSessionBlock + mediaBlocks.join('');
-  return [newSdp, {
-    block: applicationMBlock,
-    index: applicationMBlockIndex,
-    applicationMId: applicationMId,
-    needsInteropTranslation: !!mediaBlocks.length
-  }];
-}
-
-function injectApplicationBlock(sdp, extractedBlock) {
-  if (!extractedBlock) {
-    return sdp;
-  }
-
-  var _sdp$split3 = sdp.split(blockSplitRegExp),
-      _sdp$split4 = __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_toArray___default()(_sdp$split3),
-      sessionBlock = _sdp$split4[0],
-      mediaBlocks = _sdp$split4.slice(1);
-
-  var newSessionBlock = sessionBlock.replace(bundleAttributeRegExp, function (_, mIdsStr) {
-    var mIds = mIdsStr ? mIdsStr.split(' ') : [];
-    mIds.splice(extractedBlock.index, 0, extractedBlock.applicationMId);
-    return 'a=group:BUNDLE ' + mIds.join(' ');
-  });
-
-  mediaBlocks.splice(extractedBlock.index, 0, extractedBlock.block);
-  return newSessionBlock + mediaBlocks.join('');
-}
-
-var modeRegExp = new RegExp('^a=(inactive|recvonly|sendonly|sendrecv)$', 'mi');
-var blockSplitRegExp = new RegExp('(?=m=(?:audio|video|application))', 'i');
-var mediaTypeRegExp = new RegExp('^m=(audio|video|application)', 'i');
-
-var modeValues = {
-  inactive: 0,
-  sendonly: 1,
-  recvonly: 2,
-  sendrecv: 3
-};
-var modeNames = {
-  0: 'inactive',
-  1: 'sendonly',
-  2: 'recvonly',
-  3: 'sendrecv'
-};
-
-function readMediaModeUnions(sdp) {
-  var _sdp$split5 = sdp.split(blockSplitRegExp),
-      _sdp$split6 = __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_toArray___default()(_sdp$split5),
-      sessionBlock = _sdp$split6[0],
-      mediaBlocks = _sdp$split6.slice(1);
-  // the mode above the media blocks is used if a media block doesn't have it's own mode
-
-
-  var _ref3 = sessionBlock.match(modeRegExp) || [],
-      _ref4 = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray___default()(_ref3, 2),
-      _ref4$ = _ref4[1],
-      defaultModeName = _ref4$ === undefined ? 'sendrecv' : _ref4$;
-
-  var audioModeValue = modeValues.inactive;
-  var videoModeValue = modeValues.inactive;
-  var applicationModeValue = modeValues.inactive;
-
-  mediaBlocks.forEach(function (mediaBlock) {
-    var _mediaBlock$match = mediaBlock.match(mediaTypeRegExp),
-        _mediaBlock$match2 = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray___default()(_mediaBlock$match, 2),
-        mediaType = _mediaBlock$match2[1];
-
-    var _ref5 = mediaBlock.match(modeRegExp) || [],
-        _ref6 = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray___default()(_ref5, 2),
-        _ref6$ = _ref6[1],
-        modeName = _ref6$ === undefined ? defaultModeName : _ref6$;
-
-    var modeValue = modeValues[modeName];
-    if (mediaType === 'audio') {
-      audioModeValue |= modeValue;
-    } else if (mediaType === 'video') {
-      videoModeValue |= modeValue;
-    } else if (mediaType === 'application') {
-      applicationModeValue |= modeValue;
-    }
-  });
-
-  return {
-    audio: modeNames[audioModeValue],
-    video: modeNames[videoModeValue],
-    application: modeNames[applicationModeValue]
-  };
-}
-
-function overrideMediaModes(sdp, mediaModes) {
-  var _sdp$split7 = sdp.split(blockSplitRegExp),
-      _sdp$split8 = __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_toArray___default()(_sdp$split7),
-      sessionBlock = _sdp$split8[0],
-      mediaBlocks = _sdp$split8.slice(1);
-
-  mediaBlocks = mediaBlocks.map(function (mediaBlock) {
-    var _mediaBlock$match3 = mediaBlock.match(mediaTypeRegExp),
-        _mediaBlock$match4 = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray___default()(_mediaBlock$match3, 2),
-        mediaType = _mediaBlock$match4[1];
-
-    var modeName = mediaModes[mediaType] || modeNames[3]; // default to sendrecv
-    return mediaBlock.replace(modeRegExp, 'a=' + modeName);
-  });
-
-  return [sessionBlock].concat(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray___default()(mediaBlocks)).join('');
-}
-
-// This rewrites the bundle attribute according to the actual media blocks in the sdp
-function rewriteBundleAttribute(sdp) {
-  var _sdp$split9 = sdp.split(blockSplitRegExp),
-      _sdp$split10 = __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_toArray___default()(_sdp$split9),
-      sessionBlock = _sdp$split10[0],
-      mediaBlocks = _sdp$split10.slice(1);
-
-  var mIds = mediaBlocks.map(function (mediaBlock) {
-    var _ref7 = mediaBlock.match(/^a=mid:(.+)$/mi) || [],
-        _ref8 = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray___default()(_ref7, 2),
-        mId = _ref8[1];
-
-    if (!mId) {
-      var _mediaBlock$match5 = mediaBlock.match(mediaTypeRegExp),
-          _mediaBlock$match6 = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray___default()(_mediaBlock$match5, 2),
-          mediaType = _mediaBlock$match6[1];
-
-      throw new Error('media block of type ' + mediaType + ' did not contain mid attribute');
-    }
-    return mId;
-  });
-
-  mIds.unshift(''); // conditional padding weith space after BUNDLE
-  var bundleAttribute = 'a=group:BUNDLE' + mIds.join(' ');
-
-  if (sessionBlock.match(bundleAttributeRegExp)) {
-    sessionBlock = sessionBlock.replace(bundleAttributeRegExp, bundleAttribute);
-  } else {
-    sessionBlock += bundleAttribute + '\r\n';
-  }
-  return [sessionBlock].concat(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray___default()(mediaBlocks)).join('');
-}
-
-var bweRegExp = new RegExp('a=extmap:5 ' + 'http://www\\.ietf\\.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01' + '\r\n', 'gi');
-
-// Chrome 58 and 59 has a broken bandwidth estimation implementation that
-// doesn't detect when packets are sent using TURN/TCP. This results in
-// the estimated bandwidth to always end up at 10kbps.
-// The fix we use is to always disable the new bandwidth estimation algorithm
-// for all connections.
-function disableSendBandwidthEstimation(sdp) {
-  return sdp.replace(bweRegExp, '');
-}
-
-var ssrcGroupRegExp = new RegExp('a=ssrc-group:.+\\s\\d+\\s(\\d+)' + '\r\n', 'gi');
-var rtxPayloadTypeRegExp = new RegExp('a=(?:fmtp:\\d+\\sapt=\\d+|rtpmap:\\d+\\srtx/\\d+)' + '\r\n', 'gi');
-
-// Removes retransmission information from a Chrome-style (Plan B) SDPs.
-// This includes rtpmap and fmtp attributes with rtx/apt values, ssrc-group
-// attributes, and the ssrc attributes for the ssrcs used for retransmission.
-function removeChromeRetransmission(sdp) {
-  var _sdp$split11 = sdp.split(blockSplitRegExp),
-      _sdp$split12 = __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_toArray___default()(_sdp$split11),
-      sessionBlock = _sdp$split12[0],
-      mediaBlocks = _sdp$split12.slice(1);
-
-  var modifiedMediaBlocks = mediaBlocks.map(function (mediaBlock) {
-    var _mediaBlock$match7 = mediaBlock.match(mediaTypeRegExp),
-        _mediaBlock$match8 = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray___default()(_mediaBlock$match7, 2),
-        mediaType = _mediaBlock$match8[1];
-
-    if (mediaType !== 'video') {
-      return mediaBlock;
-    }
-    var removedSsrcs = [];
-
-    var withoutSsrcGroups = mediaBlock.replace(ssrcGroupRegExp, function (_, ssrc) {
-      // We assume the second SSRC is used for retransmission
-      removedSsrcs.push(ssrc);
-      return '';
-    });
-    var ssrcRegExp = new RegExp('a=ssrc:(?:' + removedSsrcs.join('|') + ')\\s.*\r\n', 'gi');
-    var withoutSsrcs = withoutSsrcGroups.replace(ssrcRegExp, '');
-    var withoutRtxPayloadTypes = withoutSsrcs.replace(rtxPayloadTypeRegExp, '');
-    return withoutRtxPayloadTypes;
-  });
-
-  return [sessionBlock].concat(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray___default()(modifiedMediaBlocks)).join('');
-}
-
-/***/ }),
-/* 200 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (immutable) */ __webpack_exports__["default"] = StatsFormatter;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_common_utils__ = __webpack_require__(13);
-
-
-
-
-function StatsFormatter(context, reporter) {
-  this.context = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_common_utils__["assign"])({}, context);
-  this.context.contextId = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_common_utils__["randomString"])(16);
-  this.context.userAgent = navigator.userAgent;
-  this.reporter = reporter;
-  this.tag = 'stats-formatter';
-}
-
-StatsFormatter.prototype.setPeerId = function (peerId) {
-  this.context.peerId = peerId;
-};
-
-StatsFormatter.prototype.handleStats = function (stats) {
-  for (var i in stats) {
-    stats[i] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_common_utils__["assign"])(stats[i], this.context);
-  }
-  this.reporter.handleStats(stats);
-};
-
-/***/ }),
-/* 201 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = createPeerConnectionStatNormalizer;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_common_log__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_common_utils__ = __webpack_require__(13);
-
-
-
-
-
-var STATS_OBJ_REGEX_FIREFOX = /(in|out)bound_(rtp|rtcp)_(audio|video)_(\d+)/;
-var STATS_KEY_BLACKLIST_FIREFOX = ['id', 'type', 'isRemote', 'remoteId'];
-
-var STATS_OBJ_REGEX_CHROME = /(ssrc)_(\d+)_(recv|send)/;
-var STATS_KEY_BLACKLIST_CHROME = ['id', 'type', 'googTrackId', 'transportId'];
-
-function normalizeStatsMatchFirefox(statKey, stat) {
-  var sample = {};
-  var matchFirefox = statKey.match(STATS_OBJ_REGEX_FIREFOX);
-  if (matchFirefox) {
-    switch (matchFirefox[1]) {
-      case 'in':
-        sample.role = 'receiver';
-        break;
-      case 'out':
-        sample.role = 'sender';
-        break;
-      default:
-        __WEBPACK_IMPORTED_MODULE_0_common_log__["default"].warning('stats-normalizer', 'No role match!');
-        return null;
-    }
-    switch (matchFirefox[2]) {
-      case 'rtp':
-        sample.reportType = sample.role === 'receiver' ? 'receiver' : 'sender';
-        break;
-      case 'rtcp':
-        sample.reportType = sample.role === 'receiver' ? 'sender' : 'receiver';
-        break;
-      default:
-        __WEBPACK_IMPORTED_MODULE_0_common_log__["default"].warning('stats-normalizer', 'No reportType match!');
-        return null;
-    }
-
-    for (var k in stat) {
-      if (STATS_KEY_BLACKLIST_FIREFOX.indexOf(k) >= 0) {
-        continue;
-      }
-      sample[k] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_common_utils__["maybeConvertStringToNumber"])(stat[k].toString());
-    }
-    return sample;
-  }
-}
-
-function normalizeStatsMatchChrome(statKey, stat) {
-  var sample = {};
-  var matchChrome = statKey.match(STATS_OBJ_REGEX_CHROME);
-  if (matchChrome) {
-    switch (matchChrome[3]) {
-      case 'recv':
-        sample.role = 'receiver';
-        sample.reportType = 'receiver';
-        break;
-      case 'send':
-        sample.role = 'sender';
-        sample.reportType = 'sender';
-        break;
-      default:
-        __WEBPACK_IMPORTED_MODULE_0_common_log__["default"].warning('stats-normalizer', 'No role match!');
-        return null;
-    }
-
-    for (var k in stat) {
-      if (STATS_KEY_BLACKLIST_CHROME.indexOf(k) >= 0) {
-        continue;
-      }
-      sample[k] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_common_utils__["maybeConvertStringToNumber"])(stat[k].toString());
-      // FIXME - set the mediaType from an ssrc lookup after parsing the sdp
-      if (k === 'audioInputLevel' || k === 'audioOutputLevel') {
-        sample.mediaType = 'audio';
-      } else if (k === 'googFrameHeightReceived' || k === 'googFrameHeightSent') {
-        sample.mediaType = 'video';
-      } else {
-        continue;
-      }
-    }
-    return sample;
-  }
-}
-
-var candidatePairKeys = ['portNumber', 'ipAddress', 'transport', 'candidateType'];
-function assignCandidatePairValues(stat, localOrRemote, sample) {
-  for (var i in candidatePairKeys) {
-    var key = candidatePairKeys[i];
-    if (key in stat) {
-      var destKey = localOrRemote + key.charAt(0).toUpperCase() + key.slice(1);
-      sample[destKey] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_common_utils__["maybeConvertStringToNumber"])(stat[key]);
-    }
-  }
-  return sample;
-}
-
-function getSelectedPairSampleFromStats(stats, stat, browser) {
-  var localCandidateId = stat.localCandidateId;
-  var remoteCandidateId = stat.remoteCandidateId;
-  var localStat = stats[localCandidateId];
-  var remoteStat = stats[remoteCandidateId];
-
-  var sample = {};
-
-  sample.sourceId = 'selectedPair';
-
-  sample = assignCandidatePairValues(localStat, 'local', sample);
-  sample = assignCandidatePairValues(remoteStat, 'remote', sample);
-  if (browser === 'chrome') {
-    sample.localPriority = +localStat.priority;
-    sample.remotePriority = +remoteStat.priority;
-  }
-  if (browser === 'firefox') {
-    sample.localPriority = +stat.priority;
-    sample.remotePriority = +stat.priority;
-  }
-
-  return sample;
-}
-
-function createPeerConnectionStatNormalizer() {
-  var selectedPairs = {};
-
-  function normalizeSsrcStats(stats, identities) {
-    var samples = [];
-    var sampleTsMs = Date.now();
-
-    for (var i in stats) {
-      var stat = stats[i];
-      var sample = null;
-      var ssrc = stat.ssrc;
-      if (!ssrc) {
-        continue;
-      }
-      var identity = identities[ssrc];
-      if (!identity) {
-        __WEBPACK_IMPORTED_MODULE_0_common_log__["default"].warning('stat-normalizer', 'got stat without identity:', stat);
-        continue;
-      }
-
-      if (__WEBPACK_IMPORTED_MODULE_1_common_utils__["isFirefox"]) {
-        sample = normalizeStatsMatchFirefox(i, stat);
-      }
-      if (__WEBPACK_IMPORTED_MODULE_1_common_utils__["isChrome"]) {
-        sample = normalizeStatsMatchChrome(i, stat);
-      }
-      if (!sample) {
-        continue;
-      }
-
-      if (sample.timestamp) {
-        sample.getStatsTs = sample.timestamp;
-        delete sample.timestamp;
-      }
-
-      sample.timestamp = sampleTsMs;
-      sample.pcId = identities.pcId;
-      sample.isRelay = identities.isRelay;
-
-      sample = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_common_utils__["assign"])(sample, identity);
-      sample.sourceId = 'ssrc-' + ssrc;
-
-      samples.push(sample);
-    }
-
-    return samples;
-  }
-
-  function normalizeSelectedPairStats(stats, identities) {
-    var samples = [];
-    var sampleTsMs = Date.now();
-    var newSelectedPairs = {};
-
-    for (var i in stats) {
-      var stat = stats[i];
-      var sample = null;
-
-      if (stat.type === 'candidatepair' && stat.selected === true && stat.state === 'succeeded') {
-        sample = getSelectedPairSampleFromStats(stats, stat, 'firefox');
-      }
-      if (stat.type === 'googCandidatePair' && stat.googActiveConnection === 'true') {
-        sample = getSelectedPairSampleFromStats(stats, stat, 'chrome');
-      }
-
-      if (!sample) {
-        continue;
-      }
-
-      sample.timestamp = sampleTsMs;
-      sample.pcId = identities.pcId;
-      sample.isRelay = identities.isRelay;
-
-      var newSelectedPair = stat.localCandidateId + stat.remoteCandidateId;
-      if (!(newSelectedPair in newSelectedPairs)) {
-        newSelectedPairs[newSelectedPair] = [];
-      }
-      newSelectedPairs[newSelectedPair].push(sample);
-    }
-
-    for (var oldPair in selectedPairs) {
-      if (!(oldPair in newSelectedPairs)) {
-        delete selectedPairs[oldPair];
-      }
-    }
-    for (var newPair in newSelectedPairs) {
-      if (!(newPair in selectedPairs)) {
-        selectedPairs[newPair] = true;
-        [].push.apply(samples, newSelectedPairs[newPair]);
-      }
-    }
-
-    return samples;
-  }
-
-  return function normalizePeerConnectionStats(stats, identities) {
-    var samples = [];
-
-    samples = normalizeSsrcStats(stats, identities);
-    [].push.apply(samples, normalizeSelectedPairStats(stats, identities));
-
-    return samples;
-  };
-}
-
-/***/ }),
-/* 202 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(203);
-var $Object = __webpack_require__(0).Object;
-module.exports = function defineProperties(T, D){
-  return $Object.defineProperties(T, D);
-};
-
-/***/ }),
-/* 203 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var $export = __webpack_require__(6);
-// 19.1.2.3 / 15.2.3.7 Object.defineProperties(O, Properties)
-$export($export.S + $export.F * !__webpack_require__(11), 'Object', {defineProperties: __webpack_require__(95)});
-
-/***/ }),
-/* 204 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var require;var require;/*! adapterjs - v0.14.3-6d236da - 2017-05-24 */
-var AdapterJS=AdapterJS||{};AdapterJS.options=AdapterJS.options||{},AdapterJS.VERSION="0.14.3-6d236da",AdapterJS.onwebrtcready=AdapterJS.onwebrtcready||function(isUsingPlugin){},AdapterJS._onwebrtcreadies=[],AdapterJS.webRTCReady=function(baseCallback){if("function"!=typeof baseCallback)throw new Error("Callback provided is not a function");var callback=function(){"function"==typeof window.require&&"function"==typeof AdapterJS._defineMediaSourcePolyfill&&AdapterJS._defineMediaSourcePolyfill(),baseCallback(null!==AdapterJS.WebRTCPlugin.plugin)};!0===AdapterJS.onwebrtcreadyDone?callback():AdapterJS._onwebrtcreadies.push(callback)},AdapterJS.WebRTCPlugin=AdapterJS.WebRTCPlugin||{},AdapterJS.WebRTCPlugin.pluginInfo=AdapterJS.WebRTCPlugin.pluginInfo||{prefix:"Tem",plugName:"TemWebRTCPlugin",pluginId:"plugin0",type:"application/x-temwebrtcplugin",onload:"__TemWebRTCReady0",portalLink:"https://skylink.io/plugin/",downloadLink:null,companyName:"Temasys",downloadLinks:{mac:"https://bit.ly/webrtcpluginpkg",win:"https://bit.ly/webrtcpluginmsi"}},"undefined"!=typeof AdapterJS.WebRTCPlugin.pluginInfo.downloadLinks&&null!==AdapterJS.WebRTCPlugin.pluginInfo.downloadLinks&&(navigator.platform.match(/^Mac/i)?AdapterJS.WebRTCPlugin.pluginInfo.downloadLink=AdapterJS.WebRTCPlugin.pluginInfo.downloadLinks.mac:navigator.platform.match(/^Win/i)&&(AdapterJS.WebRTCPlugin.pluginInfo.downloadLink=AdapterJS.WebRTCPlugin.pluginInfo.downloadLinks.win)),AdapterJS.WebRTCPlugin.TAGS={NONE:"none",AUDIO:"audio",VIDEO:"video"},AdapterJS.WebRTCPlugin.pageId=Math.random().toString(36).slice(2),AdapterJS.WebRTCPlugin.plugin=null,AdapterJS.WebRTCPlugin.setLogLevel=null,AdapterJS.WebRTCPlugin.defineWebRTCInterface=null,AdapterJS.WebRTCPlugin.isPluginInstalled=null,AdapterJS.WebRTCPlugin.pluginInjectionInterval=null,AdapterJS.WebRTCPlugin.injectPlugin=null,AdapterJS.WebRTCPlugin.PLUGIN_STATES={NONE:0,INITIALIZING:1,INJECTING:2,INJECTED:3,READY:4},AdapterJS.WebRTCPlugin.pluginState=AdapterJS.WebRTCPlugin.PLUGIN_STATES.NONE,AdapterJS.onwebrtcreadyDone=!1,AdapterJS.WebRTCPlugin.PLUGIN_LOG_LEVELS={NONE:"NONE",ERROR:"ERROR",WARNING:"WARNING",INFO:"INFO",VERBOSE:"VERBOSE",SENSITIVE:"SENSITIVE"},AdapterJS.WebRTCPlugin.WaitForPluginReady=null,AdapterJS.WebRTCPlugin.callWhenPluginReady=null,__TemWebRTCReady0=function(){if("complete"===document.readyState)AdapterJS.WebRTCPlugin.pluginState=AdapterJS.WebRTCPlugin.PLUGIN_STATES.READY,AdapterJS.maybeThroughWebRTCReady();else var timer=setInterval(function(){"complete"===document.readyState&&(clearInterval(timer),AdapterJS.WebRTCPlugin.pluginState=AdapterJS.WebRTCPlugin.PLUGIN_STATES.READY,AdapterJS.maybeThroughWebRTCReady())},100)},AdapterJS.maybeThroughWebRTCReady=function(){AdapterJS.onwebrtcreadyDone||(AdapterJS.onwebrtcreadyDone=!0,AdapterJS._onwebrtcreadies.length?AdapterJS._onwebrtcreadies.forEach(function(callback){"function"==typeof callback&&callback(null!==AdapterJS.WebRTCPlugin.plugin)}):"function"==typeof AdapterJS.onwebrtcready&&AdapterJS.onwebrtcready(null!==AdapterJS.WebRTCPlugin.plugin))},AdapterJS.TEXT={PLUGIN:{REQUIRE_INSTALLATION:"This website requires you to install a WebRTC-enabling plugin to work on this browser.",NOT_SUPPORTED:"Your browser does not support WebRTC.",BUTTON:"Install Now"},REFRESH:{REQUIRE_REFRESH:"Please refresh page",BUTTON:"Refresh Page"}},AdapterJS._iceConnectionStates={starting:"starting",checking:"checking",connected:"connected",completed:"connected",done:"completed",disconnected:"disconnected",failed:"failed",closed:"closed"},AdapterJS._iceConnectionFiredStates=[],AdapterJS.isDefined=null,AdapterJS.parseWebrtcDetectedBrowser=function(){var hasMatch=null;if(window.opr&&opr.addons||window.opera||navigator.userAgent.indexOf(" OPR/")>=0)hasMatch=navigator.userAgent.match(/OPR\/(\d+)/i)||[],webrtcDetectedBrowser="opera",webrtcDetectedVersion=parseInt(hasMatch[1]||"0",10),webrtcMinimumVersion=26,webrtcDetectedType="webkit",webrtcDetectedDCSupport="SCTP";else if(navigator.userAgent.match(/Bowser\/[0-9.]*/g)){hasMatch=navigator.userAgent.match(/Bowser\/[0-9.]*/g)||[];var chromiumVersion=parseInt((navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./i)||[])[2]||"0",10);webrtcDetectedBrowser="bowser",webrtcDetectedVersion=parseFloat((hasMatch[0]||"0/0").split("/")[1],10),webrtcMinimumVersion=0,webrtcDetectedType="webkit",webrtcDetectedDCSupport=chromiumVersion>30?"SCTP":"RTP"}else if(navigator.userAgent.indexOf("OPiOS")>0)hasMatch=navigator.userAgent.match(/OPiOS\/([0-9]+)\./),webrtcDetectedBrowser="opera",webrtcDetectedVersion=parseInt(hasMatch[1]||"0",10),webrtcMinimumVersion=0,webrtcDetectedType=null,webrtcDetectedDCSupport=null;else if(navigator.userAgent.indexOf("CriOS")>0)hasMatch=navigator.userAgent.match(/CriOS\/([0-9]+)\./)||[],webrtcDetectedBrowser="chrome",webrtcDetectedVersion=parseInt(hasMatch[1]||"0",10),webrtcMinimumVersion=0,webrtcDetectedType=null,webrtcDetectedDCSupport=null;else if(navigator.userAgent.indexOf("FxiOS")>0)hasMatch=navigator.userAgent.match(/FxiOS\/([0-9]+)\./)||[],webrtcDetectedBrowser="firefox",webrtcDetectedVersion=parseInt(hasMatch[1]||"0",10),webrtcMinimumVersion=0,webrtcDetectedType=null,webrtcDetectedDCSupport=null;else if(document.documentMode)hasMatch=/\brv[ :]+(\d+)/g.exec(navigator.userAgent)||[],webrtcDetectedBrowser="IE",webrtcDetectedVersion=parseInt(hasMatch[1],10),webrtcMinimumVersion=9,webrtcDetectedType="plugin",webrtcDetectedDCSupport="SCTP",webrtcDetectedVersion||(hasMatch=/\bMSIE[ :]+(\d+)/g.exec(navigator.userAgent)||[],webrtcDetectedVersion=parseInt(hasMatch[1]||"0",10));else if(window.StyleMedia||navigator.userAgent.match(/Edge\/(\d+).(\d+)$/))hasMatch=navigator.userAgent.match(/Edge\/(\d+).(\d+)$/)||[],webrtcDetectedBrowser="edge",webrtcDetectedVersion=parseFloat((hasMatch[0]||"0/0").split("/")[1],10),webrtcMinimumVersion=13.10547,webrtcDetectedType="ms",webrtcDetectedDCSupport=null;else if("undefined"!=typeof InstallTrigger||navigator.userAgent.indexOf("irefox")>0)hasMatch=navigator.userAgent.match(/Firefox\/([0-9]+)\./)||[],webrtcDetectedBrowser="firefox",webrtcDetectedVersion=parseInt(hasMatch[1]||"0",10),webrtcMinimumVersion=33,webrtcDetectedType="moz",webrtcDetectedDCSupport="SCTP";else if(window.chrome&&window.chrome.webstore||navigator.userAgent.indexOf("Chrom")>0)hasMatch=navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./i)||[],webrtcDetectedBrowser="chrome",webrtcDetectedVersion=parseInt(hasMatch[2]||"0",10),webrtcMinimumVersion=38,webrtcDetectedType="webkit",webrtcDetectedDCSupport=webrtcDetectedVersion>30?"SCTP":"RTP";else if(/^((?!chrome|android).)*safari/i.test(navigator.userAgent)){hasMatch=navigator.userAgent.match(/version\/(\d+)/i)||[];var isMobile=navigator.userAgent.match(/(iPhone|iPad)/gi)||[];webrtcDetectedBrowser="safari",webrtcDetectedVersion=parseInt(hasMatch[1]||"0",10),webrtcMinimumVersion=7,webrtcDetectedType=0===isMobile.length?"plugin":null,webrtcDetectedDCSupport=0===isMobile.length?"SCTP":null}window.webrtcDetectedBrowser=webrtcDetectedBrowser,window.webrtcDetectedVersion=webrtcDetectedVersion,window.webrtcMinimumVersion=webrtcMinimumVersion,window.webrtcDetectedType=webrtcDetectedType,window.webrtcDetectedDCSupport=webrtcDetectedDCSupport},AdapterJS.addEvent=function(elem,evnt,func){elem.addEventListener?elem.addEventListener(evnt,func,!1):elem.attachEvent?elem.attachEvent("on"+evnt,func):elem[evnt]=func},AdapterJS.renderNotificationBar=function(message,buttonText,buttonCallback){if("complete"===document.readyState){var w=window,i=document.createElement("iframe");i.name="adapterjs-alert",i.style.position="fixed",i.style.top="-41px",i.style.left=0,i.style.right=0,i.style.width="100%",i.style.height="40px",i.style.backgroundColor="#ffffe1",i.style.border="none",i.style.borderBottom="1px solid #888888",i.style.zIndex="9999999","string"==typeof i.style.webkitTransition?i.style.webkitTransition="all .5s ease-out":"string"==typeof i.style.transition&&(i.style.transition="all .5s ease-out"),document.body.appendChild(i);var c=i.contentWindow?i.contentWindow:i.contentDocument.document?i.contentDocument.document:i.contentDocument;c.document.open(),c.document.write('<span style="display: inline-block; font-family: Helvetica, Arial,sans-serif; font-size: .9rem; padding: 4px; vertical-align: middle; cursor: default;">'+message+"</span>"),buttonText&&"function"==typeof buttonCallback?(c.document.write('<button id="okay">'+buttonText+'</button><button id="cancel">Cancel</button>'),c.document.close(),AdapterJS.addEvent(c.document.getElementById("okay"),"click",function(e){e.preventDefault();try{e.cancelBubble=!0}catch(error){}buttonCallback(e)}),AdapterJS.addEvent(c.document.getElementById("cancel"),"click",function(e){w.document.body.removeChild(i)})):c.document.close(),setTimeout(function(){"string"==typeof i.style.webkitTransform?i.style.webkitTransform="translateY(40px)":"string"==typeof i.style.transform?i.style.transform="translateY(40px)":i.style.top="0px"},300)}},webrtcDetectedType=null,checkMediaDataChannelSettings=function(peerBrowserAgent,peerBrowserVersion,callback,constraints){if("function"==typeof callback){var beOfferer=!0,isLocalFirefox="firefox"===webrtcDetectedBrowser,isLocalFirefoxInterop="moz"===webrtcDetectedType&&webrtcDetectedVersion>30,isPeerFirefox="firefox"===peerBrowserAgent;if(isLocalFirefox&&isPeerFirefox||isLocalFirefoxInterop)try{delete constraints.mandatory.MozDontOfferDataChannel}catch(error){}else isLocalFirefox&&!isPeerFirefox&&(constraints.mandatory.MozDontOfferDataChannel=!0);if(!isLocalFirefox)for(var prop in constraints.mandatory)constraints.mandatory.hasOwnProperty(prop)&&prop.indexOf("Moz")!==-1&&delete constraints.mandatory[prop];!isLocalFirefox||isPeerFirefox||isLocalFirefoxInterop||(beOfferer=!1),callback(beOfferer,constraints)}},checkIceConnectionState=function(peerId,iceConnectionState,callback){"function"==typeof callback&&(peerId=peerId?peerId:"peer",AdapterJS._iceConnectionFiredStates[peerId]&&iceConnectionState!==AdapterJS._iceConnectionStates.disconnected&&iceConnectionState!==AdapterJS._iceConnectionStates.failed&&iceConnectionState!==AdapterJS._iceConnectionStates.closed||(AdapterJS._iceConnectionFiredStates[peerId]=[]),iceConnectionState=AdapterJS._iceConnectionStates[iceConnectionState],AdapterJS._iceConnectionFiredStates[peerId].indexOf(iceConnectionState)<0&&(AdapterJS._iceConnectionFiredStates[peerId].push(iceConnectionState),iceConnectionState===AdapterJS._iceConnectionStates.connected&&setTimeout(function(){AdapterJS._iceConnectionFiredStates[peerId].push(AdapterJS._iceConnectionStates.done),callback(AdapterJS._iceConnectionStates.done)},1e3),callback(iceConnectionState)))},createIceServer=null,createIceServers=null,MediaStream="function"==typeof MediaStream?MediaStream:null,RTCPeerConnection="function"==typeof RTCPeerConnection?RTCPeerConnection:null,RTCSessionDescription="function"==typeof RTCSessionDescription?RTCSessionDescription:null,RTCIceCandidate="function"==typeof RTCIceCandidate?RTCIceCandidate:null,getUserMedia=null,attachMediaStream=null,reattachMediaStream=null,webrtcDetectedBrowser=null,webrtcDetectedVersion=null,webrtcMinimumVersion=null,!(navigator.mozGetUserMedia||navigator.webkitGetUserMedia||navigator.mediaDevices&&navigator.userAgent.match(/Edge\/(\d+).(\d+)$/))||0===(navigator.userAgent.match(/android/gi)||[]).length&&0===(navigator.userAgent.match(/chrome/gi)||[]).length&&navigator.userAgent.indexOf("Safari/")>0?("object"==typeof console&&"function"==typeof console.log||(console={}||console,console.log=function(arg){},console.info=function(arg){},console.error=function(arg){},console.dir=function(arg){},console.exception=function(arg){},console.trace=function(arg){},console.warn=function(arg){},console.count=function(arg){},console.debug=function(arg){},console.count=function(arg){},console.time=function(arg){},console.timeEnd=function(arg){},console.group=function(arg){},console.groupCollapsed=function(arg){},console.groupEnd=function(arg){}),AdapterJS.parseWebrtcDetectedBrowser(),isIE="IE"===webrtcDetectedBrowser,AdapterJS.WebRTCPlugin.WaitForPluginReady=function(){for(;AdapterJS.WebRTCPlugin.pluginState!==AdapterJS.WebRTCPlugin.PLUGIN_STATES.READY;);},AdapterJS.WebRTCPlugin.callWhenPluginReady=function(callback){if(AdapterJS.WebRTCPlugin.pluginState===AdapterJS.WebRTCPlugin.PLUGIN_STATES.READY)callback();else var checkPluginReadyState=setInterval(function(){AdapterJS.WebRTCPlugin.pluginState===AdapterJS.WebRTCPlugin.PLUGIN_STATES.READY&&(clearInterval(checkPluginReadyState),callback())},100)},AdapterJS.WebRTCPlugin.setLogLevel=function(logLevel){AdapterJS.WebRTCPlugin.callWhenPluginReady(function(){AdapterJS.WebRTCPlugin.plugin.setLogLevel(logLevel)})},AdapterJS.WebRTCPlugin.injectPlugin=function(){if("complete"===document.readyState&&AdapterJS.WebRTCPlugin.pluginState===AdapterJS.WebRTCPlugin.PLUGIN_STATES.INITIALIZING){if(AdapterJS.WebRTCPlugin.pluginState=AdapterJS.WebRTCPlugin.PLUGIN_STATES.INJECTING,"IE"===webrtcDetectedBrowser&&webrtcDetectedVersion<=10){var frag=document.createDocumentFragment();for(AdapterJS.WebRTCPlugin.plugin=document.createElement("div"),AdapterJS.WebRTCPlugin.plugin.innerHTML='<object id="'+AdapterJS.WebRTCPlugin.pluginInfo.pluginId+'" type="'+AdapterJS.WebRTCPlugin.pluginInfo.type+'" width="1" height="1"><param name="pluginId" value="'+AdapterJS.WebRTCPlugin.pluginInfo.pluginId+'" /> <param name="windowless" value="false" /> <param name="pageId" value="'+AdapterJS.WebRTCPlugin.pageId+'" /> <param name="onload" value="'+AdapterJS.WebRTCPlugin.pluginInfo.onload+'" /><param name="tag" value="'+AdapterJS.WebRTCPlugin.TAGS.NONE+'" />'+(AdapterJS.options.getAllCams?'<param name="forceGetAllCams" value="True" />':"")+"</object>";AdapterJS.WebRTCPlugin.plugin.firstChild;)frag.appendChild(AdapterJS.WebRTCPlugin.plugin.firstChild);document.body.appendChild(frag),AdapterJS.WebRTCPlugin.plugin=document.getElementById(AdapterJS.WebRTCPlugin.pluginInfo.pluginId)}else AdapterJS.WebRTCPlugin.plugin=document.createElement("object"),AdapterJS.WebRTCPlugin.plugin.id=AdapterJS.WebRTCPlugin.pluginInfo.pluginId,isIE?(AdapterJS.WebRTCPlugin.plugin.width="1px",AdapterJS.WebRTCPlugin.plugin.height="1px"):(AdapterJS.WebRTCPlugin.plugin.width="0px",AdapterJS.WebRTCPlugin.plugin.height="0px"),AdapterJS.WebRTCPlugin.plugin.type=AdapterJS.WebRTCPlugin.pluginInfo.type,AdapterJS.WebRTCPlugin.plugin.innerHTML='<param name="onload" value="'+AdapterJS.WebRTCPlugin.pluginInfo.onload+'"><param name="pluginId" value="'+AdapterJS.WebRTCPlugin.pluginInfo.pluginId+'"><param name="windowless" value="false" /> '+(AdapterJS.options.getAllCams?'<param name="forceGetAllCams" value="True" />':"")+'<param name="pageId" value="'+AdapterJS.WebRTCPlugin.pageId+'"><param name="tag" value="'+AdapterJS.WebRTCPlugin.TAGS.NONE+'" />',document.body.appendChild(AdapterJS.WebRTCPlugin.plugin);AdapterJS.WebRTCPlugin.pluginState=AdapterJS.WebRTCPlugin.PLUGIN_STATES.INJECTED}},AdapterJS.WebRTCPlugin.isPluginInstalled=function(comName,plugName,plugType,installedCb,notInstalledCb){if(isIE){try{new ActiveXObject(comName+"."+plugName)}catch(e){return void notInstalledCb()}installedCb()}else{for(var pluginArray=navigator.mimeTypes,i=0;i<pluginArray.length;i++)if(pluginArray[i].type.indexOf(plugType)>=0)return void installedCb();notInstalledCb()}},AdapterJS.WebRTCPlugin.defineWebRTCInterface=function(){if(AdapterJS.WebRTCPlugin.pluginState!==AdapterJS.WebRTCPlugin.PLUGIN_STATES.READY){AdapterJS.WebRTCPlugin.pluginState=AdapterJS.WebRTCPlugin.PLUGIN_STATES.INITIALIZING,AdapterJS.isDefined=function(variable){return null!==variable&&void 0!==variable},createIceServer=function(url,username,password){var iceServer=null,urlParts=url.split(":");return 0===urlParts[0].indexOf("stun")?iceServer={url:url,hasCredentials:!1}:0===urlParts[0].indexOf("turn")&&(iceServer={url:url,hasCredentials:!0,credential:password,username:username}),iceServer},createIceServers=function(urls,username,password){for(var iceServers=[],i=0;i<urls.length;++i)iceServers.push(createIceServer(urls[i],username,password));return iceServers},RTCSessionDescription=function(info){return AdapterJS.WebRTCPlugin.WaitForPluginReady(),AdapterJS.WebRTCPlugin.plugin.ConstructSessionDescription(info.type,info.sdp)},MediaStream=function(mediaStreamOrTracks){return AdapterJS.WebRTCPlugin.WaitForPluginReady(),AdapterJS.WebRTCPlugin.plugin.MediaStream(mediaStreamOrTracks)},RTCPeerConnection=function(servers,constraints){if(void 0!==servers&&null!==servers&&!Array.isArray(servers.iceServers))throw new Error("Failed to construct 'RTCPeerConnection': Malformed RTCConfiguration");if("undefined"!=typeof constraints&&null!==constraints){var invalidConstraits=!1;if(invalidConstraits|="object"!=typeof constraints,invalidConstraits|=constraints.hasOwnProperty("mandatory")&&void 0!==constraints.mandatory&&null!==constraints.mandatory&&constraints.mandatory.constructor!==Object,invalidConstraits|=constraints.hasOwnProperty("optional")&&void 0!==constraints.optional&&null!==constraints.optional&&!Array.isArray(constraints.optional))throw new Error("Failed to construct 'RTCPeerConnection': Malformed constraints object")}AdapterJS.WebRTCPlugin.WaitForPluginReady();var iceServers=null;if(servers&&Array.isArray(servers.iceServers)){iceServers=servers.iceServers;for(var i=0;i<iceServers.length;i++)iceServers[i].urls&&!iceServers[i].url&&(iceServers[i].url=iceServers[i].urls),iceServers[i].hasCredentials=AdapterJS.isDefined(iceServers[i].username)&&AdapterJS.isDefined(iceServers[i].credential)}if(AdapterJS.WebRTCPlugin.plugin.PEER_CONNECTION_VERSION&&AdapterJS.WebRTCPlugin.plugin.PEER_CONNECTION_VERSION>1)return iceServers&&(servers.iceServers=iceServers),AdapterJS.WebRTCPlugin.plugin.PeerConnection(servers);var mandatory=constraints&&constraints.mandatory?constraints.mandatory:null,optional=constraints&&constraints.optional?constraints.optional:null;return AdapterJS.WebRTCPlugin.plugin.PeerConnection(AdapterJS.WebRTCPlugin.pageId,iceServers,mandatory,optional)},MediaStreamTrack=function(){},MediaStreamTrack.getSources=function(callback){AdapterJS.WebRTCPlugin.callWhenPluginReady(function(){AdapterJS.WebRTCPlugin.plugin.GetSources(callback)})};var constraintsToPlugin=function(c){if("object"!=typeof c||c.mandatory||c.optional)return c;var cc={};return Object.keys(c).forEach(function(key){if("require"!==key&&"advanced"!==key){if("string"==typeof c[key])return void(cc[key]=c[key]);var r="object"==typeof c[key]?c[key]:{ideal:c[key]};void 0!==r.exact&&"number"==typeof r.exact&&(r.min=r.max=r.exact);var oldname=function(prefix,name){return prefix?prefix+name.charAt(0).toUpperCase()+name.slice(1):"deviceId"===name?"sourceId":name};if("sourceId"===oldname("",key)&&void 0!==r.exact&&(r.ideal=r.exact,r.exact=void 0),void 0!==r.ideal){cc.optional=cc.optional||[];var oc={};"number"==typeof r.ideal?(oc[oldname("min",key)]=r.ideal,cc.optional.push(oc),oc={},oc[oldname("max",key)]=r.ideal,cc.optional.push(oc)):(oc[oldname("",key)]=r.ideal,cc.optional.push(oc))}void 0!==r.exact&&"number"!=typeof r.exact?(cc.mandatory=cc.mandatory||{},cc.mandatory[oldname("",key)]=r.exact):["min","max"].forEach(function(mix){void 0!==r[mix]&&(cc.mandatory=cc.mandatory||{},cc.mandatory[oldname(mix,key)]=r[mix])})}}),c.advanced&&(cc.optional=(cc.optional||[]).concat(c.advanced)),cc};getUserMedia=function(constraints,successCallback,failureCallback){var cc={};cc.audio=!!constraints.audio&&constraintsToPlugin(constraints.audio),cc.video=!!constraints.video&&constraintsToPlugin(constraints.video),AdapterJS.WebRTCPlugin.callWhenPluginReady(function(){AdapterJS.WebRTCPlugin.plugin.getUserMedia(cc,successCallback,failureCallback)})},window.navigator.getUserMedia=getUserMedia,navigator.mediaDevices||"undefined"==typeof Promise||(requestUserMedia=function(constraints){return new Promise(function(resolve,reject){try{getUserMedia(constraints,resolve,reject)}catch(error){reject(error)}})},navigator.mediaDevices={getUserMedia:requestUserMedia,enumerateDevices:function(){return new Promise(function(resolve){var kinds={audio:"audioinput",video:"videoinput"};return MediaStreamTrack.getSources(function(devices){resolve(devices.map(function(device){return{label:device.label,kind:kinds[device.kind],id:device.id,deviceId:device.id,groupId:""}}))})})}}),attachMediaStream=function(element,stream){if(element&&element.parentNode){var streamId;null===stream?streamId="":("undefined"!=typeof stream.enableSoundTracks&&stream.enableSoundTracks(!0),streamId=stream.id);var elementId=0===element.id.length?Math.random().toString(36).slice(2):element.id,nodeName=element.nodeName.toLowerCase();if("object"!==nodeName){var tag;switch(nodeName){case"audio":tag=AdapterJS.WebRTCPlugin.TAGS.AUDIO;break;case"video":tag=AdapterJS.WebRTCPlugin.TAGS.VIDEO;break;default:tag=AdapterJS.WebRTCPlugin.TAGS.NONE}var frag=document.createDocumentFragment(),temp=document.createElement("div"),classHTML="";for(element.className?classHTML='class="'+element.className+'" ':element.attributes&&element.attributes.class&&(classHTML='class="'+element.attributes.class.value+'" '),temp.innerHTML='<object id="'+elementId+'" '+classHTML+'type="'+AdapterJS.WebRTCPlugin.pluginInfo.type+'"><param name="pluginId" value="'+elementId+'" /> <param name="pageId" value="'+AdapterJS.WebRTCPlugin.pageId+'" /> <param name="windowless" value="true" /> <param name="streamId" value="'+streamId+'" /> <param name="tag" value="'+tag+'" /> </object>';temp.firstChild;)frag.appendChild(temp.firstChild);var height="",width="";element.clientWidth||element.clientHeight?(width=element.clientWidth,height=element.clientHeight):(element.width||element.height)&&(width=element.width,height=element.height),element.parentNode.insertBefore(frag,element),frag=document.getElementById(elementId),frag.width=width,frag.height=height,element.parentNode.removeChild(element)}else{for(var children=element.children,i=0;i!==children.length;++i)if("streamId"===children[i].name){children[i].value=streamId;break}element.setStreamId(streamId)}var newElement=document.getElementById(elementId);return AdapterJS.forwardEventHandlers(newElement,element,Object.getPrototypeOf(element)),newElement}},reattachMediaStream=function(to,from){for(var stream=null,children=from.children,i=0;i!==children.length;++i)if("streamId"===children[i].name){AdapterJS.WebRTCPlugin.WaitForPluginReady(),stream=AdapterJS.WebRTCPlugin.plugin.getStreamWithId(AdapterJS.WebRTCPlugin.pageId,children[i].value);break}if(null!==stream)return attachMediaStream(to,stream)},window.attachMediaStream=attachMediaStream,window.reattachMediaStream=reattachMediaStream,window.getUserMedia=getUserMedia,AdapterJS.attachMediaStream=attachMediaStream,AdapterJS.reattachMediaStream=reattachMediaStream,AdapterJS.getUserMedia=getUserMedia,AdapterJS.forwardEventHandlers=function(destElem,srcElem,prototype){var properties=Object.getOwnPropertyNames(prototype);for(var prop in properties)if(prop){var propName=properties[prop];"function"==typeof propName.slice&&"on"===propName.slice(0,2)&&"function"==typeof srcElem[propName]&&AdapterJS.addEvent(destElem,propName.slice(2),srcElem[propName])}var subPrototype=Object.getPrototypeOf(prototype);subPrototype&&AdapterJS.forwardEventHandlers(destElem,srcElem,subPrototype)},RTCIceCandidate=function(candidate){return candidate.sdpMid||(candidate.sdpMid=""),AdapterJS.WebRTCPlugin.WaitForPluginReady(),AdapterJS.WebRTCPlugin.plugin.ConstructIceCandidate(candidate.sdpMid,candidate.sdpMLineIndex,candidate.candidate)},AdapterJS.addEvent(document,"readystatechange",AdapterJS.WebRTCPlugin.injectPlugin),AdapterJS.WebRTCPlugin.injectPlugin()}},AdapterJS.WebRTCPlugin.pluginNeededButNotInstalledCb=AdapterJS.WebRTCPlugin.pluginNeededButNotInstalledCb||function(){AdapterJS.addEvent(document,"readystatechange",AdapterJS.WebRTCPlugin.pluginNeededButNotInstalledCbPriv),AdapterJS.WebRTCPlugin.pluginNeededButNotInstalledCbPriv()},AdapterJS.WebRTCPlugin.pluginNeededButNotInstalledCbPriv=function(){if(!AdapterJS.options.hidePluginInstallPrompt){var downloadLink=AdapterJS.WebRTCPlugin.pluginInfo.downloadLink;if(downloadLink){var popupString;popupString=AdapterJS.WebRTCPlugin.pluginInfo.portalLink?'This website requires you to install the  <a href="'+AdapterJS.WebRTCPlugin.pluginInfo.portalLink+'" target="_blank">'+AdapterJS.WebRTCPlugin.pluginInfo.companyName+" WebRTC Plugin</a> to work on this browser.":AdapterJS.TEXT.PLUGIN.REQUIRE_INSTALLATION,AdapterJS.renderNotificationBar(popupString,AdapterJS.TEXT.PLUGIN.BUTTON,function(){window.open(downloadLink,"_top");var pluginInstallInterval=setInterval(function(){isIE||navigator.plugins.refresh(!1),AdapterJS.WebRTCPlugin.isPluginInstalled(AdapterJS.WebRTCPlugin.pluginInfo.prefix,AdapterJS.WebRTCPlugin.pluginInfo.plugName,AdapterJS.WebRTCPlugin.pluginInfo.type,function(){clearInterval(pluginInstallInterval),AdapterJS.WebRTCPlugin.defineWebRTCInterface()},function(){})},500)})}else AdapterJS.renderNotificationBar(AdapterJS.TEXT.PLUGIN.NOT_SUPPORTED)}},AdapterJS.WebRTCPlugin.isPluginInstalled(AdapterJS.WebRTCPlugin.pluginInfo.prefix,AdapterJS.WebRTCPlugin.pluginInfo.plugName,AdapterJS.WebRTCPlugin.pluginInfo.type,AdapterJS.WebRTCPlugin.defineWebRTCInterface,AdapterJS.WebRTCPlugin.pluginNeededButNotInstalledCb)):(navigator.userAgent.match(/Edge\/(\d+).(\d+)$/)&&window.RTCPeerConnection&&(window.msRTCPeerConnection=window.RTCPeerConnection),function(f){if(true)module.exports=f();else if("function"==typeof define&&define.amd)define([],f);else{var g;g="undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof self?self:this,g.adapter=f()}}(function(){return function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a="function"==typeof require&&require;if(!u&&a)return require(o,!0);if(i)return require(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}for(var i="function"==typeof require&&require,o=0;o<r.length;o++)s(r[o]);return s}({1:[function(requirecopy,module,exports){"use strict";var SDPUtils={};SDPUtils.generateIdentifier=function(){return Math.random().toString(36).substr(2,10)},SDPUtils.localCName=SDPUtils.generateIdentifier(),SDPUtils.splitLines=function(blob){return blob.trim().split("\n").map(function(line){return line.trim()})},SDPUtils.splitSections=function(blob){var parts=blob.split("\nm=");return parts.map(function(part,index){return(index>0?"m="+part:part).trim()+"\r\n"})},SDPUtils.matchPrefix=function(blob,prefix){return SDPUtils.splitLines(blob).filter(function(line){return 0===line.indexOf(prefix)})},SDPUtils.parseCandidate=function(line){var parts;parts=0===line.indexOf("a=candidate:")?line.substring(12).split(" "):line.substring(10).split(" ");for(var candidate={foundation:parts[0],component:parts[1],protocol:parts[2].toLowerCase(),priority:parseInt(parts[3],10),ip:parts[4],port:parseInt(parts[5],10),type:parts[7]},i=8;i<parts.length;i+=2)switch(parts[i]){case"raddr":candidate.relatedAddress=parts[i+1];break;case"rport":candidate.relatedPort=parseInt(parts[i+1],10);break;case"tcptype":candidate.tcpType=parts[i+1]}return candidate},SDPUtils.writeCandidate=function(candidate){var sdp=[];sdp.push(candidate.foundation),sdp.push(candidate.component),sdp.push(candidate.protocol.toUpperCase()),sdp.push(candidate.priority),sdp.push(candidate.ip),sdp.push(candidate.port);var type=candidate.type;return sdp.push("typ"),sdp.push(type),"host"!==type&&candidate.relatedAddress&&candidate.relatedPort&&(sdp.push("raddr"),sdp.push(candidate.relatedAddress),sdp.push("rport"),sdp.push(candidate.relatedPort)),candidate.tcpType&&"tcp"===candidate.protocol.toLowerCase()&&(sdp.push("tcptype"),sdp.push(candidate.tcpType)),"candidate:"+sdp.join(" ")},SDPUtils.parseRtpMap=function(line){var parts=line.substr(9).split(" "),parsed={payloadType:parseInt(parts.shift(),10)};return parts=parts[0].split("/"),parsed.name=parts[0],parsed.clockRate=parseInt(parts[1],10),parsed.numChannels=3===parts.length?parseInt(parts[2],10):1,parsed},SDPUtils.writeRtpMap=function(codec){var pt=codec.payloadType;return void 0!==codec.preferredPayloadType&&(pt=codec.preferredPayloadType),"a=rtpmap:"+pt+" "+codec.name+"/"+codec.clockRate+(1!==codec.numChannels?"/"+codec.numChannels:"")+"\r\n"},SDPUtils.parseExtmap=function(line){var parts=line.substr(9).split(" ");return{id:parseInt(parts[0],10),uri:parts[1]}},SDPUtils.writeExtmap=function(headerExtension){return"a=extmap:"+(headerExtension.id||headerExtension.preferredId)+" "+headerExtension.uri+"\r\n"},SDPUtils.parseFmtp=function(line){for(var kv,parsed={},parts=line.substr(line.indexOf(" ")+1).split(";"),j=0;j<parts.length;j++)kv=parts[j].trim().split("="),parsed[kv[0].trim()]=kv[1];return parsed},SDPUtils.writeFmtp=function(codec){var line="",pt=codec.payloadType;if(void 0!==codec.preferredPayloadType&&(pt=codec.preferredPayloadType),codec.parameters&&Object.keys(codec.parameters).length){var params=[];Object.keys(codec.parameters).forEach(function(param){params.push(param+"="+codec.parameters[param])}),line+="a=fmtp:"+pt+" "+params.join(";")+"\r\n"}return line},SDPUtils.parseRtcpFb=function(line){var parts=line.substr(line.indexOf(" ")+1).split(" ");return{type:parts.shift(),parameter:parts.join(" ")}},SDPUtils.writeRtcpFb=function(codec){var lines="",pt=codec.payloadType;return void 0!==codec.preferredPayloadType&&(pt=codec.preferredPayloadType),codec.rtcpFeedback&&codec.rtcpFeedback.length&&codec.rtcpFeedback.forEach(function(fb){lines+="a=rtcp-fb:"+pt+" "+fb.type+(fb.parameter&&fb.parameter.length?" "+fb.parameter:"")+"\r\n"}),lines},SDPUtils.parseSsrcMedia=function(line){var sp=line.indexOf(" "),parts={ssrc:parseInt(line.substr(7,sp-7),10)},colon=line.indexOf(":",sp);return colon>-1?(parts.attribute=line.substr(sp+1,colon-sp-1),parts.value=line.substr(colon+1)):parts.attribute=line.substr(sp+1),parts},SDPUtils.getMid=function(mediaSection){var mid=SDPUtils.matchPrefix(mediaSection,"a=mid:")[0];if(mid)return mid.substr(6)},SDPUtils.getDtlsParameters=function(mediaSection,sessionpart){var lines=SDPUtils.splitLines(mediaSection);lines=lines.concat(SDPUtils.splitLines(sessionpart));var fpLine=lines.filter(function(line){return 0===line.indexOf("a=fingerprint:")})[0].substr(14),dtlsParameters={role:"auto",fingerprints:[{algorithm:fpLine.split(" ")[0].toLowerCase(),value:fpLine.split(" ")[1]}]};return dtlsParameters},SDPUtils.writeDtlsParameters=function(params,setupType){var sdp="a=setup:"+setupType+"\r\n";return params.fingerprints.forEach(function(fp){sdp+="a=fingerprint:"+fp.algorithm+" "+fp.value+"\r\n"}),sdp},SDPUtils.getIceParameters=function(mediaSection,sessionpart){var lines=SDPUtils.splitLines(mediaSection);lines=lines.concat(SDPUtils.splitLines(sessionpart));var iceParameters={usernameFragment:lines.filter(function(line){return 0===line.indexOf("a=ice-ufrag:")})[0].substr(12),password:lines.filter(function(line){return 0===line.indexOf("a=ice-pwd:")})[0].substr(10)};return iceParameters},SDPUtils.writeIceParameters=function(params){return"a=ice-ufrag:"+params.usernameFragment+"\r\na=ice-pwd:"+params.password+"\r\n"},SDPUtils.parseRtpParameters=function(mediaSection){for(var description={codecs:[],headerExtensions:[],fecMechanisms:[],rtcp:[]},lines=SDPUtils.splitLines(mediaSection),mline=lines[0].split(" "),i=3;i<mline.length;i++){var pt=mline[i],rtpmapline=SDPUtils.matchPrefix(mediaSection,"a=rtpmap:"+pt+" ")[0];if(rtpmapline){var codec=SDPUtils.parseRtpMap(rtpmapline),fmtps=SDPUtils.matchPrefix(mediaSection,"a=fmtp:"+pt+" ");switch(codec.parameters=fmtps.length?SDPUtils.parseFmtp(fmtps[0]):{},codec.rtcpFeedback=SDPUtils.matchPrefix(mediaSection,"a=rtcp-fb:"+pt+" ").map(SDPUtils.parseRtcpFb),description.codecs.push(codec),codec.name.toUpperCase()){case"RED":case"ULPFEC":description.fecMechanisms.push(codec.name.toUpperCase())}}}return SDPUtils.matchPrefix(mediaSection,"a=extmap:").forEach(function(line){
-description.headerExtensions.push(SDPUtils.parseExtmap(line))}),description},SDPUtils.writeRtpDescription=function(kind,caps){var sdp="";sdp+="m="+kind+" ",sdp+=caps.codecs.length>0?"9":"0",sdp+=" UDP/TLS/RTP/SAVPF ",sdp+=caps.codecs.map(function(codec){return void 0!==codec.preferredPayloadType?codec.preferredPayloadType:codec.payloadType}).join(" ")+"\r\n",sdp+="c=IN IP4 0.0.0.0\r\n",sdp+="a=rtcp:9 IN IP4 0.0.0.0\r\n",caps.codecs.forEach(function(codec){sdp+=SDPUtils.writeRtpMap(codec),sdp+=SDPUtils.writeFmtp(codec),sdp+=SDPUtils.writeRtcpFb(codec)});var maxptime=0;return caps.codecs.forEach(function(codec){codec.maxptime>maxptime&&(maxptime=codec.maxptime)}),maxptime>0&&(sdp+="a=maxptime:"+maxptime+"\r\n"),sdp+="a=rtcp-mux\r\n",caps.headerExtensions.forEach(function(extension){sdp+=SDPUtils.writeExtmap(extension)}),sdp},SDPUtils.parseRtpEncodingParameters=function(mediaSection){var secondarySsrc,encodingParameters=[],description=SDPUtils.parseRtpParameters(mediaSection),hasRed=description.fecMechanisms.indexOf("RED")!==-1,hasUlpfec=description.fecMechanisms.indexOf("ULPFEC")!==-1,ssrcs=SDPUtils.matchPrefix(mediaSection,"a=ssrc:").map(function(line){return SDPUtils.parseSsrcMedia(line)}).filter(function(parts){return"cname"===parts.attribute}),primarySsrc=ssrcs.length>0&&ssrcs[0].ssrc,flows=SDPUtils.matchPrefix(mediaSection,"a=ssrc-group:FID").map(function(line){var parts=line.split(" ");return parts.shift(),parts.map(function(part){return parseInt(part,10)})});flows.length>0&&flows[0].length>1&&flows[0][0]===primarySsrc&&(secondarySsrc=flows[0][1]),description.codecs.forEach(function(codec){if("RTX"===codec.name.toUpperCase()&&codec.parameters.apt){var encParam={ssrc:primarySsrc,codecPayloadType:parseInt(codec.parameters.apt,10),rtx:{ssrc:secondarySsrc}};encodingParameters.push(encParam),hasRed&&(encParam=JSON.parse(JSON.stringify(encParam)),encParam.fec={ssrc:secondarySsrc,mechanism:hasUlpfec?"red+ulpfec":"red"},encodingParameters.push(encParam))}}),0===encodingParameters.length&&primarySsrc&&encodingParameters.push({ssrc:primarySsrc});var bandwidth=SDPUtils.matchPrefix(mediaSection,"b=");return bandwidth.length&&(0===bandwidth[0].indexOf("b=TIAS:")?bandwidth=parseInt(bandwidth[0].substr(7),10):0===bandwidth[0].indexOf("b=AS:")&&(bandwidth=parseInt(bandwidth[0].substr(5),10)),encodingParameters.forEach(function(params){params.maxBitrate=bandwidth})),encodingParameters},SDPUtils.parseRtcpParameters=function(mediaSection){var rtcpParameters={},remoteSsrc=SDPUtils.matchPrefix(mediaSection,"a=ssrc:").map(function(line){return SDPUtils.parseSsrcMedia(line)}).filter(function(obj){return"cname"===obj.attribute})[0];remoteSsrc&&(rtcpParameters.cname=remoteSsrc.value,rtcpParameters.ssrc=remoteSsrc.ssrc);var rsize=SDPUtils.matchPrefix(mediaSection,"a=rtcp-rsize");rtcpParameters.reducedSize=rsize.length>0,rtcpParameters.compound=0===rsize.length;var mux=SDPUtils.matchPrefix(mediaSection,"a=rtcp-mux");return rtcpParameters.mux=mux.length>0,rtcpParameters},SDPUtils.parseMsid=function(mediaSection){var parts,spec=SDPUtils.matchPrefix(mediaSection,"a=msid:");if(1===spec.length)return parts=spec[0].substr(7).split(" "),{stream:parts[0],track:parts[1]};var planB=SDPUtils.matchPrefix(mediaSection,"a=ssrc:").map(function(line){return SDPUtils.parseSsrcMedia(line)}).filter(function(parts){return"msid"===parts.attribute});return planB.length>0?(parts=planB[0].value.split(" "),{stream:parts[0],track:parts[1]}):void 0},SDPUtils.writeSessionBoilerplate=function(){return"v=0\r\no=thisisadapterortc 8169639915646943137 2 IN IP4 127.0.0.1\r\ns=-\r\nt=0 0\r\n"},SDPUtils.writeMediaSection=function(transceiver,caps,type,stream){var sdp=SDPUtils.writeRtpDescription(transceiver.kind,caps);if(sdp+=SDPUtils.writeIceParameters(transceiver.iceGatherer.getLocalParameters()),sdp+=SDPUtils.writeDtlsParameters(transceiver.dtlsTransport.getLocalParameters(),"offer"===type?"actpass":"active"),sdp+="a=mid:"+transceiver.mid+"\r\n",sdp+=transceiver.rtpSender&&transceiver.rtpReceiver?"a=sendrecv\r\n":transceiver.rtpSender?"a=sendonly\r\n":transceiver.rtpReceiver?"a=recvonly\r\n":"a=inactive\r\n",transceiver.rtpSender){var msid="msid:"+stream.id+" "+transceiver.rtpSender.track.id+"\r\n";sdp+="a="+msid,sdp+="a=ssrc:"+transceiver.sendEncodingParameters[0].ssrc+" "+msid,transceiver.sendEncodingParameters[0].rtx&&(sdp+="a=ssrc:"+transceiver.sendEncodingParameters[0].rtx.ssrc+" "+msid,sdp+="a=ssrc-group:FID "+transceiver.sendEncodingParameters[0].ssrc+" "+transceiver.sendEncodingParameters[0].rtx.ssrc+"\r\n")}return sdp+="a=ssrc:"+transceiver.sendEncodingParameters[0].ssrc+" cname:"+SDPUtils.localCName+"\r\n",transceiver.rtpSender&&transceiver.sendEncodingParameters[0].rtx&&(sdp+="a=ssrc:"+transceiver.sendEncodingParameters[0].rtx.ssrc+" cname:"+SDPUtils.localCName+"\r\n"),sdp},SDPUtils.getDirection=function(mediaSection,sessionpart){for(var lines=SDPUtils.splitLines(mediaSection),i=0;i<lines.length;i++)switch(lines[i]){case"a=sendrecv":case"a=sendonly":case"a=recvonly":case"a=inactive":return lines[i].substr(2)}return sessionpart?SDPUtils.getDirection(sessionpart):"sendrecv"},SDPUtils.getKind=function(mediaSection){var lines=SDPUtils.splitLines(mediaSection),mline=lines[0].split(" ");return mline[0].substr(2)},SDPUtils.isRejected=function(mediaSection){return"0"===mediaSection.split(" ",2)[1]},module.exports=SDPUtils},{}],2:[function(requirecopy,module,exports){"use strict";!function(){var logging=requirecopy("./utils").log,browserDetails=requirecopy("./utils").browserDetails;module.exports.browserDetails=browserDetails,module.exports.extractVersion=requirecopy("./utils").extractVersion,module.exports.disableLog=requirecopy("./utils").disableLog;var chromeShim=requirecopy("./chrome/chrome_shim")||null,edgeShim=requirecopy("./edge/edge_shim")||null,firefoxShim=requirecopy("./firefox/firefox_shim")||null,safariShim=requirecopy("./safari/safari_shim")||null;switch(browserDetails.browser){case"opera":case"chrome":if(!chromeShim||!chromeShim.shimPeerConnection)return void logging("Chrome shim is not included in this adapter release.");logging("adapter.js shimming chrome."),module.exports.browserShim=chromeShim,chromeShim.shimGetUserMedia(),chromeShim.shimMediaStream(),chromeShim.shimSourceObject(),chromeShim.shimPeerConnection(),chromeShim.shimOnTrack();break;case"firefox":if(!firefoxShim||!firefoxShim.shimPeerConnection)return void logging("Firefox shim is not included in this adapter release.");logging("adapter.js shimming firefox."),module.exports.browserShim=firefoxShim,firefoxShim.shimGetUserMedia(),firefoxShim.shimSourceObject(),firefoxShim.shimPeerConnection(),firefoxShim.shimOnTrack();break;case"edge":if(!edgeShim||!edgeShim.shimPeerConnection)return void logging("MS edge shim is not included in this adapter release.");logging("adapter.js shimming edge."),module.exports.browserShim=edgeShim,edgeShim.shimGetUserMedia(),edgeShim.shimPeerConnection();break;case"safari":if(!safariShim)return void logging("Safari shim is not included in this adapter release.");logging("adapter.js shimming safari."),module.exports.browserShim=safariShim,safariShim.shimGetUserMedia();break;default:logging("Unsupported browser!")}}()},{"./chrome/chrome_shim":3,"./edge/edge_shim":5,"./firefox/firefox_shim":7,"./safari/safari_shim":9,"./utils":10}],3:[function(requirecopy,module,exports){"use strict";var logging=requirecopy("../utils.js").log,browserDetails=requirecopy("../utils.js").browserDetails,chromeShim={shimMediaStream:function(){window.MediaStream=window.MediaStream||window.webkitMediaStream},shimOnTrack:function(){"object"!=typeof window||!window.RTCPeerConnection||"ontrack"in window.RTCPeerConnection.prototype||Object.defineProperty(window.RTCPeerConnection.prototype,"ontrack",{get:function(){return this._ontrack},set:function(f){var self=this;this._ontrack&&(this.removeEventListener("track",this._ontrack),this.removeEventListener("addstream",this._ontrackpoly)),this.addEventListener("track",this._ontrack=f),this.addEventListener("addstream",this._ontrackpoly=function(e){e.stream.addEventListener("addtrack",function(te){var event=new Event("track");event.track=te.track,event.receiver={track:te.track},event.streams=[e.stream],self.dispatchEvent(event)}),e.stream.getTracks().forEach(function(track){var event=new Event("track");event.track=track,event.receiver={track:track},event.streams=[e.stream],this.dispatchEvent(event)}.bind(this))}.bind(this))}})},shimSourceObject:function(){"object"==typeof window&&(!window.HTMLMediaElement||"srcObject"in window.HTMLMediaElement.prototype||Object.defineProperty(window.HTMLMediaElement.prototype,"srcObject",{get:function(){return this._srcObject},set:function(stream){var self=this;return this._srcObject=stream,this.src&&URL.revokeObjectURL(this.src),stream?(this.src=URL.createObjectURL(stream),stream.addEventListener("addtrack",function(){self.src&&URL.revokeObjectURL(self.src),self.src=URL.createObjectURL(stream)}),void stream.addEventListener("removetrack",function(){self.src&&URL.revokeObjectURL(self.src),self.src=URL.createObjectURL(stream)})):void(this.src="")}}))},shimPeerConnection:function(){window.RTCPeerConnection=function(pcConfig,pcConstraints){logging("PeerConnection"),pcConfig&&pcConfig.iceTransportPolicy&&(pcConfig.iceTransports=pcConfig.iceTransportPolicy);var pc=new webkitRTCPeerConnection(pcConfig,pcConstraints),origGetStats=pc.getStats.bind(pc);return pc.getStats=function(selector,successCallback,errorCallback){var self=this,args=arguments;if(arguments.length>0&&"function"==typeof selector)return origGetStats(selector,successCallback);var fixChromeStats_=function(response){var standardReport={},reports=response.result();return reports.forEach(function(report){var standardStats={id:report.id,timestamp:report.timestamp,type:report.type};report.names().forEach(function(name){standardStats[name]=report.stat(name)}),standardReport[standardStats.id]=standardStats}),standardReport},makeMapStats=function(stats,legacyStats){var map=new Map(Object.keys(stats).map(function(key){return[key,stats[key]]}));return legacyStats=legacyStats||stats,Object.keys(legacyStats).forEach(function(key){map[key]=legacyStats[key]}),map};if(arguments.length>=2){var successCallbackWrapper_=function(response){args[1](makeMapStats(fixChromeStats_(response)))};return origGetStats.apply(this,[successCallbackWrapper_,arguments[0]])}return new Promise(function(resolve,reject){1===args.length&&"object"==typeof selector?origGetStats.apply(self,[function(response){resolve(makeMapStats(fixChromeStats_(response)))},reject]):origGetStats.apply(self,[function(response){resolve(makeMapStats(fixChromeStats_(response),response.result()))},reject])}).then(successCallback,errorCallback)},pc},window.RTCPeerConnection.prototype=webkitRTCPeerConnection.prototype,webkitRTCPeerConnection.generateCertificate&&Object.defineProperty(window.RTCPeerConnection,"generateCertificate",{get:function(){return webkitRTCPeerConnection.generateCertificate}}),["createOffer","createAnswer"].forEach(function(method){var nativeMethod=webkitRTCPeerConnection.prototype[method];webkitRTCPeerConnection.prototype[method]=function(){var self=this;if(arguments.length<1||1===arguments.length&&"object"==typeof arguments[0]){var opts=1===arguments.length?arguments[0]:void 0;return new Promise(function(resolve,reject){nativeMethod.apply(self,[resolve,reject,opts])})}return nativeMethod.apply(this,arguments)}}),browserDetails.version<51&&["setLocalDescription","setRemoteDescription","addIceCandidate"].forEach(function(method){var nativeMethod=webkitRTCPeerConnection.prototype[method];webkitRTCPeerConnection.prototype[method]=function(){var args=arguments,self=this,promise=new Promise(function(resolve,reject){nativeMethod.apply(self,[args[0],resolve,reject])});return args.length<2?promise:promise.then(function(){args[1].apply(null,[])},function(err){args.length>=3&&args[2].apply(null,[err])})}}),["setLocalDescription","setRemoteDescription","addIceCandidate"].forEach(function(method){var nativeMethod=webkitRTCPeerConnection.prototype[method];webkitRTCPeerConnection.prototype[method]=function(){return arguments[0]=new("addIceCandidate"===method?RTCIceCandidate:RTCSessionDescription)(arguments[0]),nativeMethod.apply(this,arguments)}});var nativeAddIceCandidate=RTCPeerConnection.prototype.addIceCandidate;RTCPeerConnection.prototype.addIceCandidate=function(){return null===arguments[0]?Promise.resolve():nativeAddIceCandidate.apply(this,arguments)}}};module.exports={shimMediaStream:chromeShim.shimMediaStream,shimOnTrack:chromeShim.shimOnTrack,shimSourceObject:chromeShim.shimSourceObject,shimPeerConnection:chromeShim.shimPeerConnection,shimGetUserMedia:requirecopy("./getusermedia")}},{"../utils.js":10,"./getusermedia":4}],4:[function(requirecopy,module,exports){"use strict";var logging=requirecopy("../utils.js").log;module.exports=function(){var constraintsToChrome_=function(c){if("object"!=typeof c||c.mandatory||c.optional)return c;var cc={};return Object.keys(c).forEach(function(key){if("require"!==key&&"advanced"!==key&&"mediaSource"!==key){var r="object"==typeof c[key]?c[key]:{ideal:c[key]};void 0!==r.exact&&"number"==typeof r.exact&&(r.min=r.max=r.exact);var oldname_=function(prefix,name){return prefix?prefix+name.charAt(0).toUpperCase()+name.slice(1):"deviceId"===name?"sourceId":name};if(void 0!==r.ideal){cc.optional=cc.optional||[];var oc={};"number"==typeof r.ideal?(oc[oldname_("min",key)]=r.ideal,cc.optional.push(oc),oc={},oc[oldname_("max",key)]=r.ideal,cc.optional.push(oc)):(oc[oldname_("",key)]=r.ideal,cc.optional.push(oc))}void 0!==r.exact&&"number"!=typeof r.exact?(cc.mandatory=cc.mandatory||{},cc.mandatory[oldname_("",key)]=r.exact):["min","max"].forEach(function(mix){void 0!==r[mix]&&(cc.mandatory=cc.mandatory||{},cc.mandatory[oldname_(mix,key)]=r[mix])})}}),c.advanced&&(cc.optional=(cc.optional||[]).concat(c.advanced)),cc},shimConstraints_=function(constraints,func){if(constraints=JSON.parse(JSON.stringify(constraints)),constraints&&constraints.audio&&(constraints.audio=constraintsToChrome_(constraints.audio)),constraints&&"object"==typeof constraints.video){var face=constraints.video.facingMode;if(face=face&&("object"==typeof face?face:{ideal:face}),face&&("user"===face.exact||"environment"===face.exact||"user"===face.ideal||"environment"===face.ideal)&&(!navigator.mediaDevices.getSupportedConstraints||!navigator.mediaDevices.getSupportedConstraints().facingMode)&&(delete constraints.video.facingMode,"environment"===face.exact||"environment"===face.ideal))return navigator.mediaDevices.enumerateDevices().then(function(devices){devices=devices.filter(function(d){return"videoinput"===d.kind});var back=devices.find(function(d){return d.label.toLowerCase().indexOf("back")!==-1})||devices.length&&devices[devices.length-1];return back&&(constraints.video.deviceId=face.exact?{exact:back.deviceId}:{ideal:back.deviceId}),constraints.video=constraintsToChrome_(constraints.video),logging("chrome: "+JSON.stringify(constraints)),func(constraints)});constraints.video=constraintsToChrome_(constraints.video)}return logging("chrome: "+JSON.stringify(constraints)),func(constraints)},shimError_=function(e){return{name:{PermissionDeniedError:"NotAllowedError",ConstraintNotSatisfiedError:"OverconstrainedError"}[e.name]||e.name,message:e.message,constraint:e.constraintName,toString:function(){return this.name+(this.message&&": ")+this.message}}},getUserMedia_=function(constraints,onSuccess,onError){shimConstraints_(constraints,function(c){navigator.webkitGetUserMedia(c,onSuccess,function(e){onError(shimError_(e))})})};navigator.getUserMedia=getUserMedia_;var getUserMediaPromise_=function(constraints){return new Promise(function(resolve,reject){navigator.getUserMedia(constraints,resolve,reject)})};if(navigator.mediaDevices||(navigator.mediaDevices={getUserMedia:getUserMediaPromise_,enumerateDevices:function(){return new Promise(function(resolve){var kinds={audio:"audioinput",video:"videoinput"};return MediaStreamTrack.getSources(function(devices){resolve(devices.map(function(device){return{label:device.label,kind:kinds[device.kind],deviceId:device.id,groupId:""}}))})})}}),navigator.mediaDevices.getUserMedia){var origGetUserMedia=navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);navigator.mediaDevices.getUserMedia=function(cs){return shimConstraints_(cs,function(c){return origGetUserMedia(c).catch(function(e){return Promise.reject(shimError_(e))})})}}else navigator.mediaDevices.getUserMedia=function(constraints){return getUserMediaPromise_(constraints)};"undefined"==typeof navigator.mediaDevices.addEventListener&&(navigator.mediaDevices.addEventListener=function(){logging("Dummy mediaDevices.addEventListener called.")}),"undefined"==typeof navigator.mediaDevices.removeEventListener&&(navigator.mediaDevices.removeEventListener=function(){logging("Dummy mediaDevices.removeEventListener called.")})}},{"../utils.js":10}],5:[function(requirecopy,module,exports){"use strict";var SDPUtils=requirecopy("sdp"),browserDetails=requirecopy("../utils").browserDetails,edgeShim={shimPeerConnection:function(){window.RTCIceGatherer&&(window.RTCIceCandidate||(window.RTCIceCandidate=function(args){return args}),window.RTCSessionDescription||(window.RTCSessionDescription=function(args){return args})),window.RTCPeerConnection=function(config){var self=this,_eventTarget=document.createDocumentFragment();if(["addEventListener","removeEventListener","dispatchEvent"].forEach(function(method){self[method]=_eventTarget[method].bind(_eventTarget)}),this.onicecandidate=null,this.onaddstream=null,this.ontrack=null,this.onremovestream=null,this.onsignalingstatechange=null,this.oniceconnectionstatechange=null,this.onnegotiationneeded=null,this.ondatachannel=null,this.localStreams=[],this.remoteStreams=[],this.getLocalStreams=function(){return self.localStreams},this.getRemoteStreams=function(){return self.remoteStreams},this.localDescription=new RTCSessionDescription({type:"",sdp:""}),this.remoteDescription=new RTCSessionDescription({type:"",sdp:""}),this.signalingState="stable",this.iceConnectionState="new",this.iceGatheringState="new",this.iceOptions={gatherPolicy:"all",iceServers:[]},config&&config.iceTransportPolicy)switch(config.iceTransportPolicy){case"all":case"relay":this.iceOptions.gatherPolicy=config.iceTransportPolicy;break;case"none":throw new TypeError('iceTransportPolicy "none" not supported')}if(this.usingBundle=config&&"max-bundle"===config.bundlePolicy,config&&config.iceServers){var iceServers=JSON.parse(JSON.stringify(config.iceServers));this.iceOptions.iceServers=iceServers.filter(function(server){if(server&&server.urls){var urls=server.urls;return"string"==typeof urls&&(urls=[urls]),urls=urls.filter(function(url){return 0===url.indexOf("turn:")&&url.indexOf("transport=udp")!==-1&&url.indexOf("turn:[")===-1||0===url.indexOf("stun:")&&browserDetails.version>=14393})[0],!!urls}return!1})}this.transceivers=[],this._localIceCandidatesBuffer=[]},window.RTCPeerConnection.prototype._emitBufferedCandidates=function(){var self=this,sections=SDPUtils.splitSections(self.localDescription.sdp);this._localIceCandidatesBuffer.forEach(function(event){var end=!event.candidate||0===Object.keys(event.candidate).length;if(end)for(var j=1;j<sections.length;j++)sections[j].indexOf("\r\na=end-of-candidates\r\n")===-1&&(sections[j]+="a=end-of-candidates\r\n");else event.candidate.candidate.indexOf("typ endOfCandidates")===-1&&(sections[event.candidate.sdpMLineIndex+1]+="a="+event.candidate.candidate+"\r\n");if(self.localDescription.sdp=sections.join(""),self.dispatchEvent(event),null!==self.onicecandidate&&self.onicecandidate(event),!event.candidate&&"complete"!==self.iceGatheringState){var complete=self.transceivers.every(function(transceiver){return transceiver.iceGatherer&&"completed"===transceiver.iceGatherer.state});complete&&(self.iceGatheringState="complete")}}),this._localIceCandidatesBuffer=[]},window.RTCPeerConnection.prototype.addStream=function(stream){this.localStreams.push(stream.clone()),this._maybeFireNegotiationNeeded()},window.RTCPeerConnection.prototype.removeStream=function(stream){var idx=this.localStreams.indexOf(stream);idx>-1&&(this.localStreams.splice(idx,1),this._maybeFireNegotiationNeeded())},window.RTCPeerConnection.prototype.getSenders=function(){return this.transceivers.filter(function(transceiver){return!!transceiver.rtpSender}).map(function(transceiver){return transceiver.rtpSender})},window.RTCPeerConnection.prototype.getReceivers=function(){return this.transceivers.filter(function(transceiver){return!!transceiver.rtpReceiver}).map(function(transceiver){return transceiver.rtpReceiver})},window.RTCPeerConnection.prototype._getCommonCapabilities=function(localCapabilities,remoteCapabilities){var commonCapabilities={codecs:[],headerExtensions:[],fecMechanisms:[]};return localCapabilities.codecs.forEach(function(lCodec){for(var i=0;i<remoteCapabilities.codecs.length;i++){var rCodec=remoteCapabilities.codecs[i];if(lCodec.name.toLowerCase()===rCodec.name.toLowerCase()&&lCodec.clockRate===rCodec.clockRate&&lCodec.numChannels===rCodec.numChannels){commonCapabilities.codecs.push(rCodec),rCodec.rtcpFeedback=rCodec.rtcpFeedback.filter(function(fb){for(var j=0;j<lCodec.rtcpFeedback.length;j++)if(lCodec.rtcpFeedback[j].type===fb.type&&lCodec.rtcpFeedback[j].parameter===fb.parameter)return!0;return!1});break}}}),localCapabilities.headerExtensions.forEach(function(lHeaderExtension){for(var i=0;i<remoteCapabilities.headerExtensions.length;i++){var rHeaderExtension=remoteCapabilities.headerExtensions[i];if(lHeaderExtension.uri===rHeaderExtension.uri){commonCapabilities.headerExtensions.push(rHeaderExtension);break}}}),commonCapabilities},window.RTCPeerConnection.prototype._createIceAndDtlsTransports=function(mid,sdpMLineIndex){var self=this,iceGatherer=new RTCIceGatherer(self.iceOptions),iceTransport=new RTCIceTransport(iceGatherer);iceGatherer.onlocalcandidate=function(evt){var event=new Event("icecandidate");event.candidate={sdpMid:mid,sdpMLineIndex:sdpMLineIndex};var cand=evt.candidate,end=!cand||0===Object.keys(cand).length;end?(void 0===iceGatherer.state&&(iceGatherer.state="completed"),event.candidate.candidate="candidate:1 1 udp 1 0.0.0.0 9 typ endOfCandidates"):(cand.component="RTCP"===iceTransport.component?2:1,event.candidate.candidate=SDPUtils.writeCandidate(cand));var sections=SDPUtils.splitSections(self.localDescription.sdp);event.candidate.candidate.indexOf("typ endOfCandidates")===-1?sections[event.candidate.sdpMLineIndex+1]+="a="+event.candidate.candidate+"\r\n":sections[event.candidate.sdpMLineIndex+1]+="a=end-of-candidates\r\n",self.localDescription.sdp=sections.join("");var complete=self.transceivers.every(function(transceiver){return transceiver.iceGatherer&&"completed"===transceiver.iceGatherer.state});switch(self.iceGatheringState){case"new":self._localIceCandidatesBuffer.push(event),end&&complete&&self._localIceCandidatesBuffer.push(new Event("icecandidate"));break;case"gathering":self._emitBufferedCandidates(),self.dispatchEvent(event),null!==self.onicecandidate&&self.onicecandidate(event),complete&&(self.dispatchEvent(new Event("icecandidate")),null!==self.onicecandidate&&self.onicecandidate(new Event("icecandidate")),self.iceGatheringState="complete");break;case"complete":}},iceTransport.onicestatechange=function(){self._updateConnectionState()};var dtlsTransport=new RTCDtlsTransport(iceTransport);return dtlsTransport.ondtlsstatechange=function(){self._updateConnectionState()},dtlsTransport.onerror=function(){dtlsTransport.state="failed",self._updateConnectionState()},{iceGatherer:iceGatherer,iceTransport:iceTransport,dtlsTransport:dtlsTransport}},window.RTCPeerConnection.prototype._transceive=function(transceiver,send,recv){var params=this._getCommonCapabilities(transceiver.localCapabilities,transceiver.remoteCapabilities);send&&transceiver.rtpSender&&(params.encodings=transceiver.sendEncodingParameters,params.rtcp={cname:SDPUtils.localCName},transceiver.recvEncodingParameters.length&&(params.rtcp.ssrc=transceiver.recvEncodingParameters[0].ssrc),transceiver.rtpSender.send(params)),recv&&transceiver.rtpReceiver&&(params.encodings=transceiver.recvEncodingParameters,params.rtcp={cname:transceiver.cname},transceiver.sendEncodingParameters.length&&(params.rtcp.ssrc=transceiver.sendEncodingParameters[0].ssrc),transceiver.rtpReceiver.receive(params))},window.RTCPeerConnection.prototype.setLocalDescription=function(description){var sections,sessionpart,self=this;if("offer"===description.type)this._pendingOffer&&(sections=SDPUtils.splitSections(description.sdp),sessionpart=sections.shift(),sections.forEach(function(mediaSection,sdpMLineIndex){var caps=SDPUtils.parseRtpParameters(mediaSection);self._pendingOffer[sdpMLineIndex].localCapabilities=caps}),this.transceivers=this._pendingOffer,delete this._pendingOffer);else if("answer"===description.type){sections=SDPUtils.splitSections(self.remoteDescription.sdp),sessionpart=sections.shift();var isIceLite=SDPUtils.matchPrefix(sessionpart,"a=ice-lite").length>0;sections.forEach(function(mediaSection,sdpMLineIndex){var transceiver=self.transceivers[sdpMLineIndex],iceGatherer=transceiver.iceGatherer,iceTransport=transceiver.iceTransport,dtlsTransport=transceiver.dtlsTransport,localCapabilities=transceiver.localCapabilities,remoteCapabilities=transceiver.remoteCapabilities,rejected="0"===mediaSection.split("\n",1)[0].split(" ",2)[1];if(!rejected&&!transceiver.isDatachannel){var remoteIceParameters=SDPUtils.getIceParameters(mediaSection,sessionpart);if(isIceLite){var cands=SDPUtils.matchPrefix(mediaSection,"a=candidate:").map(function(cand){return SDPUtils.parseCandidate(cand)}).filter(function(cand){return"1"===cand.component});cands.length&&iceTransport.setRemoteCandidates(cands)}var remoteDtlsParameters=SDPUtils.getDtlsParameters(mediaSection,sessionpart);isIceLite&&(remoteDtlsParameters.role="server"),self.usingBundle&&0!==sdpMLineIndex||(iceTransport.start(iceGatherer,remoteIceParameters,isIceLite?"controlling":"controlled"),dtlsTransport.start(remoteDtlsParameters));var params=self._getCommonCapabilities(localCapabilities,remoteCapabilities);self._transceive(transceiver,params.codecs.length>0,!1)}})}switch(this.localDescription={type:description.type,sdp:description.sdp},description.type){case"offer":this._updateSignalingState("have-local-offer");break;case"answer":this._updateSignalingState("stable");break;default:throw new TypeError('unsupported type "'+description.type+'"')}var hasCallback=arguments.length>1&&"function"==typeof arguments[1];if(hasCallback){var cb=arguments[1];window.setTimeout(function(){cb(),"new"===self.iceGatheringState&&(self.iceGatheringState="gathering"),self._emitBufferedCandidates()},0)}var p=Promise.resolve();return p.then(function(){hasCallback||("new"===self.iceGatheringState&&(self.iceGatheringState="gathering"),window.setTimeout(self._emitBufferedCandidates.bind(self),500))}),p},window.RTCPeerConnection.prototype.setRemoteDescription=function(description){var self=this,stream=new MediaStream,receiverList=[],sections=SDPUtils.splitSections(description.sdp),sessionpart=sections.shift(),isIceLite=SDPUtils.matchPrefix(sessionpart,"a=ice-lite").length>0;switch(this.usingBundle=SDPUtils.matchPrefix(sessionpart,"a=group:BUNDLE ").length>0,sections.forEach(function(mediaSection,sdpMLineIndex){var lines=SDPUtils.splitLines(mediaSection),mline=lines[0].substr(2).split(" "),kind=mline[0],rejected="0"===mline[1],direction=SDPUtils.getDirection(mediaSection,sessionpart),mid=SDPUtils.matchPrefix(mediaSection,"a=mid:");if(mid=mid.length?mid[0].substr(6):SDPUtils.generateIdentifier(),"application"===kind&&"DTLS/SCTP"===mline[2])return void(self.transceivers[sdpMLineIndex]={mid:mid,isDatachannel:!0});var transceiver,iceGatherer,iceTransport,dtlsTransport,rtpSender,rtpReceiver,sendEncodingParameters,recvEncodingParameters,localCapabilities,track,remoteIceParameters,remoteDtlsParameters,remoteCapabilities=SDPUtils.parseRtpParameters(mediaSection);rejected||(remoteIceParameters=SDPUtils.getIceParameters(mediaSection,sessionpart),remoteDtlsParameters=SDPUtils.getDtlsParameters(mediaSection,sessionpart),remoteDtlsParameters.role="client"),recvEncodingParameters=SDPUtils.parseRtpEncodingParameters(mediaSection);var cname,remoteSsrc=SDPUtils.matchPrefix(mediaSection,"a=ssrc:").map(function(line){return SDPUtils.parseSsrcMedia(line)}).filter(function(obj){return"cname"===obj.attribute})[0];remoteSsrc&&(cname=remoteSsrc.value);var isComplete=SDPUtils.matchPrefix(mediaSection,"a=end-of-candidates",sessionpart).length>0,cands=SDPUtils.matchPrefix(mediaSection,"a=candidate:").map(function(cand){return SDPUtils.parseCandidate(cand)}).filter(function(cand){return"1"===cand.component});if("offer"!==description.type||rejected)"answer"!==description.type||rejected||(transceiver=self.transceivers[sdpMLineIndex],iceGatherer=transceiver.iceGatherer,iceTransport=transceiver.iceTransport,dtlsTransport=transceiver.dtlsTransport,rtpSender=transceiver.rtpSender,rtpReceiver=transceiver.rtpReceiver,sendEncodingParameters=transceiver.sendEncodingParameters,localCapabilities=transceiver.localCapabilities,self.transceivers[sdpMLineIndex].recvEncodingParameters=recvEncodingParameters,self.transceivers[sdpMLineIndex].remoteCapabilities=remoteCapabilities,self.transceivers[sdpMLineIndex].cname=cname,(isIceLite||isComplete)&&cands.length&&iceTransport.setRemoteCandidates(cands),self.usingBundle&&0!==sdpMLineIndex||(iceTransport.start(iceGatherer,remoteIceParameters,"controlling"),dtlsTransport.start(remoteDtlsParameters)),self._transceive(transceiver,"sendrecv"===direction||"recvonly"===direction,"sendrecv"===direction||"sendonly"===direction),!rtpReceiver||"sendrecv"!==direction&&"sendonly"!==direction?delete transceiver.rtpReceiver:(track=rtpReceiver.track,receiverList.push([track,rtpReceiver]),stream.addTrack(track)));else{var transports=self.usingBundle&&sdpMLineIndex>0?{iceGatherer:self.transceivers[0].iceGatherer,iceTransport:self.transceivers[0].iceTransport,dtlsTransport:self.transceivers[0].dtlsTransport}:self._createIceAndDtlsTransports(mid,sdpMLineIndex);if(isComplete&&transports.iceTransport.setRemoteCandidates(cands),localCapabilities=RTCRtpReceiver.getCapabilities(kind),sendEncodingParameters=[{ssrc:1001*(2*sdpMLineIndex+2)}],rtpReceiver=new RTCRtpReceiver(transports.dtlsTransport,kind),track=rtpReceiver.track,receiverList.push([track,rtpReceiver]),stream.addTrack(track),self.localStreams.length>0&&self.localStreams[0].getTracks().length>=sdpMLineIndex){var localTrack;"audio"===kind?localTrack=self.localStreams[0].getAudioTracks()[0]:"video"===kind&&(localTrack=self.localStreams[0].getVideoTracks()[0]),localTrack&&(rtpSender=new RTCRtpSender(localTrack,transports.dtlsTransport))}self.transceivers[sdpMLineIndex]={iceGatherer:transports.iceGatherer,iceTransport:transports.iceTransport,dtlsTransport:transports.dtlsTransport,localCapabilities:localCapabilities,remoteCapabilities:remoteCapabilities,rtpSender:rtpSender,rtpReceiver:rtpReceiver,kind:kind,mid:mid,cname:cname,sendEncodingParameters:sendEncodingParameters,recvEncodingParameters:recvEncodingParameters},self._transceive(self.transceivers[sdpMLineIndex],!1,"sendrecv"===direction||"sendonly"===direction)}}),this.remoteDescription={type:description.type,sdp:description.sdp},description.type){case"offer":this._updateSignalingState("have-remote-offer");break;case"answer":this._updateSignalingState("stable");break;default:throw new TypeError('unsupported type "'+description.type+'"')}return stream.getTracks().length&&(self.remoteStreams.push(stream),window.setTimeout(function(){var event=new Event("addstream");event.stream=stream,self.dispatchEvent(event),null!==self.onaddstream&&window.setTimeout(function(){self.onaddstream(event)},0),receiverList.forEach(function(item){var track=item[0],receiver=item[1],trackEvent=new Event("track");trackEvent.track=track,trackEvent.receiver=receiver,
-trackEvent.streams=[stream],self.dispatchEvent(event),null!==self.ontrack&&window.setTimeout(function(){self.ontrack(trackEvent)},0)})},0)),arguments.length>1&&"function"==typeof arguments[1]&&window.setTimeout(arguments[1],0),Promise.resolve()},window.RTCPeerConnection.prototype.close=function(){this.transceivers.forEach(function(transceiver){transceiver.iceTransport&&transceiver.iceTransport.stop(),transceiver.dtlsTransport&&transceiver.dtlsTransport.stop(),transceiver.rtpSender&&transceiver.rtpSender.stop(),transceiver.rtpReceiver&&transceiver.rtpReceiver.stop()}),this._updateSignalingState("closed")},window.RTCPeerConnection.prototype._updateSignalingState=function(newState){this.signalingState=newState;var event=new Event("signalingstatechange");this.dispatchEvent(event),null!==this.onsignalingstatechange&&this.onsignalingstatechange(event)},window.RTCPeerConnection.prototype._maybeFireNegotiationNeeded=function(){var event=new Event("negotiationneeded");this.dispatchEvent(event),null!==this.onnegotiationneeded&&this.onnegotiationneeded(event)},window.RTCPeerConnection.prototype._updateConnectionState=function(){var newState,self=this,states={new:0,closed:0,connecting:0,checking:0,connected:0,completed:0,failed:0};if(this.transceivers.forEach(function(transceiver){states[transceiver.iceTransport.state]++,states[transceiver.dtlsTransport.state]++}),states.connected+=states.completed,newState="new",states.failed>0?newState="failed":states.connecting>0||states.checking>0?newState="connecting":states.disconnected>0?newState="disconnected":states.new>0?newState="new":(states.connected>0||states.completed>0)&&(newState="connected"),newState!==self.iceConnectionState){self.iceConnectionState=newState;var event=new Event("iceconnectionstatechange");this.dispatchEvent(event),null!==this.oniceconnectionstatechange&&this.oniceconnectionstatechange(event)}},window.RTCPeerConnection.prototype.createOffer=function(){var self=this;if(this._pendingOffer)throw new Error("createOffer called while there is a pending offer.");var offerOptions;1===arguments.length&&"function"!=typeof arguments[0]?offerOptions=arguments[0]:3===arguments.length&&(offerOptions=arguments[2]);var tracks=[],numAudioTracks=0,numVideoTracks=0;if(this.localStreams.length&&(numAudioTracks=this.localStreams[0].getAudioTracks().length,numVideoTracks=this.localStreams[0].getVideoTracks().length),offerOptions){if(offerOptions.mandatory||offerOptions.optional)throw new TypeError("Legacy mandatory/optional constraints not supported.");void 0!==offerOptions.offerToReceiveAudio&&(numAudioTracks=offerOptions.offerToReceiveAudio),void 0!==offerOptions.offerToReceiveVideo&&(numVideoTracks=offerOptions.offerToReceiveVideo)}for(this.localStreams.length&&this.localStreams[0].getTracks().forEach(function(track){tracks.push({kind:track.kind,track:track,wantReceive:"audio"===track.kind?numAudioTracks>0:numVideoTracks>0}),"audio"===track.kind?numAudioTracks--:"video"===track.kind&&numVideoTracks--});numAudioTracks>0||numVideoTracks>0;)numAudioTracks>0&&(tracks.push({kind:"audio",wantReceive:!0}),numAudioTracks--),numVideoTracks>0&&(tracks.push({kind:"video",wantReceive:!0}),numVideoTracks--);var sdp=SDPUtils.writeSessionBoilerplate(),transceivers=[];tracks.forEach(function(mline,sdpMLineIndex){var rtpSender,rtpReceiver,track=mline.track,kind=mline.kind,mid=SDPUtils.generateIdentifier(),transports=self.usingBundle&&sdpMLineIndex>0?{iceGatherer:transceivers[0].iceGatherer,iceTransport:transceivers[0].iceTransport,dtlsTransport:transceivers[0].dtlsTransport}:self._createIceAndDtlsTransports(mid,sdpMLineIndex),localCapabilities=RTCRtpSender.getCapabilities(kind),sendEncodingParameters=[{ssrc:1001*(2*sdpMLineIndex+1)}];track&&(rtpSender=new RTCRtpSender(track,transports.dtlsTransport)),mline.wantReceive&&(rtpReceiver=new RTCRtpReceiver(transports.dtlsTransport,kind)),transceivers[sdpMLineIndex]={iceGatherer:transports.iceGatherer,iceTransport:transports.iceTransport,dtlsTransport:transports.dtlsTransport,localCapabilities:localCapabilities,remoteCapabilities:null,rtpSender:rtpSender,rtpReceiver:rtpReceiver,kind:kind,mid:mid,sendEncodingParameters:sendEncodingParameters,recvEncodingParameters:null}}),this.usingBundle&&(sdp+="a=group:BUNDLE "+transceivers.map(function(t){return t.mid}).join(" ")+"\r\n"),tracks.forEach(function(mline,sdpMLineIndex){var transceiver=transceivers[sdpMLineIndex];sdp+=SDPUtils.writeMediaSection(transceiver,transceiver.localCapabilities,"offer",self.localStreams[0])}),this._pendingOffer=transceivers;var desc=new RTCSessionDescription({type:"offer",sdp:sdp});return arguments.length&&"function"==typeof arguments[0]&&window.setTimeout(arguments[0],0,desc),Promise.resolve(desc)},window.RTCPeerConnection.prototype.createAnswer=function(){var self=this,sdp=SDPUtils.writeSessionBoilerplate();this.usingBundle&&(sdp+="a=group:BUNDLE "+this.transceivers.map(function(t){return t.mid}).join(" ")+"\r\n"),this.transceivers.forEach(function(transceiver){if(transceiver.isDatachannel)return void(sdp+="m=application 0 DTLS/SCTP 5000\r\nc=IN IP4 0.0.0.0\r\na=mid:"+transceiver.mid+"\r\n");var commonCapabilities=self._getCommonCapabilities(transceiver.localCapabilities,transceiver.remoteCapabilities);sdp+=SDPUtils.writeMediaSection(transceiver,commonCapabilities,"answer",self.localStreams[0])});var desc=new RTCSessionDescription({type:"answer",sdp:sdp});return arguments.length&&"function"==typeof arguments[0]&&window.setTimeout(arguments[0],0,desc),Promise.resolve(desc)},window.RTCPeerConnection.prototype.addIceCandidate=function(candidate){if(null===candidate)this.transceivers.forEach(function(transceiver){transceiver.iceTransport.addRemoteCandidate({})});else{var mLineIndex=candidate.sdpMLineIndex;if(candidate.sdpMid)for(var i=0;i<this.transceivers.length;i++)if(this.transceivers[i].mid===candidate.sdpMid){mLineIndex=i;break}var transceiver=this.transceivers[mLineIndex];if(transceiver){var cand=Object.keys(candidate.candidate).length>0?SDPUtils.parseCandidate(candidate.candidate):{};if("tcp"===cand.protocol&&(0===cand.port||9===cand.port))return;if("1"!==cand.component)return;"endOfCandidates"===cand.type&&(cand={}),transceiver.iceTransport.addRemoteCandidate(cand);var sections=SDPUtils.splitSections(this.remoteDescription.sdp);sections[mLineIndex+1]+=(cand.type?candidate.candidate.trim():"a=end-of-candidates")+"\r\n",this.remoteDescription.sdp=sections.join("")}}return arguments.length>1&&"function"==typeof arguments[1]&&window.setTimeout(arguments[1],0),Promise.resolve()},window.RTCPeerConnection.prototype.getStats=function(){var promises=[];this.transceivers.forEach(function(transceiver){["rtpSender","rtpReceiver","iceGatherer","iceTransport","dtlsTransport"].forEach(function(method){transceiver[method]&&promises.push(transceiver[method].getStats())})});var cb=arguments.length>1&&"function"==typeof arguments[1]&&arguments[1];return new Promise(function(resolve){var results=new Map;Promise.all(promises).then(function(res){res.forEach(function(result){Object.keys(result).forEach(function(id){results.set(id,result[id]),results[id]=result[id]})}),cb&&window.setTimeout(cb,0,results),resolve(results)})})}}};module.exports={shimPeerConnection:edgeShim.shimPeerConnection,shimGetUserMedia:requirecopy("./getusermedia")}},{"../utils":10,"./getusermedia":6,sdp:1}],6:[function(requirecopy,module,exports){"use strict";module.exports=function(){var shimError_=function(e){return{name:{PermissionDeniedError:"NotAllowedError"}[e.name]||e.name,message:e.message,constraint:e.constraint,toString:function(){return this.name}}},origGetUserMedia=navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);navigator.mediaDevices.getUserMedia=function(c){return origGetUserMedia(c).catch(function(e){return Promise.reject(shimError_(e))})}}},{}],7:[function(requirecopy,module,exports){"use strict";var browserDetails=requirecopy("../utils").browserDetails,firefoxShim={shimOnTrack:function(){"object"!=typeof window||!window.RTCPeerConnection||"ontrack"in window.RTCPeerConnection.prototype||Object.defineProperty(window.RTCPeerConnection.prototype,"ontrack",{get:function(){return this._ontrack},set:function(f){this._ontrack&&(this.removeEventListener("track",this._ontrack),this.removeEventListener("addstream",this._ontrackpoly)),this.addEventListener("track",this._ontrack=f),this.addEventListener("addstream",this._ontrackpoly=function(e){e.stream.getTracks().forEach(function(track){var event=new Event("track");event.track=track,event.receiver={track:track},event.streams=[e.stream],this.dispatchEvent(event)}.bind(this))}.bind(this))}})},shimSourceObject:function(){"object"==typeof window&&(!window.HTMLMediaElement||"srcObject"in window.HTMLMediaElement.prototype||Object.defineProperty(window.HTMLMediaElement.prototype,"srcObject",{get:function(){return this.mozSrcObject},set:function(stream){this.mozSrcObject=stream}}))},shimPeerConnection:function(){if("object"==typeof window&&(window.RTCPeerConnection||window.mozRTCPeerConnection)){window.RTCPeerConnection||(window.RTCPeerConnection=function(pcConfig,pcConstraints){if(browserDetails.version<38&&pcConfig&&pcConfig.iceServers){for(var newIceServers=[],i=0;i<pcConfig.iceServers.length;i++){var server=pcConfig.iceServers[i];if(server.hasOwnProperty("urls"))for(var j=0;j<server.urls.length;j++){var newServer={url:server.urls[j]};0===server.urls[j].indexOf("turn")&&(newServer.username=server.username,newServer.credential=server.credential),newIceServers.push(newServer)}else newIceServers.push(pcConfig.iceServers[i])}pcConfig.iceServers=newIceServers}return new mozRTCPeerConnection(pcConfig,pcConstraints)},window.RTCPeerConnection.prototype=mozRTCPeerConnection.prototype,mozRTCPeerConnection.generateCertificate&&Object.defineProperty(window.RTCPeerConnection,"generateCertificate",{get:function(){return mozRTCPeerConnection.generateCertificate}}),window.RTCSessionDescription=mozRTCSessionDescription,window.RTCIceCandidate=mozRTCIceCandidate),["setLocalDescription","setRemoteDescription","addIceCandidate"].forEach(function(method){var nativeMethod=RTCPeerConnection.prototype[method];RTCPeerConnection.prototype[method]=function(){return arguments[0]=new("addIceCandidate"===method?RTCIceCandidate:RTCSessionDescription)(arguments[0]),nativeMethod.apply(this,arguments)}});var nativeAddIceCandidate=RTCPeerConnection.prototype.addIceCandidate;RTCPeerConnection.prototype.addIceCandidate=function(){return null===arguments[0]?Promise.resolve():nativeAddIceCandidate.apply(this,arguments)};var makeMapStats=function(stats){var map=new Map;return Object.keys(stats).forEach(function(key){map.set(key,stats[key]),map[key]=stats[key]}),map},nativeGetStats=RTCPeerConnection.prototype.getStats;RTCPeerConnection.prototype.getStats=function(selector,onSucc,onErr){return nativeGetStats.apply(this,[selector||null]).then(function(stats){return makeMapStats(stats)}).then(onSucc,onErr)}}}};module.exports={shimOnTrack:firefoxShim.shimOnTrack,shimSourceObject:firefoxShim.shimSourceObject,shimPeerConnection:firefoxShim.shimPeerConnection,shimGetUserMedia:requirecopy("./getusermedia")}},{"../utils":10,"./getusermedia":8}],8:[function(requirecopy,module,exports){"use strict";var logging=requirecopy("../utils").log,browserDetails=requirecopy("../utils").browserDetails;module.exports=function(){var shimError_=function(e){return{name:{SecurityError:"NotAllowedError",PermissionDeniedError:"NotAllowedError"}[e.name]||e.name,message:{"The operation is insecure.":"The request is not allowed by the user agent or the platform in the current context."}[e.message]||e.message,constraint:e.constraint,toString:function(){return this.name+(this.message&&": ")+this.message}}},getUserMedia_=function(constraints,onSuccess,onError){var constraintsToFF37_=function(c){if("object"!=typeof c||c.require)return c;var require=[];return Object.keys(c).forEach(function(key){if("require"!==key&&"advanced"!==key&&"mediaSource"!==key){var r=c[key]="object"==typeof c[key]?c[key]:{ideal:c[key]};if(void 0===r.min&&void 0===r.max&&void 0===r.exact||require.push(key),void 0!==r.exact&&("number"==typeof r.exact?r.min=r.max=r.exact:c[key]=r.exact,delete r.exact),void 0!==r.ideal){c.advanced=c.advanced||[];var oc={};"number"==typeof r.ideal?oc[key]={min:r.ideal,max:r.ideal}:oc[key]=r.ideal,c.advanced.push(oc),delete r.ideal,Object.keys(r).length||delete c[key]}}}),require.length&&(c.require=require),c};return constraints=JSON.parse(JSON.stringify(constraints)),browserDetails.version<38&&(logging("spec: "+JSON.stringify(constraints)),constraints.audio&&(constraints.audio=constraintsToFF37_(constraints.audio)),constraints.video&&(constraints.video=constraintsToFF37_(constraints.video)),logging("ff37: "+JSON.stringify(constraints))),navigator.mozGetUserMedia(constraints,onSuccess,function(e){onError(shimError_(e))})},getUserMediaPromise_=function(constraints){return new Promise(function(resolve,reject){getUserMedia_(constraints,resolve,reject)})};if(navigator.mediaDevices||(navigator.mediaDevices={getUserMedia:getUserMediaPromise_,addEventListener:function(){},removeEventListener:function(){}}),navigator.mediaDevices.enumerateDevices=navigator.mediaDevices.enumerateDevices||function(){return new Promise(function(resolve){var infos=[{kind:"audioinput",deviceId:"default",label:"",groupId:""},{kind:"videoinput",deviceId:"default",label:"",groupId:""}];resolve(infos)})},browserDetails.version<41){var orgEnumerateDevices=navigator.mediaDevices.enumerateDevices.bind(navigator.mediaDevices);navigator.mediaDevices.enumerateDevices=function(){return orgEnumerateDevices().then(void 0,function(e){if("NotFoundError"===e.name)return[];throw e})}}if(browserDetails.version<49){var origGetUserMedia=navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);navigator.mediaDevices.getUserMedia=function(c){return origGetUserMedia(c).catch(function(e){return Promise.reject(shimError_(e))})}}navigator.getUserMedia=function(constraints,onSuccess,onError){return browserDetails.version<44?getUserMedia_(constraints,onSuccess,onError):void navigator.mediaDevices.getUserMedia(constraints).then(onSuccess,onError)}}},{"../utils":10}],9:[function(requirecopy,module,exports){"use strict";var safariShim={shimGetUserMedia:function(){navigator.getUserMedia=navigator.webkitGetUserMedia}};module.exports={shimGetUserMedia:safariShim.shimGetUserMedia}},{}],10:[function(requirecopy,module,exports){"use strict";var logDisabled_=!0,utils={disableLog:function(bool){return"boolean"!=typeof bool?new Error("Argument type: "+typeof bool+". Please use a boolean."):(logDisabled_=bool,bool?"adapter.js logging disabled":"adapter.js logging enabled")},log:function(){if("object"==typeof window){if(logDisabled_)return;"undefined"!=typeof console&&"function"==typeof console.log}},extractVersion:function(uastring,expr,pos){var match=uastring.match(expr);return match&&match.length>=pos&&parseInt(match[pos],10)},detectBrowser:function(){var result={};if(result.browser=null,result.version=null,"undefined"==typeof window||!window.navigator)return result.browser="Not a browser.",result;if(navigator.mozGetUserMedia)result.browser="firefox",result.version=this.extractVersion(navigator.userAgent,/Firefox\/([0-9]+)\./,1);else if(navigator.webkitGetUserMedia)if(window.webkitRTCPeerConnection)result.browser="chrome",result.version=this.extractVersion(navigator.userAgent,/Chrom(e|ium)\/([0-9]+)\./,2);else{if(!navigator.userAgent.match(/Version\/(\d+).(\d+)/))return result.browser="Unsupported webkit-based browser with GUM support but no WebRTC support.",result;result.browser="safari",result.version=this.extractVersion(navigator.userAgent,/AppleWebKit\/([0-9]+)\./,1)}else{if(!navigator.mediaDevices||!navigator.userAgent.match(/Edge\/(\d+).(\d+)$/))return result.browser="Not a supported browser.",result;result.browser="edge",result.version=this.extractVersion(navigator.userAgent,/Edge\/(\d+).(\d+)$/,2)}return result}};module.exports={log:utils.log,disableLog:utils.disableLog,browserDetails:utils.detectBrowser(),extractVersion:utils.extractVersion}},{}]},{},[2])(2)}),AdapterJS.parseWebrtcDetectedBrowser(),navigator.mozGetUserMedia?(MediaStreamTrack.getSources=function(successCb){setTimeout(function(){var infos=[{kind:"audio",id:"default",label:"",facing:""},{kind:"video",id:"default",label:"",facing:""}];successCb(infos)},0)},attachMediaStream=function(element,stream){return element.srcObject=stream,element},reattachMediaStream=function(to,from){return to.srcObject=from.srcObject,to},createIceServer=function(url,username,password){var iceServer=null,urlParts=url.split(":");if(0===urlParts[0].indexOf("stun"))iceServer={urls:[url]};else if(0===urlParts[0].indexOf("turn"))if(webrtcDetectedVersion<27){var turnUrlParts=url.split("?");1!==turnUrlParts.length&&0!==turnUrlParts[1].indexOf("transport=udp")||(iceServer={urls:[turnUrlParts[0]],credential:password,username:username})}else iceServer={urls:[url],credential:password,username:username};return iceServer},createIceServers=function(urls,username,password){var iceServers=[];for(i=0;i<urls.length;i++){var iceServer=createIceServer(urls[i],username,password);null!==iceServer&&iceServers.push(iceServer)}return iceServers}):navigator.webkitGetUserMedia?(attachMediaStream=function(element,stream){return webrtcDetectedVersion>=43?element.srcObject=stream:"undefined"!=typeof element.src&&(element.src=URL.createObjectURL(stream)),element},reattachMediaStream=function(to,from){return webrtcDetectedVersion>=43?to.srcObject=from.srcObject:to.src=from.src,to},createIceServer=function(url,username,password){var iceServer=null,urlParts=url.split(":");return 0===urlParts[0].indexOf("stun")?iceServer={url:url}:0===urlParts[0].indexOf("turn")&&(iceServer={url:url,credential:password,username:username}),iceServer},createIceServers=function(urls,username,password){var iceServers=[];if(webrtcDetectedVersion>=34)iceServers={urls:urls,credential:password,username:username};else for(i=0;i<urls.length;i++){var iceServer=createIceServer(urls[i],username,password);null!==iceServer&&iceServers.push(iceServer)}return iceServers}):navigator.mediaDevices&&navigator.userAgent.match(/Edge\/(\d+).(\d+)$/)&&(attachMediaStream=function(element,stream){return element.srcObject=stream,element},reattachMediaStream=function(to,from){return to.srcObject=from.srcObject,to}),attachMediaStream_base=attachMediaStream,"opera"===webrtcDetectedBrowser&&(attachMediaStream_base=function(element,stream){webrtcDetectedVersion>38?element.srcObject=stream:"undefined"!=typeof element.src&&(element.src=URL.createObjectURL(stream))}),attachMediaStream=function(element,stream){return"chrome"!==webrtcDetectedBrowser&&"opera"!==webrtcDetectedBrowser||stream?attachMediaStream_base(element,stream):element.src="",element},reattachMediaStream_base=reattachMediaStream,reattachMediaStream=function(to,from){return reattachMediaStream_base(to,from),to},window.attachMediaStream=attachMediaStream,window.reattachMediaStream=reattachMediaStream,window.getUserMedia=function(constraints,onSuccess,onFailure){navigator.getUserMedia(constraints,onSuccess,onFailure)},AdapterJS.attachMediaStream=attachMediaStream,AdapterJS.reattachMediaStream=reattachMediaStream,AdapterJS.getUserMedia=getUserMedia,"undefined"==typeof Promise&&(requestUserMedia=null),AdapterJS.maybeThroughWebRTCReady()),"undefined"!=typeof exports&&(module.exports=AdapterJS);
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = AdapterJS;
-
-/***/ }),
-/* 205 */
-/***/ (function(module, exports) {
-
-/* Copyright @ 2015 Atlassian Pty Ltd
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-module.exports = function arrayEquals(array) {
-    // if the other array is a falsy value, return
-    if (!array)
-        return false;
-
-    // compare lengths - can save a lot of time
-    if (this.length != array.length)
-        return false;
-
-    for (var i = 0, l = this.length; i < l; i++) {
-        // Check if we have nested arrays
-        if (this[i] instanceof Array && array[i] instanceof Array) {
-            // recurse into the nested arrays
-            if (!arrayEquals.apply(this[i], [array[i]]))
-                return false;
-        } else if (this[i] != array[i]) {
-            // Warning - two different object instances will never be equal:
-            // {x:20} != {x:20}
-            return false;
-        }
-    }
-    return true;
-};
-
-
-
-/***/ }),
-/* 206 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* Copyright @ 2015 Atlassian Pty Ltd
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-exports.Interop = __webpack_require__(207);
-
-
-/***/ }),
-/* 207 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* Copyright @ 2015 Atlassian Pty Ltd
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-/* global RTCSessionDescription */
-/* jshint -W097 */
-
-
-var transform = __webpack_require__(208);
-var arrayEquals = __webpack_require__(205);
-
-function Interop() {
-
-    /**
-     * This map holds the most recent Unified Plan offer/answer SDP that was
-     * converted to Plan B, with the SDP type ('offer' or 'answer') as keys and
-     * the SDP string as values.
-     *
-     * @type {{}}
-     */
-    this.cache = {};
-}
-
-module.exports = Interop;
-
-/**
- * Returns the index of the first m-line with the given media type and with a
- * direction which allows sending, in the last Unified Plan description with
- * type "answer" converted to Plan B. Returns {null} if there is no saved
- * answer, or if none of its m-lines with the given type allow sending.
- * @param type the media type ("audio" or "video").
- * @returns {*}
- */
-Interop.prototype.getFirstSendingIndexFromAnswer = function(type) {
-    if (!this.cache.answer) {
-        return null;
-    }
-
-    var session = transform.parse(this.cache.answer);
-    if (session && session.media && Array.isArray(session.media)){
-        for (var i = 0; i < session.media.length; i++) {
-            if (session.media[i].type == type &&
-                (!session.media[i].direction /* default to sendrecv */ ||
-                    session.media[i].direction === 'sendrecv' ||
-                    session.media[i].direction === 'sendonly')){
-                return i;
-            }
-        }
-    }
-
-    return null;
-};
-
-/**
- * This method transforms a Unified Plan SDP to an equivalent Plan B SDP. A
- * PeerConnection wrapper transforms the SDP to Plan B before passing it to the
- * application.
- *
- * @param desc
- * @returns {*}
- */
-Interop.prototype.toPlanB = function(desc) {
-    var self = this;
-    //#region Preliminary input validation.
-
-    if (typeof desc !== 'object' || desc === null ||
-        typeof desc.sdp !== 'string') {
-        console.warn('An empty description was passed as an argument.');
-        return desc;
-    }
-
-    // Objectify the SDP for easier manipulation.
-    var session = transform.parse(desc.sdp);
-
-    // If the SDP contains no media, there's nothing to transform.
-    if (typeof session.media === 'undefined' ||
-        !Array.isArray(session.media) || session.media.length === 0) {
-        console.warn('The description has no media.');
-        return desc;
-    }
-
-    // Try some heuristics to "make sure" this is a Unified Plan SDP. Plan B
-    // SDP has a video, an audio and a data "channel" at most.
-    if (session.media.length <= 3 && session.media.every(function(m) {
-            return ['video', 'audio', 'data'].indexOf(m.mid) !== -1;
-        })) {
-        console.warn('This description does not look like Unified Plan.');
-        return desc;
-    }
-
-    //#endregion
-
-    // HACK https://bugzilla.mozilla.org/show_bug.cgi?id=1113443
-    var sdp = desc.sdp;
-    var rewrite = false;
-    for (var i = 0; i < session.media.length; i++) {
-        var uLine = session.media[i];
-        uLine.rtp.forEach(function(rtp) {
-            if (rtp.codec === 'NULL')
-            {
-                rewrite = true;
-                var offer = transform.parse(self.cache['offer']);
-                rtp.codec = offer.media[i].rtp[0].codec;
-            }
-        });
-    };
-    if (rewrite) {
-        sdp = transform.write(session);
-    }
-
-    // Unified Plan SDP is our "precious". Cache it for later use in the Plan B
-    // -> Unified Plan transformation.
-    this.cache[desc.type] = sdp;
-
-    //#region Convert from Unified Plan to Plan B.
-
-    // We rebuild the session.media array.
-    var media = session.media;
-    session.media = [];
-
-    // Associative array that maps channel types to channel objects for fast
-    // access to channel objects by their type, e.g. type2bl['audio']->channel
-    // obj.
-    var type2bl = {};
-
-    // Used to build the group:BUNDLE value after the channels construction
-    // loop.
-    var types = [];
-
-    // Implode the Unified Plan m-lines/tracks into Plan B channels.
-    media.forEach(function(uLine) {
-
-        // rtcp-mux is required in the Plan B SDP.
-        if ((typeof uLine.rtcpMux !== 'string' ||
-            uLine.rtcpMux !== 'rtcp-mux') &&
-            uLine.direction !== 'inactive') {
-            throw new Error('Cannot convert to Plan B because m-lines ' +
-                'without the rtcp-mux attribute were found.');
-        }
-
-        if (uLine.type === 'application') {
-            session.media.push(uLine);
-            types.push(uLine.mid);
-            return;
-        }
-
-        // If we don't have a channel for this uLine.type, then use this
-        // uLine as the channel basis.
-        if (typeof type2bl[uLine.type] === 'undefined') {
-            type2bl[uLine.type] = uLine;
-        }
-
-        // Add sources to the channel and handle a=msid.
-        if (typeof uLine.sources === 'object') {
-            Object.keys(uLine.sources).forEach(function(ssrc) {
-                if (typeof type2bl[uLine.type].sources !== 'object')
-                    type2bl[uLine.type].sources = {};
-
-                // Assign the sources to the channel.
-                type2bl[uLine.type].sources[ssrc] =
-                    uLine.sources[ssrc];
-
-                if (typeof uLine.msid !== 'undefined') {
-                    // In Plan B the msid is an SSRC attribute. Also, we don't
-                    // care about the obsolete label and mslabel attributes.
-                    //
-                    // Note that it is not guaranteed that the uLine will
-                    // have an msid. recvonly channels in particular don't have
-                    // one.
-                    type2bl[uLine.type].sources[ssrc].msid =
-                        uLine.msid;
-                }
-                // NOTE ssrcs in ssrc groups will share msids, as
-                // draft-uberti-rtcweb-plan-00 mandates.
-            });
-        }
-
-        // Add ssrc groups to the channel.
-        if (typeof uLine.ssrcGroups !== 'undefined' &&
-                Array.isArray(uLine.ssrcGroups)) {
-
-            // Create the ssrcGroups array, if it's not defined.
-            if (typeof type2bl[uLine.type].ssrcGroups === 'undefined' ||
-                    !Array.isArray(type2bl[uLine.type].ssrcGroups)) {
-                type2bl[uLine.type].ssrcGroups = [];
-            }
-
-            type2bl[uLine.type].ssrcGroups =
-                type2bl[uLine.type].ssrcGroups.concat(
-                    uLine.ssrcGroups);
-        }
-
-        if (type2bl[uLine.type] === uLine) {
-            // Copy ICE related stuff from the principal media line.
-            uLine.candidates = media[0].candidates;
-            uLine.iceUfrag = media[0].iceUfrag;
-            uLine.icePwd = media[0].icePwd;
-            uLine.fingerprint = media[0].fingerprint;
-
-            // Plan B mids are in ['audio', 'video', 'data']
-            uLine.mid = uLine.type;
-
-            // Plan B doesn't support/need the bundle-only attribute.
-            delete uLine.bundleOnly;
-
-            // In Plan B the msid is an SSRC attribute.
-            delete uLine.msid;
-
-            // Used to build the group:BUNDLE value after this loop.
-            types.push(uLine.type);
-
-            // Add the channel to the new media array.
-            session.media.push(uLine);
-        }
-    });
-
-    // We regenerate the BUNDLE group with the new mids.
-    session.groups.some(function(group) {
-        if (group.type === 'BUNDLE') {
-            group.mids = types.join(' ');
-            return true;
-        }
-    });
-
-    // msid semantic
-    session.msidSemantic = {
-        semantic: 'WMS',
-        token: '*'
-    };
-
-    var resStr = transform.write(session);
-
-    return new RTCSessionDescription({
-        type: desc.type,
-        sdp: resStr
-    });
-
-    //#endregion
-};
-
-/**
- * This method transforms a Plan B SDP to an equivalent Unified Plan SDP. A
- * PeerConnection wrapper transforms the SDP to Unified Plan before passing it
- * to FF.
- *
- * @param desc
- * @returns {*}
- */
-Interop.prototype.toUnifiedPlan = function(desc) {
-    var self = this;
-    //#region Preliminary input validation.
-
-    if (typeof desc !== 'object' || desc === null ||
-        typeof desc.sdp !== 'string') {
-        console.warn('An empty description was passed as an argument.');
-        return desc;
-    }
-
-    var session = transform.parse(desc.sdp);
-
-    // If the SDP contains no media, there's nothing to transform.
-    if (typeof session.media === 'undefined' ||
-        !Array.isArray(session.media) || session.media.length === 0) {
-        console.warn('The description has no media.');
-        return desc;
-    }
-
-    // Try some heuristics to "make sure" this is a Plan B SDP. Plan B SDP has
-    // a video, an audio and a data "channel" at most.
-    if (session.media.length > 3 || !session.media.every(function(m) {
-            return ['video', 'audio', 'data'].indexOf(m.mid) !== -1;
-        })) {
-        console.warn('This description does not look like Plan B.');
-        return desc;
-    }
-
-    // Make sure this Plan B SDP can be converted to a Unified Plan SDP.
-    var mids = [];
-    session.media.forEach(function(m) {
-        mids.push(m.mid);
-    });
-
-    var hasBundle = false;
-    if (typeof session.groups !== 'undefined' &&
-        Array.isArray(session.groups)) {
-        hasBundle = session.groups.every(function(g) {
-            return g.type !== 'BUNDLE' ||
-                arrayEquals.apply(g.mids.sort(), [mids.sort()]);
-        });
-    }
-
-    if (!hasBundle) {
-        throw new Error("Cannot convert to Unified Plan because m-lines that" +
-            " are not bundled were found.");
-    }
-
-    //#endregion
-
-
-    //#region Convert from Plan B to Unified Plan.
-
-    // Unfortunately, a Plan B offer/answer doesn't have enough information to
-    // rebuild an equivalent Unified Plan offer/answer.
-    //
-    // For example, if this is a local answer (in Unified Plan style) that we
-    // convert to Plan B prior to handing it over to the application (the
-    // PeerConnection wrapper called us, for instance, after a successful
-    // createAnswer), we want to remember the m-line at which we've seen the
-    // (local) SSRC. That's because when the application wants to do call the
-    // SLD method, forcing us to do the inverse transformation (from Plan B to
-    // Unified Plan), we need to know to which m-line to assign the (local)
-    // SSRC. We also need to know all the other m-lines that the original
-    // answer had and include them in the transformed answer as well.
-    //
-    // Another example is if this is a remote offer that we convert to Plan B
-    // prior to giving it to the application, we want to remember the mid at
-    // which we've seen the (remote) SSRC.
-    //
-    // In the iteration that follows, we use the cached Unified Plan (if it
-    // exists) to assign mids to ssrcs.
-
-    var cached;
-    if (typeof this.cache[desc.type] !== 'undefined') {
-        cached = transform.parse(this.cache[desc.type]);
-    }
-
-    var recvonlySsrcs = {
-        audio: {},
-        video: {}
-    };
-
-    // A helper map that sends mids to m-line objects. We use it later to
-    // rebuild the Unified Plan style session.media array.
-    var mid2ul = {};
-    session.media.forEach(function(bLine) {
-        if ((typeof bLine.rtcpMux !== 'string' ||
-            bLine.rtcpMux !== 'rtcp-mux') &&
-            bLine.direction !== 'inactive') {
-            throw new Error("Cannot convert to Unified Plan because m-lines " +
-                "without the rtcp-mux attribute were found.");
-        }
-
-        if (bLine.type === 'application') {
-            mid2ul[bLine.mid] = bLine;
-            return;
-        }
-
-        // With rtcp-mux and bundle all the channels should have the same ICE
-        // stuff.
-        var sources = bLine.sources;
-        var ssrcGroups = bLine.ssrcGroups;
-        var candidates = bLine.candidates;
-        var iceUfrag = bLine.iceUfrag;
-        var icePwd = bLine.icePwd;
-        var fingerprint = bLine.fingerprint;
-        var port = bLine.port;
-
-        // We'll use the "bLine" object as a prototype for each new "mLine"
-        // that we create, but first we need to clean it up a bit.
-        delete bLine.sources;
-        delete bLine.ssrcGroups;
-        delete bLine.candidates;
-        delete bLine.iceUfrag;
-        delete bLine.icePwd;
-        delete bLine.fingerprint;
-        delete bLine.port;
-        delete bLine.mid;
-
-        // inverted ssrc group map
-        var ssrc2group = {};
-        if (typeof ssrcGroups !== 'undefined' && Array.isArray(ssrcGroups)) {
-            ssrcGroups.forEach(function (ssrcGroup) {
-
-                // TODO(gp) find out how to receive simulcast with FF. For the
-                // time being, hide it.
-                if (ssrcGroup.semantics === 'SIM') {
-                    return;
-                }
-
-                // XXX This might brake if an SSRC is in more than one group
-                // for some reason.
-                if (typeof ssrcGroup.ssrcs !== 'undefined' &&
-                    Array.isArray(ssrcGroup.ssrcs)) {
-                    ssrcGroup.ssrcs.forEach(function (ssrc) {
-                        if (typeof ssrc2group[ssrc] === 'undefined') {
-                            ssrc2group[ssrc] = [];
-                        }
-
-                        ssrc2group[ssrc].push(ssrcGroup);
-                    });
-                }
-            });
-        }
-
-        // ssrc to m-line index.
-        var ssrc2ml = {};
-
-        if (typeof sources === 'object') {
-
-            // Explode the Plan B channel sources with one m-line per source.
-            Object.keys(sources).forEach(function(ssrc) {
-
-                // The (unified) m-line for this SSRC. We either create it from
-                // scratch or, if it's a grouped SSRC, we re-use a related
-                // mline. In other words, if the source is grouped with another
-                // source, put the two together in the same m-line.
-                var uLine;
-
-                // We assume here that we are the answerer in the O/A, so any
-                // offers which we translate come from the remote side, while
-                // answers are local. So the check below is to make that we
-                // handle receive-only SSRCs in a special way only if they come
-                // from the remote side.
-                if (desc.type==='offer') {
-                    // We want to detect SSRCs which are used by a remote peer
-                    // in an m-line with direction=recvonly (i.e. they are
-                    // being used for RTCP only).
-                    // This information would have gotten lost if the remote
-                    // peer used Unified Plan and their local description was
-                    // translated to Plan B. So we use the lack of an MSID
-                    // attribute to deduce a "receive only" SSRC.
-                    if (!sources[ssrc].msid) {
-                        recvonlySsrcs[bLine.type][ssrc] = sources[ssrc];
-                        // Receive-only SSRCs must not create new m-lines. We
-                        // will assign them to an existing m-line later.
-                        return;
-                    }
-                }
-
-                if (typeof ssrc2group[ssrc] !== 'undefined' &&
-                    Array.isArray(ssrc2group[ssrc])) {
-                    ssrc2group[ssrc].some(function (ssrcGroup) {
-                        // ssrcGroup.ssrcs *is* an Array, no need to check
-                        // again here.
-                        return ssrcGroup.ssrcs.some(function (related) {
-                            if (typeof ssrc2ml[related] === 'object') {
-                                uLine = ssrc2ml[related];
-                                return true;
-                            }
-                        });
-                    });
-                }
-
-                if (typeof uLine === 'object') {
-                    // the m-line already exists. Just add the source.
-                    uLine.sources[ssrc] = sources[ssrc];
-                    delete sources[ssrc].msid;
-                } else {
-                    // Use the "bLine" as a prototype for the "uLine".
-                    uLine = Object.create(bLine);
-                    ssrc2ml[ssrc] = uLine;
-
-                    if (typeof sources[ssrc].msid !== 'undefined') {
-                        // Assign the msid of the source to the m-line. Note
-                        // that it is not guaranteed that the source will have
-                        // msid. In particular "recvonly" sources don't have an
-                        // msid. Note that "recvonly" is a term only defined
-                        // for m-lines.
-                        uLine.msid = sources[ssrc].msid;
-                        uLine.direction = 'sendrecv';
-                        delete sources[ssrc].msid;
-                    }
-
-                    // We assign one SSRC per media line.
-                    uLine.sources = {};
-                    uLine.sources[ssrc] = sources[ssrc];
-                    uLine.ssrcGroups = ssrc2group[ssrc];
-
-                    // Use the cached Unified Plan SDP (if it exists) to assign
-                    // SSRCs to mids.
-                    if (typeof cached !== 'undefined' &&
-                        typeof cached.media !== 'undefined' &&
-                        Array.isArray(cached.media)) {
-
-                        cached.media.forEach(function (m) {
-                            if (typeof m.sources === 'object') {
-                                Object.keys(m.sources).forEach(function (s) {
-                                    if (s === ssrc) {
-                                        uLine.mid = m.mid;
-                                    }
-                                });
-                            }
-                        });
-                    }
-
-                    if (typeof uLine.mid === 'undefined') {
-
-                        // If this is an SSRC that we see for the first time
-                        // assign it a new mid. This is typically the case when
-                        // this method is called to transform a remote
-                        // description for the first time or when there is a
-                        // new SSRC in the remote description because a new
-                        // peer has joined the conference. Local SSRCs should
-                        // have already been added to the map in the toPlanB
-                        // method.
-                        //
-                        // Because FF generates answers in Unified Plan style,
-                        // we MUST already have a cached answer with all the
-                        // local SSRCs mapped to some m-line/mid.
-
-                        if (desc.type === 'answer') {
-                            throw new Error("An unmapped SSRC was found.");
-                        }
-
-                        uLine.mid = [bLine.type, '-', ssrc].join('');
-                    }
-
-                    // Include the candidates in the 1st media line.
-                    uLine.candidates = candidates;
-                    uLine.iceUfrag = iceUfrag;
-                    uLine.icePwd = icePwd;
-                    uLine.fingerprint = fingerprint;
-                    uLine.port = port;
-
-                    mid2ul[uLine.mid] = uLine;
-                }
-            });
-        }
-    });
-
-    // Rebuild the media array in the right order and add the missing mLines
-    // (missing from the Plan B SDP).
-    session.media = [];
-    mids = []; // reuse
-
-    if (desc.type === 'answer') {
-
-        // The media lines in the answer must match the media lines in the
-        // offer. The order is important too. Here we assume that Firefox is
-        // the answerer, so we merely have to use the reconstructed (unified)
-        // answer to update the cached (unified) answer accordingly.
-        //
-        // In the general case, one would have to use the cached (unified)
-        // offer to find the m-lines that are missing from the reconstructed
-        // answer, potentially grabbing them from the cached (unified) answer.
-        // One has to be careful with this approach because inactive m-lines do
-        // not always have an mid, making it tricky (impossible?) to find where
-        // exactly and which m-lines are missing from the reconstructed answer.
-
-        for (var i = 0; i < cached.media.length; i++) {
-            var uLine = cached.media[i];
-
-            if (typeof mid2ul[uLine.mid] === 'undefined') {
-
-                // The mid isn't in the reconstructed (unified) answer.
-                // This is either a (unified) m-line containing a remote
-                // track only, or a (unified) m-line containing a remote
-                // track and a local track that has been removed.
-                // In either case, it MUST exist in the cached
-                // (unified) answer.
-                //
-                // In case this is a removed local track, clean-up
-                // the (unified) m-line and make sure it's 'recvonly' or
-                // 'inactive'.
-
-                delete uLine.msid;
-                delete uLine.sources;
-                delete uLine.ssrcGroups;
-                if (!uLine.direction
-                    || uLine.direction === 'sendrecv')
-                    uLine.direction = 'recvonly';
-                else if (uLine.direction === 'sendonly')
-                    uLine.direction = 'inactive';
-            } else {
-                // This is an (unified) m-line/channel that contains a local
-                // track (sendrecv or sendonly channel) or it's a unified
-                // recvonly m-line/channel. In either case, since we're
-                // going from PlanB -> Unified Plan this m-line MUST
-                // exist in the cached answer.
-            }
-
-            session.media.push(uLine);
-
-            if (typeof uLine.mid === 'string') {
-                // inactive lines don't/may not have an mid.
-                mids.push(uLine.mid);
-            }
-        }
-    } else {
-
-        // SDP offer/answer (and the JSEP spec) forbids removing an m-section
-        // under any circumstances. If we are no longer interested in sending a
-        // track, we just remove the msid and ssrc attributes and set it to
-        // either a=recvonly (as the reofferer, we must use recvonly if the
-        // other side was previously sending on the m-section, but we can also
-        // leave the possibility open if it wasn't previously in use), or
-        // a=inactive.
-
-        if (typeof cached !== 'undefined' &&
-            typeof cached.media !== 'undefined' &&
-            Array.isArray(cached.media)) {
-            cached.media.forEach(function(uLine) {
-                mids.push(uLine.mid);
-                if (typeof mid2ul[uLine.mid] !== 'undefined') {
-                    session.media.push(mid2ul[uLine.mid]);
-                } else {
-                    delete uLine.msid;
-                    delete uLine.sources;
-                    delete uLine.ssrcGroups;
-                    if (!uLine.direction
-                        || uLine.direction === 'sendrecv')
-                        uLine.direction = 'recvonly';
-                    if (!uLine.direction
-                        || uLine.direction === 'sendonly')
-                        uLine.direction = 'inactive';
-                    session.media.push(uLine);
-                }
-            });
-        }
-
-        // Add all the remaining (new) m-lines of the transformed SDP.
-        Object.keys(mid2ul).forEach(function(mid) {
-            if (mids.indexOf(mid) === -1) {
-                mids.push(mid);
-                if (mid2ul[mid].direction === 'recvonly') {
-                    // This is a remote recvonly channel. Add its SSRC to the
-                    // appropriate sendrecv or sendonly channel.
-                    // TODO(gp) what if we don't have sendrecv/sendonly
-                    // channel?
-
-                    session.media.some(function (uLine) {
-                        if ((uLine.direction === 'sendrecv' ||
-                            uLine.direction === 'sendonly') &&
-                            uLine.type === mid2ul[mid].type) {
-
-                            // mid2ul[mid] shouldn't have any ssrc-groups
-                            Object.keys(mid2ul[mid].sources).forEach(
-                                function (ssrc) {
-                                uLine.sources[ssrc] =
-                                    mid2ul[mid].sources[ssrc];
-                            });
-
-                            return true;
-                        }
-                    });
-                } else {
-                    session.media.push(mid2ul[mid]);
-                }
-            }
-        });
-    }
-
-    // After we have constructed the Plan Unified m-lines we can figure out
-    // where (in which m-line) to place the 'recvonly SSRCs'.
-    // Note: we assume here that we are the answerer in the O/A, so any offers
-    // which we translate come from the remote side, while answers are local
-    // (and so our last local description is cached as an 'answer').
-    ["audio", "video"].forEach(function (type) {
-        if (!session || !session.media || !Array.isArray(session.media))
-            return;
-
-        var idx = null;
-        if (Object.keys(recvonlySsrcs[type]).length > 0) {
-            idx = self.getFirstSendingIndexFromAnswer(type);
-            if (idx === null){
-                // If this is the first offer we receive, we don't have a
-                // cached answer. Assume that we will be sending media using
-                // the first m-line for each media type.
-
-                for (var i = 0; i < session.media.length; i++) {
-                    if (session.media[i].type === type) {
-                        idx = i;
-                        break;
-                    }
-                }
-            }
-        }
-
-        if (idx && session.media.length > idx) {
-            var mLine = session.media[idx];
-            Object.keys(recvonlySsrcs[type]).forEach(function(ssrc) {
-                if (mLine.sources && mLine.sources[ssrc]) {
-                    console.warn("Replacing an existing SSRC.");
-                }
-                if (!mLine.sources) {
-                    mLine.sources = {};
-                }
-
-                mLine.sources[ssrc] = recvonlySsrcs[type][ssrc];
-            });
-        }
-    });
-
-    // We regenerate the BUNDLE group (since we regenerated the mids)
-    session.groups.some(function(group) {
-        if (group.type === 'BUNDLE') {
-            group.mids = mids.join(' ');
-            return true;
-        }
-    });
-
-    // msid semantic
-    session.msidSemantic = {
-        semantic: 'WMS',
-        token: '*'
-    };
-
-    var resStr = transform.write(session);
-
-    // Cache the transformed SDP (Unified Plan) for later re-use in this
-    // function.
-    this.cache[desc.type] = resStr;
-
-    return new RTCSessionDescription({
-        type: desc.type,
-        sdp: resStr
-    });
-
-    //#endregion
-};
-
-
-/***/ }),
-/* 208 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* Copyright @ 2015 Atlassian Pty Ltd
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-var transform = __webpack_require__(209);
-
-exports.write = function(session, opts) {
-
-  if (typeof session !== 'undefined' &&
-      typeof session.media !== 'undefined' &&
-      Array.isArray(session.media)) {
-
-    session.media.forEach(function (mLine) {
-      // expand sources to ssrcs
-      if (typeof mLine.sources !== 'undefined' &&
-        Object.keys(mLine.sources).length !== 0) {
-          mLine.ssrcs = [];
-          Object.keys(mLine.sources).forEach(function (ssrc) {
-            var source = mLine.sources[ssrc];
-            Object.keys(source).forEach(function (attribute) {
-              mLine.ssrcs.push({
-                id: ssrc,
-                attribute: attribute,
-                value: source[attribute]
-              });
-            });
-          });
-          delete mLine.sources;
-        }
-
-      // join ssrcs in ssrc groups
-      if (typeof mLine.ssrcGroups !== 'undefined' &&
-        Array.isArray(mLine.ssrcGroups)) {
-          mLine.ssrcGroups.forEach(function (ssrcGroup) {
-            if (typeof ssrcGroup.ssrcs !== 'undefined' &&
-                Array.isArray(ssrcGroup.ssrcs)) {
-              ssrcGroup.ssrcs = ssrcGroup.ssrcs.join(' ');
-            }
-          });
-        }
-    });
-  }
-
-  // join group mids
-  if (typeof session !== 'undefined' &&
-      typeof session.groups !== 'undefined' && Array.isArray(session.groups)) {
-
-    session.groups.forEach(function (g) {
-      if (typeof g.mids !== 'undefined' && Array.isArray(g.mids)) {
-        g.mids = g.mids.join(' ');
-      }
-    });
-  }
-
-  return transform.write(session, opts);
-};
-
-exports.parse = function(sdp) {
-  var session = transform.parse(sdp);
-
-  if (typeof session !== 'undefined' && typeof session.media !== 'undefined' &&
-      Array.isArray(session.media)) {
-
-    session.media.forEach(function (mLine) {
-      // group sources attributes by ssrc
-      if (typeof mLine.ssrcs !== 'undefined' && Array.isArray(mLine.ssrcs)) {
-        mLine.sources = {};
-        mLine.ssrcs.forEach(function (ssrc) {
-          if (!mLine.sources[ssrc.id])
-          mLine.sources[ssrc.id] = {};
-        mLine.sources[ssrc.id][ssrc.attribute] = ssrc.value;
-        });
-
-        delete mLine.ssrcs;
-      }
-
-      // split ssrcs in ssrc groups
-      if (typeof mLine.ssrcGroups !== 'undefined' &&
-        Array.isArray(mLine.ssrcGroups)) {
-          mLine.ssrcGroups.forEach(function (ssrcGroup) {
-            if (typeof ssrcGroup.ssrcs === 'string') {
-              ssrcGroup.ssrcs = ssrcGroup.ssrcs.split(' ');
-            }
-          });
-        }
-    });
-  }
-  // split group mids
-  if (typeof session !== 'undefined' &&
-      typeof session.groups !== 'undefined' && Array.isArray(session.groups)) {
-
-    session.groups.forEach(function (g) {
-      if (typeof g.mids === 'string') {
-        g.mids = g.mids.split(' ');
-      }
-    });
-  }
-
-  return session;
-};
-
-
-
-/***/ }),
-/* 209 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var parser = __webpack_require__(210);
-var writer = __webpack_require__(211);
-
-exports.write = writer;
-exports.parse = parser.parse;
-exports.parseFmtpConfig = parser.parseFmtpConfig;
-exports.parsePayloads = parser.parsePayloads;
-exports.parseRemoteCandidates = parser.parseRemoteCandidates;
-
-
-/***/ }),
-/* 210 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var toIntIfInt = function (v) {
-  return String(Number(v)) === v ? Number(v) : v;
-};
-
-var attachProperties = function (match, location, names, rawName) {
-  if (rawName && !names) {
-    location[rawName] = toIntIfInt(match[1]);
-  }
-  else {
-    for (var i = 0; i < names.length; i += 1) {
-      if (match[i+1] != null) {
-        location[names[i]] = toIntIfInt(match[i+1]);
-      }
-    }
-  }
-};
-
-var parseReg = function (obj, location, content) {
-  var needsBlank = obj.name && obj.names;
-  if (obj.push && !location[obj.push]) {
-    location[obj.push] = [];
-  }
-  else if (needsBlank && !location[obj.name]) {
-    location[obj.name] = {};
-  }
-  var keyLocation = obj.push ?
-    {} :  // blank object that will be pushed
-    needsBlank ? location[obj.name] : location; // otherwise, named location or root
-
-  attachProperties(content.match(obj.reg), keyLocation, obj.names, obj.name);
-
-  if (obj.push) {
-    location[obj.push].push(keyLocation);
-  }
-};
-
-var grammar = __webpack_require__(175);
-var validLine = RegExp.prototype.test.bind(/^([a-z])=(.*)/);
-
-exports.parse = function (sdp) {
-  var session = {}
-    , media = []
-    , location = session; // points at where properties go under (one of the above)
-
-  // parse lines we understand
-  sdp.split(/(\r\n|\r|\n)/).filter(validLine).forEach(function (l) {
-    var type = l[0];
-    var content = l.slice(2);
-    if (type === 'm') {
-      media.push({rtp: [], fmtp: []});
-      location = media[media.length-1]; // point at latest media line
-    }
-
-    for (var j = 0; j < (grammar[type] || []).length; j += 1) {
-      var obj = grammar[type][j];
-      if (obj.reg.test(content)) {
-        return parseReg(obj, location, content);
-      }
-    }
-  });
-
-  session.media = media; // link it up
-  return session;
-};
-
-var fmtpReducer = function (acc, expr) {
-  var s = expr.split('=');
-  if (s.length === 2) {
-    acc[s[0]] = toIntIfInt(s[1]);
-  }
-  return acc;
-};
-
-exports.parseFmtpConfig = function (str) {
-  return str.split(/\;\s?/).reduce(fmtpReducer, {});
-};
-
-exports.parsePayloads = function (str) {
-  return str.split(' ').map(Number);
-};
-
-exports.parseRemoteCandidates = function (str) {
-  var candidates = [];
-  var parts = str.split(' ').map(toIntIfInt);
-  for (var i = 0; i < parts.length; i += 3) {
-    candidates.push({
-      component: parts[i],
-      ip: parts[i + 1],
-      port: parts[i + 2]
-    });
-  }
-  return candidates;
-};
-
-
-/***/ }),
-/* 211 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var grammar = __webpack_require__(175);
-
-// customized util.format - discards excess arguments and can void middle ones
-var formatRegExp = /%[sdv%]/g;
-var format = function (formatStr) {
-  var i = 1;
-  var args = arguments;
-  var len = args.length;
-  return formatStr.replace(formatRegExp, function (x) {
-    if (i >= len) {
-      return x; // missing argument
-    }
-    var arg = args[i];
-    i += 1;
-    switch (x) {
-      case '%%':
-        return '%';
-      case '%s':
-        return String(arg);
-      case '%d':
-        return Number(arg);
-      case '%v':
-        return '';
-    }
-  });
-  // NB: we discard excess arguments - they are typically undefined from makeLine
-};
-
-var makeLine = function (type, obj, location) {
-  var str = obj.format instanceof Function ?
-    (obj.format(obj.push ? location : location[obj.name])) :
-    obj.format;
-
-  var args = [type + '=' + str];
-  if (obj.names) {
-    for (var i = 0; i < obj.names.length; i += 1) {
-      var n = obj.names[i];
-      if (obj.name) {
-        args.push(location[obj.name][n]);
-      }
-      else { // for mLine and push attributes
-        args.push(location[obj.names[i]]);
-      }
-    }
-  }
-  else {
-    args.push(location[obj.name]);
-  }
-  return format.apply(null, args);
-};
-
-// RFC specified order
-// TODO: extend this with all the rest
-var defaultOuterOrder = [
-  'v', 'o', 's', 'i',
-  'u', 'e', 'p', 'c',
-  'b', 't', 'r', 'z', 'a'
-];
-var defaultInnerOrder = ['i', 'c', 'b', 'a'];
-
-
-module.exports = function (session, opts) {
-  opts = opts || {};
-  // ensure certain properties exist
-  if (session.version == null) {
-    session.version = 0; // "v=0" must be there (only defined version atm)
-  }
-  if (session.name == null) {
-    session.name = " "; // "s= " must be there if no meaningful name set
-  }
-  session.media.forEach(function (mLine) {
-    if (mLine.payloads == null) {
-      mLine.payloads = "";
-    }
-  });
-
-  var outerOrder = opts.outerOrder || defaultOuterOrder;
-  var innerOrder = opts.innerOrder || defaultInnerOrder;
-  var sdp = [];
-
-  // loop through outerOrder for matching properties on session
-  outerOrder.forEach(function (type) {
-    grammar[type].forEach(function (obj) {
-      if (obj.name in session && session[obj.name] != null) {
-        sdp.push(makeLine(type, obj, session));
-      }
-      else if (obj.push in session && session[obj.push] != null) {
-        session[obj.push].forEach(function (el) {
-          sdp.push(makeLine(type, obj, el));
-        });
-      }
-    });
-  });
-
-  // then for each media line, follow the innerOrder
-  session.media.forEach(function (mLine) {
-    sdp.push(makeLine('m', grammar.m[0], mLine));
-
-    innerOrder.forEach(function (type) {
-      grammar[type].forEach(function (obj) {
-        if (obj.name in mLine && mLine[obj.name] != null) {
-          sdp.push(makeLine(type, obj, mLine));
-        }
-        else if (obj.push in mLine && mLine[obj.push] != null) {
-          mLine[obj.push].forEach(function (el) {
-            sdp.push(makeLine(type, obj, el));
-          });
-        }
-      });
-    });
-  });
-
-  return sdp.join('\r\n') + '\r\n';
-};
-
-
-/***/ }),
-/* 212 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (immutable) */ __webpack_exports__["calculateClientPower"] = calculateClientPower;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_core_js_math_log2__ = __webpack_require__(287);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_core_js_math_log2___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_babel_runtime_core_js_math_log2__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_log__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_common_argCheck__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_common_emitter__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_common_utils__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_webrtc_dataHub__ = __webpack_require__(193);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_webrtc_attachmentManager__ = __webpack_require__(192);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_conference_raft__ = __webpack_require__(184);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_conference_switcher__ = __webpack_require__(261);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_conference_meshTopology__ = __webpack_require__(152);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_conference_conferencePeers__ = __webpack_require__(260);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_conference_conferenceConnectionPool__ = __webpack_require__(259);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_conference_conferenceConnection__ = __webpack_require__(258);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_conference_voiceActivityDetector__ = __webpack_require__(262);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var TAG = 'conference';
-
-var SIGNALING_STATE_SEARCHING = 'searching';
-var SIGNALING_STATE_JOINING = 'joining';
-var SIGNALING_STATE_MEMBER = 'member';
-var SIGNALING_STATE_CLOSED = 'closed';
-
-// We haven't found a cluster to join yet
-var CONNECTION_STATE_SIGNALING = 'signaling';
-// Connecting to the cluster
-var CONNECTION_STATE_CONNECTING = 'connecting';
-// Connected to at least one other member of the current cluster
-var CONNECTION_STATE_CONNECTED = 'connected';
-// Duh
-var CONNECTION_STATE_CLOSED = 'closed';
-
-var MEMBER_ADD_TTL_MS = 20 * 1000;
-
-function calculateClientPower(navigator) {
-  if (navigator.hardwareConcurrency) {
-    return __WEBPACK_IMPORTED_MODULE_6_babel_runtime_core_js_math_log2___default()(navigator.hardwareConcurrency) | 0;
-  } else if (navigator.userAgent.match(/iPad|iPhone/)) {
-    return 2;
-  } else {
-    return 2;
-  }
-}
-
-var switcherAttachPoint = '__c3-switcher';
-
-/**
- * A peer-to-peer WebRTC call between multiple users.
- *
- * The main role of the conference is to manage a set of connections to other
- * peers in the conference. Just like with {@link Call}, functionality is
- * added via {@link RtcComponent}s that are attached to the conference
- * using {@link Conference#attach}. An exception to this is the {@link Switcher},
- * which provides specialized media streaming capabilities for conferences.
- *
- * A conference always happens within a {@link Room}, and there's is only
- * a single conference in a room at a given time. Any member of the room
- * that calls {@link Room#startConference} will join the conference, as long
- * as they have permission to do so, which is default.
- *
- * @example <caption>Example of starting a conference with switching, broadcasting and data sharing.</caption>
- * let conference = room.startConference({
- *   switcherMode: 'automatic', // Use voice-activated switching
- * })
- *
- * let mediaSource = new cct.DeviceSource({
- *   audio: true,
- *   video: true,
- * })
- *
- * // We use a splitter to get hold of separate audio and video streams
- * let streamSplitter = new cct.StreamSplitter()
- * mediaSource.connect(streamSplitter)
- *
- * // The conference switcher can send a single high-quality media stream
- * streamSplitter.videoOutput.connect(conference.switcher)
- * // It also receives a high-quality video stream from the current speaker.
- * conference.switcher.connect(largeVideoView)
- *
- * // See MediaBroadcaster for how to broadcast audio
- *
- * // Use a DataShare to share data with all participants.
- * let data = new cct.DataShare()
- * conference.attach('test-data', data)
- * data.on('update', ({key, value}) => console.log(`updated test-data:s ${key}=${value}`))
- * data.set('some-key', 'some-value')
- *
- * @abstract
- * @class Conference
- * @extends EventEmitter
- */
-
-var Conference = function (_EmitterMixin) {
-  __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default()(Conference, _EmitterMixin);
-
-  __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass___default()(Conference, null, [{
-    key: 'create',
-    value: function create(config) {
-      __WEBPACK_IMPORTED_MODULE_8_common_argCheck__["a" /* default */].options('Conference.create', 'config', config).optString('userId').optArray('iceServers').optFunc('iceCandidateFilter').optString('switcherMode').func('onSignalingMessage');
-
-      var _config$userId = config.userId,
-          userId = _config$userId === undefined ? 'self' : _config$userId,
-          _config$iceServers = config.iceServers,
-          iceServers = _config$iceServers === undefined ? null : _config$iceServers,
-          _config$iceCandidateF = config.iceCandidateFilter,
-          iceCandidateFilter = _config$iceCandidateF === undefined ? null : _config$iceCandidateF,
-          switcherMode = config.switcherMode,
-          onSignalingMessage = config.onSignalingMessage;
-
-
-      return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_10_common_utils__["priv"])(Conference, {
-        userId: userId,
-        iceServers: iceServers,
-        iceCandidateFilter: iceCandidateFilter,
-        switcherMode: switcherMode,
-        onSignalingMessage: onSignalingMessage
-      });
-    }
-  }]);
-
-  function Conference(priv, deps) {
-    __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default()(this, Conference);
-
-    var _this = __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (Conference.__proto__ || __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default()(Conference)).call(this));
-
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_10_common_utils__["assertPriv"])('Conference', priv);
-
-    _this._onRaftStateChange = _this._onRaftStateChange.bind(_this);
-    _this._onRaftMembersChange = _this._onRaftMembersChange.bind(_this);
-    _this._onRaftLeadershipChange = _this._onRaftLeadershipChange.bind(_this);
-    _this._onAttachmentUpdate = _this._onAttachmentUpdate.bind(_this);
-    _this._onPeersUpdate = _this._onPeersUpdate.bind(_this);
-    _this._onDisconnected = _this._onDisconnected.bind(_this);
-    _this._invitePeer = _this._invitePeer.bind(_this);
-
-    // this._id = randomString(16)
-    _this._connectionState = CONNECTION_STATE_SIGNALING;
-    _this._signalingState = null;
-    _this._joiningCluster = null;
-    _this._ownId = deps.userId;
-    _this._onClosed = deps.onClosed;
-    _this._iceServers = deps.iceServers;
-    _this._onSignalingMessage = deps.onSignalingMessage;
-    _this._iceCandidateFilter = deps.iceCandidateFilter;
-    _this._statsFormatterFactory = deps.statsFormatterFactory;
-
-    _this._peers = new __WEBPACK_IMPORTED_MODULE_16_conference_conferencePeers__["a" /* default */]({
-      ownId: _this._ownId,
-      onUpdate: _this._onPeersUpdate
-    });
-
-    _this._voiceActivityDetector = new __WEBPACK_IMPORTED_MODULE_19_conference_voiceActivityDetector__["a" /* default */]({
-      active: __WEBPACK_IMPORTED_MODULE_14_conference_switcher__["a" /* default */].modeUsesVoiceDetection(deps.switcherMode)
-    });
-
-    _this._meshTopology = new __WEBPACK_IMPORTED_MODULE_15_conference_meshTopology__["c" /* default */]({
-      power: calculateClientPower(navigator),
-      ownId: _this._ownId,
-      voiceActivityDetector: _this._voiceActivityDetector
-    });
-
-    _this._connectionPool = new __WEBPACK_IMPORTED_MODULE_17_conference_conferenceConnectionPool__["a" /* default */]({
-      ownId: _this._ownId,
-      connectionFactory: _this._createConnection.bind(_this),
-      meshTopology: _this._meshTopology,
-      onRaftMessage: function onRaftMessage(raftId, message) {
-        return _this._raft.handleMessage(raftId, message);
-      },
-      onDisconnected: _this._onDisconnected,
-      onInvite: _this._invitePeer,
-      onBestConnection: function onBestConnection(connection) {
-        if (connection) {
-          _this._voiceActivityDetector.setPeerConnection(connection._peerConnection);
-        } else {
-          _this._voiceActivityDetector.setPeerConnection(null);
-        }
-      }
-    });
-
-    _this._raft = new __WEBPACK_IMPORTED_MODULE_13_conference_raft__["a" /* default */]({
-      id: _this._ownId,
-      meshTopology: _this._meshTopology,
-      onMessage: _this._connectionPool.handleRaftMessage,
-      onStateChange: _this._onRaftStateChange,
-      onMembersChange: _this._onRaftMembersChange,
-      onLeadershipChange: _this._onRaftLeadershipChange,
-      onReplicationDeadlock: _this._onDisconnected
-    });
-
-    _this._switcher = new __WEBPACK_IMPORTED_MODULE_14_conference_switcher__["a" /* default */]({
-      ownId: _this._ownId,
-      raft: _this._raft,
-      mode: deps.switcherMode,
-      voiceActivityDetector: _this._voiceActivityDetector
-    });
-
-    _this._attachmentManager = new __WEBPACK_IMPORTED_MODULE_12_webrtc_attachmentManager__["b" /* default */]({
-      ownId: _this._ownId,
-      type: 'conference',
-      dataHub: new __WEBPACK_IMPORTED_MODULE_11_webrtc_dataHub__["b" /* default */](),
-      onUpdate: _this._onAttachmentUpdate
-    });
-
-    _this._attachmentManager.attach(switcherAttachPoint, _this._switcher._component);
-    return _this;
-  }
-
-  /**
-   * Emitted when there is an error within the conference, e.g. the signaling fails.
-   *
-   * @event Conference#error
-   * @param {Error} error - The error.
-   */
-
-  __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass___default()(Conference, [{
-    key: 'toString',
-    value: function toString() {
-      return 'conference{ownId=' + this._ownId + ',state=' + this._signalingState + '}';
-    }
-
-    /**
-     * Attach a component that will be shared in the conference.
-     *
-     * @function Conference#attach
-     * @param {string} name - Name of the attachment point.
-     * @param {RtcComponent} component - A component to attach.
-     */
-
-  }, {
-    key: 'attach',
-    value: function attach(name, component) {
-      if (name === switcherAttachPoint) {
-        __WEBPACK_IMPORTED_MODULE_8_common_argCheck__["a" /* default */].error('Conference.attach', 'name', 'not use reserved name ' + name);
-      }
-      if (!this._attachmentManager) {
-        __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].error(TAG, 'Tried to attach component at \'' + name + '\' on a closed conference.');
-      } else {
-        this._attachmentManager.attach(name, component);
-      }
-    }
-
-    /**
-     * Detach a component that was previously attached. If the component argument
-     * is given and it does not match the currently attached component, a `TypeError`
-     * will be thrown.
-     *
-     * @function Conference#detach
-     * @param {string} name - Name of the attachment point.
-     * @param {RtcComponent} [component] - An optional specific component to detach.
-     */
-
-  }, {
-    key: 'detach',
-    value: function detach(name, component) {
-      if (name === switcherAttachPoint) {
-        __WEBPACK_IMPORTED_MODULE_8_common_argCheck__["a" /* default */].error('Conference.detach', 'name', 'not use reserved name ' + name);
-      }
-      if (!this._attachmentManager) {
-        __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].error(TAG, 'Tried to detach component at \'' + name + '\' from a closed conference.');
-      } else {
-        this._attachmentManager.detach(name, component);
-      }
-    }
-
-    /**
-     * The client's own user id in the conference, this is what other members
-     * will see as `peerId`. This will be the same as the logged in user ID.
-     *
-     * @member {UserId} Conference#ownId
-     */
-
-  }, {
-    key: 'start',
-
-
-    /**
-     * Start an incoming conference. This only needs to be called if listening
-     * to the conference events on a client or room.
-     *
-     * @param {Object} options - Options object.
-     * @param {ConferenceSwitcherMode} [options.switcherMode] - The default switcher mode for this conference.
-     */
-    value: function start() {
-      var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-
-      if (this._signalingState !== null) {
-        return __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].warning(TAG, 'tried to start conference in wrong state: ' + this._signalingState);
-      }
-      __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].debug(TAG, this, 'starting conference');
-      this._connectionPool.start();
-      this._switcher._setDefaultMode(options.switcherMode);
-      this._startSearch();
-    }
-
-    /**
-     * Leave the conference, remove all attachments, and cleanup all resources.
-     *
-     * Note that like {@link Call#close}, this does not signal the other
-     * participants in the conference. To do a room-wide conference start/stop,
-     * one should use application specific signaling, e.g. using room state.
-    */
-
-  }, {
-    key: 'close',
-    value: function close() {
-      if (this._signalingState !== SIGNALING_STATE_CLOSED) {
-        __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].debug(TAG, 'closing ' + this);
-        if (this._onClosed) {
-          this._onClosed();
-        }
-        this._setSignalingState(SIGNALING_STATE_CLOSED);
-        this._raft.stop();
-        this._raft = null;
-        this._connectionPool.stop();
-        this._connectionPool = null;
-        this._peers._cleanup();
-        this._peers = null;
-        this._attachmentManager.cleanup();
-        this._attachmentManager = null;
-        this._emit('closed', {
-          reason: 'closed',
-          source: 'self',
-          conference: this
-        });
-        this._clearListeners();
-      }
-    }
-  }, {
-    key: '_onAttachmentUpdate',
-    value: function _onAttachmentUpdate() {
-      var _this2 = this;
-
-      this._connectionPool.connections.forEach(function (connection, peerId) {
-        var streams = _this2._attachmentManager.getLocalStreamsForPeer(peerId);
-        connection._updateLocalStreams(streams);
-      });
-    }
-
-    // Join message
-    // {type: 'search', browser: <string>, [multiOffer: <offer>]}
-    //
-    // Connect message
-    // {type: 'invite', [multiAnswer: <answer>]}
-    //
-    // multiOffer and multiAnswer reuses the same certificate for multiple peer connections, avoiding
-    // an RTT and speeding up setup time
-    //
-    // Connection signaling
-    // {type: 'connection'}
-
-  }, {
-    key: 'handleSignalingMessage',
-    value: function handleSignalingMessage(peerId, message) {
-      if (this._signalingState === null || this._signalingState === SIGNALING_STATE_CLOSED) {
-        return __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].verbose(TAG, this, 'ignoring signaling message for stopped conference');
-      }
-
-      var type = message.type;
-
-      if (!type) {
-        __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].warning(TAG, this, 'got signaling message without type from ' + peerId);
-        return;
-      }
-
-      if (type === 'search') {
-        return this._handleSearchMessage(peerId, message);
-      } else if (type === 'invite') {
-        return this._handleInviteMessage(peerId, message);
-      } else if (type === 'connection') {
-        return this._connectionPool.handleConnectionMessage(peerId, message);
-      }
-    }
-  }, {
-    key: '_handleSearchMessage',
-    value: function _handleSearchMessage(peerId, message) {
-      if (this._signalingState === SIGNALING_STATE_SEARCHING) {
-        __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].info(TAG, this, 'got search message from ' + peerId + ' while searching, creating new cluster');
-
-        // An invite message is sent to the peer,
-        this._invitePeer(peerId);
-        this._setSignalingState(SIGNALING_STATE_MEMBER);
-      } else if (this._signalingState === SIGNALING_STATE_JOINING) {
-        __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].info(TAG, this, 'got search message from ' + peerId + ' while joining, ignoring');
-        // If we are currently joining a cluster, we only add the searching peer to the member waitlist
-        // If we then become leader while the member is still on the waitlist
-        // FIXME: a connection needs to be set up to the peer if we become leader
-        this._raft.addPeer(peerId, { waitlistTtlMs: MEMBER_ADD_TTL_MS });
-        this._connectionPool.addGhostConnection(peerId, { ttlMs: MEMBER_ADD_TTL_MS });
-      } else if (this._signalingState === SIGNALING_STATE_MEMBER) {
-        __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].debug(TAG, this, 'got search message from ' + peerId + ' as ' + (this._raft.isLeader ? 'leader' : 'member'));
-        if (this._raft.isLeader) {
-          // An invite message is sent to the peer,
-          this._invitePeer(peerId);
-        } else {
-          // Keep track of the peer in case we become leader within the TTL
-          this._raft.addPeer(peerId, { waitlistTtlMs: MEMBER_ADD_TTL_MS });
-          this._connectionPool.addGhostConnection(peerId, { ttlMs: MEMBER_ADD_TTL_MS });
-        }
-      }
-    }
-  }, {
-    key: '_getClusterInfo',
-    value: function _getClusterInfo() {
-      if (this._joiningCluster) {
-        return this._joiningCluster;
-      }
-      return {
-        id: this._raft.get('clusterId'),
-        size: this._raft.members.size,
-        term: this._raft.term
-      };
-    }
-  }, {
-    key: '_compareClusters',
-    value: function _compareClusters(clusterA, clusterB) {
-      if (clusterA.size !== clusterB.size) {
-        return clusterB.size - clusterA.size;
-      } else if (clusterA.id !== clusterB.id) {
-        return clusterA.id.localeCompare(clusterB.id);
-      } else {
-        return clusterB.term - clusterA.term;
-      }
-    }
-  }, {
-    key: '_joinCluster',
-    value: function _joinCluster(_ref) {
-      var leaderId = _ref.leaderId,
-          cluster = _ref.cluster;
-
-      __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].debug(TAG, this, 'joining cluster led by ' + leaderId + ': ' + __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default()(cluster));
-      this._setSignalingState(SIGNALING_STATE_JOINING);
-      this._joiningCluster = cluster;
-      this._raft.startPassive();
-      this._connectionPool.connectToClusterLeader(leaderId);
-      this._peers._setPeers([leaderId], this._connectionPool.connections);
-    }
-  }, {
-    key: '_handleInviteMessage',
-    value: function _handleInviteMessage(peerId, message) {
-      if (message.recipient === this._ownId) {
-        var cluster = message.cluster;
-
-        __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].debug(TAG, this, 'received invite in state ' + this._signalingState + ' for ' + __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default()(cluster));
-        if (this._signalingState === SIGNALING_STATE_SEARCHING) {
-          this._joinCluster({ leaderId: peerId, cluster: cluster });
-        } else if (this._signalingState === SIGNALING_STATE_JOINING || this._signalingState === SIGNALING_STATE_MEMBER) {
-          // we are already joining a cluster, so we need to figure out if we should abort that process
-          // and accept the new invite instead. For now we just error out
-          var ownCluster = this._getClusterInfo();
-          var compareResult = this._compareClusters(ownCluster, cluster);
-          if (compareResult > 0) {
-            __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].info(TAG, this, 'left existing cluster to join cluster of ' + peerId + ', ' + ('old: ' + __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default()(ownCluster) + ', new: ' + __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default()(cluster) + ', result: ' + compareResult));
-            this._joinCluster({ leaderId: peerId, cluster: cluster });
-          }
-        }
-      } else {
-        if (this._signalingState === SIGNALING_STATE_JOINING || this._signalingState === SIGNALING_STATE_MEMBER) {
-          var _cluster = message.cluster;
-
-          var _ownCluster = this._getClusterInfo();
-          var _compareResult = this._compareClusters(_ownCluster, _cluster);
-          if (_compareResult > 0) {
-            __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].info(TAG, this, 'saw invite from other cluster with higher priority' + (', abanding ' + __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default()(_ownCluster) + ' for ' + __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default()(_cluster)));
-            this._joinCluster({ leaderId: peerId, cluster: _cluster });
-          }
-        }
-      }
-    }
-  }, {
-    key: '_onRaftStateChange',
-    value: function _onRaftStateChange() {
-      this._switcher._handleStateChange();
-    }
-  }, {
-    key: '_onRaftMembersChange',
-    value: function _onRaftMembersChange(peerIds) {
-      var _this3 = this;
-
-      this._switcher._setMembers(peerIds);
-      this._connectionPool.setExpectedConnections(peerIds);
-
-      var connections = this._connectionPool.connections;
-
-      this._peers._setPeers(peerIds, connections);
-
-      var isMember = peerIds.has(this._ownId);
-      connections.forEach(function (connection, peerId) {
-        var isPaused = !isMember || !_this3._raft.members.has(peerId);
-        connection.setPausedState(isPaused);
-        _this3._attachmentManager.setPeerPausedState(peerId, isPaused);
-      });
-
-      if (this._signalingState === SIGNALING_STATE_MEMBER) {
-        // If we lost membership it means we're considered disconnected by the cluster
-        // and need to rejoin.
-        if (!isMember) {
-          __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].info(TAG, this, 'got new cluster members in connected state without self present');
-          this._onDisconnected();
-        }
-      } else if (this._signalingState === SIGNALING_STATE_JOINING) {
-        if (isMember) {
-          __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].info(TAG, this, 'got new cluster members with itself as member, promoting to member');
-          this._setSignalingState(SIGNALING_STATE_MEMBER);
-        }
-      }
-    }
-  }, {
-    key: '_onRaftLeadershipChange',
-    value: function _onRaftLeadershipChange(isLeader) {
-      __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].info(TAG, this, (isLeader ? 'got' : 'lost') + ' cluster leadership');
-      this._switcher._handleLeadershipChange(isLeader);
-      if (isLeader) {
-        this._connectionPool.materializeGhostConnections();
-      }
-    }
-  }, {
-    key: '_onPeersUpdate',
-    value: function _onPeersUpdate() {
-      if (this._connectionState === CONNECTION_STATE_CONNECTING) {
-        if (this._peers._hasConnection()) {
-          this._setConnectionState(CONNECTION_STATE_CONNECTED);
-        }
-      } else if (this._connectionState === CONNECTION_STATE_CONNECTED) {
-        if (!this._peers._hasConnection()) {
-          this._setConnectionState(CONNECTION_STATE_CONNECTING);
-        }
-      }
-    }
-  }, {
-    key: '_setSignalingState',
-    value: function _setSignalingState(newSignalingState) {
-      if (this._signalingState === SIGNALING_STATE_CLOSED) {
-        return;
-      }
-      this._signalingState = newSignalingState;
-
-      if (newSignalingState !== SIGNALING_STATE_JOINING) {
-        this._joiningCluster = null;
-      }
-
-      var newConnectionState = null;
-
-      if (newSignalingState === SIGNALING_STATE_SEARCHING) {
-        if (this._connectionState !== CONNECTION_STATE_SIGNALING) {
-          newConnectionState = CONNECTION_STATE_SIGNALING;
-        }
-      } else if (newSignalingState === SIGNALING_STATE_JOINING) {
-        if (this._connectionState !== CONNECTION_STATE_SIGNALING) {
-          newConnectionState = CONNECTION_STATE_SIGNALING;
-        }
-      } else if (newSignalingState === SIGNALING_STATE_MEMBER) {
-        if (this._connectionState === CONNECTION_STATE_SIGNALING) {
-          if (this._peers._hasConnection()) {
-            newConnectionState = CONNECTION_STATE_CONNECTED;
-          } else {
-            newConnectionState = CONNECTION_STATE_CONNECTING;
-          }
-        }
-      } else if (newSignalingState === SIGNALING_STATE_CLOSED) {
-        newConnectionState = CONNECTION_STATE_CLOSED;
-      }
-
-      if (newConnectionState) {
-        this._setConnectionState(newConnectionState);
-      }
-    }
-  }, {
-    key: '_setConnectionState',
-    value: function _setConnectionState(newConnectionState) {
-      var oldConnectionState = this._connectionState;
-      this._connectionState = newConnectionState;
-      this._emit('connectionState', newConnectionState, oldConnectionState);
-    }
-  }, {
-    key: '_onDisconnected',
-    value: function _onDisconnected() {
-      // We keep the connection pool going on disconnects, which means that we don't kill
-      // existing connections that we are trying to set up. That means that triggering a
-      // disconnect is quite cheack, there's only ome matrix signaling overhead.
-      // Because of that we can keep disconnect timeouts low.
-
-      this._raft.stop();
-      this._peers._clear();
-
-      __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].debug(TAG, this, 'resetting conference due to disconnect');
-      this._startSearch();
-    }
-  }, {
-    key: '_startSearch',
-    value: function _startSearch() {
-      __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].debug(TAG, this, 'is starting search');
-      // We start in active state with no other peers, which will immediately make us leader
-      this._raft.start();
-      var clusterId = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_10_common_utils__["randomString"])(16);
-      // While being leader, we set and commit the clusterId, which should then never be touched for
-      // the history of this cluster's log.
-      this._raft.set('clusterId', clusterId);
-
-      this._switcher._initializeLeader();
-
-      this._setSignalingState(SIGNALING_STATE_SEARCHING);
-      this._onSignalingMessage({
-        type: 'search',
-        browser: __WEBPACK_IMPORTED_MODULE_10_common_utils__["browser"],
-        cluster: this._getClusterInfo()
-      });
-    }
-  }, {
-    key: '_invitePeer',
-    value: function _invitePeer(peerId) {
-      __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].debug(TAG, this, 'inviting ' + peerId + ' to cluster');
-      this._raft.addPeer(peerId, { waitlistTtlMs: MEMBER_ADD_TTL_MS });
-      this._onSignalingMessage({
-        type: 'invite',
-        browser: __WEBPACK_IMPORTED_MODULE_10_common_utils__["browser"],
-        recipient: peerId,
-        cluster: this._getClusterInfo()
-      });
-      this._connectionPool.ensureTemporaryConnection(peerId);
-    }
-  }, {
-    key: '_createConnection',
-    value: function _createConnection(_ref2) {
-      var _this4 = this;
-
-      var peerId = _ref2.peerId,
-          peerLinkInfo = _ref2.peerLinkInfo;
-
-      __WEBPACK_IMPORTED_MODULE_8_common_argCheck__["a" /* default */].string('Conference._createConnection', 'peerId', peerId);
-
-      var conferencePeer = this._peers.get(peerId) || null;
-
-      var connection = new __WEBPACK_IMPORTED_MODULE_18_conference_conferenceConnection__["a" /* default */]({
-        ownId: this._ownId,
-        peerId: peerId,
-        peerLinkInfo: peerLinkInfo,
-        conferencePeer: conferencePeer,
-        offer: null,
-        iceServers: this._iceServers,
-        iceCandidateFilter: this._iceCandidateFilter,
-        statsFormatter: this._statsFormatterFactory && this._statsFormatterFactory(peerId),
-        attachmentManager: this._attachmentManager,
-        onSignalingMessage: function onSignalingMessage(message) {
-          _this4._onSignalingMessage({
-            type: 'connection',
-            recipient: peerId,
-            content: message
-          });
-        }
-      });
-
-      var isPaused = !this._raft.members.has(peerId);
-      connection.setPausedState(isPaused);
-      this._attachmentManager.setPeerPausedState(peerId, isPaused);
-
-      if (conferencePeer) {
-        connection._setConferencePeer(conferencePeer);
-      }
-
-      return connection;
-    }
-  }, {
-    key: 'ownId',
-    get: function get() {
-      return this._ownId;
-    }
-
-    /**
-     * A map representing the conference peers.
-     *
-     * @member {ConferencePeers} Conference#peers
-     */
-
-  }, {
-    key: 'peers',
-    get: function get() {
-      return this._peers;
-    }
-
-    /**
-     * The {@link ConferenceSwitcher} instance for this conference.
-     *
-     * Conferences always have a single switcher instance associated with them.
-     * As long as the switcher mode is set to `'off'`, which is default, the switcher
-     * will not consume any resources.
-     *
-     * @member {ConferenceSwitcher} Conference#switcher
-     */
-
-  }, {
-    key: 'switcher',
-    get: function get() {
-      return this._switcher;
-    }
-
-    /**
-     * Emitted when the connection state of the conference changes.
-     *
-     * @event Conference#connectionState
-     * @param {PeerConnectionState} connectionState - The new connection state.
-     * @param {PeerConnectionState} oldConnectionState - The old connection state.
-     */
-
-    /**
-     * The connection state of the conference.
-     *
-     * @readonly
-     * @member {PeerConnectionState} Conference#connectionState
-     */
-
-  }, {
-    key: 'connectionState',
-    get: function get() {
-      return this._connectionState;
-    }
-
-    /**
-     * True if the conference has been closed.
-     *
-     * A closed conference can not be started again, and will have had all attachments removed. It will
-     * alse have been removed from {@link Room#conference}, so that a new conference can be started in the room.
-     *
-     * @member {boolean} Conference#closed
-     */
-
-  }, {
-    key: 'closed',
-    get: function get() {
-      return this._signalingState === SIGNALING_STATE_CLOSED;
-    }
-
-    /**
-     * True if the conference is stopped. This is the initial state for incoming conferences.
-     *
-     * Stopped conferences will keep all attachments and state, but will not have any connections to
-     * other peers.
-     *
-     * @member {boolean} Conference#stopped
-     */
-
-  }, {
-    key: 'stopped',
-    get: function get() {
-      return this._signalingState === null;
-    }
-  }]);
-
-  return Conference;
-}(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9_common_emitter__["a" /* default */])(null));
-
-/* harmony default export */ __webpack_exports__["default"] = (Conference);
-
-/***/ }),
-/* 213 */,
-/* 214 */,
-/* 215 */,
-/* 216 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = RoomQuery;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_common_log__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_common_emitter__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_common_utils__ = __webpack_require__(13);
-
-
-
-
-
-
-/**
- * Emitted when the result of the query has changed.
- *
- * @event RoomQuery#update
- * @param {Array<*>} rows - The resulting rows, MUST NOT be modified.
- */
-
-/**
- * Emitted when a row is added to the result of the query.
- *
- * @event RoomQuery#added
- * @param {*} row - The added row
- */
-
-/**
- * Emitted when a row is removed from the result of the query.
- *
- * @event RoomQuery#removed
- * @param {*} row - The removed row
- */
-
-/**
- * Represents a live query that selects a subset of all rooms and transforms
- * them using a map function.
- *
- * Whenever a room receives an event, the map function is run for every query.
- * If the map function returns a falsy value, it is ignored. If the value is
- * truthy, the value is added to the resulting rows.
- *
- * This is an example of a map function that lists all public rooms that the user is
- * a member of:
- *
- * ```js
- * function (room) {
- *     if (room.membership === 'member' && room.visibility === 'public') {
- *         return room;
- *     }
- * }
- * ```
- *
- * Whenever the value returned by the map function changes, an `'update'` event is
- * emitted, as well as `'added'` and/or `'removed'` events.
- * The value is considered changed if it switches between truthy and falsy, or
- * if the id property of the value changes.
- * If multiple return values are bundled in an object, it is important to
- * include an id property to avoid unnecessary change events.
- *
- * This is an example of a map function that lists all rooms to which the user has
- * been invited, as well as the inviting user:
- *
- * ```js
- * function (room) {
- *     if (room.membership === 'invited') {
- *         return {
- *             id: room.invitedBy.id,
- *             user: room.invitedBy,
- *             room: room,
- *         };
- *     }
- * }
- * ```
- *
- * @abstract
- * @class RoomQuery
- * @extends EventEmitter
- */
-
-function RoomQuery(priv, mapFunction) {
-  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_common_utils__["assertPriv"])('RoomQuery', priv);
-  var self = this;
-  var rows = [];
-  var items = [];
-  var stateChangeFunctions = [];
-  var stopped = false;
-  var deferredEmit = 0;
-
-  /**
-   * The resulting rows of the RoomQuery, MUST NOT be modified.
-   * @readonly
-   * @member {Array<*>} RoomQuery#rows
-   */
-  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_common_utils__["getter"])(this, 'rows', function () {
-    return items;
-  });
-
-  /**
-   * Stops the query and frees all resources.
-   *
-   * @function
-   * @name RoomQuery#stop
-   */
-  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_common_utils__["prop"])(this, 'stop', function () {
-    stopped = true;
-    rows = [];
-    items = [];
-    stateChangeFunctions = [];
-    self._emit('update', items);
-    self._clearListeners('update');
-    self._clearListeners('added');
-    self._clearListeners('removed');
-  });
-
-  /**
-   * Forces the map function to be rerun for all rooms.
-   *
-   * @function
-   * @name RoomQuery#forceUpdate
-   */
-  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_common_utils__["prop"])(this, 'forceUpdate', function () {
-    if (stopped) {
-      return;
-    }
-    stateChangeFunctions.forEach(function (fn) {
-      fn();
-    });
-  });
-
-  function handleNewRoom(room) {
-    if (stopped) {
-      return;
-    }
-    var item = mapFunction(room);
-    var row = null;
-    if (item) {
-      row = {
-        item: item
-      };
-      addRow(row);
-    }
-    var stateChangeFunction = onStateChangeFunction(room, row);
-    stateChangeFunctions.push(stateChangeFunction);
-    room._registerQuery(stateChangeFunction);
-    return true;
-  }
-
-  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_common_utils__["hiddenProp"])(this, '_handleNewRoom', handleNewRoom);
-
-  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_common_utils__["hiddenProp"])(this, '_clear', function () {
-    if (stopped) {
-      return;
-    }
-    rows = [];
-    items = [];
-    self._emit('update', items);
-  });
-
-  function deferEmit() {
-    if (!deferredEmit) {
-      deferredEmit = setTimeout(function () {
-        if (stopped) {
-          return;
-        }
-        self._emit('update', items);
-        deferredEmit = 0;
-      });
-    }
-  }
-
-  function addRow(row) {
-    rows.push(row);
-    items.push(row.item);
-    self._emit('added', row.item);
-    deferEmit();
-  }
-
-  function removeRow(row) {
-    var index = rows.indexOf(row);
-    if (index === -1) {
-      __WEBPACK_IMPORTED_MODULE_0_common_log__["default"].error('room-query', 'RoomQuery removeRow: room does not exist', row.item);
-    } else {
-      rows.splice(index, 1);
-      items.splice(index, 1);
-      self._emit('removed', row.item);
-      deferEmit();
-    }
-  }
-
-  function onStateChangeFunction(room, row) {
-    return function onStateChange() {
-      if (stopped) {
-        return true;
-      }
-
-      var newItem = mapFunction(room);
-      if (row) {
-        if (newItem) {
-          if (newItem === row.item) {
-            return;
-          } else if (newItem.id === row.item.id) {
-            return;
-          }
-        }
-        removeRow(row);
-      } else if (!newItem) {
-        return;
-      }
-
-      var newRow = null;
-      if (newItem) {
-        newRow = {
-          item: newItem
-        };
-        addRow(newRow);
-      }
-      row = newRow;
-    };
-  }
-}
-
-__WEBPACK_IMPORTED_MODULE_1_common_emitter__["a" /* default */].call(RoomQuery.prototype);
-
-/***/ }),
-/* 217 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = RoomState;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_keys__ = __webpack_require__(64);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_keys___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_keys__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_typeof__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_typeof___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_typeof__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_common_argCheck__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_common_emitter__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_common_utils__ = __webpack_require__(13);
-
-
-
-
-
-
-
-
-/**
- * Emitted when the default value of the room state is changed.
- *
- * @event RoomState#value
- * @param {JsonTypes} value - The new value.
- * @param {JsonTypes} oldValue - The old value, if any.
- */
-
-/**
- * Emitted when any value but the default value is changed.
- *
- * @event RoomState#update
- * @param {Object} change
- * @param {string} change.key - The key whose value was changed.
- * @param {JsonTypes} change.value - The new value that the key is now associated with.
- * @param {JsonTypes} change.oldValue - The value that the key was previously associated with, if any.
- */
-
-/**
- * Emitted when the value associated with the given key is changed.
- *
- * @event RoomState#update:&lt;key&gt;
- * @param {JsonTypes} value - The new value that the key is now associated with.
- * @param {JsonTypes} oldValue - The value that the key was previously associated with, if any.
- */
-
-// eslint-disable-next-line
-/**
- * Represents a state in a room identified by a state type, and synchronized between all clients.
- *
- * Each room state is a key-value pair store that emits events when values are changed.
- *
- * The room state also has a default value which can be accessed by omitting the
- *  key parameter to any of the methods. The default value is handy for simple states
- *  such as setting a hex color for the room.
- *
- * @abstract
- * @class RoomState
- * @extends EventEmitter
- */
-function RoomState(priv, type, room, setState) {
-  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4_common_utils__["assertPriv"])('RoomState', priv);
-  var self = this;
-  var values = {};
-
-  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4_common_utils__["hiddenProp"])(this, '_set', function (key, value) {
-    key = '' + key;
-    if (value && '__value__' in value) {
-      value = value.__value__;
-    }
-    var oldValue = values[key];
-    values[key] = value;
-    if (key === '') {
-      this._emit('value', value, oldValue);
-    } else {
-      this._emit('update:' + key, value, oldValue);
-    }
-    this._emit('update', {
-      key: key,
-      value: value,
-      oldValue: oldValue
-    });
-  });
-
-  /**
-   * The type of the RoomState
-   * @readonly
-   * @member {string} RoomState#type
-   */
-  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4_common_utils__["prop"])(this, 'type', type);
-
-  /**
-   * The room that the RoomState is derived from
-   * @readonly
-   * @member {Room} RoomState#room
-   */
-  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4_common_utils__["prop"])(this, 'room', room);
-
-  /**
-   * Returns true if the key has been set
-   *
-   * @name RoomState#has
-   * @function
-   * @param {string} [key] - The key to test if it has been set.
-   * @returns {boolean} - True if the key has been set, false otherwise
-   */
-  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4_common_utils__["prop"])(this, 'has', function (key) {
-    if (!__WEBPACK_IMPORTED_MODULE_2_common_argCheck__["a" /* default */].optString('RoomState.has', 'key', key)) {
-      key = '';
-    }
-    return key in values;
-  });
-
-  /**
-   * Gets the value for the corresponding key.
-   *
-   * If the key is omitted the default value of the RoomState will returned instead
-   *
-   * @name RoomState#get
-   * @function
-   * @param {string} [key] - The key whose associated value should be returned,
-   *  or omitted if the default value is desired instead.
-   * @returns {JsonTypes} - The value associated with the key
-   */
-  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4_common_utils__["prop"])(this, 'get', function (key) {
-    if (!__WEBPACK_IMPORTED_MODULE_2_common_argCheck__["a" /* default */].optString('RoomState.get', 'key', key)) {
-      key = '';
-    }
-    return values[key];
-  });
-
-  /**
-   * Sets the value that a key should be associated with. This will override any
-   * existing association with the key.
-   *
-   * If the key is omitted the value of the RoomState will set instead.
-   *
-   * **NOTE:**
-   * It is best to avoid relying on the returned promise to modify application state,
-   * e.g. UI updates, as that will lead to race conditions and undefined behaviour.
-   * It is better to use the returned promise for feedback that the state was changed
-   * was successfully, and tie application state changes an 'update' event handler.
-   * This is due to the fact that state changes are received via the event stream, but
-   * the returned promise is resolved when the request is returned, and those two events
-   * can happen in any order.
-   *
-   * ##### Errors:
-   * - {@link TooLargeError} - The serialized value is too large, as in it occupies too many bytes.
-   * - {@link NotAllowedError} - The user must be a member of the room and have enough power level.
-   * - {@link GuestAccessError} - Guest access is not allowed.
-   * - {@link AuthenticationError} - The client must be authenticated to use this method.
-   *
-   * <i style="color: red;">Privacy warning: Do not pass private user information to this method</i>
-   *
-   * @name RoomState#set
-   * @function
-   * @param {string} [key] - The key that should be associated with the value.
-   * @param {JsonTypes} value - The value that should be associated with the key.
-   * @returns {Promise<RoomState, CctError>} - The room state
-   */
-  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4_common_utils__["prop"])(this, 'set', function (key, value) {
-    __WEBPACK_IMPORTED_MODULE_2_common_argCheck__["a" /* default */].count('RoomState.set', 1, arguments.length);
-    if (arguments.length === 1) {
-      value = key;
-      key = '';
-    } else {
-      __WEBPACK_IMPORTED_MODULE_2_common_argCheck__["a" /* default */].string('RoomState.get', 'key', key);
-    }
-    if ((typeof value === 'undefined' ? 'undefined' : __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_typeof___default()(value)) !== 'object' || value === null || Array.isArray(value)) {
-      value = {
-        __value__: value
-      };
-    }
-    return setState(key, value).then(function () {
-      return self;
-    });
-  });
-
-  /**
-   * A list of all keys who are associated to a value
-   *
-   * @readonly
-   * @member {string[]} RoomState#keys
-   */
-  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4_common_utils__["getter"])(this, 'keys', function () {
-    return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_keys___default()(values).filter(function (x) {
-      return x;
-    });
-  });
-}
-
-RoomState.prototype.toString = function () {
-  return 'RoomState{type=' + this.type + ', value=' + this.get() + ', keys=' + this.keys + '}';
-};
-
-__WEBPACK_IMPORTED_MODULE_3_common_emitter__["a" /* default */].call(RoomState.prototype);
-
-/***/ }),
-/* 218 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export getChromeMediaSourceId */
-/* unused harmony export getChromeScreenConstraints */
-/* unused harmony export getChromeMediaSourceIdEx */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_promise__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_promise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_log__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_argCheck__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_common_errors__ = __webpack_require__(145);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_media_common__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_media_concreteMediaSource__ = __webpack_require__(164);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var TAG = 'chrome-screen-source';
-
-function getChromeMediaSourceId(extensionId, sourceTypes) {
-  return new __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_promise___default.a(function (resolve, reject) {
-    var installedStatusTimeout = setTimeout(function () {
-      window.removeEventListener('message', onMessage);
-      var error = new __WEBPACK_IMPORTED_MODULE_8_common_errors__["b" /* NotFoundError */]('Screen sharing extension not installed');
-      error.reason = new Error('Extension did not respond to install status check');
-      reject(error);
-    }, 1000);
-    var onMessage = function onMessage(event) {
-      var data = event.data;
-      if (data.extensionId === extensionId) {
-        switch (data.message) {
-          case 'extensionIsInstalled':
-            clearTimeout(installedStatusTimeout);
-            window.postMessage({
-              extensionId: extensionId, sourceTypes: sourceTypes,
-              message: 'requestChromeMediaSourceId'
-            }, '*');
-            break;
-          case 'chromeMediaSourceId':
-            window.removeEventListener('message', onMessage);
-            var sourceId = data.content;
-            if (sourceId) {
-              resolve(sourceId);
-            } else {
-              // user denied the request
-              reject(new __WEBPACK_IMPORTED_MODULE_8_common_errors__["c" /* NotAllowedError */]('The user denied the request to share the screen'));
-            }
-        }
-      }
-    };
-
-    window.addEventListener('message', onMessage);
-    window.postMessage({
-      extensionId: extensionId,
-      message: 'getInstalledStatus'
-    }, '*');
-  });
-}
-
-function getChromeScreenConstraints() {
-  var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
-      _ref$audio = _ref.audio,
-      audio = _ref$audio === undefined ? false : _ref$audio,
-      video = _ref.video,
-      sourceId = _ref.sourceId;
-
-  if (!video) {
-    video = {};
-  }
-  if (!(video.width || video.height)) {
-    video.width = { max: window.screen.width };
-    video.height = { max: window.screen.height };
-  }
-  video.chromeMediaSourceId = { exact: sourceId };
-  video.chromeMediaSource = { exact: 'desktop' };
-
-  return { audio: audio, video: video };
-}
-
-function _sendChromeMessage(extensionId, message) {
-  return new __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_promise___default.a(function (resolve, reject) {
-    window.chrome.runtime.sendMessage(extensionId, message, function (response) {
-      if (response) {
-        resolve(response);
-      } else {
-        var error = new Error('No response received');
-        error.name = 'NotFoundError';
-        reject(error);
-      }
-    });
-  });
-}
-
-function getChromeMediaSourceIdEx(extensionId, sourceTypes) {
-  return new __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_promise___default.a(function (resolve, reject) {
-    var installedStatusTimeout = setTimeout(function () {
-      var error = new __WEBPACK_IMPORTED_MODULE_8_common_errors__["b" /* NotFoundError */]('Screen sharing extension not installed');
-      error.reason = new Error('Extension did not respond to install status check');
-      reject(error);
-    }, 1000);
-
-    _sendChromeMessage(extensionId, {
-      extensionId: extensionId,
-      message: 'getInstalledStatus'
-    }).then(function (response) {
-      clearTimeout(installedStatusTimeout);
-      return response;
-    }).then(_sendChromeMessage(extensionId, {
-      extensionId: extensionId,
-      sourceTypes: sourceTypes,
-      message: 'requestChromeMediaSourceId'
-    }).then(function (response) {
-      var sourceId = response.content;
-      if (sourceId) {
-        resolve(sourceId);
-      } else {
-        // user denied the request
-        reject(new __WEBPACK_IMPORTED_MODULE_8_common_errors__["c" /* NotAllowedError */]('The user denied the request to share the screen'));
-      }
-    }).catch(function (error) {
-      return reject(error);
-    })).catch(function (error) {
-      return reject(error);
-    });
-  });
-}
-
-/**
- * Internal media node for acquiring a Chrome screen sharing stream.
- *
- * @private
- * @class ChromeScreenSource
- * @extends ConcreteMediaSource
- * @param {Object} options - Options object.
- * @param {string} options.chromeExtensionId - The id of the chrome extension to use.
- * @param {ScreenSharingType|null} [options.type=null] - The screen sharing type to use. Specifying
- *   null will let the user choose either screen or window.
- * @param {boolean} [options.audio=false] - Whether desktop audio should be captured as well.
- * @param {Object} [options.video] - Constraints for the video, defaults to max resolution and no
- *   framerate limit.
- */
-
-var ChromeScreenSource = function (_ConcreteMediaSource) {
-  __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default()(ChromeScreenSource, _ConcreteMediaSource);
-
-  function ChromeScreenSource(options) {
-    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, ChromeScreenSource);
-
-    var _this = __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (ChromeScreenSource.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(ChromeScreenSource)).call(this));
-
-    __WEBPACK_IMPORTED_MODULE_7_common_argCheck__["a" /* default */].options('ChromeScreenSource constructor', 'options', options).string('chromeExtensionId').optString('type').optBoolean('audio').optObject('video');
-
-    var sourceTypes = options.type ? [options.type] : ['screen', 'window'];
-
-    getChromeMediaSourceIdEx(options.chromeExtensionId, sourceTypes).then(function (sourceId) {
-      return getChromeScreenConstraints({
-        sourceId: sourceId,
-        type: options.type,
-        audio: options.audio,
-        video: options.video
-      });
-    }).then(function (constraints) {
-      return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9_media_common__["f" /* getUserMedia */])(constraints);
-    }).then(function (stream) {
-      return _this.setStream(stream);
-    }, function (error) {
-      if (error.name && error.name === 'NotFoundError') {
-        __WEBPACK_IMPORTED_MODULE_6_common_log__["default"].warning('deprecated', 'This Extension implementation will be DEPRICATED in later release');
-        var p2 = getChromeMediaSourceId(options.chromeExtensionId, sourceTypes);
-        _this._handleExtensionId(p2, options).catch(function () {
-          _this.setError(error);
-        });
-      } else {
-        _this.setError(error);
-      }
-    }).catch(function (error) {
-      __WEBPACK_IMPORTED_MODULE_6_common_log__["default"].error(TAG, 'unexpected error in ChromeScreenSource: ' + error);
-    });
-    return _this;
-  }
-
-  __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(ChromeScreenSource, [{
-    key: '_handleExtensionId',
-    value: function _handleExtensionId(promise, options) {
-      var _this2 = this;
-
-      return promise.then(function (sourceId) {
-        return getChromeScreenConstraints({
-          sourceId: sourceId,
-          type: options.type,
-          audio: options.audio,
-          video: options.video
-        });
-      }).then(function (constraints) {
-        return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9_media_common__["f" /* getUserMedia */])(constraints);
-      }).then(function (stream) {
-        return _this2.setStream(stream);
-      }, function (error) {
-        return _this2.setError(error);
-      }).catch(function (error) {
-        __WEBPACK_IMPORTED_MODULE_6_common_log__["default"].error(TAG, 'unexpected error in ChromeScreenSource: ' + error);
-      });
-    }
-  }]);
-
-  return ChromeScreenSource;
-}(__WEBPACK_IMPORTED_MODULE_10_media_concreteMediaSource__["a" /* default */]);
-
-/* harmony default export */ __webpack_exports__["a"] = (ChromeScreenSource);
-
-/***/ }),
-/* 219 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_common_log__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_common_argCheck__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_errors__ = __webpack_require__(145);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_media_common__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_media_concreteMediaSource__ = __webpack_require__(164);
-
-
-
-
-
-
-
-
-
-
-
-
-
-var TAG = 'firefox-screen-source';
-var ERROR_TIME_BREAKPOINT_MS = 100;
-
-/**
- * Internal media node for acquiring a Firefox screen sharing stream.
- *
- * @private
- * @class FirefoxScreenSource
- * @extends ConcreteMediaSource
- * @param {Object} [options] - Optional options object.
- * @param {ScreenSharingType} [options.type='window'] - The screen sharing type to use.
- *   The difference between window and application is that application will show all application windows
- *   at once, while window only shows a single window. e.g. only a single Firefox window or all open Firefox
- *   windows.
- * @param {boolean} [options.audio=false] - Whether audio should be requested as well.
- * @param {Object} [options.video] - Constraints for the video, defaults to max resolution and no
- *   framerate limit.
- */
-
-var FirefoxScreenSource = function (_ConcreteMediaSource) {
-  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(FirefoxScreenSource, _ConcreteMediaSource);
-
-  function FirefoxScreenSource(options) {
-    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, FirefoxScreenSource);
-
-    var _this = __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (FirefoxScreenSource.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(FirefoxScreenSource)).call(this));
-
-    var audio = options.audio || false;
-    var video = options.video || {};
-    var type = options.type || 'window';
-
-    __WEBPACK_IMPORTED_MODULE_5_common_argCheck__["a" /* default */].optBoolean('FirefoxScreenSource constructor', 'options.audio', audio);
-    __WEBPACK_IMPORTED_MODULE_5_common_argCheck__["a" /* default */].optObject('FirefoxScreenSource constructor', 'options.video', video);
-    __WEBPACK_IMPORTED_MODULE_5_common_argCheck__["a" /* default */].optString('FirefoxScreenSource constructor', 'options.type', type);
-
-    if (!video.mediaSource) {
-      video.mediaSource = type;
-    }
-    var startTime = Date.now();
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_7_media_common__["f" /* getUserMedia */])({ audio: audio, video: video }).then(function (stream) {
-      return _this.setStream(stream);
-    }, function (error) {
-      if (error.name === 'NotAllowedError') {
-        var actualError;
-        // If the diff is too short we can assume it's not the user...
-        var timeToError = Date.now() - startTime;
-        if (timeToError < ERROR_TIME_BREAKPOINT_MS) {
-          if (location.protocol !== 'https:') {
-            actualError = new __WEBPACK_IMPORTED_MODULE_6_common_errors__["c" /* NotAllowedError */]('Screen sharing is only allowed over HTTPS');
-          } else {
-            var msg = 'Screen sharing is not allowed on this domain, it needs to be added to ' + 'the media.getusermedia.screensharing.allowed_domains preference in about:config, ' + 'either manually or using an extension.';
-            actualError = new __WEBPACK_IMPORTED_MODULE_6_common_errors__["b" /* NotFoundError */](msg);
-          }
-        } else {
-          actualError = new __WEBPACK_IMPORTED_MODULE_6_common_errors__["c" /* NotAllowedError */]('The user denied the request to share the screen');
-        }
-        actualError.reason = error.reason;
-        error = actualError;
-      }
-      _this.setError(error);
-    }).catch(function (error) {
-      __WEBPACK_IMPORTED_MODULE_4_common_log__["default"].error(TAG, 'unexpected error in FirefoxScreenSource: ' + error);
-    });
-    return _this;
-  }
-
-  return FirefoxScreenSource;
-}(__WEBPACK_IMPORTED_MODULE_8_media_concreteMediaSource__["a" /* default */]);
-
-/* harmony default export */ __webpack_exports__["a"] = (FirefoxScreenSource);
-
-/***/ }),
-/* 220 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_common_log__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_emitter__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_media_streamSink__ = __webpack_require__(189);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_media_mediaNode__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_media_muteFilter__ = __webpack_require__(180);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var TAG = 'media-tee';
-
-/**
- * A simple {@link MediaNode} that can be used to expose media together with the basic utilities
- * of emitting stream events, exposing a stream stream property, and a mute property.
- *
- * @class MediaTee
- * @extends ConnectMixin
- */
-
-var MediaTee = function (_EmitterMixin) {
-  __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default()(MediaTee, _EmitterMixin);
-
-  function MediaTee() {
-    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, MediaTee);
-
-    var _this = __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (MediaTee.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(MediaTee)).call(this));
-
-    _this._streamSink = new __WEBPACK_IMPORTED_MODULE_7_media_streamSink__["a" /* default */]({ onStream: function onStream(stream) {
-        return _this._emit('stream', stream);
-      } });
-    _this._muteFilter = new __WEBPACK_IMPORTED_MODULE_9_media_muteFilter__["a" /* default */]();
-    _this._muteFilter.connect(_this._streamSink);
-    return _this;
-  }
-
-  /**
-   * Emitted whenever the stream is changed.
-   *
-   * @event MediaTee#stream
-   * @param {?MediaStream} stream - The media stream, or null.
-   */
-
-  __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(MediaTee, [{
-    key: 'sink',
-    set: function set(target) {
-      __WEBPACK_IMPORTED_MODULE_5_common_log__["default"].error(TAG, 'mediaTee.sink is removed, just connect directly to the sink instead');
-    }
-
-    /**
-     * The tee's current media stream, or null.
-     *
-     * @readonly
-     * @member {MediaStream} MediaTee#stream
-     */
-
-  }, {
-    key: 'stream',
-    get: function get() {
-      return this._streamSink.stream;
-    }
-
-    /**
-     * The input of the media tee.
-     *
-     * @readonly
-     * @member {MediaNodeInput} MediaTee#input
-     */
-
-  }, {
-    key: 'input',
-    get: function get() {
-      return this._muteFilter;
-    }
-
-    /**
-     * The output of the media tee.
-     *
-     * @readonly
-     * @member {MediaNodeOutput} MediaTee#output
-     */
-
-  }, {
-    key: 'output',
-    get: function get() {
-      return this._muteFilter;
-    }
-
-    /**
-     * Mute property as documented in {@link MuteFilter#mute}.
-     *
-     * @member {Object} MediaTee#mute
-     */
-
-  }, {
-    key: 'mute',
-    get: function get() {
-      return this._muteFilter.mute;
-    },
-    set: function set(value) {
-      this._muteFilter.mute = value;
-    }
-  }]);
-
-  return MediaTee;
-}(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_common_emitter__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_8_media_mediaNode__["a" /* default */].connectMixin()));
-
-/* harmony default export */ __webpack_exports__["a"] = (MediaTee);
-
-/***/ }),
-/* 221 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_common_log__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_common_argCheck__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_media_common__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_media_concreteMediaSource__ = __webpack_require__(164);
-
-
-
-
-
-
-
-
-
-
-
-
-var TAG = 'user-media-source';
-
-/**
- * Low level media node that wraps a `getUserMedia` call. Applications will typically want to use
- * {@link DeviceSource} or {@link ScreenSource} instead.
- *
- * @class UserMediaSource
- * @extends ConcreteMediaSource
- * @param {Object} [options] - Optional options object.
- * @param {Object} [options.constraints] - Constraints passed to `getUserMedia`.
- * @param {boolean|Object} [options.constraints.audio=true] - Set to `true` if audio is desired, or a
- *  {@link http://w3c.github.io/mediacapture-main/getusermedia.html#idl-def-MediaTrackConstraints MediaTrackConstraints}
- *  object if more detailed constraints is required.
- * @param {boolean|Object} [options.constraints.video=true] - Set to `true` if video is desired, or a
- *  {@link http://w3c.github.io/mediacapture-main/getusermedia.html#idl-def-MediaTrackConstraints MediaTrackConstraints}
- *  object if more detailed configuration is required.
- */
-
-var UserMediaSource = function (_ConcreteMediaSource) {
-  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(UserMediaSource, _ConcreteMediaSource);
-
-  function UserMediaSource() {
-    var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-
-    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, UserMediaSource);
-
-    __WEBPACK_IMPORTED_MODULE_5_common_argCheck__["a" /* default */].optOptions('UserMediaSource constructor', 'options', options).optObject('constraints');
-    var _options$constraints = options.constraints,
-        constraints = _options$constraints === undefined ? { audio: true, video: true } : _options$constraints;
-
-    var _this = __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (UserMediaSource.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(UserMediaSource)).call(this));
-
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_media_common__["f" /* getUserMedia */])(constraints).then(function (stream) {
-      return _this.setStream(stream);
-    }, function (error) {
-      return _this.setError(error);
-    }).catch(function (error) {
-      __WEBPACK_IMPORTED_MODULE_4_common_log__["default"].error(TAG, 'unexpected error in UserMediaSource: ' + error);
-    });
-    return _this;
-  }
-
-  /**
-   * @private
-   * @function UserMediaSource#setStream
-   */
-
-  /**
-   * @private
-   * @function UserMediaSource#setError
-   */
-
-
-  return UserMediaSource;
-}(__WEBPACK_IMPORTED_MODULE_7_media_concreteMediaSource__["a" /* default */]);
-
-/* harmony default export */ __webpack_exports__["a"] = (UserMediaSource);
-
-/***/ }),
-/* 222 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_log__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_argCheck__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_webrtc_utils__ = __webpack_require__(66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_media_mediaFilter__ = __webpack_require__(179);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var TAG = 'web-audio-filter';
-
-/**
- * A base class for media filter nodes that wish to use the WebAudio APIs.
- *
- * @class WebAudioFilter
- * @extends MediaFilter
- * @param {Object} [options] - Optional options object
- * @param {AudioContext} [options.context] - Audio context to use within this media node,
- *   which must not be closed as while the filter is still being used.
- *   If omitted, an internal context will be used.
- */
-
-var WebAudioFilter = function (_MediaFilter) {
-  __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default()(WebAudioFilter, _MediaFilter);
-
-  function WebAudioFilter() {
-    var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-
-    __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default()(this, WebAudioFilter);
-
-    var _this = __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn___default()(this, (WebAudioFilter.__proto__ || __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default()(WebAudioFilter)).call(this));
-
-    __WEBPACK_IMPORTED_MODULE_7_common_argCheck__["a" /* default */].optOptions('WebAudioFilter constructor', 'options', options).optInstance('context', __WEBPACK_IMPORTED_MODULE_8_webrtc_utils__["AudioContext"]);
-
-    if (options.context) {
-      _this._releaseContext = false;
-      _this._audioContext = options.context;
-    } else {
-      _this._releaseContext = true;
-      _this._audioContext = null;
-    }
-
-    _this._source = null;
-    _this._destination = null;
-    return _this;
-  }
-
-  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass___default()(WebAudioFilter, [{
-    key: 'onStream',
-    value: function onStream(stream, oldStream) {
-      if (this._source) {
-        this._source.disconnect();
-        this._source = null;
-      }
-      if (stream) {
-        if (this._releaseContext) {
-          this._audioContext = __WEBPACK_IMPORTED_MODULE_8_webrtc_utils__["audioContextUtil"].get();
-        }
-        this._source = this._audioContext.createMediaStreamSource(stream);
-        this._destination = this._audioContext.createMediaStreamDestination();
-        this.setStream(this._destination.stream);
-      } else {
-        if (this._audioContext && this._releaseContext) {
-          __WEBPACK_IMPORTED_MODULE_8_webrtc_utils__["audioContextUtil"].release();
-          this._audioContext = null;
-        }
-        this._destination = null;
-        this.setStream(null);
-      }
-
-      try {
-        this.onAudioSource(this._source, this._destination, this._audioContext);
-      } catch (error) {
-        __WEBPACK_IMPORTED_MODULE_6_common_log__["default"].error(TAG, 'Error thrown in WebAudioFilter.onAudioSource: ' + error);
-      }
-    }
-  }, {
-    key: 'onAudioSource',
-    value: function onAudioSource(source, destination, context) {
-      if (source) {
-        if (this.onSetupFilter) {
-          try {
-            var result = this.onSetupFilter(context);
-            if (result instanceof AudioNode) {
-              source.connect(result);
-              result.connect(destination);
-            } else if (Array.isArray(result)) {
-              var _result = __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray___default()(result, 2),
-                  input = _result[0],
-                  output = _result[1];
-
-              if (!(input instanceof AudioNode)) {
-                throw new TypeError('returned input node must be an AudioNode');
-              }
-              if (!(output instanceof AudioNode)) {
-                throw new TypeError('returned output node must be an AudioNode');
-              }
-              source.connect(input);
-              output.connect(destination);
-            } else {
-              throw new TypeError('return value must be an AudioNode or array of [input, output] nodes');
-            }
-          } catch (error) {
-            __WEBPACK_IMPORTED_MODULE_6_common_log__["default"].error(TAG, 'Error thrown in WebAudioFilter.onSetupFilter: ' + error);
-          }
-        } else {
-          __WEBPACK_IMPORTED_MODULE_6_common_log__["default"].warning(TAG, 'WebAudioFilter should override onAudioSource(source, destination, context) ' + 'or implement onSetupFilter(context)');
-        }
-      } else {
-        if (this.onTeardownFilter) {
-          try {
-            this.onTeardownFilter(context);
-          } catch (error) {
-            __WEBPACK_IMPORTED_MODULE_6_common_log__["default"].error(TAG, 'Error thrown in WebAudioFilter.onTeardownFilter: ' + error);
-          }
-        }
-      }
-    }
-  }, {
-    key: 'context',
-    get: function get() {
-      return this._audioContext;
-    }
-  }, {
-    key: 'audioSource',
-    get: function get() {
-      return this._source;
-    }
-  }, {
-    key: 'audioDestination',
-    get: function get() {
-      return this._destination;
-    }
-  }]);
-
-  return WebAudioFilter;
-}(__WEBPACK_IMPORTED_MODULE_9_media_mediaFilter__["a" /* default */]);
-
-/* harmony default export */ __webpack_exports__["a"] = (WebAudioFilter);
-
-/***/ }),
-/* 223 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_common_argCheck__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_utils__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_webrtc_utils__ = __webpack_require__(66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_media_mediaSource__ = __webpack_require__(144);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**
- * A base class for media source nodes that wish to use the WebAudio APIs.
- *
- * @class WebAudioSource
- * @extends MediaSource
- * @param {Object} [options] - Optional options object
- * @param {AudioContext} [options.context] - Audio context to use within this media node,
- *   which must not be closed as while the filter is still being used.
- *   If omitted, an internal context will be used.
- */
-
-var WebAudioSource = function (_MediaSource) {
-  __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default()(WebAudioSource, _MediaSource);
-
-  function WebAudioSource() {
-    var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-
-    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, WebAudioSource);
-
-    var _this = __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (WebAudioSource.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(WebAudioSource)).call(this));
-
-    __WEBPACK_IMPORTED_MODULE_5_common_argCheck__["a" /* default */].optOptions('WebAudioSource constructor', 'options', options).optInstance('context', __WEBPACK_IMPORTED_MODULE_7_webrtc_utils__["AudioContext"]);
-
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_common_utils__["registerInstance"])('webAudioSource', _this);
-
-    if (options.context) {
-      _this._releaseContext = false;
-      _this._audioContext = options.context;
-    } else {
-      _this._releaseContext = true;
-      _this._audioContext = __WEBPACK_IMPORTED_MODULE_7_webrtc_utils__["audioContextUtil"].get();
-    }
-
-    _this._destination = _this._audioContext.createMediaStreamDestination();
-    _this.setStream(_this._destination.stream);
-    return _this;
-  }
-
-  /**
-   * The audio context that is used within this media node.
-   */
-
-
-  __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(WebAudioSource, [{
-    key: 'stop',
-
-
-    /**
-     * Stops the source and cleans up all resources. This has to be called once the source
-     * is no longer used in order to clean up resources.
-     *
-     * Calling this method multiple times has no effect.
-     */
-    value: function stop() {
-      if (this._stopped) {
-        return;
-      }
-      this._stopped = true;
-      __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_common_utils__["unregisterInstance"])('webAudioSource', this);
-      this.setStream(null);
-      this._destination = null;
-      if (this._releaseContext) {
-        __WEBPACK_IMPORTED_MODULE_7_webrtc_utils__["audioContextUtil"].release();
-        this._audioContext = null;
-      }
-    }
-
-    /**
-     * @private
-     * @function WebAudioSource#setStream
-     */
-
-  }, {
-    key: 'context',
-    get: function get() {
-      return this._audioContext;
-    }
-
-    /**
-     * The web audio media stream destination node, whose stream is set as the output stream
-     * of this source. Audio nodes should be connected to this node in order to generate an output.
-     *
-     * This property should only be accessed by subclasses of the web audio source.
-     */
-
-  }, {
-    key: 'audioDestination',
-    get: function get() {
-      return this._destination;
-    }
-  }]);
-
-  return WebAudioSource;
-}(__WEBPACK_IMPORTED_MODULE_8_media_mediaSource__["a" /* default */]);
-
-/* harmony default export */ __webpack_exports__["a"] = (WebAudioSource);
-
-/***/ }),
-/* 224 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_map__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_createClass__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_log__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_common_argCheck__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_common_emitter__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_common_utils__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_webrtc_errors__ = __webpack_require__(161);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_webrtc_utils__ = __webpack_require__(66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_webrtc_peerConnectionProxy__ = __webpack_require__(162);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_webrtc_dataHub__ = __webpack_require__(193);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_webrtc_dataChannelMonitor__ = __webpack_require__(232);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_webrtc_attachmentManager__ = __webpack_require__(192);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_webrtc_components__ = __webpack_require__(225);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_webrtc_signaler__ = __webpack_require__(233);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_datamux_datamux__ = __webpack_require__(227);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_media_mediaNode__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_media_mediaNodeInput__ = __webpack_require__(131);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var TAG = 'call';
-
-var PEER_SWITCH_TIMEOUT_MS = 5000;
-
-/**
- * A WebRTC call to a single peer.
- *
- * The call only manages the connection to a single peer. Functionality is added by attaching
- * different {@link RtcComponent}s using {@link Call#attach}.
- *
- * @abstract
- * @class Call
- * @extends EventEmitter
- */
-
-var Call = function (_EmitterMixin) {
-  __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits___default()(Call, _EmitterMixin);
-
-  __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_createClass___default()(Call, null, [{
-    key: 'create',
-
-    /**
-     * Emitted when the call is closed. Closing the call is permanent, and removes it from the
-     * active calls in a room.
-     * @event Call#closed
-     * @param {object} info - Information about who closed the call and how.
-     * @param {string} info.reason -
-     * An identifier for the reason that the call closed
-     * * `closed` - The call was closed locally.
-     * * `hangup` - Someone hangs up the call, can be caused by both parties.
-     * @param {string} info.source - Who caused the call to close
-     * * `self` - The call was closed locally.
-     * * `peer` - The call was closed by the peer.
-     * @param {Call} info.call - The call that was closed
-     */
-
-    /**
-     * Emitted when the connection state of the call changes.
-     *
-     * @event Call#connectionState
-     * @param {PeerConnectionState} connectionState - The new connection state.
-     */
-
-    /**
-     * Emitted when the call error state is changed.
-     *
-     * @event Call#error
-     * @param {(ConnectionFailedError|ConnectionLostError)?} error - The new error state.
-     */
-
-    /**
-     * Emitted when there is a signaling error.
-     *
-     * @event Call#signalingError
-     * @param {ConnectionSignalingError} signalingError - A signaling error.
-     */
-
-    value: function create(config) {
-      __WEBPACK_IMPORTED_MODULE_8_common_argCheck__["a" /* default */].options('Call.create', 'config', config).func('onSignalingMessage').optString('userId').optString('peerId').optArray('iceServers').optFunc('iceCandidateFilter').optObject('receivedOffer');
-
-      var onSignalingMessage = config.onSignalingMessage,
-          _config$userId = config.userId,
-          userId = _config$userId === undefined ? 'self' : _config$userId,
-          _config$peerId = config.peerId,
-          peerId = _config$peerId === undefined ? 'peer' : _config$peerId,
-          _config$iceServers = config.iceServers,
-          iceServers = _config$iceServers === undefined ? null : _config$iceServers,
-          _config$iceCandidateF = config.iceCandidateFilter,
-          iceCandidateFilter = _config$iceCandidateF === undefined ? null : _config$iceCandidateF,
-          _config$receivedOffer = config.receivedOffer,
-          receivedOffer = _config$receivedOffer === undefined ? null : _config$receivedOffer;
-
-
-      if (userId === peerId) {
-        __WEBPACK_IMPORTED_MODULE_8_common_argCheck__["a" /* default */].error('Call.create', 'config', 'not have identical userId and peerId');
-      }
-
-      return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_10_common_utils__["priv"])(Call, { onSignalingMessage: onSignalingMessage, userId: userId, peerId: peerId, iceServers: iceServers, iceCandidateFilter: iceCandidateFilter, receivedOffer: receivedOffer });
-    }
-  }]);
-
-  function Call(priv, deps) {
-    __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck___default()(this, Call);
-
-    var _this = __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn___default()(this, (Call.__proto__ || __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of___default()(Call)).call(this));
-
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_10_common_utils__["assertPriv"])('Call', priv);
-    _this._ownId = deps.userId || null;
-    _this._peerId = deps.peerId || null;
-    _this._isPassive = !deps.peerId;
-    _this._onClosed = deps.onClosed;
-    _this._statsFormatter = deps.statsFormatter;
-
-    _this._disconnectTimeoutId = 0;
-
-    _this._attachmentManager = new __WEBPACK_IMPORTED_MODULE_16_webrtc_attachmentManager__["b" /* default */]({
-      ownId: deps.userId,
-      type: 'call',
-      dataHub: new __WEBPACK_IMPORTED_MODULE_14_webrtc_dataHub__["b" /* default */](),
-      onUpdate: _this._onAttachmentUpdate.bind(_this)
-    });
-
-    _this._datamux = new __WEBPACK_IMPORTED_MODULE_19_datamux_datamux__["a" /* default */]({
-      onChannel: function onChannel(channel) {
-        return _this._attachmentManager.handlePeerChannel(_this._peerId, channel);
-      },
-      onConnect: function onConnect() {
-        return _this._signaler.handleDataChannelConnect();
-      },
-      onDisconnect: function onDisconnect(reason) {
-        return _this._signaler.handleDataChannelDisconnect(reason);
-      }
-    });
-
-    // All builtin channels should be created here
-    var renegotiationChannel = _this._datamux.createChannel({
-      builtin: true,
-      label: 'cct.call',
-      protocol: 'cct.call.v0'
-    });
-    _this._attachmentChannels = {
-      negotiationChannel: _this._datamux.createChannel({
-        builtin: true,
-        label: 'cct.call.attach-map',
-        protocol: 'cct.call.attach-map.v0'
-      }),
-      dataHubChannel: _this._datamux.createChannel({
-        builtin: true,
-        label: 'cct.attach.data',
-        protocol: 'cct.attach.data.v0'
-      }),
-      messagingChannel: _this._datamux.createChannel({
-        builtin: true,
-        label: 'cct.attach.messaging',
-        protocol: 'cct.attach.messaging.v0'
-      })
-    };
-
-    _this._peerConnectionConfiguration = {
-      iceServers: deps.iceServers,
-      iceCandidateFilter: deps.iceCandidateFilter,
-      statsFormatter: deps.statsFormatter
-    };
-
-    _this._onAddRemoteStream = _this._onRemoteStreamChange.bind(_this, 'got');
-    _this._onRemoveRemoteStream = _this._onRemoteStreamChange.bind(_this, 'lost');
-
-    _this._signaler = new __WEBPACK_IMPORTED_MODULE_18_webrtc_signaler__["a" /* default */]({
-      label: _this._ownId + '=>' + _this._peerId,
-      receivedOffer: deps.offer,
-      renegotiationChannel: renegotiationChannel,
-      onMessage: deps.onSignalingMessage,
-      onSignalingError: _this._onSignalingError.bind(_this),
-      onErrorStateChange: _this._onErrorStateChange.bind(_this),
-      onConnectionStateChange: _this._onConnectionStateChange.bind(_this),
-      onCreatePeerConnection: _this._createPeerConnection.bind(_this)
-    });
-    return _this;
-  }
-
-  __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_createClass___default()(Call, [{
-    key: 'toString',
-    value: function toString() {
-      return 'call{id=' + this.id + ',' + this._peerConnection + '}';
-    }
-  }, {
-    key: '_onErrorStateChange',
-    value: function _onErrorStateChange(error) {
-      this._emit('errorState', error);
-      this._emit('error', error);
-      if (error && this._statsFormatter) {
-        this._statsFormatter.handleStats([{
-          timestamp: Date.now(),
-          pcId: this._peerConnection && this._peerConnection.id,
-          sourceId: 'errorState',
-          name: error.name,
-          message: error.message
-        }]);
-      }
-    }
-  }, {
-    key: '_onConnectionStateChange',
-    value: function _onConnectionStateChange(state, prevState) {
-      if (state === 'connected') {
-        this._emit('connected', this);
-      }
-      if (prevState === 'connected') {
-        this._emit('disconnected', this);
-      }
-      this._emit('connectionState', state, prevState);
-    }
-  }, {
-    key: '_onSignalingError',
-    value: function _onSignalingError(error) {
-      var signalingError = new __WEBPACK_IMPORTED_MODULE_11_webrtc_errors__["e" /* ConnectionSignalingError */](error);
-      this._emit({
-        eventType: 'signalingError',
-        defaultHandler: function defaultHandler() {
-          __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].error(TAG, 'unhandled call signaling error', signalingError);
-        }
-      }, signalingError);
-      if (this._statsFormatter) {
-        this._statsFormatter.handleStats([{
-          timestamp: Date.now(),
-          pcId: this._peerConnection && this._peerConnection.id,
-          sourceId: 'signalingError',
-          name: error.name,
-          message: error.message
-        }]);
-      }
-    }
-
-    /**
-     * Attaches an {@link RtcComponent} to the call. If the peer attaches a compatible component
-     * to the same attachment point, the two components will be paired together.
-     *
-     * A common use case is for two peers to each attach a {@link DataShare} to 'data'.
-     * Once the call has connected, both peers will be able to use the attached DataShare to share data.
-     *
-     * The attachment point name can be any string, although excessively long names should be avoided.
-     *
-     * This method can be called at any point during a call, but will have no effect if the call is closed.
-     *
-     * @param  {string} name - The attachment point where the component should be attached.
-     * @param  {RtcComponent} component - An RtcComponent instance to attach.
-     */
-
-  }, {
-    key: 'attach',
-    value: function attach(name, component) {
-      if (!this._attachmentManager) {
-        __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].debug(TAG, 'Tried to attach component at \'' + name + '\' on a closed call.');
-      } else {
-        this._attachmentManager.attach(name, component);
-      }
-    }
-
-    /**
-     * Detaches the {@link RtcComponent} currently attached to the given attachment point.
-     * If no component is currently attached, an error will be thrown. If the component argument is
-     * given and it does not match the currently attached component, an error will be thrown.
-     *
-     * This method can be called at any point during a call, but will have no effect if the call is closed.
-     *
-     * @param {string} name - The attachment point from where the component should be detached.
-     * @param {RtcComponent} [component] - An RtcComponent instance that is expected to be attached
-     *   at the point.
-     */
-
-  }, {
-    key: 'detach',
-    value: function detach(name, component) {
-      if (!this._attachmentManager) {
-        __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].debug(TAG, 'Tried to detach component at \'' + name + '\' from a closed call.');
-      } else {
-        this._attachmentManager.detach(name, component);
-      }
-    }
-
-    /**
-     * A object containing all the attachments of the call.
-     *
-     * @readonly
-     * @member {Object<RtcComponent>} Call#attachments
-     */
-
-  }, {
-    key: '_getMediaPipe',
-    value: function _getMediaPipe(name) {
-      if (!this._attachmentManager) {
-        return new __WEBPACK_IMPORTED_MODULE_17_webrtc_components__["d" /* PeerMediaPipe */]();
-      }
-      var pipe = this._attachmentManager.getAttachments()[name];
-      if (pipe && !(pipe instanceof __WEBPACK_IMPORTED_MODULE_17_webrtc_components__["d" /* PeerMediaPipe */])) {
-        throw new Error('Attachment conflict for ' + name + ', another component is attached.');
-      } else if (!pipe) {
-        pipe = new __WEBPACK_IMPORTED_MODULE_17_webrtc_components__["d" /* PeerMediaPipe */]();
-        this._attachmentManager.attach(name, pipe);
-      }
-      return pipe;
-    }
-
-    /**
-     * Returns a {@link MediaTee} that represents a remote source with a specific name.
-     *
-     * This method is guaranteed to always return a {@link MediaTee}, unless the call is closed.
-     * If there is no remote source with the given name, it will be created.
-     *
-     * Under the hood this method will ensure that a {@link PeerMediaPipe} component is attached to the given point.
-     *
-     * @example <caption>Rendering a remote stream to a &lt;video&gt; element</caption>
-     *
-     * call.getRemoteSource('main').connect(videoElement)
-     *
-     * @function Call#getRemoteSource
-     * @param {string} name - The name of the remote source to return.
-     * @returns {MediaTee} A media tee that forwards the remote stream.
-     */
-
-  }, {
-    key: 'getRemoteSource',
-    value: function getRemoteSource(name) {
-      return this._getMediaPipe(name).output;
-    }
-
-    /**
-     * Sets or removes a local media source that will be streamed to the peer.
-     *
-     * Under the hood this method will ensure that a {@link MediaPipe} component is attached to the given point.
-     *
-     * @function Call#setLocalSource
-     * @param {string} name - The name of the stream, e.g. 'main'.
-     * @param {?MediaNode} source - The media source.
-     */
-
-  }, {
-    key: 'setLocalSource',
-    value: function setLocalSource(name, source) {
-      if (arguments.length < 2) {
-        throw new TypeError('Call.setLocalSource: requires at least 2 arguments');
-      }
-      if (typeof name !== 'string') {
-        throw new TypeError('Call.setLocalSource: name has to be a string');
-      }
-      if (source) {
-        __WEBPACK_IMPORTED_MODULE_20_media_mediaNode__["a" /* default */].connect(source, this._getMediaPipe(name));
-      } else {
-        var input = __WEBPACK_IMPORTED_MODULE_21_media_mediaNodeInput__["a" /* default */].resolve(this._getMediaPipe(name));
-        if (input.target) {
-          input.target.disconnect(input);
-        }
-      }
-    }
-  }, {
-    key: '_onAttachmentUpdate',
-    value: function _onAttachmentUpdate() {
-      var _this2 = this;
-
-      if (!this._peerConnection) {
-        return;
-      }
-      if (!this.peerId) {
-        return __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].error(TAG, 'got attachment update while no peer id was set');
-      }
-      var streams = this._attachmentManager.getLocalStreamsForPeer(this.peerId);
-      var currentStreams = this._peerConnection.getLocalStreams();
-
-      var _streamDiff = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_12_webrtc_utils__["streamDiff"])(currentStreams, streams),
-          _streamDiff2 = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray___default()(_streamDiff, 2),
-          added = _streamDiff2[0],
-          removed = _streamDiff2[1];
-
-      added.forEach(function (stream) {
-        return _this2._peerConnection.addStream(stream);
-      });
-      removed.forEach(function (stream) {
-        return _this2._peerConnection.removeStream(stream);
-      });
-    }
-  }, {
-    key: '_onRemoteStreamChange',
-    value: function _onRemoteStreamChange(op, event) {
-      var stream = event.stream;
-
-      __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].debug(TAG, op + ' remote stream \'' + stream.id + ':\'', stream);
-      var streams = this._peerConnection.getRemoteStreams();
-      this._attachmentManager.setRemoteStreamsForPeer(this.peerId, streams);
-    }
-  }, {
-    key: '_setPeerId',
-    value: function _setPeerId(peerId) {
-      if (this._peerId !== peerId) {
-        this._oldPeers = this._oldPeers || new __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_map___default.a();
-        var now = Date.now();
-        var switchTimeout = this._oldPeers.get(peerId);
-        if (now < switchTimeout) {
-          __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].info(TAG, this, 'ignoring peer change from ' + this._peerId + ' to ' + peerId + ', timeout has not expired');
-          return false;
-        }
-        this._oldPeers.set(peerId, now + PEER_SWITCH_TIMEOUT_MS);
-
-        if (this._peerId) {
-          __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].info(TAG, this, 'changed peer, sending hangup to old peer');
-          this._signaler.sendHangup();
-        }
-
-        this._reset();
-        this._peerId = peerId;
-        this._emit('peerId', peerId);
-        if (this._statsFormatter) {
-          this._statsFormatter.setPeerId(peerId);
-        }
-      }
-      return true;
-    }
-  }, {
-    key: 'handleSignalingMessage',
-    value: function handleSignalingMessage(message) {
-      __WEBPACK_IMPORTED_MODULE_8_common_argCheck__["a" /* default */].object('Call.handleSignalingMessage', 'message', message);
-      try {
-        this._signaler.handleMessage(message);
-      } catch (error) {
-        if (error.message === 'hangup') {
-          if (this._signaler.transitionToClosed()) {
-            this._closeCall('hangup', 'peer');
-          }
-        } else {
-          __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].error(TAG, this + ' error when handling signaling message: ' + error);
-        }
-      }
-    }
-  }, {
-    key: '_createPeerConnection',
-    value: function _createPeerConnection() {
-      __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].verbose(TAG, this + ' replacing peer connection');
-      this._reset();
-
-      this._peerConnection = __WEBPACK_IMPORTED_MODULE_13_webrtc_peerConnectionProxy__["a" /* default */].create(this._peerConnectionConfiguration);
-      if (this._statsFormatter) {
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_15_webrtc_dataChannelMonitor__["a" /* default */])(this._peerConnection, this._statsFormatter);
-      }
-      var dataChannelFactory = this._peerConnection.createDataChannel.bind(this._peerConnection);
-      this._datamux.createDataChannels(dataChannelFactory);
-      this._attachmentManager.setDatamuxForPeer(this._peerId, this._datamux, this._attachmentChannels);
-      this._onAttachmentUpdate();
-      this._peerConnection.addEventListener('addstream', this._onAddRemoteStream);
-      this._peerConnection.addEventListener('removestream', this._onRemoveRemoteStream);
-
-      this._emit('peerConnection', this._peerConnection);
-
-      return this._peerConnection;
-    }
-
-    // Members
-
-    /**
-     * The id of the call.
-     *
-     * This is not guaranteed to be constant, as it can be changed due to negotiation
-     * conflicts. If the id is changed, an `'id` event will be emitted.
-     *
-     * @readonly
-     * @member {string} Call#id
-     */
-
-  }, {
-    key: 'hangup',
-
-
-    // Methods
-    /**
-     * Signal to the peer that the call is has been hung up, and then stop the call.
-     *
-     * When a call is hung up all components will be detached, and all resources cleaned up. It will
-     * not be possible to start the call again.
-     *
-     * @function Call#hangup
-     * @returns {Promise<Room>} A promise that is resolved if the hangup event is sent successfully.
-     */
-    value: function hangup() {
-      if (this._signaler.transitionToClosed()) {
-        this._signaler.sendHangup();
-        this._closeCall('hangup', 'self');
-      }
-    }
-    /**
-     * Abruptly close the call without signaling to the peer.
-     *
-     * When a call is hung up all components will be detached, and all resources cleaned up. It will
-     * not be possible to start the call again.
-     *
-     * @function Call#close
-     */
-
-  }, {
-    key: 'close',
-    value: function close() {
-      if (this._signaler.transitionToClosed()) {
-        this._closeCall('closed', 'self');
-      }
-    }
-    /**
-     * Starts an incoming call, or tries to reconnect the call if the connection has failed.
-     *
-     * @function Call#start
-     */
-
-  }, {
-    key: 'start',
-    value: function start() {
-      this._signaler.start();
-      return this;
-    }
-  }, {
-    key: '_closeCall',
-    value: function _closeCall(reason, source) {
-      this._reset();
-      this._datamux.cleanup();
-      this._attachmentManager.cleanup();
-      this._attachmentManager = null;
-      if (this._onClosed) {
-        this._onClosed(this);
-      }
-      __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].info(TAG, 'closed call: ' + this);
-      this._emit('closed', {
-        reason: reason,
-        source: source,
-        call: this
-      });
-    }
-  }, {
-    key: '_reset',
-    value: function _reset() {
-      if (this._peerConnection) {
-        this._peerConnection.removeEventListener('addstream', this._onAddRemoteStream);
-        this._peerConnection.removeEventListener('removestream', this._onRemoveRemoteStream);
-      }
-      this._signaler.reset();
-      try {
-        if (this._peerConnection && this._peerConnection.signalingState !== 'closed') {
-          this._peerConnection.close();
-        }
-      } catch (e) {
-        __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].error(TAG, 'failed to close peer connection: ', e);
-      }
-      this._peerConnection = null;
-      this._datamux.reset();
-      this._attachmentManager.cleanupPeer(this.peerId);
-    }
-  }, {
-    key: 'attachments',
-    get: function get() {
-      return this._attachmentManager.getAttachments();
-    }
-  }, {
-    key: 'id',
-    get: function get() {
-      return this._signaler.ticket;
-    }
-
-    // these two are added in callRegistry.js
-    /**
-     * The room that the call is taking place in.
-     *
-     * @readonly
-     * @member {Room} Call#room
-     */
-    /**
-     * The peer that the call is connecting to.
-     *
-     * @readonly
-     * @member {User} Call#peer
-     */
-
-    /**
-     * Your own id that the peer will see as {@link Call#peerId}.
-     *
-     * @readonly
-     * @member {string} Call#ownId
-     */
-
-  }, {
-    key: 'ownId',
-    get: function get() {
-      return this._ownId;
-    }
-
-    /**
-     * The id of the peer that the call is connecting to.
-     *
-     * @readonly
-     * @member {string} Call#peerId
-     */
-
-  }, {
-    key: 'peerId',
-    get: function get() {
-      return this._peerId;
-    }
-
-    /**
-     * The state of the signalling channel, `true` if the channel is open, `false` otherwise.
-     *
-     * @readonly
-     * @member {boolean} Call#connected
-     */
-
-  }, {
-    key: 'connected',
-    get: function get() {
-      return this._signaler.isConnected();
-    }
-
-    /**
-     * Whether the call is closed or not. A closed call cannot be started again.
-     *
-     * @readonly
-     * @member {boolean} Call#closed
-     */
-
-  }, {
-    key: 'closed',
-    get: function get() {
-      return this._signaler.closed;
-    }
-
-    /**
-     * Whether the call is stopped or not. The initial state of incoming calls is stopped,
-     * and calls will also transition to the stopped state if the connection has failed.
-     *
-     * @readonly
-     * @member {boolean} Call#stopped
-     */
-
-  }, {
-    key: 'stopped',
-    get: function get() {
-      return this._signaler.stopped;
-    }
-
-    /**
-     * The connection state of the call.
-     *
-     * @readonly
-     * @member {PeerConnectionState} Call#connectionState
-     */
-
-  }, {
-    key: 'connectionState',
-    get: function get() {
-      return this._signaler.connectionState;
-    }
-
-    /**
-     * An error describing why the call connection is failing, or null if there is no error.
-     * Will always be null if {@link Call#connectionState} is `'connected'` or `'closed'`.
-     *
-     * @readonly
-     * @member {(ConnectionFailedError|ConnectionLostError)?} Call#errorState
-     */
-
-  }, {
-    key: 'errorState',
-    get: function get() {
-      return this._signaler.errorState;
-    }
-  }, {
-    key: 'error',
-    get: function get() {
-      __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].warning('deprecated', 'call.error is deprecated, use call.errorState instead');
-      return this._signaler.errorState;
-    }
-  }]);
-
-  return Call;
-}(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9_common_emitter__["a" /* default */])(null));
-
-/* harmony default export */ __webpack_exports__["default"] = (Call);
-
-
-Call._deprecatedEvents = {
-  // FIXME: remove once call.error is removed
-  error: function error(funcName) {
-    return 'call.' + funcName + '(\'error\', ...) is deprecated, use call.' + funcName + '(\'errorState\', ...) instead';
-  }
-};
-
-/***/ }),
-/* 225 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MediaBroadcaster; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return DataShare; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return FileShare; });
@@ -23981,38 +17471,38 @@ Call._deprecatedEvents = {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return ProxySource; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_get_iterator__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_get_iterator__ = __webpack_require__(152);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_get_iterator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_get_iterator__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_symbol_iterator__ = __webpack_require__(94);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_symbol_iterator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_symbol_iterator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_promise__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_promise__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_promise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_toConsumableArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_toConsumableArray__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_map__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_babel_runtime_core_js_object_get_prototype_of__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_babel_runtime_helpers_classCallCheck__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_babel_runtime_helpers_createClass__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_common_log__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_common_argCheck__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_common_emitter__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_common_emitter__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_common_utils__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_webrtc_fileRef__ = __webpack_require__(226);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_webrtc_rtcComponent__ = __webpack_require__(160);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_webrtc_candidater__ = __webpack_require__(230);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_webrtc_peerConnectionProxy__ = __webpack_require__(162);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_media_mediaNode__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_media_mediaTee__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_media_mediaNode__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_media_mediaTee__ = __webpack_require__(221);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_media_passthrough__ = __webpack_require__(181);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_media_streamSource__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_media_streamSource__ = __webpack_require__(183);
 
 
 
@@ -25239,29 +18729,6539 @@ var ProxySource = function (_MediaNode$connectMix2) {
 }(__WEBPACK_IMPORTED_MODULE_19_media_mediaNode__["a" /* default */].connectMixin(__WEBPACK_IMPORTED_MODULE_16_webrtc_rtcComponent__["a" /* default */]));
 
 /***/ }),
+/* 194 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export OP_SET */
+/* unused harmony export OP_DELETE */
+/* unused harmony export OP_NAME */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AttachData; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_entries__ = __webpack_require__(234);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_entries___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_entries__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_defineProperty__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_defineProperty___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_defineProperty__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_slicedToArray__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_slicedToArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_slicedToArray__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_symbol_iterator__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_symbol_iterator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_symbol_iterator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_map__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_babel_runtime_helpers_createClass__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_babel_runtime_helpers_createClass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_babel_runtime_helpers_inherits__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_common_log__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_common_argCheck__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_common_utils__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_webrtc_channelControllers__ = __webpack_require__(231);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function randomSeq() {
+  return Math.random() * 1000000000 | 0;
+}
+
+var OP_SET = 1;
+var OP_DELETE = 2;
+var OP_NAME = [undefined, 'set', 'delete'];
+
+/**
+ * A class which provides a way to read and modify a set of data that is synchronized between all
+ * the peers of an {@link RtcComponent}.
+ *
+ * @abstract
+ * @class AttachData
+ * @extends Map
+ */
+var AttachData = function (_Map) {
+  __WEBPACK_IMPORTED_MODULE_10_babel_runtime_helpers_inherits___default()(AttachData, _Map);
+
+  function AttachData(_ref) {
+    var onUpdate = _ref.onUpdate,
+        onSendUpdate = _ref.onSendUpdate;
+
+    __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_classCallCheck___default()(this, AttachData);
+
+    var _this = __WEBPACK_IMPORTED_MODULE_8_babel_runtime_helpers_possibleConstructorReturn___default()(this, (AttachData.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData)).call(this));
+
+    _this.tag = 'attach-data';
+    _this._seqs = new __WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_map___default.a();
+    _this._ownerIds = new __WEBPACK_IMPORTED_MODULE_13_common_utils__["ReadOnlyMap"]();
+    _this._ownOwnerIds = new __WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_map___default.a();
+
+    _this._onUpdate = onUpdate;
+    _this._onSendUpdate = onSendUpdate;
+    return _this;
+  }
+
+  /**
+   * A collection of all owner ids for the data in this map. If an owner id exists for a given key
+   * a entry must exist in the map as well, although the opposite is not always true.
+   *
+   * See {@link AttachData#setWithOwnership} for more information about ownership.
+   *
+   * @readonly
+   * @member {ReadOnlyMap<string,string>} AttachData#owners
+   */
+
+
+  __WEBPACK_IMPORTED_MODULE_7_babel_runtime_helpers_createClass___default()(AttachData, [{
+    key: 'keys',
+
+
+    /**
+     * @returns {Iterator<string>} An iterator of all the keys in the map.
+     */
+    value: function keys() {
+      this._checkValid();
+      return __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), 'keys', this).call(this);
+    }
+
+    /**
+     * @returns {Iterator<JsonTypes>} An iterator of all the values in the map.
+     */
+
+  }, {
+    key: 'values',
+    value: function values() {
+      this._checkValid();
+      return __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), 'values', this).call(this);
+    }
+
+    /**
+     * @returns {Iterator<Array<*>>} An iterator of all the values in the map.
+     */
+
+  }, {
+    key: 'entries',
+    value: function entries() {
+      this._checkValid();
+      return __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), 'entries', this).call(this);
+    }
+
+    /**
+     * @param {string} key - The key to look for.
+     * @returns {boolean} True if there is an entry for the given key.
+     */
+
+  }, {
+    key: 'has',
+    value: function has(key) {
+      __WEBPACK_IMPORTED_MODULE_12_common_argCheck__["a" /* default */].string('AttachData.has', 'key', key);
+      this._checkValid();
+      return __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), 'has', this).call(this, key);
+    }
+
+    /**
+     * @param {string} key - The key of the value to retrive.
+     * @returns {JsonTypes} Returns the value for the given key.
+     */
+
+  }, {
+    key: 'get',
+    value: function get(key) {
+      __WEBPACK_IMPORTED_MODULE_12_common_argCheck__["a" /* default */].string('AttachData.get', 'key', key);
+      this._checkValid();
+      return __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), 'get', this).call(this, key);
+    }
+
+    /**
+     * Sets set value for the given key.
+     *
+     * Setting a local value will **not** trigger a {@link RtcComponent#rtcComponentUpdatedData} call,
+     * that only happens for remote updates.
+     *
+     * @param {string} key - The key of the value.
+     * @param {JsonTypes} value - The value to set.
+     */
+
+  }, {
+    key: 'set',
+    value: function set(key, value) {
+      __WEBPACK_IMPORTED_MODULE_12_common_argCheck__["a" /* default */].count('AttachData.set', 2, arguments.length);
+      __WEBPACK_IMPORTED_MODULE_12_common_argCheck__["a" /* default */].string('AttachData.set', 'key', key);
+      return this.setWithOwnership(key, value, null);
+    }
+
+    /**
+     * Sets set value for the given key, along with an ownership id.
+     *
+     * Setting the ownership allows data to be transparently overridden by users that are joining or
+     * rejoining the data synchronization network. Usually the `ownerId` will be set to the id of the user,
+     * but it can sometimes be useful to use other values, such as the role of the user, e.g. `'moderator'`.
+     *
+     * Since values can be updated while a call is not connected, the values that are set when disconnected
+     * may be updated once you are connected with the rest of the users. When relaying some kind of state
+     * to other peers this can cause problems, as the updates that you sent out before a reconnect will
+     * cause an update to your local values. By tagging data with an owner id, it is possible to rejoin
+     * a data synchronization group and transparently update your exsting values with the new state, without
+     * causing a local update to trigger.
+     *
+     * Setting a local value will not trigger a {@link RtcComponent#rtcComponentUpdatedData} call,
+     * that only happens for remote updates.
+     *
+     * @param {string} key - The key of the value.
+     * @param {JsonTypes} value - The value to set.
+     * @param {?string} ownerId - The owner id to use when setting the value.
+     */
+
+  }, {
+    key: 'setWithOwnership',
+    value: function setWithOwnership(key, value, ownerId) {
+      __WEBPACK_IMPORTED_MODULE_12_common_argCheck__["a" /* default */].count('AttachData.setWithOwnership', 3, arguments.length);
+      __WEBPACK_IMPORTED_MODULE_12_common_argCheck__["a" /* default */].string('AttachData.setWithOwnership', 'key', key);
+      __WEBPACK_IMPORTED_MODULE_12_common_argCheck__["a" /* default */].optString('AttachData.setWithOwnership', 'ownerId', ownerId);
+      this._checkValid();
+      var ret = __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), 'set', this).call(this, key, value);
+
+      var seq = this._seqs.get(key) || 0;
+      seq += randomSeq();
+      this._seqs.set(key, seq);
+      if (ownerId) {
+        this._ownerIds._set(key, ownerId);
+        this._ownOwnerIds.set(key, ownerId);
+      }
+      this._onSendUpdate(this._toSetMessage(seq, ownerId, key, value));
+      return ret;
+    }
+
+    /**
+     * Deletes an existing value of the corresponding key.
+     *
+     * Deleting a local value will not trigger a {@link RtcComponent#rtcComponentUpdatedData} call,
+     * that only happens for remote updates.
+     *
+     * @param {string} key - The key to delete the value for.
+     * @returns {boolean} True if a value existed.
+     */
+
+  }, {
+    key: 'delete',
+    value: function _delete(key) {
+      __WEBPACK_IMPORTED_MODULE_12_common_argCheck__["a" /* default */].count('AttachData.delete', 1, arguments.length);
+      __WEBPACK_IMPORTED_MODULE_12_common_argCheck__["a" /* default */].string('AttachData.delete', 'key', key);
+      return this.deleteWithOwnership(key, null);
+    }
+
+    /**
+     * Deletes an existing value of the corresponding key, using an ownership id.
+     *
+     * See {@link AttachData#setWithOwnership} for more information about ownership.
+     *
+     * Deleting a local value will not trigger a {@link RtcComponent#rtcComponentUpdatedData} call,
+     * that only happens for remote updates.
+     *
+     * @param {string} key - The key to delete the value for.
+     * @param {?string} ownerId - The owner id to use when deleting the value.
+     * @returns {boolean} True if a value existed.
+     */
+
+  }, {
+    key: 'deleteWithOwnership',
+    value: function deleteWithOwnership(key, ownerId) {
+      __WEBPACK_IMPORTED_MODULE_12_common_argCheck__["a" /* default */].count('AttachData.deleteWithOwnership', 2, arguments.length);
+      __WEBPACK_IMPORTED_MODULE_12_common_argCheck__["a" /* default */].string('AttachData.deleteWithOwnership', 'key', key);
+      __WEBPACK_IMPORTED_MODULE_12_common_argCheck__["a" /* default */].optString('AttachData.deleteWithOwnership', 'ownerId', ownerId);
+      this._checkValid();
+      var ret = __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), 'delete', this).call(this, key);
+
+      var seq = this._seqs.get(key) || 0;
+      seq += randomSeq();
+      this._seqs.set(key, seq);
+      if (ownerId) {
+        this._ownerIds._set(key, ownerId);
+        this._ownOwnerIds.set(key, ownerId);
+      }
+      this._onSendUpdate(this._toDeleteMessage(seq, ownerId, key));
+      return ret;
+    }
+
+    /**
+     * Clears all the data in the map.
+     *
+     * Clearing the map locally will not trigger a {@link RtcComponent#rtcComponentUpdatedData} call,
+     * that only happens for remote updates.
+     */
+
+  }, {
+    key: 'clear',
+    value: function clear() {
+      var _this2 = this;
+
+      // TODO: This could be more efficient
+      this._checkValid();
+      __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), 'forEach', this).call(this, function (key) {
+        return _this2.delete(key);
+      });
+    }
+
+    /**
+     * Clears all the data in the map, using an ownership.
+     *
+     * See {@link AttachData#setWithOwnership} for more information about ownership.
+     *
+     * Clearing the map locally will not trigger a {@link RtcComponent#rtcComponentUpdatedData} call,
+     * that only happens for remote updates.
+     *
+     * @param {?string} ownerId - The owner id to use when clearing the map.
+     */
+
+  }, {
+    key: 'clearWithOwnership',
+    value: function clearWithOwnership(ownerId) {
+      var _this3 = this;
+
+      this._checkValid();
+      __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), 'forEach', this).call(this, function (key) {
+        return _this3.deleteWithOwnership(key, ownerId);
+      });
+    }
+
+    /**
+     * The iterator function passed to {@link ReadOnlyMap#forEach}.
+     *
+     * @callback AttachData~ForEachCallback
+     * @param {*} key - The key of the current entry.
+     * @param {JsonTypes} value - The value of the current entry.
+     * @param {AttachData} map - The map itself.
+     */
+
+    /**
+     * Synchronously calls an interator function once for each entry in the map.
+     *
+     * Errors thrown inside the iterator function will cancel the iteration.
+     *
+     * @param {AttachData~ForEachCallback} func - The iterator function.
+     * @param {*} [thisArg] - The value to use as `this` inside the iterator function.
+     */
+
+  }, {
+    key: 'forEach',
+    value: function forEach(func, thisArg) {
+      this._checkValid();
+      return __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), 'forEach', this).call(this, func, thisArg);
+    }
+
+    /**
+     * This symbol allows the map to be used directly inside a `for..of` loop.
+     *
+     * @function AttachData#@@iterator
+     * @returns {Object} An iterator for all the entries in this map.
+     */
+
+  }, {
+    key: __WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_symbol_iterator___default.a,
+    value: function value() {
+      this._checkValid();
+      return __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), __WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_symbol_iterator___default.a, this).call(this);
+    }
+
+    // A local update uses the form {key, value, oldValue, ownerId}
+    // An update that is sent over the wire uses an array to keep the json form more compact
+    //   [op, key, value, seq] | [op, key, value, seq, ownerId]
+    //   where op is either 1 for set
+
+  }, {
+    key: '_toDeleteMessage',
+    value: function _toDeleteMessage(seq, ownerId, key) {
+      return [OP_DELETE, seq, ownerId || 0, key];
+    }
+  }, {
+    key: '_toSetMessage',
+    value: function _toSetMessage(seq, ownerId, key, value) {
+      return [OP_SET, seq, ownerId || 0, key, value];
+    }
+
+    // returns an array of updates
+
+  }, {
+    key: '_getCurrentState',
+    value: function _getCurrentState() {
+      var _this4 = this;
+
+      var states = [];
+      this._seqs.forEach(function (seq, key) {
+        var value = __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), 'get', _this4).call(_this4, key);
+        var ownerId = _this4._ownerIds.get(key);
+        states.push(_this4._toSetMessage(seq, ownerId, key, value));
+      });
+      return states;
+    }
+
+    // Handles a received update
+
+  }, {
+    key: '_onReceiveUpdate',
+    value: function _onReceiveUpdate(peerId, _ref2) {
+      var _ref3 = __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_slicedToArray___default()(_ref2, 5),
+          op = _ref3[0],
+          seq = _ref3[1],
+          ownerId = _ref3[2],
+          key = _ref3[3],
+          value = _ref3[4];
+
+      __WEBPACK_IMPORTED_MODULE_11_common_log__["default"].verbose(this.tag, 'message from \'' + peerId + '\' op=' + OP_NAME[op] + ' key=\'' + key + '\' seq=' + seq + ' ownerId=\'' + ownerId + '\'');
+      if (!(op === OP_SET || op === OP_DELETE)) {
+        __WEBPACK_IMPORTED_MODULE_11_common_log__["default"].error(this.tag, 'update had invalid op code: \'' + op + '\', ignoring');
+        return;
+      }
+      var localSeq = this._seqs.get(key) || 0;
+      var ownOwnerId = this._ownOwnerIds.get(key);
+      var receivedOwnValue = ownerId && ownOwnerId && ownerId === ownOwnerId;
+      var receivedIsNewer = localSeq < seq;
+
+      if (receivedOwnValue && receivedIsNewer) {
+        // Own value, so we increment seq and send update without signaling a local change
+        seq += randomSeq();
+        this._seqs.set(key, seq);
+        if (__WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), 'has', this).call(this, key)) {
+          var _value = __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), 'get', this).call(this, key);
+          this._onSendUpdate(this._toSetMessage(seq, ownerId, key, _value));
+        } else {
+          // If key is not present in main map, then it's been deleted
+          this._onSendUpdate(this._toDeleteMessage(seq, ownerId, key));
+        }
+      } else if (receivedIsNewer) {
+        this._seqs.set(key, seq);
+        if (ownerId) {
+          this._ownerIds._set(key, ownerId);
+        }
+        var oldValue = __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), 'get', this).call(this, key);
+        if (op === OP_SET) {
+          __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), 'set', this).call(this, key, value);
+        } else {
+          __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), 'delete', this).call(this, key);
+          value = undefined;
+        }
+        this._onUpdate({ key: key, value: value, oldValue: oldValue, ownerId: ownerId });
+      }
+    }
+  }, {
+    key: '_invalidate',
+    value: function _invalidate() {
+      this._seqs.clear();
+      this._ownerIds._clear();
+      this._seqs = null;
+      this._ownerIds = null;
+    }
+  }, {
+    key: '_checkValid',
+    value: function _checkValid() {
+      if (!this._seqs) {
+        throw new TypeError('AttachData was accessed after the component was detached.');
+      }
+    }
+  }, {
+    key: 'owners',
+    get: function get() {
+      return this._ownerIds;
+    }
+
+    /**
+     * The number of entries in the map.
+     *
+     * @readonly
+     * @member {number} AttachData#size
+     */
+
+  }, {
+    key: 'size',
+    get: function get() {
+      this._checkValid();
+      return __WEBPACK_IMPORTED_MODULE_9_babel_runtime_helpers_get___default()(AttachData.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_get_prototype_of___default()(AttachData.prototype), 'size', this);
+    }
+  }]);
+
+  return AttachData;
+}(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_map___default.a);
+
+/**
+ * A class that keeps track of a set of {@link AttachData}. Used by {@link AttachmentManager}.
+ *
+ * @private
+ * @class DataHub
+ */
+
+var DataHub = function () {
+  function DataHub() {
+    __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_classCallCheck___default()(this, DataHub);
+
+    this.attachDatas = new __WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_map___default.a();
+
+    this.onUpdateListener = null;
+
+    this.controller = new __WEBPACK_IMPORTED_MODULE_14_webrtc_channelControllers__["a" /* JsonChannelBroadcastController */]({
+      onPeerChannelOpen: this.onPeerChannelOpen.bind(this),
+      onMessageFromPeer: this.onMessageFromPeer.bind(this)
+    });
+  }
+
+  __WEBPACK_IMPORTED_MODULE_7_babel_runtime_helpers_createClass___default()(DataHub, [{
+    key: 'get',
+    value: function get(name) {
+      var _this5 = this;
+
+      var attachData = this.attachDatas.get(name);
+      if (!attachData) {
+        attachData = new AttachData({
+          onUpdate: function onUpdate(update) {
+            return _this5.onUpdate(name, update);
+          },
+          onSendUpdate: function onSendUpdate(update) {
+            return _this5.onSendUpdate(name, update);
+          }
+        });
+        this.attachDatas.set(name, attachData);
+      }
+      return attachData;
+    }
+  }, {
+    key: 'setOnUpdateListener',
+    value: function setOnUpdateListener(listener) {
+      this.onUpdateListener = listener;
+    }
+  }, {
+    key: 'onUpdate',
+    value: function onUpdate(name, update) {
+      if (this.onUpdateListener) {
+        this.onUpdateListener(name, update);
+      }
+    }
+  }, {
+    key: 'onSendUpdate',
+    value: function onSendUpdate(name, update) {
+      var updatesMap = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_defineProperty___default()({}, name, [update]);
+      this.controller.sendMessage({ map: updatesMap });
+    }
+  }, {
+    key: 'setChannelForPeer',
+    value: function setChannelForPeer(peerId, channel) {
+      if (channel) {
+        this.controller.addPeer(peerId, channel);
+      } else {
+        this.controller.removePeer(peerId);
+      }
+    }
+  }, {
+    key: 'onPeerChannelOpen',
+    value: function onPeerChannelOpen(peerId) {
+      var updatesMap = {};
+      this.attachDatas.forEach(function (attachData, name) {
+        var updates = attachData._getCurrentState();
+        updatesMap[name] = updates;
+      });
+      this.controller.sendMessageToPeer(peerId, { map: updatesMap });
+    }
+  }, {
+    key: 'onMessageFromPeer',
+    value: function onMessageFromPeer(peerId, message) {
+      var _this6 = this;
+
+      var updatesMap = message.map;
+      if (updatesMap) {
+        __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_entries___default()(updatesMap).forEach(function (_ref4) {
+          var _ref5 = __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_slicedToArray___default()(_ref4, 2),
+              name = _ref5[0],
+              updates = _ref5[1];
+
+          var attachData = _this6.get(name);
+          updates.forEach(function (update) {
+            return attachData._onReceiveUpdate(peerId, update);
+          });
+        });
+      }
+    }
+  }, {
+    key: 'cleanup',
+    value: function cleanup() {
+      this.onUpdateListener = null;
+      this.controller.cleanup();
+      this.controller = null;
+      this.attachDatas.forEach(function (attachData) {
+        attachData._invalidate();
+      });
+      this.attachDatas.clear();
+      this.attachDatas = null;
+    }
+  }]);
+
+  return DataHub;
+}();
+
+/* harmony default export */ __webpack_exports__["b"] = (DataHub);
+
+/***/ }),
+/* 195 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_common_argCheck__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_common_log__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_conference_raftConfiguration__ = __webpack_require__(132);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_conference_raftMessages__ = __webpack_require__(147);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_conference_raftLogEntry__ = __webpack_require__(133);
+
+
+
+
+
+
+
+
+
+
+
+
+var TAG = 'raft';
+
+var RaftLog = function () {
+  function RaftLog(_ref) {
+    var stateMachine = _ref.stateMachine,
+        meshTopology = _ref.meshTopology,
+        configuration = _ref.configuration;
+
+    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, RaftLog);
+
+    this._stateMachine = stateMachine;
+    this._meshTopology = meshTopology;
+    this._configuration = configuration;
+
+    this._entries = [];
+    this._offset = 0;
+    this._commitIndex = 0;
+    this._lastApplied = 0;
+    this._snapshot = null;
+    this._configurationIndex = 0;
+  }
+
+  __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(RaftLog, [{
+    key: 'toString',
+    value: function toString() {
+      var entries = this._entries.slice(this._lastApplied - this._offset).join(',');
+      return 'log{lli=' + this.lastLogIndex + ',llt=' + this.lastLogTerm + ',ci=' + this.commitIndex + (',la=' + this._lastApplied + ',' + this._configuration + ',es=[' + entries + ']}');
+    }
+  }, {
+    key: 'entryAtIndex',
+    value: function entryAtIndex(index) {
+      if (index === 0) {
+        return null;
+      }
+      return this._entries[index - 1 - this._offset] || null;
+    }
+  }, {
+    key: 'entryTermAtIndex',
+    value: function entryTermAtIndex(index) {
+      if (this._snapshot) {
+        if (index < this._snapshot.lastIndex) {
+          throw new Error("can't get term for entry ahead of local snapshot");
+        } else if (index === this._snapshot.lastIndex) {
+          return this._snapshot.lastTerm;
+        }
+      }
+      if (index > this._entries.length + this._offset || index < 1) {
+        return 0;
+      }
+      return this.entryAtIndex(index).term;
+    }
+
+    // from fromIndex, to, but not including toIndex
+
+  }, {
+    key: 'sliceEntries',
+    value: function sliceEntries(fromIndex, toIndex) {
+      fromIndex = Math.max(fromIndex - 1 - this._offset, 0);
+      toIndex = Math.max(toIndex - 1 - this._offset, 0);
+      return this._entries.slice(fromIndex, toIndex);
+    }
+  }, {
+    key: 'handleAppendEntriesRequest',
+    value: function handleAppendEntriesRequest(message) {
+      if (message.prevIndex > this.lastLogIndex) {
+        // Appending these entries would leave a gap
+        return message.response({ meshTopology: this._meshTopology });
+      }
+
+      // Check if we have a snapshot installed and and the request is older, in that
+      // case we just ignore it since it must be a delayed/repeated message and the leader
+      // should know to send a post-snapshot append
+      if (this._snapshot && message.prevIndex < this._offset) {
+        return;
+      }
+
+      var localPrevTerm = this.entryTermAtIndex(message.prevIndex);
+      var remoteEntries = message.entries;
+      if (localPrevTerm === message.prevTerm) {
+        // Loop through remote entries until we don't have a local one or find a term mismatch
+        for (var index = 0; index < remoteEntries.length; index += 1) {
+          var remoteEntry = remoteEntries[index];
+          // +1 since prevIndex is the entry before the one we want to match against
+          var localIndex = message.prevIndex + index + 1;
+          if (localIndex > this.lastLogIndex) {
+            // We've run out of local entires to match against, append the rest
+            this._pushEntries(remoteEntries.slice(index));
+            break;
+          }
+          var localTerm = this.entryTermAtIndex(localIndex);
+          if (localTerm !== remoteEntry.term) {
+            // if an entry term doesn't match, delete the rest and append all
+            this._revertEntries(localIndex);
+            this._pushEntries(remoteEntries.slice(index));
+            break;
+          }
+        }
+        var matchIndex = message.prevIndex + remoteEntries.length;
+        if (message.commitIndex > this._commitIndex) {
+          // increase commit index to the remote one, but not higher than the last entry we received
+          var newCommitIndex = Math.min(message.commitIndex, matchIndex);
+          this._incrementCommitIndex(newCommitIndex);
+        }
+        return message.response({ success: true, matchIndex: matchIndex, meshTopology: this._meshTopology });
+      } else {
+        return message.response({ meshTopology: this._meshTopology });
+      }
+    }
+  }, {
+    key: 'getCommittedConfigurationData',
+    value: function getCommittedConfigurationData() {
+      var committedEntries = this.sliceEntries(0, this.commitIndex + 1);
+      for (var index = committedEntries.length - 1; index >= 0; index -= 1) {
+        var entry = committedEntries[index];
+        if (entry instanceof __WEBPACK_IMPORTED_MODULE_7_conference_raftLogEntry__["b" /* ConfigurationEntry */]) {
+          return entry.data;
+        }
+      }
+      if (this._snapshot) {
+        return this._snapshot.configuration;
+      }
+      return new __WEBPACK_IMPORTED_MODULE_5_conference_raftConfiguration__["b" /* ConfigurationData */](new __WEBPACK_IMPORTED_MODULE_5_conference_raftConfiguration__["c" /* Members */]());
+    }
+  }, {
+    key: 'tryCommitIndexForTerm',
+    value: function tryCommitIndexForTerm(newCommitIndex, expectedTerm) {
+      if (newCommitIndex <= this._commitIndex) {
+        return [];
+      }
+      var actualTerm = this.entryTermAtIndex(newCommitIndex);
+      if (actualTerm !== expectedTerm) {
+        __WEBPACK_IMPORTED_MODULE_4_common_log__["default"].debug(TAG, 'Commit index ' + newCommitIndex + ' rejected, expected term was ' + expectedTerm + ', got ' + actualTerm);
+        return [];
+      }
+      return this._incrementCommitIndex(newCommitIndex);
+    }
+  }, {
+    key: 'createConfigurationEntry',
+    value: function createConfigurationEntry(_ref2) {
+      var term = _ref2.term,
+          data = _ref2.data;
+
+      var index = this.lastLogIndex + 1;
+      var entry = new __WEBPACK_IMPORTED_MODULE_7_conference_raftLogEntry__["b" /* ConfigurationEntry */]({ term: term, index: index, data: data });
+      this._configuration.set(data);
+      this._configurationIndex = index;
+      this._entries.push(entry);
+      return entry;
+    }
+  }, {
+    key: 'createOpEntry',
+    value: function createOpEntry(_ref3) {
+      var term = _ref3.term,
+          id = _ref3.id,
+          op = _ref3.op,
+          args = _ref3.args;
+
+      var index = this.lastLogIndex + 1;
+      var entry = new __WEBPACK_IMPORTED_MODULE_7_conference_raftLogEntry__["d" /* OpEntry */]({ term: term, index: index, id: id, op: op, args: args });
+      this._entries.push(entry);
+      return entry;
+    }
+  }, {
+    key: '_incrementCommitIndex',
+    value: function _incrementCommitIndex(newCommitIndex) {
+      this._commitIndex = newCommitIndex;
+      var fromApplied = this._lastApplied;
+      if (this._lastApplied < newCommitIndex) {
+        this._lastApplied = newCommitIndex;
+      }
+      var committed = this.sliceEntries(fromApplied + 1, newCommitIndex + 1);
+      this._stateMachine.commitEntries(committed);
+      return committed;
+    }
+  }, {
+    key: '_revertEntries',
+    value: function _revertEntries(fromIncludingIndex) {
+      if (fromIncludingIndex <= this.commitIndex) {
+        throw new Error('tried to revert committed entries, ci=' + this.commitIndex + ', revert=' + fromIncludingIndex);
+      }
+      if (fromIncludingIndex <= this._lastApplied) {
+        throw new Error('tried to revert applied entries, la=' + this._lastApplied + ', revert=' + fromIncludingIndex);
+      }
+      var reverted = this._entries.splice(fromIncludingIndex - 1 - this._offset);
+      reverted.reverse(); // newest first
+      this._stateMachine.revertEntries(reverted);
+
+      if (this._configurationIndex < fromIncludingIndex) {
+        return; // no need to revert configuration
+      }
+
+      for (var index = fromIncludingIndex - 1; index > 0; index -= 1) {
+        if (this._snapshot && this._snapshot.lastIndex === index) {
+          this._configuration.set(this._snapshot.configuration);
+          this._configurationIndex = index;
+          return;
+        }
+        var entry = this.entryAtIndex(index);
+        if (entry instanceof __WEBPACK_IMPORTED_MODULE_7_conference_raftLogEntry__["b" /* ConfigurationEntry */]) {
+          this._configuration.set(entry.data);
+          this._configurationIndex = index;
+          return;
+        }
+      }
+
+      // no configuration found
+      this._configuration.set(new __WEBPACK_IMPORTED_MODULE_5_conference_raftConfiguration__["b" /* ConfigurationData */](new __WEBPACK_IMPORTED_MODULE_5_conference_raftConfiguration__["c" /* Members */]()));
+      this._configurationIndex = 0;
+    }
+  }, {
+    key: '_pushEntries',
+    value: function _pushEntries(entries) {
+      var _entries;
+
+      (_entries = this._entries).push.apply(_entries, __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray___default()(entries));
+
+      for (var index = entries.length - 1; index >= 0; index -= 1) {
+        var entry = entries[index];
+        if (entry instanceof __WEBPACK_IMPORTED_MODULE_7_conference_raftLogEntry__["b" /* ConfigurationEntry */]) {
+          this._configuration.set(entry.data);
+          this._configurationIndex = index;
+          break;
+        }
+      }
+    }
+  }, {
+    key: 'createSnapshot',
+    value: function createSnapshot(term) {
+      return __WEBPACK_IMPORTED_MODULE_6_conference_raftMessages__["h" /* SnapshotRequest */].create({
+        term: term,
+        lastTerm: this.entryTermAtIndex(this._lastApplied),
+        lastIndex: this._lastApplied,
+        configuration: this._configuration.get(),
+        state: this._stateMachine.state
+      });
+    }
+  }, {
+    key: 'loadSnapshot',
+    value: function loadSnapshot(snapshot) {
+      __WEBPACK_IMPORTED_MODULE_3_common_argCheck__["a" /* default */].instance('RaftLog.loadSnapshot', 'snapshot', snapshot, __WEBPACK_IMPORTED_MODULE_6_conference_raftMessages__["h" /* SnapshotRequest */]);
+      var lastIndex = snapshot.lastIndex,
+          configuration = snapshot.configuration;
+
+
+      this._entries = [];
+      this._offset = lastIndex;
+      this._commitIndex = lastIndex;
+      this._lastApplied = lastIndex;
+      this._configurationIndex = lastIndex;
+      this._configuration.set(configuration);
+      this._snapshot = snapshot;
+
+      this._stateMachine.loadSnapshot(snapshot);
+    }
+  }, {
+    key: 'clear',
+    value: function clear() {
+      this._stateMachine.clear();
+      this._entries = [];
+      this._offset = 0;
+      this._commitIndex = 0;
+      this._lastApplied = 0;
+      this._snapshot = null;
+      this._configurationIndex = 0;
+    }
+  }, {
+    key: 'meshTopology',
+    get: function get() {
+      return this._meshTopology;
+    }
+  }, {
+    key: 'configuration',
+    get: function get() {
+      return this._configuration;
+    }
+  }, {
+    key: 'lastEntry',
+    get: function get() {
+      return this.entryAtIndex(this.lastLogIndex);
+    }
+  }, {
+    key: 'lastLogIndex',
+    get: function get() {
+      return this._offset + this._entries.length;
+    }
+  }, {
+    key: 'lastLogTerm',
+    get: function get() {
+      return this.entryTermAtIndex(this.lastLogIndex);
+    }
+  }, {
+    key: 'commitIndex',
+    get: function get() {
+      return this._commitIndex;
+    }
+  }]);
+
+  return RaftLog;
+}();
+
+/* harmony default export */ __webpack_exports__["a"] = (RaftLog);
+
+/***/ }),
+/* 196 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_map__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_common_log__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_common_utils__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_conference_raftLogEntry__ = __webpack_require__(133);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_conference_raftMessages__ = __webpack_require__(147);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_conference_raftState__ = __webpack_require__(168);
+
+
+
+
+
+
+
+
+
+
+
+
+
+var TAG = 'raft';
+
+var TICK_INTERVAL = 100;
+var TICK_APPLIED_FACTOR = 10;
+var STATE_OP_APPLY_TTL_MS = 30 * 1000;
+var RESEND_RTT_FACTOR = 6;
+
+// The StateMachine keeps the local state of the Raft cluster, and applies
+// committed entries to that state after deduplication. It is also responsible
+// for keeping track of operations that have been requested by the local
+// client, and to retry them if needed.
+//
+// This diagram describes the flow of a successful state operation where the
+// local client is the leader.
+//
+//      Raft --3-> LeaderState --4b-> ...
+//      |  ^            |
+//      1  2            4a
+//      v  |            v
+// StateMachine <-5-- RaftLog
+//
+// 1. An operation is requested.
+// 2. The state machine sends a request via the onStateOpRequest callback.
+// 3. Raft forwards the request to the current state.
+// 4a. Append the OpEntry to the log.
+// 4b. Raft algorithm in action, which ends up committing the entry.
+// 5. The log forwards committed entries to the state machine.
+//
+// And now a diagram for if we're a follower.
+//
+//      Raft --3-> FollowerState --4-> LeaderState --5a->
+//      |  ^                                |
+//      1  2                                5a
+//      v  |                                v
+// StateMachine <-7-- RaftLog <- - 6 - - RaftLog
+//
+// 1-3. Same as above.
+// 4. Send StateOpRequest to the current leader.
+// 5a 5b. Same as 4a 4b above.
+// 6. Raft algorithm ends up committing the entry in the follower's log.
+// 7. Same as 5 above.
+//
+
+var StateMachine = function () {
+  function StateMachine(_ref) {
+    var onStateChange = _ref.onStateChange,
+        onStateOpRequest = _ref.onStateOpRequest,
+        onConfigurationCommitted = _ref.onConfigurationCommitted;
+
+    __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default()(this, StateMachine);
+
+    this._tick = this._tick.bind(this);
+
+    this._state = {};
+    this._tickMod = 0;
+
+    // Client requests are tracked here, type is Map<opId, [expiryMs, deferred, StateOpRequest]>
+    this._tuples = new __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_map___default.a();
+
+    // All members keep track of all op entry IDs that have been applied.
+    this._appliedIds = new __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_map___default.a();
+    this._onStateChange = onStateChange;
+    this._onStateOpRequest = onStateOpRequest;
+    this._onConfigurationCommitted = onConfigurationCommitted;
+  }
+
+  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass___default()(StateMachine, [{
+    key: 'toString',
+    value: function toString() {
+      return 'stateMachine{' + __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default()(this.state) + '}';
+    }
+  }, {
+    key: 'start',
+    value: function start() {
+      this.stop();
+      this._tickMod = 0;
+      this._intervalId = setInterval(this._tick, TICK_INTERVAL);
+    }
+  }, {
+    key: 'stop',
+    value: function stop() {
+      this.clear();
+      if (this._intervalId) {
+        clearInterval(this._intervalId);
+        this._intervalId = null;
+      }
+    }
+  }, {
+    key: 'clear',
+    value: function clear() {
+      this._state = {};
+      this._tuples.clear();
+      this._appliedIds.clear();
+    }
+  }, {
+    key: 'requestStateOp',
+    value: function requestStateOp(_ref2) {
+      var op = _ref2.op,
+          args = _ref2.args,
+          retryTtlMs = _ref2.retryTtlMs;
+
+      var id = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_common_utils__["randomString"])(__WEBPACK_IMPORTED_MODULE_6_conference_raftLogEntry__["d" /* OpEntry */].idSize);
+      var request = __WEBPACK_IMPORTED_MODULE_7_conference_raftMessages__["j" /* StateOpRequest */].create({ id: id, op: op, args: args });
+      var now = Date.now();
+      var expiry = now + retryTtlMs;
+      var nextResend = now + __WEBPACK_IMPORTED_MODULE_8_conference_raftState__["d" /* EXPECTED_RTT_MS */] * RESEND_RTT_FACTOR;
+      var deferred = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_common_utils__["defer"])();
+      this._tuples.set(id, { expiry: expiry, nextResend: nextResend, deferred: deferred, request: request });
+      this._onStateOpRequest(request);
+      return deferred.promise;
+    }
+  }, {
+    key: 'handleStateOpResponse',
+    value: function handleStateOpResponse(peerId, message) {
+      var id = message.id,
+          errorCode = message.errorCode;
+
+      var tuple = this._tuples.get();
+      if (!tuple) {
+        __WEBPACK_IMPORTED_MODULE_4_common_log__["default"].info(TAG, this, ' got StateOpResponse for unknown tuple, ' + id);
+        return;
+      }
+      if (errorCode) {
+        if (errorCode === __WEBPACK_IMPORTED_MODULE_7_conference_raftMessages__["k" /* StateOpResponse */].NOT_LEADER) {
+          this._onStateOpRequest(tuple.request);
+          tuple.nextResend = Date.now() + __WEBPACK_IMPORTED_MODULE_8_conference_raftState__["d" /* EXPECTED_RTT_MS */] * RESEND_RTT_FACTOR;
+        } else {
+          __WEBPACK_IMPORTED_MODULE_4_common_log__["default"].error(TAG, this, ' got unknown StateOpResponse errorCode for ' + id + ', ' + errorCode);
+        }
+      } else {
+        // Success, reset resend timeout
+        tuple.nextResend = Date.now() + __WEBPACK_IMPORTED_MODULE_8_conference_raftState__["d" /* EXPECTED_RTT_MS */] * RESEND_RTT_FACTOR;
+      }
+    }
+  }, {
+    key: '_tick',
+    value: function _tick() {
+      var _this = this;
+
+      var now = Date.now();
+      // Applied ids don't need to be checked nearly as often as tuple resends, so
+      // only do it every nth tick.
+      this._tickMod = (this._tickMod + 1) % TICK_APPLIED_FACTOR;
+      if (this._tickMod === 0) {
+        this._appliedIds.forEach(function (expiry, entryId) {
+          if (expiry < now) {
+            _this._appliedIds.delete(entryId);
+          }
+        });
+      }
+      this._tuples.forEach(function (tuple, entryId) {
+        if (tuple.expiry < now) {
+          _this._tuples.delete(entryId);
+          tuple.deferred.reject(new Error('Timed out'));
+        } else if (tuple.nextResend < now) {
+          _this._onStateOpRequest(tuple.request);
+          tuple.nextResend = now + __WEBPACK_IMPORTED_MODULE_8_conference_raftState__["d" /* EXPECTED_RTT_MS */] * RESEND_RTT_FACTOR;
+        }
+      });
+    }
+  }, {
+    key: 'commitEntries',
+    value: function commitEntries(entries) {
+      var _this2 = this;
+
+      var updated = false;
+      entries.forEach(function (entry) {
+        if (entry instanceof __WEBPACK_IMPORTED_MODULE_6_conference_raftLogEntry__["d" /* OpEntry */]) {
+          if (_this2._appliedIds.has(entry.id)) {
+            __WEBPACK_IMPORTED_MODULE_4_common_log__["default"].debug(TAG, _this2, 'ignored duplicate entry, ' + entry);
+          } else {
+            var expiry = Date.now() + STATE_OP_APPLY_TTL_MS;
+            if (entry.id) {
+              _this2._appliedIds.set(entry.id, expiry);
+            }
+            var newState = entry.apply(_this2._state);
+            if (newState) {
+              updated = true;
+              _this2._state = newState;
+            }
+          }
+          var tuple = _this2._tuples.get(entry.id);
+          if (tuple) {
+            tuple.deferred.resolve();
+            _this2._tuples.delete(entry.id);
+          }
+        } else if (entry instanceof __WEBPACK_IMPORTED_MODULE_6_conference_raftLogEntry__["b" /* ConfigurationEntry */]) {
+          _this2._onConfigurationCommitted && _this2._onConfigurationCommitted(entry.data);
+        }
+      });
+      if (updated) {
+        this._onStateChange && this._onStateChange();
+      }
+    }
+  }, {
+    key: 'revertEntries',
+    value: function revertEntries(entries) {
+      var _this3 = this;
+
+      entries.forEach(function (entry) {
+        var tuple = _this3._tuples.get(entry.id);
+        if (tuple) {
+          _this3._onStateOpRequest(tuple.request);
+          tuple.nextResend = Date.now() + __WEBPACK_IMPORTED_MODULE_8_conference_raftState__["d" /* EXPECTED_RTT_MS */] * RESEND_RTT_FACTOR;
+        }
+      });
+    }
+  }, {
+    key: 'loadSnapshot',
+    value: function loadSnapshot(snapshot) {
+      this._state = snapshot.state;
+
+      this._onStateChange && this._onStateChange();
+      this._onConfigurationCommitted && this._onConfigurationCommitted(snapshot.configuration);
+    }
+  }, {
+    key: 'state',
+    get: function get() {
+      return this._state;
+    }
+  }]);
+
+  return StateMachine;
+}();
+
+/* harmony default export */ __webpack_exports__["a"] = (StateMachine);
+
+/***/ }),
+/* 197 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export BadRequestError */
+/* unused harmony export TooLargeError */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return AuthenticationError; });
+/* unused harmony export InvalidCaptchaError */
+/* unused harmony export GuestAccessError */
+/* unused harmony export ConflictError */
+/* unused harmony export InvalidUsernameError */
+/* unused harmony export InvalidPasswordError */
+/* unused harmony export InvalidAliasError */
+/* unused harmony export RateLimitError */
+/* unused harmony export InternalServerError */
+/* harmony export (immutable) */ __webpack_exports__["a"] = parseSynapseErrorResponse;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_common_errors__ = __webpack_require__(146);
+
+
+
+
+
+
+
+
+/**
+ * The request was malformed. This error shouldn't be encountered since input is validated
+ * on the client-side.
+ *
+ * @class BadRequestError
+ * @extends CctError
+ */
+var BadRequestError = function (_CctError) {
+  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(BadRequestError, _CctError);
+
+  function BadRequestError() {
+    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, BadRequestError);
+
+    return __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (BadRequestError.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(BadRequestError)).apply(this, arguments));
+  }
+
+  return BadRequestError;
+}(__WEBPACK_IMPORTED_MODULE_4_common_errors__["a" /* default */]);
+BadRequestError.errorName = 'BadRequestError';
+
+/**
+ * The request was too large, encountered e.g. when sending messages in a room.
+ *
+ * @class TooLargeError
+ * @extends CctError
+ */
+var TooLargeError = function (_CctError2) {
+  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(TooLargeError, _CctError2);
+
+  function TooLargeError() {
+    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, TooLargeError);
+
+    return __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (TooLargeError.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(TooLargeError)).apply(this, arguments));
+  }
+
+  return TooLargeError;
+}(__WEBPACK_IMPORTED_MODULE_4_common_errors__["a" /* default */]);
+TooLargeError.errorName = 'TooLargeError';
+
+/**
+ * Authentication failed, or authentication is required to perform the action.
+ *
+ * @class AuthenticationError
+ * @extends CctError
+ */
+var AuthenticationError = function (_CctError3) {
+  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(AuthenticationError, _CctError3);
+
+  function AuthenticationError() {
+    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, AuthenticationError);
+
+    return __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (AuthenticationError.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(AuthenticationError)).apply(this, arguments));
+  }
+
+  return AuthenticationError;
+}(__WEBPACK_IMPORTED_MODULE_4_common_errors__["a" /* default */]);
+AuthenticationError.errorName = 'AuthenticationError';
+
+/* placeholder */
+var InvalidCaptchaError = function (_CctError4) {
+  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(InvalidCaptchaError, _CctError4);
+
+  function InvalidCaptchaError() {
+    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, InvalidCaptchaError);
+
+    return __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (InvalidCaptchaError.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(InvalidCaptchaError)).apply(this, arguments));
+  }
+
+  return InvalidCaptchaError;
+}(__WEBPACK_IMPORTED_MODULE_4_common_errors__["a" /* default */]);
+InvalidCaptchaError.errorName = 'InvalidCaptchaError';
+
+/**
+ * The requested action could not be performed because the authenticated user has a guest account.
+ *
+ * @class GuestAccessError
+ * @extends CctError
+ */
+var GuestAccessError = function (_CctError5) {
+  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(GuestAccessError, _CctError5);
+
+  function GuestAccessError() {
+    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, GuestAccessError);
+
+    return __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (GuestAccessError.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(GuestAccessError)).apply(this, arguments));
+  }
+
+  return GuestAccessError;
+}(__WEBPACK_IMPORTED_MODULE_4_common_errors__["a" /* default */]);
+GuestAccessError.errorName = 'GuestAccessError';
+
+/**
+ * The requested action would result in a conflict, such as trying to create a room with an
+ * alias that already exists, or registering a user with an existing username.
+ *
+ * @class ConflictError
+ * @extends CctError
+ */
+var ConflictError = function (_CctError6) {
+  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(ConflictError, _CctError6);
+
+  function ConflictError() {
+    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, ConflictError);
+
+    return __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (ConflictError.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(ConflictError)).apply(this, arguments));
+  }
+
+  return ConflictError;
+}(__WEBPACK_IMPORTED_MODULE_4_common_errors__["a" /* default */]);
+ConflictError.errorName = 'ConflictError';
+
+/**
+ * The requested username is invalid. Usernames must at most be 512 characters long
+ * and may only contain `a-z`, `0-9`, and `_-./`.
+ *
+ * @class InvalidUsernameError
+ * @extends CctError
+ */
+var InvalidUsernameError = function (_CctError7) {
+  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(InvalidUsernameError, _CctError7);
+
+  function InvalidUsernameError() {
+    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, InvalidUsernameError);
+
+    return __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (InvalidUsernameError.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(InvalidUsernameError)).apply(this, arguments));
+  }
+
+  return InvalidUsernameError;
+}(__WEBPACK_IMPORTED_MODULE_4_common_errors__["a" /* default */]);
+InvalidUsernameError.errorName = 'InvalidUsernameError';
+
+/**
+ * The requested password is invalid. Passwords must at most be 512 characters long.
+ *
+ * @class InvalidPasswordError
+ * @extends CctError
+ */
+var InvalidPasswordError = function (_CctError8) {
+  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(InvalidPasswordError, _CctError8);
+
+  function InvalidPasswordError() {
+    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, InvalidPasswordError);
+
+    return __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (InvalidPasswordError.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(InvalidPasswordError)).apply(this, arguments));
+  }
+
+  return InvalidPasswordError;
+}(__WEBPACK_IMPORTED_MODULE_4_common_errors__["a" /* default */]);
+InvalidPasswordError.errorName = 'InvalidPasswordError';
+
+/**
+ * The requested room alias is invalid because it contains forbidden characters. Aliases are
+ * not allowed to contain whitespace characters.
+ *
+ * @class InvalidAliasError
+ * @extends CctError
+ */
+var InvalidAliasError = function (_CctError9) {
+  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(InvalidAliasError, _CctError9);
+
+  function InvalidAliasError() {
+    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, InvalidAliasError);
+
+    return __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (InvalidAliasError.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(InvalidAliasError)).apply(this, arguments));
+  }
+
+  return InvalidAliasError;
+}(__WEBPACK_IMPORTED_MODULE_4_common_errors__["a" /* default */]);
+InvalidAliasError.errorName = 'InvalidAliasError';
+
+/**
+ * The action could not be performed because it hit the rate limit of the server. This is
+ * currently only used internally since requests are automatically retried if they hit the
+ * rate limit.
+ *
+ * @class RateLimitError
+ * @extends CctError
+ */
+var RateLimitError = function (_CctError10) {
+  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(RateLimitError, _CctError10);
+
+  function RateLimitError(message, body) {
+    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, RateLimitError);
+
+    var _this10 = __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (RateLimitError.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(RateLimitError)).call(this, message));
+
+    if (body && 'retry_after_ms' in body) {
+      _this10.retryAfterMs = body.retry_after_ms;
+    } else {
+      _this10.retryAfterMs = RateLimitError.defaultRetryTimeoutMs;
+    }
+    return _this10;
+  }
+
+  return RateLimitError;
+}(__WEBPACK_IMPORTED_MODULE_4_common_errors__["a" /* default */]);
+RateLimitError.errorName = 'RateLimitError';
+RateLimitError.defaultRetryTimeoutMs = 1000;
+
+/**
+ * The server encountered an error because of an unexpected code path or an invalid state.
+ *
+ * @class InternalServerError
+ * @extends CctError
+ */
+var InternalServerError = function (_CctError11) {
+  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(InternalServerError, _CctError11);
+
+  function InternalServerError() {
+    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, InternalServerError);
+
+    return __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (InternalServerError.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(InternalServerError)).apply(this, arguments));
+  }
+
+  return InternalServerError;
+}(__WEBPACK_IMPORTED_MODULE_4_common_errors__["a" /* default */]);
+InternalServerError.errorName = 'InternalServerError';
+
+var errorParsers = {
+  M_UNKNOWN: {
+    parse: function parse(message) {
+      if (message.indexOf('Room alias') === 0 && message.indexOf('already exists') !== -1) {
+        return ConflictError;
+      } else if (message.indexOf('Room') === 0 && message.indexOf('does not exist') !== -1) {
+        return __WEBPACK_IMPORTED_MODULE_4_common_errors__["b" /* NotFoundError */];
+      }
+    },
+
+    exact: {
+      'Room alias already taken': ConflictError,
+      'HMAC incorrect': AuthenticationError,
+      'Invalid username': InvalidUsernameError,
+      'Invalid password': InvalidPasswordError,
+      'Invalid characters in room alias': InvalidAliasError,
+      'Registration has been disabled': __WEBPACK_IMPORTED_MODULE_4_common_errors__["c" /* NotAllowedError */],
+      'Guest access is disabled': GuestAccessError,
+      'Upload request body is too large': TooLargeError
+    },
+    Default: __WEBPACK_IMPORTED_MODULE_4_common_errors__["d" /* UnknownError */]
+  },
+  M_FORBIDDEN: {
+    parse: function parse(message) {
+      if (message.indexOf('is already in the room.') !== -1) {
+        return ConflictError;
+      }
+    },
+
+    exact: {
+      'Guest access not allowed': GuestAccessError,
+      'Invalid password': AuthenticationError,
+      'Invalid token': AuthenticationError
+    },
+    Default: __WEBPACK_IMPORTED_MODULE_4_common_errors__["c" /* NotAllowedError */]
+  },
+  M_NOT_FOUND: { Default: __WEBPACK_IMPORTED_MODULE_4_common_errors__["b" /* NotFoundError */] },
+  M_LIMIT_EXCEEDED: { Default: RateLimitError },
+  M_UNAUTHORIZED: { Default: __WEBPACK_IMPORTED_MODULE_4_common_errors__["c" /* NotAllowedError */] },
+  M_MISSING_TOKEN: { Default: BadRequestError },
+  M_UNKNOWN_TOKEN: { Default: AuthenticationError },
+  M_UNRECOGNIZED: { Default: BadRequestError },
+  M_BAD_JSON: { Default: BadRequestError },
+  M_NOT_JSON: { Default: BadRequestError },
+  M_USER_IN_USE: { Default: ConflictError },
+  M_ROOM_IN_USE: { Default: ConflictError },
+  M_BAD_PAGINATION: { Default: BadRequestError },
+  M_BAD_STATE: { Default: ConflictError }, // only for trying to ban/unban users
+  M_GUEST_ACCESS_FORBIDDEN: { Default: GuestAccessError },
+  M_CAPTCHA_NEEDED: { Default: BadRequestError },
+  M_CAPTCHA_INVALID: { Default: InvalidCaptchaError },
+  M_MISSING_PARAM: { Default: BadRequestError },
+  M_TOO_LARGE: { Default: TooLargeError },
+  M_EXCLUSIVE: { Default: ConflictError },
+  M_THREEPID_AUTH_FAILED: { Default: __WEBPACK_IMPORTED_MODULE_4_common_errors__["d" /* UnknownError */] },
+  M_THREEPID_IN_USE: { Default: __WEBPACK_IMPORTED_MODULE_4_common_errors__["d" /* UnknownError */] },
+  M_THREEPID_NOT_FOUND: { Default: __WEBPACK_IMPORTED_MODULE_4_common_errors__["d" /* UnknownError */] },
+  M_INVALID_USERNAME: { Default: InvalidUsernameError },
+  M_SERVER_NOT_TRUSTED: { Default: AuthenticationError }
+};
+
+function parseSynapseErrorResponse(error) {
+  if (error instanceof Error) {
+    return error;
+  }
+
+  var status = error.status;
+  var name = error.body && error.body.errcode;
+  var message = error.body && error.body.error;
+
+  if (!message && !name && typeof error.body === 'string') {
+    name = 'M_UNKNOWN';
+    message = error.body;
+  }
+
+  // console.error(`Synapse error: [${status}] ${name}: ${message}`)
+  if (status === 404) {
+    return new __WEBPACK_IMPORTED_MODULE_4_common_errors__["b" /* NotFoundError */](message || 'Not Found', error.body);
+  }
+  message = message || 'No message';
+  if (status === 500) {
+    return new InternalServerError(message, error.body);
+  }
+
+  var parser = errorParsers[name];
+  if (!parser) {
+    return new __WEBPACK_IMPORTED_MODULE_4_common_errors__["d" /* UnknownError */]('[' + name + '] ' + message, error.body);
+  }
+  var ExactMatch = parser.exact && parser.exact[message];
+
+  if (ExactMatch) {
+    return new ExactMatch(message, error.body);
+  } else {
+    if (parser.parse) {
+      var Match = parser.parse(message);
+      if (Match) {
+        return new Match(message, error.body);
+      }
+    }
+    if (parser.Default) {
+      return new parser.Default(message, error.body);
+    }
+  }
+  return new __WEBPACK_IMPORTED_MODULE_4_common_errors__["d" /* UnknownError */]('[' + name + '] ' + message, error.body);
+}
+
+/***/ }),
+/* 198 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["b"] = UserRegistry;
+/* harmony export (immutable) */ __webpack_exports__["a"] = toUserId;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_common_log__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_common_argCheck__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_common_utils__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_matrix_ids__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_matrix_user__ = __webpack_require__(190);
+
+
+
+
+
+
+
+
+function UserRegistry() {
+  this._dependencies = null;
+  this._users = {};
+}
+
+UserRegistry.prototype = {
+  constructor: UserRegistry,
+  tag: 'user-registry',
+  toString: function toString() {
+    return 'userRegistry{}';
+  },
+  getUser: function getUser(arg) {
+    var matrixId = toUserId('UserRegistry.get', arg, this._dependencies.serverName);
+    var user = this._users[matrixId];
+    if (!user) {
+      user = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_common_utils__["priv"])(__WEBPACK_IMPORTED_MODULE_4_matrix_user__["a" /* default */], {
+        matrixId: matrixId,
+        serverName: this._dependencies.serverName
+      }, this._dependencies.imageResourceFactory);
+      this._users[matrixId] = user;
+    }
+    return user;
+  },
+
+  // dependencies.ownUserId
+  // dependencies.imageResourceFactory
+  init: function init(dependencies) {
+    this._dependencies = dependencies;
+    return this;
+  },
+  clear: function clear() {
+    this._dependencies = null;
+    this._users = {};
+  },
+
+  _handlePresenceSync: function _handlePresenceSync(presenceEvents) {
+    for (var i in presenceEvents) {
+      var event = presenceEvents[i];
+      var content = event.content;
+      var matrixId = event.sender;
+      var user = this.getUser(matrixId);
+      user._update(content);
+      __WEBPACK_IMPORTED_MODULE_0_common_log__["default"].verbose('events', 'got presence event for user ' + matrixId, user);
+    }
+  }
+};
+
+function toUserId(context, user, serverName) {
+  var id;
+  if (user instanceof __WEBPACK_IMPORTED_MODULE_4_matrix_user__["a" /* default */]) {
+    id = user._matrixId;
+  } else if (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_common_utils__["isObject"])(user)) {
+    id = user.user_id || user.userId || user.id;
+  } else {
+    id = user;
+  }
+  __WEBPACK_IMPORTED_MODULE_1_common_argCheck__["a" /* default */].string(context, 'id', id);
+  return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_matrix_ids__["b" /* toMatrixIdForServer */])(context, id, serverName, 'user');
+}
+
+/***/ }),
+/* 199 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = attachPeerConnectionMonitor;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_keys__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_keys___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_keys__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_common_log__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_common_utils__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_webrtc_statsNormalizer__ = __webpack_require__(202);
+
+
+
+
+
+
+
+
+// function MediaStreamTrackMonitor(pc, mst) {
+//     this.pc = pc;
+//     this.mst = mst;
+//     mst.addEventListener('started', function () {
+//         log.verbose('stats-monitor', 'mst: onstarted');
+//     });
+//     mst.addEventListener('mute', function () {
+//         log.verbose('stats-monitor', 'mst: onmute');
+//     });
+//     mst.addEventListener('unmute', function () {
+//         log.verbose('stats-monitor', 'mst: onunmute');
+//     });
+//     mst.addEventListener('overconstrained', function () {
+//         log.verbose('stats-monitor', 'mst: onoverconstrained: ' + JSON.stringify(mst.getConstraints()));
+//     });
+//     mst.addEventListener('ended', function () {
+//         log.verbose('stats-monitor', 'mst: onended');
+//     });
+// }
+//
+// function MediaStreamMonitor(pc, ms) {
+//     var self = this;
+//     this.pc = pc;
+//     this.ms = ms;
+//     this.mediaStreamTracks = {};
+//     ms.addEventListener('active', function () {
+//         log.verbose('stats-monitor', 'ms: onactive');
+//     });
+//     ms.addEventListener('addtrack', function (e) {
+//         log.verbose('stats-monitor', 'ms: onaddtrack: ' + e.track.id);
+//         self.mediaStreamTracks[e.track.id] = new MediaStreamTrackMonitor(self, e.track);
+//     });
+//     ms.addEventListener('ended', function () {
+//         log.verbose('stats-monitor', 'ms: onended');
+//     });
+//     ms.addEventListener('inactive', function () {
+//         log.verbose('stats-monitor', 'ms: oninactive');
+//     });
+//     ms.addEventListener('removetrack', function (e) {
+//         log.verbose('stats-monitor', 'ms: onremovetrack: ' + e.track.id);
+//         delete self.mediaStreamTracks[e.track.id];
+//     });
+// }
+
+var WEBRTC_MONITOR_REGEX_MSID_CHROME = /^a=ssrc:(\d+) msid:([-a-zA-Z0-9]+) ([-a-zA-Z0-9]+)$/;
+var WEBRTC_MONITOR_REGEX_MSID_FIREFOX = /^a=msid:{([-a-zA-Z0-9]+)} {([-a-zA-Z0-9]+)}$/;
+var WEBRTC_MONITOR_REGEX_MSLABEL = /^a=ssrc:(\d+) mslabel:([-a-zA-Z0-9]+)$/;
+var WEBRTC_MONITOR_REGEX_LABEL = /^a=ssrc:(\d+) label:(?:{)([-a-zA-Z0-9]+)(?:})$/;
+var WEBRTC_MONITOR_REGEX_CNAME = /^a=ssrc:(\d+) cname:(?:{)([-a-zA-Z0-9]+)(?:})$/;
+
+function parseIdentities(sdp, identities) {
+  var ids = {};
+  ids.ssrcs = [];
+  var blocks = sdp.split(/(?=^m=)/mig);
+  for (var block in blocks) {
+    var lines = blocks[block].split(/\r?\n/);
+    var msidTemp = {};
+    for (var line = 0; line < lines.length; line += 1) {
+      var sdpMsIdC = lines[line].match(WEBRTC_MONITOR_REGEX_MSID_CHROME);
+      if (sdpMsIdC) {
+        if (!(sdpMsIdC[1] in ids.ssrcs)) {
+          ids.ssrcs.push(sdpMsIdC[1]);
+        }
+        ids.msid = sdpMsIdC[2];
+        ids.mstid = sdpMsIdC[3];
+      }
+      var sdpMsIdF = lines[line].match(WEBRTC_MONITOR_REGEX_MSID_FIREFOX);
+      if (sdpMsIdF) {
+        if (ids.ssrc) {
+          ids.msid = sdpMsIdF[1];
+          ids.mstid = sdpMsIdF[2];
+        } else {
+          msidTemp.msid = sdpMsIdF[1];
+          msidTemp.mstid = sdpMsIdF[2];
+        }
+      }
+      var sdpMsLabel = lines[line].match(WEBRTC_MONITOR_REGEX_MSLABEL);
+      if (sdpMsLabel) {
+        if (!(sdpMsLabel[1] in ids.ssrcs)) {
+          ids.ssrcs.push(sdpMsLabel[1]);
+        }
+        ids.msid = sdpMsLabel[2];
+      }
+      var sdpLabel = lines[line].match(WEBRTC_MONITOR_REGEX_LABEL);
+      if (sdpLabel) {
+        if (!(sdpLabel[1] in ids.ssrcs)) {
+          ids.ssrcs.push(sdpLabel[1]);
+        }
+        ids.mstid = sdpLabel[2];
+      }
+      var sdpCname = lines[line].match(WEBRTC_MONITOR_REGEX_CNAME);
+      if (sdpCname) {
+        if (!(sdpCname[1] in ids.ssrcs)) {
+          ids.ssrcs.push(sdpCname[1]);
+        }
+        ids.cname = sdpCname[2];
+        if (__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_keys___default()(msidTemp).length) {
+          ids.msid = msidTemp.msid;
+          ids.mstid = msidTemp.mstid;
+          msidTemp = {};
+        }
+      }
+    }
+    if (__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_keys___default()(ids.ssrcs).length) {
+      for (var ssrc in ids.ssrcs) {
+        identities[ids.ssrcs[ssrc]] = {};
+        for (var id in ids) {
+          if (id === 'ssrcs') {
+            continue;
+          }
+          identities[ids.ssrcs[ssrc]][id] = ids[id];
+        }
+      }
+    }
+    ids = {};
+    ids.ssrcs = [];
+  }
+  return identities;
+}
+
+function reportGenericStat(formatter, identities, stat) {
+  var sample = {
+    timestamp: Date.now(),
+    pcId: identities.pcId
+  };
+
+  sample = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_common_utils__["assign"])(sample, stat);
+
+  formatter.handleStats([sample]);
+}
+
+var PEER_CONNECTION_MONITOR_CANDIDATE_RE = new RegExp('' + '^candidate:(\\d+) (\\d) (UDP|TCP) ([\\d\\.]*) ([\\d\\.a-f\\:]*) (\\d*) ' + 'typ ([a-z]*)( raddr ([\\d\\.a-f\\:]*) rport (\\d*))?( tcptype (active|passive|so))?.*$', 'mi');
+
+function parseCandidateString(candidateString) {
+  var candidate = null;
+  var candidateMatches = candidateString.match(PEER_CONNECTION_MONITOR_CANDIDATE_RE);
+  if (candidateMatches) {
+    candidate = {
+      'foundation': candidateMatches[1],
+      'componentId': parseInt(candidateMatches[2]),
+      'transport': candidateMatches[3].toUpperCase(),
+      'priority': parseInt(candidateMatches[4]),
+      'address': candidateMatches[5],
+      'port': parseInt(candidateMatches[6]),
+      'type': candidateMatches[7]
+    };
+    if (candidateMatches[9]) {
+      candidate.relatedAddress = candidateMatches[9];
+    }
+    if (!isNaN(candidateMatches[10])) {
+      candidate.relatedPort = parseInt(candidateMatches[10]);
+    }
+    if (candidateMatches[12]) {
+      candidate.tcpType = candidateMatches[12];
+    } else if (candidate.transport === 'TCP') {
+      if (candidate.port === 0 || candidate.port === 9) {
+        candidate.tcpType = 'active';
+        candidate.port = 9;
+      } else {
+        return;
+      }
+    }
+  }
+  return candidate;
+}
+
+function reportCandidate(formatter, identities, rtcicecandidate, localOrRemote) {
+  var candidate = parseCandidateString(rtcicecandidate.candidate);
+  if (!candidate) {
+    return;
+  }
+  var report = {
+    sourceId: 'candidates',
+    localOrRemote: localOrRemote
+  };
+  report = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_common_utils__["assign"])(report, candidate);
+  reportGenericStat(formatter, identities, report);
+}
+
+var PEER_CONNECTION_MONITOR_INTERNAL_MS = 1000;
+var PEER_CONNECTION_MONITOR_ICE_CHECKING_TIMEOUT_MS = 15000;
+
+function attachPeerConnectionMonitor(pc, formatter, reportIntervalMs) {
+  var tag = 'stats-monitor';
+  var callSucceeded = null;
+
+  var reportInterval = 0;
+  reportIntervalMs = reportIntervalMs || PEER_CONNECTION_MONITOR_INTERNAL_MS;
+
+  var identities = {
+    isRelay: false,
+    pcId: pc.id
+  };
+
+  pc.addEventListener('signalingstatechange', function () {
+    if (pc.signalingState === 'closed') {
+      __WEBPACK_IMPORTED_MODULE_1_common_log__["default"].debug(tag, 'stopped gather stats for ' + pc.id);
+      return clearInterval(reportInterval);
+    }
+
+    if (pc._pc.localDescription) {
+      identities = parseIdentities(pc._pc.localDescription.sdp, identities);
+    }
+    if (pc._pc.remoteDescription) {
+      identities = parseIdentities(pc._pc.remoteDescription.sdp, identities);
+    }
+  });
+
+  var normalizePeerConnectionStats = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_webrtc_statsNormalizer__["a" /* default */])();
+  var iceCheckingTimeout;
+
+  pc.addEventListener('iceconnectionstatechange', function () {
+    var iceConnectionState = pc.iceConnectionState;
+    reportGenericStat(formatter, identities, {
+      sourceId: 'iceConnectionState',
+      iceConnectionState: iceConnectionState
+    });
+    if (iceCheckingTimeout) {
+      clearTimeout(iceCheckingTimeout);
+      iceCheckingTimeout = null;
+    }
+    if (callSucceeded === null) {
+      if (iceConnectionState === 'connected' || iceConnectionState === 'completed') {
+        callSucceeded = true;
+        reportGenericStat(formatter, identities, {
+          sourceId: 'events',
+          eventType: 'callSetupResult',
+          callSucceeded: true
+        });
+
+        pc.getStats(null).then(function (stats) {
+          var normalizedStats = normalizePeerConnectionStats(stats, identities);
+          for (var i in normalizedStats) {
+            var stat = normalizedStats[i];
+            if ('localIpAddress' in stat) {
+              reportGenericStat(formatter, identities, stat);
+              if ('localCandidateType' in stat) {
+                identities.isRelay = stat.localCandidateType === 'relayed';
+              }
+            }
+          }
+        }).catch(function (error) {
+          __WEBPACK_IMPORTED_MODULE_1_common_log__["default"].warning(tag, 'getStats error:', error);
+        });
+      }
+      if (iceConnectionState === 'failed') {
+        callSucceeded = false;
+        reportGenericStat(formatter, identities, {
+          sourceId: 'events',
+          eventType: 'callSetupResult',
+          callSucceeded: false
+        });
+      }
+      if (iceConnectionState === 'checking' && !iceCheckingTimeout) {
+        iceCheckingTimeout = setTimeout(function () {
+          callSucceeded = false;
+          reportGenericStat(formatter, identities, {
+            sourceId: 'events',
+            eventType: 'callSetupResult',
+            callSucceeded: false
+          });
+        }, PEER_CONNECTION_MONITOR_ICE_CHECKING_TIMEOUT_MS);
+      }
+    }
+  });
+
+  pc.addEventListener('icecandidate', function (event) {
+    if (!event.candidate) {
+      return;
+    }
+    reportCandidate(formatter, identities, event.candidate, 'local');
+  });
+
+  var realAddIceCandidate = pc.addIceCandidate;
+  function addIceCandidate(candidate) {
+    reportCandidate(formatter, identities, candidate, 'remote');
+    return realAddIceCandidate.call(pc, candidate);
+  }
+  pc.addIceCandidate = addIceCandidate;
+
+  reportInterval = setInterval(function () {
+    pc.getStats(null).then(function (stats) {
+      var normalizedStats = normalizePeerConnectionStats(stats, identities);
+      formatter.handleStats(normalizedStats);
+    }).catch(function (error) {
+      __WEBPACK_IMPORTED_MODULE_1_common_log__["default"].warning(tag, 'getStats error:', error);
+    });
+  }, reportIntervalMs);
+}
+
+/***/ }),
+/* 200 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = parseCandidateInfo;
+/* harmony export (immutable) */ __webpack_exports__["c"] = filterSdpCandidates;
+/* harmony export (immutable) */ __webpack_exports__["d"] = workaroundSdpBundleBug;
+/* harmony export (immutable) */ __webpack_exports__["e"] = extractApplicationBlock;
+/* harmony export (immutable) */ __webpack_exports__["i"] = injectApplicationBlock;
+/* harmony export (immutable) */ __webpack_exports__["f"] = readMediaModeUnions;
+/* harmony export (immutable) */ __webpack_exports__["g"] = overrideMediaModes;
+/* harmony export (immutable) */ __webpack_exports__["h"] = rewriteBundleAttribute;
+/* harmony export (immutable) */ __webpack_exports__["b"] = disableSendBandwidthEstimation;
+/* harmony export (immutable) */ __webpack_exports__["j"] = removeChromeRetransmission;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_toArray__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_toArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_toArray__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_common_log__ = __webpack_require__(3);
+
+
+
+
+
+
+var TAG = 'peer-connection';
+
+var candidateRegExp = new RegExp('^candidate:(\\d+) (\\d) (UDP|TCP) ([\\d\\.]*) ([\\d\\.a-f\\:]*) (\\d*)' + ' typ ([a-z]*)( raddr ([\\d\\.a-f\\:]*) rport (\\d*))?' + '( tcptype (active|passive|so))?(.*)$', 'i');
+var bundleAttributeRegExp = new RegExp('^a=group:BUNDLE (.*)$', 'mi');
+
+/**
+ * @typedef IceCandidateInfo
+ *
+ * An object containing information about an ICE candidate.
+ *
+ * More information can be found in [RFC 5245](https://tools.ietf.org/html/rfc5245) and
+ * [RFC 6544](https://tools.ietf.org/html/rfc6544).
+ *
+ * @property {string} foundation - The candidate foundation.
+ * @property {number} componentId - The candidate component id, will almost always be 1 because of RTCP multiplexing.
+ * @property {string} transport - The transport used, `'TCP'` or `'UDP'`.
+ * @property {number} priority - The candidate priority.
+ * @property {string} address - The candidate address.
+ * @property {number} port - The candidate port.
+ * @property {string} type - The candidate type, `'host'`, `'srflx'`, `'prflx'`, or `'relay'`.
+ * @property {string} candidate - The original candidate line, always without attribute prefix (`a=`).
+ * @property {string} origin - The origin of the candidate, `'local'` or `'remote'`.
+ * @property {string} [relatedAddress] - The candidate related address, not used in host candidates.
+ * @property {number} [relatedPort] - The candidate related port, not used in host candidates.
+ * @property {string} [tcpType] - The candidate tcp type, `'active'`, `'passive'`, simultaneous-open, `'so'`.
+ */
+
+function parseCandidateInfo(line, origin) {
+  var match = line.match(candidateRegExp);
+  if (!match) {
+    throw new Error('Could not parse ' + origin + ' ice candidate: ' + line);
+  }
+  var info = {
+    foundation: match[1],
+    componentId: parseInt(match[2]),
+    transport: match[3].toUpperCase(),
+    priority: parseInt(match[4]),
+    address: match[5],
+    port: parseInt(match[6]),
+    type: match[7],
+    candidate: line,
+    origin: origin
+  };
+  if (match[9]) {
+    info.relatedAddress = match[9];
+  }
+  if (!isNaN(match[10])) {
+    info.relatedPort = parseInt(match[10]);
+  }
+  if (match[12]) {
+    info.tcpType = match[12];
+  } else if (info.transport === 'TCP') {
+    if (info.port === 0 || info.port === 9) {
+      info.tcpType = 'active';
+      info.port = 9;
+    } else {
+      return;
+    }
+  }
+  return info;
+}
+
+function filterSdpCandidates(sdp, filter, origin) {
+  if (!sdp) {
+    return sdp;
+  }
+  return sdp.split(/\r\n/).filter(function (line) {
+    if (line.indexOf('a=candidate:') === 0) {
+      try {
+        var candidate = line.slice(2);
+        var info = parseCandidateInfo(candidate, origin);
+        if (!filter(info)) {
+          __WEBPACK_IMPORTED_MODULE_3_common_log__["default"].verbose(TAG, 'ignored candidate due to being filtered out: ' + candidate);
+          return false;
+        }
+      } catch (error) {
+        __WEBPACK_IMPORTED_MODULE_3_common_log__["default"].error(TAG, 'ignoring candidate, error was thrown in candidate filter: ' + error);
+        return false;
+      }
+    }
+    return true;
+  }).join('\r\n');
+}
+
+function workaroundSdpBundleBug(sdp) {
+  if (sdp.match(bundleAttributeRegExp)) {
+    // If the SDP already has a group attribute, we don't need to do anything
+    return sdp;
+  }
+  return rewriteBundleAttribute(sdp);
+}
+
+function extractApplicationBlock(sdp) {
+  var _sdp$split = sdp.split(blockSplitRegExp),
+      _sdp$split2 = __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_toArray___default()(_sdp$split),
+      sessionBlock = _sdp$split2[0],
+      mediaBlocks = _sdp$split2.slice(1);
+
+  var applicationMBlockIndex = -1;
+  for (var index in mediaBlocks) {
+    if (mediaBlocks[index].indexOf('m=application') === 0) {
+      applicationMBlockIndex = +index;
+      break;
+    }
+  }
+
+  if (applicationMBlockIndex === -1) {
+    return [sdp, null];
+  }
+
+  var _ref = mediaBlocks[applicationMBlockIndex].match(/a=mid:(.*)/mi) || [],
+      _ref2 = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray___default()(_ref, 2),
+      applicationMId = _ref2[1];
+
+  if (!applicationMId) {
+    throw new Error('sdp application block does not have an mId');
+  }
+
+  var newSessionBlock = sessionBlock.replace(bundleAttributeRegExp, function (_, mIdsStr) {
+    var mIds = mIdsStr.split(' ');
+    var index = mIds.indexOf(applicationMId);
+    if (index === -1) {
+      throw new Error('sdp group:BUNDLE attribute did not contain application block mId');
+    }
+    mIds.splice(index, 1);
+    return 'a=group:BUNDLE ' + mIds.join(' ');
+  });
+
+  var applicationMBlock = mediaBlocks.splice(applicationMBlockIndex, 1)[0];
+  var newSdp = newSessionBlock + mediaBlocks.join('');
+  return [newSdp, {
+    block: applicationMBlock,
+    index: applicationMBlockIndex,
+    applicationMId: applicationMId,
+    needsInteropTranslation: !!mediaBlocks.length
+  }];
+}
+
+function injectApplicationBlock(sdp, extractedBlock) {
+  if (!extractedBlock) {
+    return sdp;
+  }
+
+  var _sdp$split3 = sdp.split(blockSplitRegExp),
+      _sdp$split4 = __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_toArray___default()(_sdp$split3),
+      sessionBlock = _sdp$split4[0],
+      mediaBlocks = _sdp$split4.slice(1);
+
+  var newSessionBlock = sessionBlock.replace(bundleAttributeRegExp, function (_, mIdsStr) {
+    var mIds = mIdsStr ? mIdsStr.split(' ') : [];
+    mIds.splice(extractedBlock.index, 0, extractedBlock.applicationMId);
+    return 'a=group:BUNDLE ' + mIds.join(' ');
+  });
+
+  mediaBlocks.splice(extractedBlock.index, 0, extractedBlock.block);
+  return newSessionBlock + mediaBlocks.join('');
+}
+
+var modeRegExp = new RegExp('^a=(inactive|recvonly|sendonly|sendrecv)$', 'mi');
+var blockSplitRegExp = new RegExp('(?=m=(?:audio|video|application))', 'i');
+var mediaTypeRegExp = new RegExp('^m=(audio|video|application)', 'i');
+
+var modeValues = {
+  inactive: 0,
+  sendonly: 1,
+  recvonly: 2,
+  sendrecv: 3
+};
+var modeNames = {
+  0: 'inactive',
+  1: 'sendonly',
+  2: 'recvonly',
+  3: 'sendrecv'
+};
+
+function readMediaModeUnions(sdp) {
+  var _sdp$split5 = sdp.split(blockSplitRegExp),
+      _sdp$split6 = __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_toArray___default()(_sdp$split5),
+      sessionBlock = _sdp$split6[0],
+      mediaBlocks = _sdp$split6.slice(1);
+  // the mode above the media blocks is used if a media block doesn't have it's own mode
+
+
+  var _ref3 = sessionBlock.match(modeRegExp) || [],
+      _ref4 = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray___default()(_ref3, 2),
+      _ref4$ = _ref4[1],
+      defaultModeName = _ref4$ === undefined ? 'sendrecv' : _ref4$;
+
+  var audioModeValue = modeValues.inactive;
+  var videoModeValue = modeValues.inactive;
+  var applicationModeValue = modeValues.inactive;
+
+  mediaBlocks.forEach(function (mediaBlock) {
+    var _mediaBlock$match = mediaBlock.match(mediaTypeRegExp),
+        _mediaBlock$match2 = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray___default()(_mediaBlock$match, 2),
+        mediaType = _mediaBlock$match2[1];
+
+    var _ref5 = mediaBlock.match(modeRegExp) || [],
+        _ref6 = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray___default()(_ref5, 2),
+        _ref6$ = _ref6[1],
+        modeName = _ref6$ === undefined ? defaultModeName : _ref6$;
+
+    var modeValue = modeValues[modeName];
+    if (mediaType === 'audio') {
+      audioModeValue |= modeValue;
+    } else if (mediaType === 'video') {
+      videoModeValue |= modeValue;
+    } else if (mediaType === 'application') {
+      applicationModeValue |= modeValue;
+    }
+  });
+
+  return {
+    audio: modeNames[audioModeValue],
+    video: modeNames[videoModeValue],
+    application: modeNames[applicationModeValue]
+  };
+}
+
+function overrideMediaModes(sdp, mediaModes) {
+  var _sdp$split7 = sdp.split(blockSplitRegExp),
+      _sdp$split8 = __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_toArray___default()(_sdp$split7),
+      sessionBlock = _sdp$split8[0],
+      mediaBlocks = _sdp$split8.slice(1);
+
+  mediaBlocks = mediaBlocks.map(function (mediaBlock) {
+    var _mediaBlock$match3 = mediaBlock.match(mediaTypeRegExp),
+        _mediaBlock$match4 = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray___default()(_mediaBlock$match3, 2),
+        mediaType = _mediaBlock$match4[1];
+
+    var modeName = mediaModes[mediaType] || modeNames[3]; // default to sendrecv
+    return mediaBlock.replace(modeRegExp, 'a=' + modeName);
+  });
+
+  return [sessionBlock].concat(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray___default()(mediaBlocks)).join('');
+}
+
+// This rewrites the bundle attribute according to the actual media blocks in the sdp
+function rewriteBundleAttribute(sdp) {
+  var _sdp$split9 = sdp.split(blockSplitRegExp),
+      _sdp$split10 = __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_toArray___default()(_sdp$split9),
+      sessionBlock = _sdp$split10[0],
+      mediaBlocks = _sdp$split10.slice(1);
+
+  var mIds = mediaBlocks.map(function (mediaBlock) {
+    var _ref7 = mediaBlock.match(/^a=mid:(.+)$/mi) || [],
+        _ref8 = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray___default()(_ref7, 2),
+        mId = _ref8[1];
+
+    if (!mId) {
+      var _mediaBlock$match5 = mediaBlock.match(mediaTypeRegExp),
+          _mediaBlock$match6 = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray___default()(_mediaBlock$match5, 2),
+          mediaType = _mediaBlock$match6[1];
+
+      throw new Error('media block of type ' + mediaType + ' did not contain mid attribute');
+    }
+    return mId;
+  });
+
+  mIds.unshift(''); // conditional padding weith space after BUNDLE
+  var bundleAttribute = 'a=group:BUNDLE' + mIds.join(' ');
+
+  if (sessionBlock.match(bundleAttributeRegExp)) {
+    sessionBlock = sessionBlock.replace(bundleAttributeRegExp, bundleAttribute);
+  } else {
+    sessionBlock += bundleAttribute + '\r\n';
+  }
+  return [sessionBlock].concat(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray___default()(mediaBlocks)).join('');
+}
+
+var bweRegExp = new RegExp('a=extmap:5 ' + 'http://www\\.ietf\\.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01' + '\r\n', 'gi');
+
+// Chrome 58 and 59 has a broken bandwidth estimation implementation that
+// doesn't detect when packets are sent using TURN/TCP. This results in
+// the estimated bandwidth to always end up at 10kbps.
+// The fix we use is to always disable the new bandwidth estimation algorithm
+// for all connections.
+function disableSendBandwidthEstimation(sdp) {
+  return sdp.replace(bweRegExp, '');
+}
+
+var ssrcGroupRegExp = new RegExp('a=ssrc-group:.+\\s\\d+\\s(\\d+)' + '\r\n', 'gi');
+var rtxPayloadTypeRegExp = new RegExp('a=(?:fmtp:\\d+\\sapt=\\d+|rtpmap:\\d+\\srtx/\\d+)' + '\r\n', 'gi');
+
+// Removes retransmission information from a Chrome-style (Plan B) SDPs.
+// This includes rtpmap and fmtp attributes with rtx/apt values, ssrc-group
+// attributes, and the ssrc attributes for the ssrcs used for retransmission.
+function removeChromeRetransmission(sdp) {
+  var _sdp$split11 = sdp.split(blockSplitRegExp),
+      _sdp$split12 = __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_toArray___default()(_sdp$split11),
+      sessionBlock = _sdp$split12[0],
+      mediaBlocks = _sdp$split12.slice(1);
+
+  var modifiedMediaBlocks = mediaBlocks.map(function (mediaBlock) {
+    var _mediaBlock$match7 = mediaBlock.match(mediaTypeRegExp),
+        _mediaBlock$match8 = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray___default()(_mediaBlock$match7, 2),
+        mediaType = _mediaBlock$match8[1];
+
+    if (mediaType !== 'video') {
+      return mediaBlock;
+    }
+    var removedSsrcs = [];
+
+    var withoutSsrcGroups = mediaBlock.replace(ssrcGroupRegExp, function (_, ssrc) {
+      // We assume the second SSRC is used for retransmission
+      removedSsrcs.push(ssrc);
+      return '';
+    });
+    var ssrcRegExp = new RegExp('a=ssrc:(?:' + removedSsrcs.join('|') + ')\\s.*\r\n', 'gi');
+    var withoutSsrcs = withoutSsrcGroups.replace(ssrcRegExp, '');
+    var withoutRtxPayloadTypes = withoutSsrcs.replace(rtxPayloadTypeRegExp, '');
+    return withoutRtxPayloadTypes;
+  });
+
+  return [sessionBlock].concat(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray___default()(modifiedMediaBlocks)).join('');
+}
+
+/***/ }),
+/* 201 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (immutable) */ __webpack_exports__["default"] = StatsFormatter;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_common_utils__ = __webpack_require__(13);
+
+
+
+
+function StatsFormatter(context, reporter) {
+  this.context = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_common_utils__["assign"])({}, context);
+  this.context.contextId = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_common_utils__["randomString"])(16);
+  this.context.userAgent = navigator.userAgent;
+  this.reporter = reporter;
+  this.tag = 'stats-formatter';
+}
+
+StatsFormatter.prototype.setPeerId = function (peerId) {
+  this.context.peerId = peerId;
+};
+
+StatsFormatter.prototype.handleStats = function (stats) {
+  for (var i in stats) {
+    stats[i] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_common_utils__["assign"])(stats[i], this.context);
+  }
+  this.reporter.handleStats(stats);
+};
+
+/***/ }),
+/* 202 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = createPeerConnectionStatNormalizer;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_common_log__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_common_utils__ = __webpack_require__(13);
+
+
+
+
+
+var STATS_OBJ_REGEX_FIREFOX = /(in|out)bound_(rtp|rtcp)_(audio|video)_(\d+)/;
+var STATS_KEY_BLACKLIST_FIREFOX = ['id', 'type', 'isRemote', 'remoteId'];
+
+var STATS_OBJ_REGEX_CHROME = /(ssrc)_(\d+)_(recv|send)/;
+var STATS_KEY_BLACKLIST_CHROME = ['id', 'type', 'googTrackId', 'transportId'];
+
+function normalizeStatsMatchFirefox(statKey, stat) {
+  var sample = {};
+  var matchFirefox = statKey.match(STATS_OBJ_REGEX_FIREFOX);
+  if (matchFirefox) {
+    switch (matchFirefox[1]) {
+      case 'in':
+        sample.role = 'receiver';
+        break;
+      case 'out':
+        sample.role = 'sender';
+        break;
+      default:
+        __WEBPACK_IMPORTED_MODULE_0_common_log__["default"].warning('stats-normalizer', 'No role match!');
+        return null;
+    }
+    switch (matchFirefox[2]) {
+      case 'rtp':
+        sample.reportType = sample.role === 'receiver' ? 'receiver' : 'sender';
+        break;
+      case 'rtcp':
+        sample.reportType = sample.role === 'receiver' ? 'sender' : 'receiver';
+        break;
+      default:
+        __WEBPACK_IMPORTED_MODULE_0_common_log__["default"].warning('stats-normalizer', 'No reportType match!');
+        return null;
+    }
+
+    for (var k in stat) {
+      if (STATS_KEY_BLACKLIST_FIREFOX.indexOf(k) >= 0) {
+        continue;
+      }
+      sample[k] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_common_utils__["maybeConvertStringToNumber"])(stat[k].toString());
+    }
+    return sample;
+  }
+}
+
+function normalizeStatsMatchChrome(statKey, stat) {
+  var sample = {};
+  var matchChrome = statKey.match(STATS_OBJ_REGEX_CHROME);
+  if (matchChrome) {
+    switch (matchChrome[3]) {
+      case 'recv':
+        sample.role = 'receiver';
+        sample.reportType = 'receiver';
+        break;
+      case 'send':
+        sample.role = 'sender';
+        sample.reportType = 'sender';
+        break;
+      default:
+        __WEBPACK_IMPORTED_MODULE_0_common_log__["default"].warning('stats-normalizer', 'No role match!');
+        return null;
+    }
+
+    for (var k in stat) {
+      if (STATS_KEY_BLACKLIST_CHROME.indexOf(k) >= 0) {
+        continue;
+      }
+      sample[k] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_common_utils__["maybeConvertStringToNumber"])(stat[k].toString());
+      // FIXME - set the mediaType from an ssrc lookup after parsing the sdp
+      if (k === 'audioInputLevel' || k === 'audioOutputLevel') {
+        sample.mediaType = 'audio';
+      } else if (k === 'googFrameHeightReceived' || k === 'googFrameHeightSent') {
+        sample.mediaType = 'video';
+      } else {
+        continue;
+      }
+    }
+    return sample;
+  }
+}
+
+var candidatePairKeys = ['portNumber', 'ipAddress', 'transport', 'candidateType'];
+function assignCandidatePairValues(stat, localOrRemote, sample) {
+  for (var i in candidatePairKeys) {
+    var key = candidatePairKeys[i];
+    if (key in stat) {
+      var destKey = localOrRemote + key.charAt(0).toUpperCase() + key.slice(1);
+      sample[destKey] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_common_utils__["maybeConvertStringToNumber"])(stat[key]);
+    }
+  }
+  return sample;
+}
+
+function getSelectedPairSampleFromStats(stats, stat, browser) {
+  var localCandidateId = stat.localCandidateId;
+  var remoteCandidateId = stat.remoteCandidateId;
+  var localStat = stats[localCandidateId];
+  var remoteStat = stats[remoteCandidateId];
+
+  var sample = {};
+
+  sample.sourceId = 'selectedPair';
+
+  sample = assignCandidatePairValues(localStat, 'local', sample);
+  sample = assignCandidatePairValues(remoteStat, 'remote', sample);
+  if (browser === 'chrome') {
+    sample.localPriority = +localStat.priority;
+    sample.remotePriority = +remoteStat.priority;
+  }
+  if (browser === 'firefox') {
+    sample.localPriority = +stat.priority;
+    sample.remotePriority = +stat.priority;
+  }
+
+  return sample;
+}
+
+function createPeerConnectionStatNormalizer() {
+  var selectedPairs = {};
+
+  function normalizeSsrcStats(stats, identities) {
+    var samples = [];
+    var sampleTsMs = Date.now();
+
+    for (var i in stats) {
+      var stat = stats[i];
+      var sample = null;
+      var ssrc = stat.ssrc;
+      if (!ssrc) {
+        continue;
+      }
+      var identity = identities[ssrc];
+      if (!identity) {
+        __WEBPACK_IMPORTED_MODULE_0_common_log__["default"].warning('stat-normalizer', 'got stat without identity:', stat);
+        continue;
+      }
+
+      if (__WEBPACK_IMPORTED_MODULE_1_common_utils__["isFirefox"]) {
+        sample = normalizeStatsMatchFirefox(i, stat);
+      }
+      if (__WEBPACK_IMPORTED_MODULE_1_common_utils__["isChrome"]) {
+        sample = normalizeStatsMatchChrome(i, stat);
+      }
+      if (!sample) {
+        continue;
+      }
+
+      if (sample.timestamp) {
+        sample.getStatsTs = sample.timestamp;
+        delete sample.timestamp;
+      }
+
+      sample.timestamp = sampleTsMs;
+      sample.pcId = identities.pcId;
+      sample.isRelay = identities.isRelay;
+
+      sample = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_common_utils__["assign"])(sample, identity);
+      sample.sourceId = 'ssrc-' + ssrc;
+
+      samples.push(sample);
+    }
+
+    return samples;
+  }
+
+  function normalizeSelectedPairStats(stats, identities) {
+    var samples = [];
+    var sampleTsMs = Date.now();
+    var newSelectedPairs = {};
+
+    for (var i in stats) {
+      var stat = stats[i];
+      var sample = null;
+
+      if (stat.type === 'candidatepair' && stat.selected === true && stat.state === 'succeeded') {
+        sample = getSelectedPairSampleFromStats(stats, stat, 'firefox');
+      }
+      if (stat.type === 'googCandidatePair' && stat.googActiveConnection === 'true') {
+        sample = getSelectedPairSampleFromStats(stats, stat, 'chrome');
+      }
+
+      if (!sample) {
+        continue;
+      }
+
+      sample.timestamp = sampleTsMs;
+      sample.pcId = identities.pcId;
+      sample.isRelay = identities.isRelay;
+
+      var newSelectedPair = stat.localCandidateId + stat.remoteCandidateId;
+      if (!(newSelectedPair in newSelectedPairs)) {
+        newSelectedPairs[newSelectedPair] = [];
+      }
+      newSelectedPairs[newSelectedPair].push(sample);
+    }
+
+    for (var oldPair in selectedPairs) {
+      if (!(oldPair in newSelectedPairs)) {
+        delete selectedPairs[oldPair];
+      }
+    }
+    for (var newPair in newSelectedPairs) {
+      if (!(newPair in selectedPairs)) {
+        selectedPairs[newPair] = true;
+        [].push.apply(samples, newSelectedPairs[newPair]);
+      }
+    }
+
+    return samples;
+  }
+
+  return function normalizePeerConnectionStats(stats, identities) {
+    var samples = [];
+
+    samples = normalizeSsrcStats(stats, identities);
+    [].push.apply(samples, normalizeSelectedPairStats(stats, identities));
+
+    return samples;
+  };
+}
+
+/***/ }),
+/* 203 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(204);
+var $Object = __webpack_require__(0).Object;
+module.exports = function defineProperties(T, D){
+  return $Object.defineProperties(T, D);
+};
+
+/***/ }),
+/* 204 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var $export = __webpack_require__(7);
+// 19.1.2.3 / 15.2.3.7 Object.defineProperties(O, Properties)
+$export($export.S + $export.F * !__webpack_require__(11), 'Object', {defineProperties: __webpack_require__(95)});
+
+/***/ }),
+/* 205 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var require;var require;/*! adapterjs - v0.14.3-6d236da - 2017-05-24 */
+var AdapterJS=AdapterJS||{};AdapterJS.options=AdapterJS.options||{},AdapterJS.VERSION="0.14.3-6d236da",AdapterJS.onwebrtcready=AdapterJS.onwebrtcready||function(isUsingPlugin){},AdapterJS._onwebrtcreadies=[],AdapterJS.webRTCReady=function(baseCallback){if("function"!=typeof baseCallback)throw new Error("Callback provided is not a function");var callback=function(){"function"==typeof window.require&&"function"==typeof AdapterJS._defineMediaSourcePolyfill&&AdapterJS._defineMediaSourcePolyfill(),baseCallback(null!==AdapterJS.WebRTCPlugin.plugin)};!0===AdapterJS.onwebrtcreadyDone?callback():AdapterJS._onwebrtcreadies.push(callback)},AdapterJS.WebRTCPlugin=AdapterJS.WebRTCPlugin||{},AdapterJS.WebRTCPlugin.pluginInfo=AdapterJS.WebRTCPlugin.pluginInfo||{prefix:"Tem",plugName:"TemWebRTCPlugin",pluginId:"plugin0",type:"application/x-temwebrtcplugin",onload:"__TemWebRTCReady0",portalLink:"https://skylink.io/plugin/",downloadLink:null,companyName:"Temasys",downloadLinks:{mac:"https://bit.ly/webrtcpluginpkg",win:"https://bit.ly/webrtcpluginmsi"}},"undefined"!=typeof AdapterJS.WebRTCPlugin.pluginInfo.downloadLinks&&null!==AdapterJS.WebRTCPlugin.pluginInfo.downloadLinks&&(navigator.platform.match(/^Mac/i)?AdapterJS.WebRTCPlugin.pluginInfo.downloadLink=AdapterJS.WebRTCPlugin.pluginInfo.downloadLinks.mac:navigator.platform.match(/^Win/i)&&(AdapterJS.WebRTCPlugin.pluginInfo.downloadLink=AdapterJS.WebRTCPlugin.pluginInfo.downloadLinks.win)),AdapterJS.WebRTCPlugin.TAGS={NONE:"none",AUDIO:"audio",VIDEO:"video"},AdapterJS.WebRTCPlugin.pageId=Math.random().toString(36).slice(2),AdapterJS.WebRTCPlugin.plugin=null,AdapterJS.WebRTCPlugin.setLogLevel=null,AdapterJS.WebRTCPlugin.defineWebRTCInterface=null,AdapterJS.WebRTCPlugin.isPluginInstalled=null,AdapterJS.WebRTCPlugin.pluginInjectionInterval=null,AdapterJS.WebRTCPlugin.injectPlugin=null,AdapterJS.WebRTCPlugin.PLUGIN_STATES={NONE:0,INITIALIZING:1,INJECTING:2,INJECTED:3,READY:4},AdapterJS.WebRTCPlugin.pluginState=AdapterJS.WebRTCPlugin.PLUGIN_STATES.NONE,AdapterJS.onwebrtcreadyDone=!1,AdapterJS.WebRTCPlugin.PLUGIN_LOG_LEVELS={NONE:"NONE",ERROR:"ERROR",WARNING:"WARNING",INFO:"INFO",VERBOSE:"VERBOSE",SENSITIVE:"SENSITIVE"},AdapterJS.WebRTCPlugin.WaitForPluginReady=null,AdapterJS.WebRTCPlugin.callWhenPluginReady=null,__TemWebRTCReady0=function(){if("complete"===document.readyState)AdapterJS.WebRTCPlugin.pluginState=AdapterJS.WebRTCPlugin.PLUGIN_STATES.READY,AdapterJS.maybeThroughWebRTCReady();else var timer=setInterval(function(){"complete"===document.readyState&&(clearInterval(timer),AdapterJS.WebRTCPlugin.pluginState=AdapterJS.WebRTCPlugin.PLUGIN_STATES.READY,AdapterJS.maybeThroughWebRTCReady())},100)},AdapterJS.maybeThroughWebRTCReady=function(){AdapterJS.onwebrtcreadyDone||(AdapterJS.onwebrtcreadyDone=!0,AdapterJS._onwebrtcreadies.length?AdapterJS._onwebrtcreadies.forEach(function(callback){"function"==typeof callback&&callback(null!==AdapterJS.WebRTCPlugin.plugin)}):"function"==typeof AdapterJS.onwebrtcready&&AdapterJS.onwebrtcready(null!==AdapterJS.WebRTCPlugin.plugin))},AdapterJS.TEXT={PLUGIN:{REQUIRE_INSTALLATION:"This website requires you to install a WebRTC-enabling plugin to work on this browser.",NOT_SUPPORTED:"Your browser does not support WebRTC.",BUTTON:"Install Now"},REFRESH:{REQUIRE_REFRESH:"Please refresh page",BUTTON:"Refresh Page"}},AdapterJS._iceConnectionStates={starting:"starting",checking:"checking",connected:"connected",completed:"connected",done:"completed",disconnected:"disconnected",failed:"failed",closed:"closed"},AdapterJS._iceConnectionFiredStates=[],AdapterJS.isDefined=null,AdapterJS.parseWebrtcDetectedBrowser=function(){var hasMatch=null;if(window.opr&&opr.addons||window.opera||navigator.userAgent.indexOf(" OPR/")>=0)hasMatch=navigator.userAgent.match(/OPR\/(\d+)/i)||[],webrtcDetectedBrowser="opera",webrtcDetectedVersion=parseInt(hasMatch[1]||"0",10),webrtcMinimumVersion=26,webrtcDetectedType="webkit",webrtcDetectedDCSupport="SCTP";else if(navigator.userAgent.match(/Bowser\/[0-9.]*/g)){hasMatch=navigator.userAgent.match(/Bowser\/[0-9.]*/g)||[];var chromiumVersion=parseInt((navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./i)||[])[2]||"0",10);webrtcDetectedBrowser="bowser",webrtcDetectedVersion=parseFloat((hasMatch[0]||"0/0").split("/")[1],10),webrtcMinimumVersion=0,webrtcDetectedType="webkit",webrtcDetectedDCSupport=chromiumVersion>30?"SCTP":"RTP"}else if(navigator.userAgent.indexOf("OPiOS")>0)hasMatch=navigator.userAgent.match(/OPiOS\/([0-9]+)\./),webrtcDetectedBrowser="opera",webrtcDetectedVersion=parseInt(hasMatch[1]||"0",10),webrtcMinimumVersion=0,webrtcDetectedType=null,webrtcDetectedDCSupport=null;else if(navigator.userAgent.indexOf("CriOS")>0)hasMatch=navigator.userAgent.match(/CriOS\/([0-9]+)\./)||[],webrtcDetectedBrowser="chrome",webrtcDetectedVersion=parseInt(hasMatch[1]||"0",10),webrtcMinimumVersion=0,webrtcDetectedType=null,webrtcDetectedDCSupport=null;else if(navigator.userAgent.indexOf("FxiOS")>0)hasMatch=navigator.userAgent.match(/FxiOS\/([0-9]+)\./)||[],webrtcDetectedBrowser="firefox",webrtcDetectedVersion=parseInt(hasMatch[1]||"0",10),webrtcMinimumVersion=0,webrtcDetectedType=null,webrtcDetectedDCSupport=null;else if(document.documentMode)hasMatch=/\brv[ :]+(\d+)/g.exec(navigator.userAgent)||[],webrtcDetectedBrowser="IE",webrtcDetectedVersion=parseInt(hasMatch[1],10),webrtcMinimumVersion=9,webrtcDetectedType="plugin",webrtcDetectedDCSupport="SCTP",webrtcDetectedVersion||(hasMatch=/\bMSIE[ :]+(\d+)/g.exec(navigator.userAgent)||[],webrtcDetectedVersion=parseInt(hasMatch[1]||"0",10));else if(window.StyleMedia||navigator.userAgent.match(/Edge\/(\d+).(\d+)$/))hasMatch=navigator.userAgent.match(/Edge\/(\d+).(\d+)$/)||[],webrtcDetectedBrowser="edge",webrtcDetectedVersion=parseFloat((hasMatch[0]||"0/0").split("/")[1],10),webrtcMinimumVersion=13.10547,webrtcDetectedType="ms",webrtcDetectedDCSupport=null;else if("undefined"!=typeof InstallTrigger||navigator.userAgent.indexOf("irefox")>0)hasMatch=navigator.userAgent.match(/Firefox\/([0-9]+)\./)||[],webrtcDetectedBrowser="firefox",webrtcDetectedVersion=parseInt(hasMatch[1]||"0",10),webrtcMinimumVersion=33,webrtcDetectedType="moz",webrtcDetectedDCSupport="SCTP";else if(window.chrome&&window.chrome.webstore||navigator.userAgent.indexOf("Chrom")>0)hasMatch=navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./i)||[],webrtcDetectedBrowser="chrome",webrtcDetectedVersion=parseInt(hasMatch[2]||"0",10),webrtcMinimumVersion=38,webrtcDetectedType="webkit",webrtcDetectedDCSupport=webrtcDetectedVersion>30?"SCTP":"RTP";else if(/^((?!chrome|android).)*safari/i.test(navigator.userAgent)){hasMatch=navigator.userAgent.match(/version\/(\d+)/i)||[];var isMobile=navigator.userAgent.match(/(iPhone|iPad)/gi)||[];webrtcDetectedBrowser="safari",webrtcDetectedVersion=parseInt(hasMatch[1]||"0",10),webrtcMinimumVersion=7,webrtcDetectedType=0===isMobile.length?"plugin":null,webrtcDetectedDCSupport=0===isMobile.length?"SCTP":null}window.webrtcDetectedBrowser=webrtcDetectedBrowser,window.webrtcDetectedVersion=webrtcDetectedVersion,window.webrtcMinimumVersion=webrtcMinimumVersion,window.webrtcDetectedType=webrtcDetectedType,window.webrtcDetectedDCSupport=webrtcDetectedDCSupport},AdapterJS.addEvent=function(elem,evnt,func){elem.addEventListener?elem.addEventListener(evnt,func,!1):elem.attachEvent?elem.attachEvent("on"+evnt,func):elem[evnt]=func},AdapterJS.renderNotificationBar=function(message,buttonText,buttonCallback){if("complete"===document.readyState){var w=window,i=document.createElement("iframe");i.name="adapterjs-alert",i.style.position="fixed",i.style.top="-41px",i.style.left=0,i.style.right=0,i.style.width="100%",i.style.height="40px",i.style.backgroundColor="#ffffe1",i.style.border="none",i.style.borderBottom="1px solid #888888",i.style.zIndex="9999999","string"==typeof i.style.webkitTransition?i.style.webkitTransition="all .5s ease-out":"string"==typeof i.style.transition&&(i.style.transition="all .5s ease-out"),document.body.appendChild(i);var c=i.contentWindow?i.contentWindow:i.contentDocument.document?i.contentDocument.document:i.contentDocument;c.document.open(),c.document.write('<span style="display: inline-block; font-family: Helvetica, Arial,sans-serif; font-size: .9rem; padding: 4px; vertical-align: middle; cursor: default;">'+message+"</span>"),buttonText&&"function"==typeof buttonCallback?(c.document.write('<button id="okay">'+buttonText+'</button><button id="cancel">Cancel</button>'),c.document.close(),AdapterJS.addEvent(c.document.getElementById("okay"),"click",function(e){e.preventDefault();try{e.cancelBubble=!0}catch(error){}buttonCallback(e)}),AdapterJS.addEvent(c.document.getElementById("cancel"),"click",function(e){w.document.body.removeChild(i)})):c.document.close(),setTimeout(function(){"string"==typeof i.style.webkitTransform?i.style.webkitTransform="translateY(40px)":"string"==typeof i.style.transform?i.style.transform="translateY(40px)":i.style.top="0px"},300)}},webrtcDetectedType=null,checkMediaDataChannelSettings=function(peerBrowserAgent,peerBrowserVersion,callback,constraints){if("function"==typeof callback){var beOfferer=!0,isLocalFirefox="firefox"===webrtcDetectedBrowser,isLocalFirefoxInterop="moz"===webrtcDetectedType&&webrtcDetectedVersion>30,isPeerFirefox="firefox"===peerBrowserAgent;if(isLocalFirefox&&isPeerFirefox||isLocalFirefoxInterop)try{delete constraints.mandatory.MozDontOfferDataChannel}catch(error){}else isLocalFirefox&&!isPeerFirefox&&(constraints.mandatory.MozDontOfferDataChannel=!0);if(!isLocalFirefox)for(var prop in constraints.mandatory)constraints.mandatory.hasOwnProperty(prop)&&prop.indexOf("Moz")!==-1&&delete constraints.mandatory[prop];!isLocalFirefox||isPeerFirefox||isLocalFirefoxInterop||(beOfferer=!1),callback(beOfferer,constraints)}},checkIceConnectionState=function(peerId,iceConnectionState,callback){"function"==typeof callback&&(peerId=peerId?peerId:"peer",AdapterJS._iceConnectionFiredStates[peerId]&&iceConnectionState!==AdapterJS._iceConnectionStates.disconnected&&iceConnectionState!==AdapterJS._iceConnectionStates.failed&&iceConnectionState!==AdapterJS._iceConnectionStates.closed||(AdapterJS._iceConnectionFiredStates[peerId]=[]),iceConnectionState=AdapterJS._iceConnectionStates[iceConnectionState],AdapterJS._iceConnectionFiredStates[peerId].indexOf(iceConnectionState)<0&&(AdapterJS._iceConnectionFiredStates[peerId].push(iceConnectionState),iceConnectionState===AdapterJS._iceConnectionStates.connected&&setTimeout(function(){AdapterJS._iceConnectionFiredStates[peerId].push(AdapterJS._iceConnectionStates.done),callback(AdapterJS._iceConnectionStates.done)},1e3),callback(iceConnectionState)))},createIceServer=null,createIceServers=null,MediaStream="function"==typeof MediaStream?MediaStream:null,RTCPeerConnection="function"==typeof RTCPeerConnection?RTCPeerConnection:null,RTCSessionDescription="function"==typeof RTCSessionDescription?RTCSessionDescription:null,RTCIceCandidate="function"==typeof RTCIceCandidate?RTCIceCandidate:null,getUserMedia=null,attachMediaStream=null,reattachMediaStream=null,webrtcDetectedBrowser=null,webrtcDetectedVersion=null,webrtcMinimumVersion=null,!(navigator.mozGetUserMedia||navigator.webkitGetUserMedia||navigator.mediaDevices&&navigator.userAgent.match(/Edge\/(\d+).(\d+)$/))||0===(navigator.userAgent.match(/android/gi)||[]).length&&0===(navigator.userAgent.match(/chrome/gi)||[]).length&&navigator.userAgent.indexOf("Safari/")>0?("object"==typeof console&&"function"==typeof console.log||(console={}||console,console.log=function(arg){},console.info=function(arg){},console.error=function(arg){},console.dir=function(arg){},console.exception=function(arg){},console.trace=function(arg){},console.warn=function(arg){},console.count=function(arg){},console.debug=function(arg){},console.count=function(arg){},console.time=function(arg){},console.timeEnd=function(arg){},console.group=function(arg){},console.groupCollapsed=function(arg){},console.groupEnd=function(arg){}),AdapterJS.parseWebrtcDetectedBrowser(),isIE="IE"===webrtcDetectedBrowser,AdapterJS.WebRTCPlugin.WaitForPluginReady=function(){for(;AdapterJS.WebRTCPlugin.pluginState!==AdapterJS.WebRTCPlugin.PLUGIN_STATES.READY;);},AdapterJS.WebRTCPlugin.callWhenPluginReady=function(callback){if(AdapterJS.WebRTCPlugin.pluginState===AdapterJS.WebRTCPlugin.PLUGIN_STATES.READY)callback();else var checkPluginReadyState=setInterval(function(){AdapterJS.WebRTCPlugin.pluginState===AdapterJS.WebRTCPlugin.PLUGIN_STATES.READY&&(clearInterval(checkPluginReadyState),callback())},100)},AdapterJS.WebRTCPlugin.setLogLevel=function(logLevel){AdapterJS.WebRTCPlugin.callWhenPluginReady(function(){AdapterJS.WebRTCPlugin.plugin.setLogLevel(logLevel)})},AdapterJS.WebRTCPlugin.injectPlugin=function(){if("complete"===document.readyState&&AdapterJS.WebRTCPlugin.pluginState===AdapterJS.WebRTCPlugin.PLUGIN_STATES.INITIALIZING){if(AdapterJS.WebRTCPlugin.pluginState=AdapterJS.WebRTCPlugin.PLUGIN_STATES.INJECTING,"IE"===webrtcDetectedBrowser&&webrtcDetectedVersion<=10){var frag=document.createDocumentFragment();for(AdapterJS.WebRTCPlugin.plugin=document.createElement("div"),AdapterJS.WebRTCPlugin.plugin.innerHTML='<object id="'+AdapterJS.WebRTCPlugin.pluginInfo.pluginId+'" type="'+AdapterJS.WebRTCPlugin.pluginInfo.type+'" width="1" height="1"><param name="pluginId" value="'+AdapterJS.WebRTCPlugin.pluginInfo.pluginId+'" /> <param name="windowless" value="false" /> <param name="pageId" value="'+AdapterJS.WebRTCPlugin.pageId+'" /> <param name="onload" value="'+AdapterJS.WebRTCPlugin.pluginInfo.onload+'" /><param name="tag" value="'+AdapterJS.WebRTCPlugin.TAGS.NONE+'" />'+(AdapterJS.options.getAllCams?'<param name="forceGetAllCams" value="True" />':"")+"</object>";AdapterJS.WebRTCPlugin.plugin.firstChild;)frag.appendChild(AdapterJS.WebRTCPlugin.plugin.firstChild);document.body.appendChild(frag),AdapterJS.WebRTCPlugin.plugin=document.getElementById(AdapterJS.WebRTCPlugin.pluginInfo.pluginId)}else AdapterJS.WebRTCPlugin.plugin=document.createElement("object"),AdapterJS.WebRTCPlugin.plugin.id=AdapterJS.WebRTCPlugin.pluginInfo.pluginId,isIE?(AdapterJS.WebRTCPlugin.plugin.width="1px",AdapterJS.WebRTCPlugin.plugin.height="1px"):(AdapterJS.WebRTCPlugin.plugin.width="0px",AdapterJS.WebRTCPlugin.plugin.height="0px"),AdapterJS.WebRTCPlugin.plugin.type=AdapterJS.WebRTCPlugin.pluginInfo.type,AdapterJS.WebRTCPlugin.plugin.innerHTML='<param name="onload" value="'+AdapterJS.WebRTCPlugin.pluginInfo.onload+'"><param name="pluginId" value="'+AdapterJS.WebRTCPlugin.pluginInfo.pluginId+'"><param name="windowless" value="false" /> '+(AdapterJS.options.getAllCams?'<param name="forceGetAllCams" value="True" />':"")+'<param name="pageId" value="'+AdapterJS.WebRTCPlugin.pageId+'"><param name="tag" value="'+AdapterJS.WebRTCPlugin.TAGS.NONE+'" />',document.body.appendChild(AdapterJS.WebRTCPlugin.plugin);AdapterJS.WebRTCPlugin.pluginState=AdapterJS.WebRTCPlugin.PLUGIN_STATES.INJECTED}},AdapterJS.WebRTCPlugin.isPluginInstalled=function(comName,plugName,plugType,installedCb,notInstalledCb){if(isIE){try{new ActiveXObject(comName+"."+plugName)}catch(e){return void notInstalledCb()}installedCb()}else{for(var pluginArray=navigator.mimeTypes,i=0;i<pluginArray.length;i++)if(pluginArray[i].type.indexOf(plugType)>=0)return void installedCb();notInstalledCb()}},AdapterJS.WebRTCPlugin.defineWebRTCInterface=function(){if(AdapterJS.WebRTCPlugin.pluginState!==AdapterJS.WebRTCPlugin.PLUGIN_STATES.READY){AdapterJS.WebRTCPlugin.pluginState=AdapterJS.WebRTCPlugin.PLUGIN_STATES.INITIALIZING,AdapterJS.isDefined=function(variable){return null!==variable&&void 0!==variable},createIceServer=function(url,username,password){var iceServer=null,urlParts=url.split(":");return 0===urlParts[0].indexOf("stun")?iceServer={url:url,hasCredentials:!1}:0===urlParts[0].indexOf("turn")&&(iceServer={url:url,hasCredentials:!0,credential:password,username:username}),iceServer},createIceServers=function(urls,username,password){for(var iceServers=[],i=0;i<urls.length;++i)iceServers.push(createIceServer(urls[i],username,password));return iceServers},RTCSessionDescription=function(info){return AdapterJS.WebRTCPlugin.WaitForPluginReady(),AdapterJS.WebRTCPlugin.plugin.ConstructSessionDescription(info.type,info.sdp)},MediaStream=function(mediaStreamOrTracks){return AdapterJS.WebRTCPlugin.WaitForPluginReady(),AdapterJS.WebRTCPlugin.plugin.MediaStream(mediaStreamOrTracks)},RTCPeerConnection=function(servers,constraints){if(void 0!==servers&&null!==servers&&!Array.isArray(servers.iceServers))throw new Error("Failed to construct 'RTCPeerConnection': Malformed RTCConfiguration");if("undefined"!=typeof constraints&&null!==constraints){var invalidConstraits=!1;if(invalidConstraits|="object"!=typeof constraints,invalidConstraits|=constraints.hasOwnProperty("mandatory")&&void 0!==constraints.mandatory&&null!==constraints.mandatory&&constraints.mandatory.constructor!==Object,invalidConstraits|=constraints.hasOwnProperty("optional")&&void 0!==constraints.optional&&null!==constraints.optional&&!Array.isArray(constraints.optional))throw new Error("Failed to construct 'RTCPeerConnection': Malformed constraints object")}AdapterJS.WebRTCPlugin.WaitForPluginReady();var iceServers=null;if(servers&&Array.isArray(servers.iceServers)){iceServers=servers.iceServers;for(var i=0;i<iceServers.length;i++)iceServers[i].urls&&!iceServers[i].url&&(iceServers[i].url=iceServers[i].urls),iceServers[i].hasCredentials=AdapterJS.isDefined(iceServers[i].username)&&AdapterJS.isDefined(iceServers[i].credential)}if(AdapterJS.WebRTCPlugin.plugin.PEER_CONNECTION_VERSION&&AdapterJS.WebRTCPlugin.plugin.PEER_CONNECTION_VERSION>1)return iceServers&&(servers.iceServers=iceServers),AdapterJS.WebRTCPlugin.plugin.PeerConnection(servers);var mandatory=constraints&&constraints.mandatory?constraints.mandatory:null,optional=constraints&&constraints.optional?constraints.optional:null;return AdapterJS.WebRTCPlugin.plugin.PeerConnection(AdapterJS.WebRTCPlugin.pageId,iceServers,mandatory,optional)},MediaStreamTrack=function(){},MediaStreamTrack.getSources=function(callback){AdapterJS.WebRTCPlugin.callWhenPluginReady(function(){AdapterJS.WebRTCPlugin.plugin.GetSources(callback)})};var constraintsToPlugin=function(c){if("object"!=typeof c||c.mandatory||c.optional)return c;var cc={};return Object.keys(c).forEach(function(key){if("require"!==key&&"advanced"!==key){if("string"==typeof c[key])return void(cc[key]=c[key]);var r="object"==typeof c[key]?c[key]:{ideal:c[key]};void 0!==r.exact&&"number"==typeof r.exact&&(r.min=r.max=r.exact);var oldname=function(prefix,name){return prefix?prefix+name.charAt(0).toUpperCase()+name.slice(1):"deviceId"===name?"sourceId":name};if("sourceId"===oldname("",key)&&void 0!==r.exact&&(r.ideal=r.exact,r.exact=void 0),void 0!==r.ideal){cc.optional=cc.optional||[];var oc={};"number"==typeof r.ideal?(oc[oldname("min",key)]=r.ideal,cc.optional.push(oc),oc={},oc[oldname("max",key)]=r.ideal,cc.optional.push(oc)):(oc[oldname("",key)]=r.ideal,cc.optional.push(oc))}void 0!==r.exact&&"number"!=typeof r.exact?(cc.mandatory=cc.mandatory||{},cc.mandatory[oldname("",key)]=r.exact):["min","max"].forEach(function(mix){void 0!==r[mix]&&(cc.mandatory=cc.mandatory||{},cc.mandatory[oldname(mix,key)]=r[mix])})}}),c.advanced&&(cc.optional=(cc.optional||[]).concat(c.advanced)),cc};getUserMedia=function(constraints,successCallback,failureCallback){var cc={};cc.audio=!!constraints.audio&&constraintsToPlugin(constraints.audio),cc.video=!!constraints.video&&constraintsToPlugin(constraints.video),AdapterJS.WebRTCPlugin.callWhenPluginReady(function(){AdapterJS.WebRTCPlugin.plugin.getUserMedia(cc,successCallback,failureCallback)})},window.navigator.getUserMedia=getUserMedia,navigator.mediaDevices||"undefined"==typeof Promise||(requestUserMedia=function(constraints){return new Promise(function(resolve,reject){try{getUserMedia(constraints,resolve,reject)}catch(error){reject(error)}})},navigator.mediaDevices={getUserMedia:requestUserMedia,enumerateDevices:function(){return new Promise(function(resolve){var kinds={audio:"audioinput",video:"videoinput"};return MediaStreamTrack.getSources(function(devices){resolve(devices.map(function(device){return{label:device.label,kind:kinds[device.kind],id:device.id,deviceId:device.id,groupId:""}}))})})}}),attachMediaStream=function(element,stream){if(element&&element.parentNode){var streamId;null===stream?streamId="":("undefined"!=typeof stream.enableSoundTracks&&stream.enableSoundTracks(!0),streamId=stream.id);var elementId=0===element.id.length?Math.random().toString(36).slice(2):element.id,nodeName=element.nodeName.toLowerCase();if("object"!==nodeName){var tag;switch(nodeName){case"audio":tag=AdapterJS.WebRTCPlugin.TAGS.AUDIO;break;case"video":tag=AdapterJS.WebRTCPlugin.TAGS.VIDEO;break;default:tag=AdapterJS.WebRTCPlugin.TAGS.NONE}var frag=document.createDocumentFragment(),temp=document.createElement("div"),classHTML="";for(element.className?classHTML='class="'+element.className+'" ':element.attributes&&element.attributes.class&&(classHTML='class="'+element.attributes.class.value+'" '),temp.innerHTML='<object id="'+elementId+'" '+classHTML+'type="'+AdapterJS.WebRTCPlugin.pluginInfo.type+'"><param name="pluginId" value="'+elementId+'" /> <param name="pageId" value="'+AdapterJS.WebRTCPlugin.pageId+'" /> <param name="windowless" value="true" /> <param name="streamId" value="'+streamId+'" /> <param name="tag" value="'+tag+'" /> </object>';temp.firstChild;)frag.appendChild(temp.firstChild);var height="",width="";element.clientWidth||element.clientHeight?(width=element.clientWidth,height=element.clientHeight):(element.width||element.height)&&(width=element.width,height=element.height),element.parentNode.insertBefore(frag,element),frag=document.getElementById(elementId),frag.width=width,frag.height=height,element.parentNode.removeChild(element)}else{for(var children=element.children,i=0;i!==children.length;++i)if("streamId"===children[i].name){children[i].value=streamId;break}element.setStreamId(streamId)}var newElement=document.getElementById(elementId);return AdapterJS.forwardEventHandlers(newElement,element,Object.getPrototypeOf(element)),newElement}},reattachMediaStream=function(to,from){for(var stream=null,children=from.children,i=0;i!==children.length;++i)if("streamId"===children[i].name){AdapterJS.WebRTCPlugin.WaitForPluginReady(),stream=AdapterJS.WebRTCPlugin.plugin.getStreamWithId(AdapterJS.WebRTCPlugin.pageId,children[i].value);break}if(null!==stream)return attachMediaStream(to,stream)},window.attachMediaStream=attachMediaStream,window.reattachMediaStream=reattachMediaStream,window.getUserMedia=getUserMedia,AdapterJS.attachMediaStream=attachMediaStream,AdapterJS.reattachMediaStream=reattachMediaStream,AdapterJS.getUserMedia=getUserMedia,AdapterJS.forwardEventHandlers=function(destElem,srcElem,prototype){var properties=Object.getOwnPropertyNames(prototype);for(var prop in properties)if(prop){var propName=properties[prop];"function"==typeof propName.slice&&"on"===propName.slice(0,2)&&"function"==typeof srcElem[propName]&&AdapterJS.addEvent(destElem,propName.slice(2),srcElem[propName])}var subPrototype=Object.getPrototypeOf(prototype);subPrototype&&AdapterJS.forwardEventHandlers(destElem,srcElem,subPrototype)},RTCIceCandidate=function(candidate){return candidate.sdpMid||(candidate.sdpMid=""),AdapterJS.WebRTCPlugin.WaitForPluginReady(),AdapterJS.WebRTCPlugin.plugin.ConstructIceCandidate(candidate.sdpMid,candidate.sdpMLineIndex,candidate.candidate)},AdapterJS.addEvent(document,"readystatechange",AdapterJS.WebRTCPlugin.injectPlugin),AdapterJS.WebRTCPlugin.injectPlugin()}},AdapterJS.WebRTCPlugin.pluginNeededButNotInstalledCb=AdapterJS.WebRTCPlugin.pluginNeededButNotInstalledCb||function(){AdapterJS.addEvent(document,"readystatechange",AdapterJS.WebRTCPlugin.pluginNeededButNotInstalledCbPriv),AdapterJS.WebRTCPlugin.pluginNeededButNotInstalledCbPriv()},AdapterJS.WebRTCPlugin.pluginNeededButNotInstalledCbPriv=function(){if(!AdapterJS.options.hidePluginInstallPrompt){var downloadLink=AdapterJS.WebRTCPlugin.pluginInfo.downloadLink;if(downloadLink){var popupString;popupString=AdapterJS.WebRTCPlugin.pluginInfo.portalLink?'This website requires you to install the  <a href="'+AdapterJS.WebRTCPlugin.pluginInfo.portalLink+'" target="_blank">'+AdapterJS.WebRTCPlugin.pluginInfo.companyName+" WebRTC Plugin</a> to work on this browser.":AdapterJS.TEXT.PLUGIN.REQUIRE_INSTALLATION,AdapterJS.renderNotificationBar(popupString,AdapterJS.TEXT.PLUGIN.BUTTON,function(){window.open(downloadLink,"_top");var pluginInstallInterval=setInterval(function(){isIE||navigator.plugins.refresh(!1),AdapterJS.WebRTCPlugin.isPluginInstalled(AdapterJS.WebRTCPlugin.pluginInfo.prefix,AdapterJS.WebRTCPlugin.pluginInfo.plugName,AdapterJS.WebRTCPlugin.pluginInfo.type,function(){clearInterval(pluginInstallInterval),AdapterJS.WebRTCPlugin.defineWebRTCInterface()},function(){})},500)})}else AdapterJS.renderNotificationBar(AdapterJS.TEXT.PLUGIN.NOT_SUPPORTED)}},AdapterJS.WebRTCPlugin.isPluginInstalled(AdapterJS.WebRTCPlugin.pluginInfo.prefix,AdapterJS.WebRTCPlugin.pluginInfo.plugName,AdapterJS.WebRTCPlugin.pluginInfo.type,AdapterJS.WebRTCPlugin.defineWebRTCInterface,AdapterJS.WebRTCPlugin.pluginNeededButNotInstalledCb)):(navigator.userAgent.match(/Edge\/(\d+).(\d+)$/)&&window.RTCPeerConnection&&(window.msRTCPeerConnection=window.RTCPeerConnection),function(f){if(true)module.exports=f();else if("function"==typeof define&&define.amd)define([],f);else{var g;g="undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof self?self:this,g.adapter=f()}}(function(){return function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a="function"==typeof require&&require;if(!u&&a)return require(o,!0);if(i)return require(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}for(var i="function"==typeof require&&require,o=0;o<r.length;o++)s(r[o]);return s}({1:[function(requirecopy,module,exports){"use strict";var SDPUtils={};SDPUtils.generateIdentifier=function(){return Math.random().toString(36).substr(2,10)},SDPUtils.localCName=SDPUtils.generateIdentifier(),SDPUtils.splitLines=function(blob){return blob.trim().split("\n").map(function(line){return line.trim()})},SDPUtils.splitSections=function(blob){var parts=blob.split("\nm=");return parts.map(function(part,index){return(index>0?"m="+part:part).trim()+"\r\n"})},SDPUtils.matchPrefix=function(blob,prefix){return SDPUtils.splitLines(blob).filter(function(line){return 0===line.indexOf(prefix)})},SDPUtils.parseCandidate=function(line){var parts;parts=0===line.indexOf("a=candidate:")?line.substring(12).split(" "):line.substring(10).split(" ");for(var candidate={foundation:parts[0],component:parts[1],protocol:parts[2].toLowerCase(),priority:parseInt(parts[3],10),ip:parts[4],port:parseInt(parts[5],10),type:parts[7]},i=8;i<parts.length;i+=2)switch(parts[i]){case"raddr":candidate.relatedAddress=parts[i+1];break;case"rport":candidate.relatedPort=parseInt(parts[i+1],10);break;case"tcptype":candidate.tcpType=parts[i+1]}return candidate},SDPUtils.writeCandidate=function(candidate){var sdp=[];sdp.push(candidate.foundation),sdp.push(candidate.component),sdp.push(candidate.protocol.toUpperCase()),sdp.push(candidate.priority),sdp.push(candidate.ip),sdp.push(candidate.port);var type=candidate.type;return sdp.push("typ"),sdp.push(type),"host"!==type&&candidate.relatedAddress&&candidate.relatedPort&&(sdp.push("raddr"),sdp.push(candidate.relatedAddress),sdp.push("rport"),sdp.push(candidate.relatedPort)),candidate.tcpType&&"tcp"===candidate.protocol.toLowerCase()&&(sdp.push("tcptype"),sdp.push(candidate.tcpType)),"candidate:"+sdp.join(" ")},SDPUtils.parseRtpMap=function(line){var parts=line.substr(9).split(" "),parsed={payloadType:parseInt(parts.shift(),10)};return parts=parts[0].split("/"),parsed.name=parts[0],parsed.clockRate=parseInt(parts[1],10),parsed.numChannels=3===parts.length?parseInt(parts[2],10):1,parsed},SDPUtils.writeRtpMap=function(codec){var pt=codec.payloadType;return void 0!==codec.preferredPayloadType&&(pt=codec.preferredPayloadType),"a=rtpmap:"+pt+" "+codec.name+"/"+codec.clockRate+(1!==codec.numChannels?"/"+codec.numChannels:"")+"\r\n"},SDPUtils.parseExtmap=function(line){var parts=line.substr(9).split(" ");return{id:parseInt(parts[0],10),uri:parts[1]}},SDPUtils.writeExtmap=function(headerExtension){return"a=extmap:"+(headerExtension.id||headerExtension.preferredId)+" "+headerExtension.uri+"\r\n"},SDPUtils.parseFmtp=function(line){for(var kv,parsed={},parts=line.substr(line.indexOf(" ")+1).split(";"),j=0;j<parts.length;j++)kv=parts[j].trim().split("="),parsed[kv[0].trim()]=kv[1];return parsed},SDPUtils.writeFmtp=function(codec){var line="",pt=codec.payloadType;if(void 0!==codec.preferredPayloadType&&(pt=codec.preferredPayloadType),codec.parameters&&Object.keys(codec.parameters).length){var params=[];Object.keys(codec.parameters).forEach(function(param){params.push(param+"="+codec.parameters[param])}),line+="a=fmtp:"+pt+" "+params.join(";")+"\r\n"}return line},SDPUtils.parseRtcpFb=function(line){var parts=line.substr(line.indexOf(" ")+1).split(" ");return{type:parts.shift(),parameter:parts.join(" ")}},SDPUtils.writeRtcpFb=function(codec){var lines="",pt=codec.payloadType;return void 0!==codec.preferredPayloadType&&(pt=codec.preferredPayloadType),codec.rtcpFeedback&&codec.rtcpFeedback.length&&codec.rtcpFeedback.forEach(function(fb){lines+="a=rtcp-fb:"+pt+" "+fb.type+(fb.parameter&&fb.parameter.length?" "+fb.parameter:"")+"\r\n"}),lines},SDPUtils.parseSsrcMedia=function(line){var sp=line.indexOf(" "),parts={ssrc:parseInt(line.substr(7,sp-7),10)},colon=line.indexOf(":",sp);return colon>-1?(parts.attribute=line.substr(sp+1,colon-sp-1),parts.value=line.substr(colon+1)):parts.attribute=line.substr(sp+1),parts},SDPUtils.getMid=function(mediaSection){var mid=SDPUtils.matchPrefix(mediaSection,"a=mid:")[0];if(mid)return mid.substr(6)},SDPUtils.getDtlsParameters=function(mediaSection,sessionpart){var lines=SDPUtils.splitLines(mediaSection);lines=lines.concat(SDPUtils.splitLines(sessionpart));var fpLine=lines.filter(function(line){return 0===line.indexOf("a=fingerprint:")})[0].substr(14),dtlsParameters={role:"auto",fingerprints:[{algorithm:fpLine.split(" ")[0].toLowerCase(),value:fpLine.split(" ")[1]}]};return dtlsParameters},SDPUtils.writeDtlsParameters=function(params,setupType){var sdp="a=setup:"+setupType+"\r\n";return params.fingerprints.forEach(function(fp){sdp+="a=fingerprint:"+fp.algorithm+" "+fp.value+"\r\n"}),sdp},SDPUtils.getIceParameters=function(mediaSection,sessionpart){var lines=SDPUtils.splitLines(mediaSection);lines=lines.concat(SDPUtils.splitLines(sessionpart));var iceParameters={usernameFragment:lines.filter(function(line){return 0===line.indexOf("a=ice-ufrag:")})[0].substr(12),password:lines.filter(function(line){return 0===line.indexOf("a=ice-pwd:")})[0].substr(10)};return iceParameters},SDPUtils.writeIceParameters=function(params){return"a=ice-ufrag:"+params.usernameFragment+"\r\na=ice-pwd:"+params.password+"\r\n"},SDPUtils.parseRtpParameters=function(mediaSection){for(var description={codecs:[],headerExtensions:[],fecMechanisms:[],rtcp:[]},lines=SDPUtils.splitLines(mediaSection),mline=lines[0].split(" "),i=3;i<mline.length;i++){var pt=mline[i],rtpmapline=SDPUtils.matchPrefix(mediaSection,"a=rtpmap:"+pt+" ")[0];if(rtpmapline){var codec=SDPUtils.parseRtpMap(rtpmapline),fmtps=SDPUtils.matchPrefix(mediaSection,"a=fmtp:"+pt+" ");switch(codec.parameters=fmtps.length?SDPUtils.parseFmtp(fmtps[0]):{},codec.rtcpFeedback=SDPUtils.matchPrefix(mediaSection,"a=rtcp-fb:"+pt+" ").map(SDPUtils.parseRtcpFb),description.codecs.push(codec),codec.name.toUpperCase()){case"RED":case"ULPFEC":description.fecMechanisms.push(codec.name.toUpperCase())}}}return SDPUtils.matchPrefix(mediaSection,"a=extmap:").forEach(function(line){
+description.headerExtensions.push(SDPUtils.parseExtmap(line))}),description},SDPUtils.writeRtpDescription=function(kind,caps){var sdp="";sdp+="m="+kind+" ",sdp+=caps.codecs.length>0?"9":"0",sdp+=" UDP/TLS/RTP/SAVPF ",sdp+=caps.codecs.map(function(codec){return void 0!==codec.preferredPayloadType?codec.preferredPayloadType:codec.payloadType}).join(" ")+"\r\n",sdp+="c=IN IP4 0.0.0.0\r\n",sdp+="a=rtcp:9 IN IP4 0.0.0.0\r\n",caps.codecs.forEach(function(codec){sdp+=SDPUtils.writeRtpMap(codec),sdp+=SDPUtils.writeFmtp(codec),sdp+=SDPUtils.writeRtcpFb(codec)});var maxptime=0;return caps.codecs.forEach(function(codec){codec.maxptime>maxptime&&(maxptime=codec.maxptime)}),maxptime>0&&(sdp+="a=maxptime:"+maxptime+"\r\n"),sdp+="a=rtcp-mux\r\n",caps.headerExtensions.forEach(function(extension){sdp+=SDPUtils.writeExtmap(extension)}),sdp},SDPUtils.parseRtpEncodingParameters=function(mediaSection){var secondarySsrc,encodingParameters=[],description=SDPUtils.parseRtpParameters(mediaSection),hasRed=description.fecMechanisms.indexOf("RED")!==-1,hasUlpfec=description.fecMechanisms.indexOf("ULPFEC")!==-1,ssrcs=SDPUtils.matchPrefix(mediaSection,"a=ssrc:").map(function(line){return SDPUtils.parseSsrcMedia(line)}).filter(function(parts){return"cname"===parts.attribute}),primarySsrc=ssrcs.length>0&&ssrcs[0].ssrc,flows=SDPUtils.matchPrefix(mediaSection,"a=ssrc-group:FID").map(function(line){var parts=line.split(" ");return parts.shift(),parts.map(function(part){return parseInt(part,10)})});flows.length>0&&flows[0].length>1&&flows[0][0]===primarySsrc&&(secondarySsrc=flows[0][1]),description.codecs.forEach(function(codec){if("RTX"===codec.name.toUpperCase()&&codec.parameters.apt){var encParam={ssrc:primarySsrc,codecPayloadType:parseInt(codec.parameters.apt,10),rtx:{ssrc:secondarySsrc}};encodingParameters.push(encParam),hasRed&&(encParam=JSON.parse(JSON.stringify(encParam)),encParam.fec={ssrc:secondarySsrc,mechanism:hasUlpfec?"red+ulpfec":"red"},encodingParameters.push(encParam))}}),0===encodingParameters.length&&primarySsrc&&encodingParameters.push({ssrc:primarySsrc});var bandwidth=SDPUtils.matchPrefix(mediaSection,"b=");return bandwidth.length&&(0===bandwidth[0].indexOf("b=TIAS:")?bandwidth=parseInt(bandwidth[0].substr(7),10):0===bandwidth[0].indexOf("b=AS:")&&(bandwidth=parseInt(bandwidth[0].substr(5),10)),encodingParameters.forEach(function(params){params.maxBitrate=bandwidth})),encodingParameters},SDPUtils.parseRtcpParameters=function(mediaSection){var rtcpParameters={},remoteSsrc=SDPUtils.matchPrefix(mediaSection,"a=ssrc:").map(function(line){return SDPUtils.parseSsrcMedia(line)}).filter(function(obj){return"cname"===obj.attribute})[0];remoteSsrc&&(rtcpParameters.cname=remoteSsrc.value,rtcpParameters.ssrc=remoteSsrc.ssrc);var rsize=SDPUtils.matchPrefix(mediaSection,"a=rtcp-rsize");rtcpParameters.reducedSize=rsize.length>0,rtcpParameters.compound=0===rsize.length;var mux=SDPUtils.matchPrefix(mediaSection,"a=rtcp-mux");return rtcpParameters.mux=mux.length>0,rtcpParameters},SDPUtils.parseMsid=function(mediaSection){var parts,spec=SDPUtils.matchPrefix(mediaSection,"a=msid:");if(1===spec.length)return parts=spec[0].substr(7).split(" "),{stream:parts[0],track:parts[1]};var planB=SDPUtils.matchPrefix(mediaSection,"a=ssrc:").map(function(line){return SDPUtils.parseSsrcMedia(line)}).filter(function(parts){return"msid"===parts.attribute});return planB.length>0?(parts=planB[0].value.split(" "),{stream:parts[0],track:parts[1]}):void 0},SDPUtils.writeSessionBoilerplate=function(){return"v=0\r\no=thisisadapterortc 8169639915646943137 2 IN IP4 127.0.0.1\r\ns=-\r\nt=0 0\r\n"},SDPUtils.writeMediaSection=function(transceiver,caps,type,stream){var sdp=SDPUtils.writeRtpDescription(transceiver.kind,caps);if(sdp+=SDPUtils.writeIceParameters(transceiver.iceGatherer.getLocalParameters()),sdp+=SDPUtils.writeDtlsParameters(transceiver.dtlsTransport.getLocalParameters(),"offer"===type?"actpass":"active"),sdp+="a=mid:"+transceiver.mid+"\r\n",sdp+=transceiver.rtpSender&&transceiver.rtpReceiver?"a=sendrecv\r\n":transceiver.rtpSender?"a=sendonly\r\n":transceiver.rtpReceiver?"a=recvonly\r\n":"a=inactive\r\n",transceiver.rtpSender){var msid="msid:"+stream.id+" "+transceiver.rtpSender.track.id+"\r\n";sdp+="a="+msid,sdp+="a=ssrc:"+transceiver.sendEncodingParameters[0].ssrc+" "+msid,transceiver.sendEncodingParameters[0].rtx&&(sdp+="a=ssrc:"+transceiver.sendEncodingParameters[0].rtx.ssrc+" "+msid,sdp+="a=ssrc-group:FID "+transceiver.sendEncodingParameters[0].ssrc+" "+transceiver.sendEncodingParameters[0].rtx.ssrc+"\r\n")}return sdp+="a=ssrc:"+transceiver.sendEncodingParameters[0].ssrc+" cname:"+SDPUtils.localCName+"\r\n",transceiver.rtpSender&&transceiver.sendEncodingParameters[0].rtx&&(sdp+="a=ssrc:"+transceiver.sendEncodingParameters[0].rtx.ssrc+" cname:"+SDPUtils.localCName+"\r\n"),sdp},SDPUtils.getDirection=function(mediaSection,sessionpart){for(var lines=SDPUtils.splitLines(mediaSection),i=0;i<lines.length;i++)switch(lines[i]){case"a=sendrecv":case"a=sendonly":case"a=recvonly":case"a=inactive":return lines[i].substr(2)}return sessionpart?SDPUtils.getDirection(sessionpart):"sendrecv"},SDPUtils.getKind=function(mediaSection){var lines=SDPUtils.splitLines(mediaSection),mline=lines[0].split(" ");return mline[0].substr(2)},SDPUtils.isRejected=function(mediaSection){return"0"===mediaSection.split(" ",2)[1]},module.exports=SDPUtils},{}],2:[function(requirecopy,module,exports){"use strict";!function(){var logging=requirecopy("./utils").log,browserDetails=requirecopy("./utils").browserDetails;module.exports.browserDetails=browserDetails,module.exports.extractVersion=requirecopy("./utils").extractVersion,module.exports.disableLog=requirecopy("./utils").disableLog;var chromeShim=requirecopy("./chrome/chrome_shim")||null,edgeShim=requirecopy("./edge/edge_shim")||null,firefoxShim=requirecopy("./firefox/firefox_shim")||null,safariShim=requirecopy("./safari/safari_shim")||null;switch(browserDetails.browser){case"opera":case"chrome":if(!chromeShim||!chromeShim.shimPeerConnection)return void logging("Chrome shim is not included in this adapter release.");logging("adapter.js shimming chrome."),module.exports.browserShim=chromeShim,chromeShim.shimGetUserMedia(),chromeShim.shimMediaStream(),chromeShim.shimSourceObject(),chromeShim.shimPeerConnection(),chromeShim.shimOnTrack();break;case"firefox":if(!firefoxShim||!firefoxShim.shimPeerConnection)return void logging("Firefox shim is not included in this adapter release.");logging("adapter.js shimming firefox."),module.exports.browserShim=firefoxShim,firefoxShim.shimGetUserMedia(),firefoxShim.shimSourceObject(),firefoxShim.shimPeerConnection(),firefoxShim.shimOnTrack();break;case"edge":if(!edgeShim||!edgeShim.shimPeerConnection)return void logging("MS edge shim is not included in this adapter release.");logging("adapter.js shimming edge."),module.exports.browserShim=edgeShim,edgeShim.shimGetUserMedia(),edgeShim.shimPeerConnection();break;case"safari":if(!safariShim)return void logging("Safari shim is not included in this adapter release.");logging("adapter.js shimming safari."),module.exports.browserShim=safariShim,safariShim.shimGetUserMedia();break;default:logging("Unsupported browser!")}}()},{"./chrome/chrome_shim":3,"./edge/edge_shim":5,"./firefox/firefox_shim":7,"./safari/safari_shim":9,"./utils":10}],3:[function(requirecopy,module,exports){"use strict";var logging=requirecopy("../utils.js").log,browserDetails=requirecopy("../utils.js").browserDetails,chromeShim={shimMediaStream:function(){window.MediaStream=window.MediaStream||window.webkitMediaStream},shimOnTrack:function(){"object"!=typeof window||!window.RTCPeerConnection||"ontrack"in window.RTCPeerConnection.prototype||Object.defineProperty(window.RTCPeerConnection.prototype,"ontrack",{get:function(){return this._ontrack},set:function(f){var self=this;this._ontrack&&(this.removeEventListener("track",this._ontrack),this.removeEventListener("addstream",this._ontrackpoly)),this.addEventListener("track",this._ontrack=f),this.addEventListener("addstream",this._ontrackpoly=function(e){e.stream.addEventListener("addtrack",function(te){var event=new Event("track");event.track=te.track,event.receiver={track:te.track},event.streams=[e.stream],self.dispatchEvent(event)}),e.stream.getTracks().forEach(function(track){var event=new Event("track");event.track=track,event.receiver={track:track},event.streams=[e.stream],this.dispatchEvent(event)}.bind(this))}.bind(this))}})},shimSourceObject:function(){"object"==typeof window&&(!window.HTMLMediaElement||"srcObject"in window.HTMLMediaElement.prototype||Object.defineProperty(window.HTMLMediaElement.prototype,"srcObject",{get:function(){return this._srcObject},set:function(stream){var self=this;return this._srcObject=stream,this.src&&URL.revokeObjectURL(this.src),stream?(this.src=URL.createObjectURL(stream),stream.addEventListener("addtrack",function(){self.src&&URL.revokeObjectURL(self.src),self.src=URL.createObjectURL(stream)}),void stream.addEventListener("removetrack",function(){self.src&&URL.revokeObjectURL(self.src),self.src=URL.createObjectURL(stream)})):void(this.src="")}}))},shimPeerConnection:function(){window.RTCPeerConnection=function(pcConfig,pcConstraints){logging("PeerConnection"),pcConfig&&pcConfig.iceTransportPolicy&&(pcConfig.iceTransports=pcConfig.iceTransportPolicy);var pc=new webkitRTCPeerConnection(pcConfig,pcConstraints),origGetStats=pc.getStats.bind(pc);return pc.getStats=function(selector,successCallback,errorCallback){var self=this,args=arguments;if(arguments.length>0&&"function"==typeof selector)return origGetStats(selector,successCallback);var fixChromeStats_=function(response){var standardReport={},reports=response.result();return reports.forEach(function(report){var standardStats={id:report.id,timestamp:report.timestamp,type:report.type};report.names().forEach(function(name){standardStats[name]=report.stat(name)}),standardReport[standardStats.id]=standardStats}),standardReport},makeMapStats=function(stats,legacyStats){var map=new Map(Object.keys(stats).map(function(key){return[key,stats[key]]}));return legacyStats=legacyStats||stats,Object.keys(legacyStats).forEach(function(key){map[key]=legacyStats[key]}),map};if(arguments.length>=2){var successCallbackWrapper_=function(response){args[1](makeMapStats(fixChromeStats_(response)))};return origGetStats.apply(this,[successCallbackWrapper_,arguments[0]])}return new Promise(function(resolve,reject){1===args.length&&"object"==typeof selector?origGetStats.apply(self,[function(response){resolve(makeMapStats(fixChromeStats_(response)))},reject]):origGetStats.apply(self,[function(response){resolve(makeMapStats(fixChromeStats_(response),response.result()))},reject])}).then(successCallback,errorCallback)},pc},window.RTCPeerConnection.prototype=webkitRTCPeerConnection.prototype,webkitRTCPeerConnection.generateCertificate&&Object.defineProperty(window.RTCPeerConnection,"generateCertificate",{get:function(){return webkitRTCPeerConnection.generateCertificate}}),["createOffer","createAnswer"].forEach(function(method){var nativeMethod=webkitRTCPeerConnection.prototype[method];webkitRTCPeerConnection.prototype[method]=function(){var self=this;if(arguments.length<1||1===arguments.length&&"object"==typeof arguments[0]){var opts=1===arguments.length?arguments[0]:void 0;return new Promise(function(resolve,reject){nativeMethod.apply(self,[resolve,reject,opts])})}return nativeMethod.apply(this,arguments)}}),browserDetails.version<51&&["setLocalDescription","setRemoteDescription","addIceCandidate"].forEach(function(method){var nativeMethod=webkitRTCPeerConnection.prototype[method];webkitRTCPeerConnection.prototype[method]=function(){var args=arguments,self=this,promise=new Promise(function(resolve,reject){nativeMethod.apply(self,[args[0],resolve,reject])});return args.length<2?promise:promise.then(function(){args[1].apply(null,[])},function(err){args.length>=3&&args[2].apply(null,[err])})}}),["setLocalDescription","setRemoteDescription","addIceCandidate"].forEach(function(method){var nativeMethod=webkitRTCPeerConnection.prototype[method];webkitRTCPeerConnection.prototype[method]=function(){return arguments[0]=new("addIceCandidate"===method?RTCIceCandidate:RTCSessionDescription)(arguments[0]),nativeMethod.apply(this,arguments)}});var nativeAddIceCandidate=RTCPeerConnection.prototype.addIceCandidate;RTCPeerConnection.prototype.addIceCandidate=function(){return null===arguments[0]?Promise.resolve():nativeAddIceCandidate.apply(this,arguments)}}};module.exports={shimMediaStream:chromeShim.shimMediaStream,shimOnTrack:chromeShim.shimOnTrack,shimSourceObject:chromeShim.shimSourceObject,shimPeerConnection:chromeShim.shimPeerConnection,shimGetUserMedia:requirecopy("./getusermedia")}},{"../utils.js":10,"./getusermedia":4}],4:[function(requirecopy,module,exports){"use strict";var logging=requirecopy("../utils.js").log;module.exports=function(){var constraintsToChrome_=function(c){if("object"!=typeof c||c.mandatory||c.optional)return c;var cc={};return Object.keys(c).forEach(function(key){if("require"!==key&&"advanced"!==key&&"mediaSource"!==key){var r="object"==typeof c[key]?c[key]:{ideal:c[key]};void 0!==r.exact&&"number"==typeof r.exact&&(r.min=r.max=r.exact);var oldname_=function(prefix,name){return prefix?prefix+name.charAt(0).toUpperCase()+name.slice(1):"deviceId"===name?"sourceId":name};if(void 0!==r.ideal){cc.optional=cc.optional||[];var oc={};"number"==typeof r.ideal?(oc[oldname_("min",key)]=r.ideal,cc.optional.push(oc),oc={},oc[oldname_("max",key)]=r.ideal,cc.optional.push(oc)):(oc[oldname_("",key)]=r.ideal,cc.optional.push(oc))}void 0!==r.exact&&"number"!=typeof r.exact?(cc.mandatory=cc.mandatory||{},cc.mandatory[oldname_("",key)]=r.exact):["min","max"].forEach(function(mix){void 0!==r[mix]&&(cc.mandatory=cc.mandatory||{},cc.mandatory[oldname_(mix,key)]=r[mix])})}}),c.advanced&&(cc.optional=(cc.optional||[]).concat(c.advanced)),cc},shimConstraints_=function(constraints,func){if(constraints=JSON.parse(JSON.stringify(constraints)),constraints&&constraints.audio&&(constraints.audio=constraintsToChrome_(constraints.audio)),constraints&&"object"==typeof constraints.video){var face=constraints.video.facingMode;if(face=face&&("object"==typeof face?face:{ideal:face}),face&&("user"===face.exact||"environment"===face.exact||"user"===face.ideal||"environment"===face.ideal)&&(!navigator.mediaDevices.getSupportedConstraints||!navigator.mediaDevices.getSupportedConstraints().facingMode)&&(delete constraints.video.facingMode,"environment"===face.exact||"environment"===face.ideal))return navigator.mediaDevices.enumerateDevices().then(function(devices){devices=devices.filter(function(d){return"videoinput"===d.kind});var back=devices.find(function(d){return d.label.toLowerCase().indexOf("back")!==-1})||devices.length&&devices[devices.length-1];return back&&(constraints.video.deviceId=face.exact?{exact:back.deviceId}:{ideal:back.deviceId}),constraints.video=constraintsToChrome_(constraints.video),logging("chrome: "+JSON.stringify(constraints)),func(constraints)});constraints.video=constraintsToChrome_(constraints.video)}return logging("chrome: "+JSON.stringify(constraints)),func(constraints)},shimError_=function(e){return{name:{PermissionDeniedError:"NotAllowedError",ConstraintNotSatisfiedError:"OverconstrainedError"}[e.name]||e.name,message:e.message,constraint:e.constraintName,toString:function(){return this.name+(this.message&&": ")+this.message}}},getUserMedia_=function(constraints,onSuccess,onError){shimConstraints_(constraints,function(c){navigator.webkitGetUserMedia(c,onSuccess,function(e){onError(shimError_(e))})})};navigator.getUserMedia=getUserMedia_;var getUserMediaPromise_=function(constraints){return new Promise(function(resolve,reject){navigator.getUserMedia(constraints,resolve,reject)})};if(navigator.mediaDevices||(navigator.mediaDevices={getUserMedia:getUserMediaPromise_,enumerateDevices:function(){return new Promise(function(resolve){var kinds={audio:"audioinput",video:"videoinput"};return MediaStreamTrack.getSources(function(devices){resolve(devices.map(function(device){return{label:device.label,kind:kinds[device.kind],deviceId:device.id,groupId:""}}))})})}}),navigator.mediaDevices.getUserMedia){var origGetUserMedia=navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);navigator.mediaDevices.getUserMedia=function(cs){return shimConstraints_(cs,function(c){return origGetUserMedia(c).catch(function(e){return Promise.reject(shimError_(e))})})}}else navigator.mediaDevices.getUserMedia=function(constraints){return getUserMediaPromise_(constraints)};"undefined"==typeof navigator.mediaDevices.addEventListener&&(navigator.mediaDevices.addEventListener=function(){logging("Dummy mediaDevices.addEventListener called.")}),"undefined"==typeof navigator.mediaDevices.removeEventListener&&(navigator.mediaDevices.removeEventListener=function(){logging("Dummy mediaDevices.removeEventListener called.")})}},{"../utils.js":10}],5:[function(requirecopy,module,exports){"use strict";var SDPUtils=requirecopy("sdp"),browserDetails=requirecopy("../utils").browserDetails,edgeShim={shimPeerConnection:function(){window.RTCIceGatherer&&(window.RTCIceCandidate||(window.RTCIceCandidate=function(args){return args}),window.RTCSessionDescription||(window.RTCSessionDescription=function(args){return args})),window.RTCPeerConnection=function(config){var self=this,_eventTarget=document.createDocumentFragment();if(["addEventListener","removeEventListener","dispatchEvent"].forEach(function(method){self[method]=_eventTarget[method].bind(_eventTarget)}),this.onicecandidate=null,this.onaddstream=null,this.ontrack=null,this.onremovestream=null,this.onsignalingstatechange=null,this.oniceconnectionstatechange=null,this.onnegotiationneeded=null,this.ondatachannel=null,this.localStreams=[],this.remoteStreams=[],this.getLocalStreams=function(){return self.localStreams},this.getRemoteStreams=function(){return self.remoteStreams},this.localDescription=new RTCSessionDescription({type:"",sdp:""}),this.remoteDescription=new RTCSessionDescription({type:"",sdp:""}),this.signalingState="stable",this.iceConnectionState="new",this.iceGatheringState="new",this.iceOptions={gatherPolicy:"all",iceServers:[]},config&&config.iceTransportPolicy)switch(config.iceTransportPolicy){case"all":case"relay":this.iceOptions.gatherPolicy=config.iceTransportPolicy;break;case"none":throw new TypeError('iceTransportPolicy "none" not supported')}if(this.usingBundle=config&&"max-bundle"===config.bundlePolicy,config&&config.iceServers){var iceServers=JSON.parse(JSON.stringify(config.iceServers));this.iceOptions.iceServers=iceServers.filter(function(server){if(server&&server.urls){var urls=server.urls;return"string"==typeof urls&&(urls=[urls]),urls=urls.filter(function(url){return 0===url.indexOf("turn:")&&url.indexOf("transport=udp")!==-1&&url.indexOf("turn:[")===-1||0===url.indexOf("stun:")&&browserDetails.version>=14393})[0],!!urls}return!1})}this.transceivers=[],this._localIceCandidatesBuffer=[]},window.RTCPeerConnection.prototype._emitBufferedCandidates=function(){var self=this,sections=SDPUtils.splitSections(self.localDescription.sdp);this._localIceCandidatesBuffer.forEach(function(event){var end=!event.candidate||0===Object.keys(event.candidate).length;if(end)for(var j=1;j<sections.length;j++)sections[j].indexOf("\r\na=end-of-candidates\r\n")===-1&&(sections[j]+="a=end-of-candidates\r\n");else event.candidate.candidate.indexOf("typ endOfCandidates")===-1&&(sections[event.candidate.sdpMLineIndex+1]+="a="+event.candidate.candidate+"\r\n");if(self.localDescription.sdp=sections.join(""),self.dispatchEvent(event),null!==self.onicecandidate&&self.onicecandidate(event),!event.candidate&&"complete"!==self.iceGatheringState){var complete=self.transceivers.every(function(transceiver){return transceiver.iceGatherer&&"completed"===transceiver.iceGatherer.state});complete&&(self.iceGatheringState="complete")}}),this._localIceCandidatesBuffer=[]},window.RTCPeerConnection.prototype.addStream=function(stream){this.localStreams.push(stream.clone()),this._maybeFireNegotiationNeeded()},window.RTCPeerConnection.prototype.removeStream=function(stream){var idx=this.localStreams.indexOf(stream);idx>-1&&(this.localStreams.splice(idx,1),this._maybeFireNegotiationNeeded())},window.RTCPeerConnection.prototype.getSenders=function(){return this.transceivers.filter(function(transceiver){return!!transceiver.rtpSender}).map(function(transceiver){return transceiver.rtpSender})},window.RTCPeerConnection.prototype.getReceivers=function(){return this.transceivers.filter(function(transceiver){return!!transceiver.rtpReceiver}).map(function(transceiver){return transceiver.rtpReceiver})},window.RTCPeerConnection.prototype._getCommonCapabilities=function(localCapabilities,remoteCapabilities){var commonCapabilities={codecs:[],headerExtensions:[],fecMechanisms:[]};return localCapabilities.codecs.forEach(function(lCodec){for(var i=0;i<remoteCapabilities.codecs.length;i++){var rCodec=remoteCapabilities.codecs[i];if(lCodec.name.toLowerCase()===rCodec.name.toLowerCase()&&lCodec.clockRate===rCodec.clockRate&&lCodec.numChannels===rCodec.numChannels){commonCapabilities.codecs.push(rCodec),rCodec.rtcpFeedback=rCodec.rtcpFeedback.filter(function(fb){for(var j=0;j<lCodec.rtcpFeedback.length;j++)if(lCodec.rtcpFeedback[j].type===fb.type&&lCodec.rtcpFeedback[j].parameter===fb.parameter)return!0;return!1});break}}}),localCapabilities.headerExtensions.forEach(function(lHeaderExtension){for(var i=0;i<remoteCapabilities.headerExtensions.length;i++){var rHeaderExtension=remoteCapabilities.headerExtensions[i];if(lHeaderExtension.uri===rHeaderExtension.uri){commonCapabilities.headerExtensions.push(rHeaderExtension);break}}}),commonCapabilities},window.RTCPeerConnection.prototype._createIceAndDtlsTransports=function(mid,sdpMLineIndex){var self=this,iceGatherer=new RTCIceGatherer(self.iceOptions),iceTransport=new RTCIceTransport(iceGatherer);iceGatherer.onlocalcandidate=function(evt){var event=new Event("icecandidate");event.candidate={sdpMid:mid,sdpMLineIndex:sdpMLineIndex};var cand=evt.candidate,end=!cand||0===Object.keys(cand).length;end?(void 0===iceGatherer.state&&(iceGatherer.state="completed"),event.candidate.candidate="candidate:1 1 udp 1 0.0.0.0 9 typ endOfCandidates"):(cand.component="RTCP"===iceTransport.component?2:1,event.candidate.candidate=SDPUtils.writeCandidate(cand));var sections=SDPUtils.splitSections(self.localDescription.sdp);event.candidate.candidate.indexOf("typ endOfCandidates")===-1?sections[event.candidate.sdpMLineIndex+1]+="a="+event.candidate.candidate+"\r\n":sections[event.candidate.sdpMLineIndex+1]+="a=end-of-candidates\r\n",self.localDescription.sdp=sections.join("");var complete=self.transceivers.every(function(transceiver){return transceiver.iceGatherer&&"completed"===transceiver.iceGatherer.state});switch(self.iceGatheringState){case"new":self._localIceCandidatesBuffer.push(event),end&&complete&&self._localIceCandidatesBuffer.push(new Event("icecandidate"));break;case"gathering":self._emitBufferedCandidates(),self.dispatchEvent(event),null!==self.onicecandidate&&self.onicecandidate(event),complete&&(self.dispatchEvent(new Event("icecandidate")),null!==self.onicecandidate&&self.onicecandidate(new Event("icecandidate")),self.iceGatheringState="complete");break;case"complete":}},iceTransport.onicestatechange=function(){self._updateConnectionState()};var dtlsTransport=new RTCDtlsTransport(iceTransport);return dtlsTransport.ondtlsstatechange=function(){self._updateConnectionState()},dtlsTransport.onerror=function(){dtlsTransport.state="failed",self._updateConnectionState()},{iceGatherer:iceGatherer,iceTransport:iceTransport,dtlsTransport:dtlsTransport}},window.RTCPeerConnection.prototype._transceive=function(transceiver,send,recv){var params=this._getCommonCapabilities(transceiver.localCapabilities,transceiver.remoteCapabilities);send&&transceiver.rtpSender&&(params.encodings=transceiver.sendEncodingParameters,params.rtcp={cname:SDPUtils.localCName},transceiver.recvEncodingParameters.length&&(params.rtcp.ssrc=transceiver.recvEncodingParameters[0].ssrc),transceiver.rtpSender.send(params)),recv&&transceiver.rtpReceiver&&(params.encodings=transceiver.recvEncodingParameters,params.rtcp={cname:transceiver.cname},transceiver.sendEncodingParameters.length&&(params.rtcp.ssrc=transceiver.sendEncodingParameters[0].ssrc),transceiver.rtpReceiver.receive(params))},window.RTCPeerConnection.prototype.setLocalDescription=function(description){var sections,sessionpart,self=this;if("offer"===description.type)this._pendingOffer&&(sections=SDPUtils.splitSections(description.sdp),sessionpart=sections.shift(),sections.forEach(function(mediaSection,sdpMLineIndex){var caps=SDPUtils.parseRtpParameters(mediaSection);self._pendingOffer[sdpMLineIndex].localCapabilities=caps}),this.transceivers=this._pendingOffer,delete this._pendingOffer);else if("answer"===description.type){sections=SDPUtils.splitSections(self.remoteDescription.sdp),sessionpart=sections.shift();var isIceLite=SDPUtils.matchPrefix(sessionpart,"a=ice-lite").length>0;sections.forEach(function(mediaSection,sdpMLineIndex){var transceiver=self.transceivers[sdpMLineIndex],iceGatherer=transceiver.iceGatherer,iceTransport=transceiver.iceTransport,dtlsTransport=transceiver.dtlsTransport,localCapabilities=transceiver.localCapabilities,remoteCapabilities=transceiver.remoteCapabilities,rejected="0"===mediaSection.split("\n",1)[0].split(" ",2)[1];if(!rejected&&!transceiver.isDatachannel){var remoteIceParameters=SDPUtils.getIceParameters(mediaSection,sessionpart);if(isIceLite){var cands=SDPUtils.matchPrefix(mediaSection,"a=candidate:").map(function(cand){return SDPUtils.parseCandidate(cand)}).filter(function(cand){return"1"===cand.component});cands.length&&iceTransport.setRemoteCandidates(cands)}var remoteDtlsParameters=SDPUtils.getDtlsParameters(mediaSection,sessionpart);isIceLite&&(remoteDtlsParameters.role="server"),self.usingBundle&&0!==sdpMLineIndex||(iceTransport.start(iceGatherer,remoteIceParameters,isIceLite?"controlling":"controlled"),dtlsTransport.start(remoteDtlsParameters));var params=self._getCommonCapabilities(localCapabilities,remoteCapabilities);self._transceive(transceiver,params.codecs.length>0,!1)}})}switch(this.localDescription={type:description.type,sdp:description.sdp},description.type){case"offer":this._updateSignalingState("have-local-offer");break;case"answer":this._updateSignalingState("stable");break;default:throw new TypeError('unsupported type "'+description.type+'"')}var hasCallback=arguments.length>1&&"function"==typeof arguments[1];if(hasCallback){var cb=arguments[1];window.setTimeout(function(){cb(),"new"===self.iceGatheringState&&(self.iceGatheringState="gathering"),self._emitBufferedCandidates()},0)}var p=Promise.resolve();return p.then(function(){hasCallback||("new"===self.iceGatheringState&&(self.iceGatheringState="gathering"),window.setTimeout(self._emitBufferedCandidates.bind(self),500))}),p},window.RTCPeerConnection.prototype.setRemoteDescription=function(description){var self=this,stream=new MediaStream,receiverList=[],sections=SDPUtils.splitSections(description.sdp),sessionpart=sections.shift(),isIceLite=SDPUtils.matchPrefix(sessionpart,"a=ice-lite").length>0;switch(this.usingBundle=SDPUtils.matchPrefix(sessionpart,"a=group:BUNDLE ").length>0,sections.forEach(function(mediaSection,sdpMLineIndex){var lines=SDPUtils.splitLines(mediaSection),mline=lines[0].substr(2).split(" "),kind=mline[0],rejected="0"===mline[1],direction=SDPUtils.getDirection(mediaSection,sessionpart),mid=SDPUtils.matchPrefix(mediaSection,"a=mid:");if(mid=mid.length?mid[0].substr(6):SDPUtils.generateIdentifier(),"application"===kind&&"DTLS/SCTP"===mline[2])return void(self.transceivers[sdpMLineIndex]={mid:mid,isDatachannel:!0});var transceiver,iceGatherer,iceTransport,dtlsTransport,rtpSender,rtpReceiver,sendEncodingParameters,recvEncodingParameters,localCapabilities,track,remoteIceParameters,remoteDtlsParameters,remoteCapabilities=SDPUtils.parseRtpParameters(mediaSection);rejected||(remoteIceParameters=SDPUtils.getIceParameters(mediaSection,sessionpart),remoteDtlsParameters=SDPUtils.getDtlsParameters(mediaSection,sessionpart),remoteDtlsParameters.role="client"),recvEncodingParameters=SDPUtils.parseRtpEncodingParameters(mediaSection);var cname,remoteSsrc=SDPUtils.matchPrefix(mediaSection,"a=ssrc:").map(function(line){return SDPUtils.parseSsrcMedia(line)}).filter(function(obj){return"cname"===obj.attribute})[0];remoteSsrc&&(cname=remoteSsrc.value);var isComplete=SDPUtils.matchPrefix(mediaSection,"a=end-of-candidates",sessionpart).length>0,cands=SDPUtils.matchPrefix(mediaSection,"a=candidate:").map(function(cand){return SDPUtils.parseCandidate(cand)}).filter(function(cand){return"1"===cand.component});if("offer"!==description.type||rejected)"answer"!==description.type||rejected||(transceiver=self.transceivers[sdpMLineIndex],iceGatherer=transceiver.iceGatherer,iceTransport=transceiver.iceTransport,dtlsTransport=transceiver.dtlsTransport,rtpSender=transceiver.rtpSender,rtpReceiver=transceiver.rtpReceiver,sendEncodingParameters=transceiver.sendEncodingParameters,localCapabilities=transceiver.localCapabilities,self.transceivers[sdpMLineIndex].recvEncodingParameters=recvEncodingParameters,self.transceivers[sdpMLineIndex].remoteCapabilities=remoteCapabilities,self.transceivers[sdpMLineIndex].cname=cname,(isIceLite||isComplete)&&cands.length&&iceTransport.setRemoteCandidates(cands),self.usingBundle&&0!==sdpMLineIndex||(iceTransport.start(iceGatherer,remoteIceParameters,"controlling"),dtlsTransport.start(remoteDtlsParameters)),self._transceive(transceiver,"sendrecv"===direction||"recvonly"===direction,"sendrecv"===direction||"sendonly"===direction),!rtpReceiver||"sendrecv"!==direction&&"sendonly"!==direction?delete transceiver.rtpReceiver:(track=rtpReceiver.track,receiverList.push([track,rtpReceiver]),stream.addTrack(track)));else{var transports=self.usingBundle&&sdpMLineIndex>0?{iceGatherer:self.transceivers[0].iceGatherer,iceTransport:self.transceivers[0].iceTransport,dtlsTransport:self.transceivers[0].dtlsTransport}:self._createIceAndDtlsTransports(mid,sdpMLineIndex);if(isComplete&&transports.iceTransport.setRemoteCandidates(cands),localCapabilities=RTCRtpReceiver.getCapabilities(kind),sendEncodingParameters=[{ssrc:1001*(2*sdpMLineIndex+2)}],rtpReceiver=new RTCRtpReceiver(transports.dtlsTransport,kind),track=rtpReceiver.track,receiverList.push([track,rtpReceiver]),stream.addTrack(track),self.localStreams.length>0&&self.localStreams[0].getTracks().length>=sdpMLineIndex){var localTrack;"audio"===kind?localTrack=self.localStreams[0].getAudioTracks()[0]:"video"===kind&&(localTrack=self.localStreams[0].getVideoTracks()[0]),localTrack&&(rtpSender=new RTCRtpSender(localTrack,transports.dtlsTransport))}self.transceivers[sdpMLineIndex]={iceGatherer:transports.iceGatherer,iceTransport:transports.iceTransport,dtlsTransport:transports.dtlsTransport,localCapabilities:localCapabilities,remoteCapabilities:remoteCapabilities,rtpSender:rtpSender,rtpReceiver:rtpReceiver,kind:kind,mid:mid,cname:cname,sendEncodingParameters:sendEncodingParameters,recvEncodingParameters:recvEncodingParameters},self._transceive(self.transceivers[sdpMLineIndex],!1,"sendrecv"===direction||"sendonly"===direction)}}),this.remoteDescription={type:description.type,sdp:description.sdp},description.type){case"offer":this._updateSignalingState("have-remote-offer");break;case"answer":this._updateSignalingState("stable");break;default:throw new TypeError('unsupported type "'+description.type+'"')}return stream.getTracks().length&&(self.remoteStreams.push(stream),window.setTimeout(function(){var event=new Event("addstream");event.stream=stream,self.dispatchEvent(event),null!==self.onaddstream&&window.setTimeout(function(){self.onaddstream(event)},0),receiverList.forEach(function(item){var track=item[0],receiver=item[1],trackEvent=new Event("track");trackEvent.track=track,trackEvent.receiver=receiver,
+trackEvent.streams=[stream],self.dispatchEvent(event),null!==self.ontrack&&window.setTimeout(function(){self.ontrack(trackEvent)},0)})},0)),arguments.length>1&&"function"==typeof arguments[1]&&window.setTimeout(arguments[1],0),Promise.resolve()},window.RTCPeerConnection.prototype.close=function(){this.transceivers.forEach(function(transceiver){transceiver.iceTransport&&transceiver.iceTransport.stop(),transceiver.dtlsTransport&&transceiver.dtlsTransport.stop(),transceiver.rtpSender&&transceiver.rtpSender.stop(),transceiver.rtpReceiver&&transceiver.rtpReceiver.stop()}),this._updateSignalingState("closed")},window.RTCPeerConnection.prototype._updateSignalingState=function(newState){this.signalingState=newState;var event=new Event("signalingstatechange");this.dispatchEvent(event),null!==this.onsignalingstatechange&&this.onsignalingstatechange(event)},window.RTCPeerConnection.prototype._maybeFireNegotiationNeeded=function(){var event=new Event("negotiationneeded");this.dispatchEvent(event),null!==this.onnegotiationneeded&&this.onnegotiationneeded(event)},window.RTCPeerConnection.prototype._updateConnectionState=function(){var newState,self=this,states={new:0,closed:0,connecting:0,checking:0,connected:0,completed:0,failed:0};if(this.transceivers.forEach(function(transceiver){states[transceiver.iceTransport.state]++,states[transceiver.dtlsTransport.state]++}),states.connected+=states.completed,newState="new",states.failed>0?newState="failed":states.connecting>0||states.checking>0?newState="connecting":states.disconnected>0?newState="disconnected":states.new>0?newState="new":(states.connected>0||states.completed>0)&&(newState="connected"),newState!==self.iceConnectionState){self.iceConnectionState=newState;var event=new Event("iceconnectionstatechange");this.dispatchEvent(event),null!==this.oniceconnectionstatechange&&this.oniceconnectionstatechange(event)}},window.RTCPeerConnection.prototype.createOffer=function(){var self=this;if(this._pendingOffer)throw new Error("createOffer called while there is a pending offer.");var offerOptions;1===arguments.length&&"function"!=typeof arguments[0]?offerOptions=arguments[0]:3===arguments.length&&(offerOptions=arguments[2]);var tracks=[],numAudioTracks=0,numVideoTracks=0;if(this.localStreams.length&&(numAudioTracks=this.localStreams[0].getAudioTracks().length,numVideoTracks=this.localStreams[0].getVideoTracks().length),offerOptions){if(offerOptions.mandatory||offerOptions.optional)throw new TypeError("Legacy mandatory/optional constraints not supported.");void 0!==offerOptions.offerToReceiveAudio&&(numAudioTracks=offerOptions.offerToReceiveAudio),void 0!==offerOptions.offerToReceiveVideo&&(numVideoTracks=offerOptions.offerToReceiveVideo)}for(this.localStreams.length&&this.localStreams[0].getTracks().forEach(function(track){tracks.push({kind:track.kind,track:track,wantReceive:"audio"===track.kind?numAudioTracks>0:numVideoTracks>0}),"audio"===track.kind?numAudioTracks--:"video"===track.kind&&numVideoTracks--});numAudioTracks>0||numVideoTracks>0;)numAudioTracks>0&&(tracks.push({kind:"audio",wantReceive:!0}),numAudioTracks--),numVideoTracks>0&&(tracks.push({kind:"video",wantReceive:!0}),numVideoTracks--);var sdp=SDPUtils.writeSessionBoilerplate(),transceivers=[];tracks.forEach(function(mline,sdpMLineIndex){var rtpSender,rtpReceiver,track=mline.track,kind=mline.kind,mid=SDPUtils.generateIdentifier(),transports=self.usingBundle&&sdpMLineIndex>0?{iceGatherer:transceivers[0].iceGatherer,iceTransport:transceivers[0].iceTransport,dtlsTransport:transceivers[0].dtlsTransport}:self._createIceAndDtlsTransports(mid,sdpMLineIndex),localCapabilities=RTCRtpSender.getCapabilities(kind),sendEncodingParameters=[{ssrc:1001*(2*sdpMLineIndex+1)}];track&&(rtpSender=new RTCRtpSender(track,transports.dtlsTransport)),mline.wantReceive&&(rtpReceiver=new RTCRtpReceiver(transports.dtlsTransport,kind)),transceivers[sdpMLineIndex]={iceGatherer:transports.iceGatherer,iceTransport:transports.iceTransport,dtlsTransport:transports.dtlsTransport,localCapabilities:localCapabilities,remoteCapabilities:null,rtpSender:rtpSender,rtpReceiver:rtpReceiver,kind:kind,mid:mid,sendEncodingParameters:sendEncodingParameters,recvEncodingParameters:null}}),this.usingBundle&&(sdp+="a=group:BUNDLE "+transceivers.map(function(t){return t.mid}).join(" ")+"\r\n"),tracks.forEach(function(mline,sdpMLineIndex){var transceiver=transceivers[sdpMLineIndex];sdp+=SDPUtils.writeMediaSection(transceiver,transceiver.localCapabilities,"offer",self.localStreams[0])}),this._pendingOffer=transceivers;var desc=new RTCSessionDescription({type:"offer",sdp:sdp});return arguments.length&&"function"==typeof arguments[0]&&window.setTimeout(arguments[0],0,desc),Promise.resolve(desc)},window.RTCPeerConnection.prototype.createAnswer=function(){var self=this,sdp=SDPUtils.writeSessionBoilerplate();this.usingBundle&&(sdp+="a=group:BUNDLE "+this.transceivers.map(function(t){return t.mid}).join(" ")+"\r\n"),this.transceivers.forEach(function(transceiver){if(transceiver.isDatachannel)return void(sdp+="m=application 0 DTLS/SCTP 5000\r\nc=IN IP4 0.0.0.0\r\na=mid:"+transceiver.mid+"\r\n");var commonCapabilities=self._getCommonCapabilities(transceiver.localCapabilities,transceiver.remoteCapabilities);sdp+=SDPUtils.writeMediaSection(transceiver,commonCapabilities,"answer",self.localStreams[0])});var desc=new RTCSessionDescription({type:"answer",sdp:sdp});return arguments.length&&"function"==typeof arguments[0]&&window.setTimeout(arguments[0],0,desc),Promise.resolve(desc)},window.RTCPeerConnection.prototype.addIceCandidate=function(candidate){if(null===candidate)this.transceivers.forEach(function(transceiver){transceiver.iceTransport.addRemoteCandidate({})});else{var mLineIndex=candidate.sdpMLineIndex;if(candidate.sdpMid)for(var i=0;i<this.transceivers.length;i++)if(this.transceivers[i].mid===candidate.sdpMid){mLineIndex=i;break}var transceiver=this.transceivers[mLineIndex];if(transceiver){var cand=Object.keys(candidate.candidate).length>0?SDPUtils.parseCandidate(candidate.candidate):{};if("tcp"===cand.protocol&&(0===cand.port||9===cand.port))return;if("1"!==cand.component)return;"endOfCandidates"===cand.type&&(cand={}),transceiver.iceTransport.addRemoteCandidate(cand);var sections=SDPUtils.splitSections(this.remoteDescription.sdp);sections[mLineIndex+1]+=(cand.type?candidate.candidate.trim():"a=end-of-candidates")+"\r\n",this.remoteDescription.sdp=sections.join("")}}return arguments.length>1&&"function"==typeof arguments[1]&&window.setTimeout(arguments[1],0),Promise.resolve()},window.RTCPeerConnection.prototype.getStats=function(){var promises=[];this.transceivers.forEach(function(transceiver){["rtpSender","rtpReceiver","iceGatherer","iceTransport","dtlsTransport"].forEach(function(method){transceiver[method]&&promises.push(transceiver[method].getStats())})});var cb=arguments.length>1&&"function"==typeof arguments[1]&&arguments[1];return new Promise(function(resolve){var results=new Map;Promise.all(promises).then(function(res){res.forEach(function(result){Object.keys(result).forEach(function(id){results.set(id,result[id]),results[id]=result[id]})}),cb&&window.setTimeout(cb,0,results),resolve(results)})})}}};module.exports={shimPeerConnection:edgeShim.shimPeerConnection,shimGetUserMedia:requirecopy("./getusermedia")}},{"../utils":10,"./getusermedia":6,sdp:1}],6:[function(requirecopy,module,exports){"use strict";module.exports=function(){var shimError_=function(e){return{name:{PermissionDeniedError:"NotAllowedError"}[e.name]||e.name,message:e.message,constraint:e.constraint,toString:function(){return this.name}}},origGetUserMedia=navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);navigator.mediaDevices.getUserMedia=function(c){return origGetUserMedia(c).catch(function(e){return Promise.reject(shimError_(e))})}}},{}],7:[function(requirecopy,module,exports){"use strict";var browserDetails=requirecopy("../utils").browserDetails,firefoxShim={shimOnTrack:function(){"object"!=typeof window||!window.RTCPeerConnection||"ontrack"in window.RTCPeerConnection.prototype||Object.defineProperty(window.RTCPeerConnection.prototype,"ontrack",{get:function(){return this._ontrack},set:function(f){this._ontrack&&(this.removeEventListener("track",this._ontrack),this.removeEventListener("addstream",this._ontrackpoly)),this.addEventListener("track",this._ontrack=f),this.addEventListener("addstream",this._ontrackpoly=function(e){e.stream.getTracks().forEach(function(track){var event=new Event("track");event.track=track,event.receiver={track:track},event.streams=[e.stream],this.dispatchEvent(event)}.bind(this))}.bind(this))}})},shimSourceObject:function(){"object"==typeof window&&(!window.HTMLMediaElement||"srcObject"in window.HTMLMediaElement.prototype||Object.defineProperty(window.HTMLMediaElement.prototype,"srcObject",{get:function(){return this.mozSrcObject},set:function(stream){this.mozSrcObject=stream}}))},shimPeerConnection:function(){if("object"==typeof window&&(window.RTCPeerConnection||window.mozRTCPeerConnection)){window.RTCPeerConnection||(window.RTCPeerConnection=function(pcConfig,pcConstraints){if(browserDetails.version<38&&pcConfig&&pcConfig.iceServers){for(var newIceServers=[],i=0;i<pcConfig.iceServers.length;i++){var server=pcConfig.iceServers[i];if(server.hasOwnProperty("urls"))for(var j=0;j<server.urls.length;j++){var newServer={url:server.urls[j]};0===server.urls[j].indexOf("turn")&&(newServer.username=server.username,newServer.credential=server.credential),newIceServers.push(newServer)}else newIceServers.push(pcConfig.iceServers[i])}pcConfig.iceServers=newIceServers}return new mozRTCPeerConnection(pcConfig,pcConstraints)},window.RTCPeerConnection.prototype=mozRTCPeerConnection.prototype,mozRTCPeerConnection.generateCertificate&&Object.defineProperty(window.RTCPeerConnection,"generateCertificate",{get:function(){return mozRTCPeerConnection.generateCertificate}}),window.RTCSessionDescription=mozRTCSessionDescription,window.RTCIceCandidate=mozRTCIceCandidate),["setLocalDescription","setRemoteDescription","addIceCandidate"].forEach(function(method){var nativeMethod=RTCPeerConnection.prototype[method];RTCPeerConnection.prototype[method]=function(){return arguments[0]=new("addIceCandidate"===method?RTCIceCandidate:RTCSessionDescription)(arguments[0]),nativeMethod.apply(this,arguments)}});var nativeAddIceCandidate=RTCPeerConnection.prototype.addIceCandidate;RTCPeerConnection.prototype.addIceCandidate=function(){return null===arguments[0]?Promise.resolve():nativeAddIceCandidate.apply(this,arguments)};var makeMapStats=function(stats){var map=new Map;return Object.keys(stats).forEach(function(key){map.set(key,stats[key]),map[key]=stats[key]}),map},nativeGetStats=RTCPeerConnection.prototype.getStats;RTCPeerConnection.prototype.getStats=function(selector,onSucc,onErr){return nativeGetStats.apply(this,[selector||null]).then(function(stats){return makeMapStats(stats)}).then(onSucc,onErr)}}}};module.exports={shimOnTrack:firefoxShim.shimOnTrack,shimSourceObject:firefoxShim.shimSourceObject,shimPeerConnection:firefoxShim.shimPeerConnection,shimGetUserMedia:requirecopy("./getusermedia")}},{"../utils":10,"./getusermedia":8}],8:[function(requirecopy,module,exports){"use strict";var logging=requirecopy("../utils").log,browserDetails=requirecopy("../utils").browserDetails;module.exports=function(){var shimError_=function(e){return{name:{SecurityError:"NotAllowedError",PermissionDeniedError:"NotAllowedError"}[e.name]||e.name,message:{"The operation is insecure.":"The request is not allowed by the user agent or the platform in the current context."}[e.message]||e.message,constraint:e.constraint,toString:function(){return this.name+(this.message&&": ")+this.message}}},getUserMedia_=function(constraints,onSuccess,onError){var constraintsToFF37_=function(c){if("object"!=typeof c||c.require)return c;var require=[];return Object.keys(c).forEach(function(key){if("require"!==key&&"advanced"!==key&&"mediaSource"!==key){var r=c[key]="object"==typeof c[key]?c[key]:{ideal:c[key]};if(void 0===r.min&&void 0===r.max&&void 0===r.exact||require.push(key),void 0!==r.exact&&("number"==typeof r.exact?r.min=r.max=r.exact:c[key]=r.exact,delete r.exact),void 0!==r.ideal){c.advanced=c.advanced||[];var oc={};"number"==typeof r.ideal?oc[key]={min:r.ideal,max:r.ideal}:oc[key]=r.ideal,c.advanced.push(oc),delete r.ideal,Object.keys(r).length||delete c[key]}}}),require.length&&(c.require=require),c};return constraints=JSON.parse(JSON.stringify(constraints)),browserDetails.version<38&&(logging("spec: "+JSON.stringify(constraints)),constraints.audio&&(constraints.audio=constraintsToFF37_(constraints.audio)),constraints.video&&(constraints.video=constraintsToFF37_(constraints.video)),logging("ff37: "+JSON.stringify(constraints))),navigator.mozGetUserMedia(constraints,onSuccess,function(e){onError(shimError_(e))})},getUserMediaPromise_=function(constraints){return new Promise(function(resolve,reject){getUserMedia_(constraints,resolve,reject)})};if(navigator.mediaDevices||(navigator.mediaDevices={getUserMedia:getUserMediaPromise_,addEventListener:function(){},removeEventListener:function(){}}),navigator.mediaDevices.enumerateDevices=navigator.mediaDevices.enumerateDevices||function(){return new Promise(function(resolve){var infos=[{kind:"audioinput",deviceId:"default",label:"",groupId:""},{kind:"videoinput",deviceId:"default",label:"",groupId:""}];resolve(infos)})},browserDetails.version<41){var orgEnumerateDevices=navigator.mediaDevices.enumerateDevices.bind(navigator.mediaDevices);navigator.mediaDevices.enumerateDevices=function(){return orgEnumerateDevices().then(void 0,function(e){if("NotFoundError"===e.name)return[];throw e})}}if(browserDetails.version<49){var origGetUserMedia=navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);navigator.mediaDevices.getUserMedia=function(c){return origGetUserMedia(c).catch(function(e){return Promise.reject(shimError_(e))})}}navigator.getUserMedia=function(constraints,onSuccess,onError){return browserDetails.version<44?getUserMedia_(constraints,onSuccess,onError):void navigator.mediaDevices.getUserMedia(constraints).then(onSuccess,onError)}}},{"../utils":10}],9:[function(requirecopy,module,exports){"use strict";var safariShim={shimGetUserMedia:function(){navigator.getUserMedia=navigator.webkitGetUserMedia}};module.exports={shimGetUserMedia:safariShim.shimGetUserMedia}},{}],10:[function(requirecopy,module,exports){"use strict";var logDisabled_=!0,utils={disableLog:function(bool){return"boolean"!=typeof bool?new Error("Argument type: "+typeof bool+". Please use a boolean."):(logDisabled_=bool,bool?"adapter.js logging disabled":"adapter.js logging enabled")},log:function(){if("object"==typeof window){if(logDisabled_)return;"undefined"!=typeof console&&"function"==typeof console.log}},extractVersion:function(uastring,expr,pos){var match=uastring.match(expr);return match&&match.length>=pos&&parseInt(match[pos],10)},detectBrowser:function(){var result={};if(result.browser=null,result.version=null,"undefined"==typeof window||!window.navigator)return result.browser="Not a browser.",result;if(navigator.mozGetUserMedia)result.browser="firefox",result.version=this.extractVersion(navigator.userAgent,/Firefox\/([0-9]+)\./,1);else if(navigator.webkitGetUserMedia)if(window.webkitRTCPeerConnection)result.browser="chrome",result.version=this.extractVersion(navigator.userAgent,/Chrom(e|ium)\/([0-9]+)\./,2);else{if(!navigator.userAgent.match(/Version\/(\d+).(\d+)/))return result.browser="Unsupported webkit-based browser with GUM support but no WebRTC support.",result;result.browser="safari",result.version=this.extractVersion(navigator.userAgent,/AppleWebKit\/([0-9]+)\./,1)}else{if(!navigator.mediaDevices||!navigator.userAgent.match(/Edge\/(\d+).(\d+)$/))return result.browser="Not a supported browser.",result;result.browser="edge",result.version=this.extractVersion(navigator.userAgent,/Edge\/(\d+).(\d+)$/,2)}return result}};module.exports={log:utils.log,disableLog:utils.disableLog,browserDetails:utils.detectBrowser(),extractVersion:utils.extractVersion}},{}]},{},[2])(2)}),AdapterJS.parseWebrtcDetectedBrowser(),navigator.mozGetUserMedia?(MediaStreamTrack.getSources=function(successCb){setTimeout(function(){var infos=[{kind:"audio",id:"default",label:"",facing:""},{kind:"video",id:"default",label:"",facing:""}];successCb(infos)},0)},attachMediaStream=function(element,stream){return element.srcObject=stream,element},reattachMediaStream=function(to,from){return to.srcObject=from.srcObject,to},createIceServer=function(url,username,password){var iceServer=null,urlParts=url.split(":");if(0===urlParts[0].indexOf("stun"))iceServer={urls:[url]};else if(0===urlParts[0].indexOf("turn"))if(webrtcDetectedVersion<27){var turnUrlParts=url.split("?");1!==turnUrlParts.length&&0!==turnUrlParts[1].indexOf("transport=udp")||(iceServer={urls:[turnUrlParts[0]],credential:password,username:username})}else iceServer={urls:[url],credential:password,username:username};return iceServer},createIceServers=function(urls,username,password){var iceServers=[];for(i=0;i<urls.length;i++){var iceServer=createIceServer(urls[i],username,password);null!==iceServer&&iceServers.push(iceServer)}return iceServers}):navigator.webkitGetUserMedia?(attachMediaStream=function(element,stream){return webrtcDetectedVersion>=43?element.srcObject=stream:"undefined"!=typeof element.src&&(element.src=URL.createObjectURL(stream)),element},reattachMediaStream=function(to,from){return webrtcDetectedVersion>=43?to.srcObject=from.srcObject:to.src=from.src,to},createIceServer=function(url,username,password){var iceServer=null,urlParts=url.split(":");return 0===urlParts[0].indexOf("stun")?iceServer={url:url}:0===urlParts[0].indexOf("turn")&&(iceServer={url:url,credential:password,username:username}),iceServer},createIceServers=function(urls,username,password){var iceServers=[];if(webrtcDetectedVersion>=34)iceServers={urls:urls,credential:password,username:username};else for(i=0;i<urls.length;i++){var iceServer=createIceServer(urls[i],username,password);null!==iceServer&&iceServers.push(iceServer)}return iceServers}):navigator.mediaDevices&&navigator.userAgent.match(/Edge\/(\d+).(\d+)$/)&&(attachMediaStream=function(element,stream){return element.srcObject=stream,element},reattachMediaStream=function(to,from){return to.srcObject=from.srcObject,to}),attachMediaStream_base=attachMediaStream,"opera"===webrtcDetectedBrowser&&(attachMediaStream_base=function(element,stream){webrtcDetectedVersion>38?element.srcObject=stream:"undefined"!=typeof element.src&&(element.src=URL.createObjectURL(stream))}),attachMediaStream=function(element,stream){return"chrome"!==webrtcDetectedBrowser&&"opera"!==webrtcDetectedBrowser||stream?attachMediaStream_base(element,stream):element.src="",element},reattachMediaStream_base=reattachMediaStream,reattachMediaStream=function(to,from){return reattachMediaStream_base(to,from),to},window.attachMediaStream=attachMediaStream,window.reattachMediaStream=reattachMediaStream,window.getUserMedia=function(constraints,onSuccess,onFailure){navigator.getUserMedia(constraints,onSuccess,onFailure)},AdapterJS.attachMediaStream=attachMediaStream,AdapterJS.reattachMediaStream=reattachMediaStream,AdapterJS.getUserMedia=getUserMedia,"undefined"==typeof Promise&&(requestUserMedia=null),AdapterJS.maybeThroughWebRTCReady()),"undefined"!=typeof exports&&(module.exports=AdapterJS);
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = AdapterJS;
+
+/***/ }),
+/* 206 */
+/***/ (function(module, exports) {
+
+/* Copyright @ 2015 Atlassian Pty Ltd
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+module.exports = function arrayEquals(array) {
+    // if the other array is a falsy value, return
+    if (!array)
+        return false;
+
+    // compare lengths - can save a lot of time
+    if (this.length != array.length)
+        return false;
+
+    for (var i = 0, l = this.length; i < l; i++) {
+        // Check if we have nested arrays
+        if (this[i] instanceof Array && array[i] instanceof Array) {
+            // recurse into the nested arrays
+            if (!arrayEquals.apply(this[i], [array[i]]))
+                return false;
+        } else if (this[i] != array[i]) {
+            // Warning - two different object instances will never be equal:
+            // {x:20} != {x:20}
+            return false;
+        }
+    }
+    return true;
+};
+
+
+
+/***/ }),
+/* 207 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* Copyright @ 2015 Atlassian Pty Ltd
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+exports.Interop = __webpack_require__(208);
+
+
+/***/ }),
+/* 208 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* Copyright @ 2015 Atlassian Pty Ltd
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/* global RTCSessionDescription */
+/* jshint -W097 */
+
+
+var transform = __webpack_require__(209);
+var arrayEquals = __webpack_require__(206);
+
+function Interop() {
+
+    /**
+     * This map holds the most recent Unified Plan offer/answer SDP that was
+     * converted to Plan B, with the SDP type ('offer' or 'answer') as keys and
+     * the SDP string as values.
+     *
+     * @type {{}}
+     */
+    this.cache = {};
+}
+
+module.exports = Interop;
+
+/**
+ * Returns the index of the first m-line with the given media type and with a
+ * direction which allows sending, in the last Unified Plan description with
+ * type "answer" converted to Plan B. Returns {null} if there is no saved
+ * answer, or if none of its m-lines with the given type allow sending.
+ * @param type the media type ("audio" or "video").
+ * @returns {*}
+ */
+Interop.prototype.getFirstSendingIndexFromAnswer = function(type) {
+    if (!this.cache.answer) {
+        return null;
+    }
+
+    var session = transform.parse(this.cache.answer);
+    if (session && session.media && Array.isArray(session.media)){
+        for (var i = 0; i < session.media.length; i++) {
+            if (session.media[i].type == type &&
+                (!session.media[i].direction /* default to sendrecv */ ||
+                    session.media[i].direction === 'sendrecv' ||
+                    session.media[i].direction === 'sendonly')){
+                return i;
+            }
+        }
+    }
+
+    return null;
+};
+
+/**
+ * This method transforms a Unified Plan SDP to an equivalent Plan B SDP. A
+ * PeerConnection wrapper transforms the SDP to Plan B before passing it to the
+ * application.
+ *
+ * @param desc
+ * @returns {*}
+ */
+Interop.prototype.toPlanB = function(desc) {
+    var self = this;
+    //#region Preliminary input validation.
+
+    if (typeof desc !== 'object' || desc === null ||
+        typeof desc.sdp !== 'string') {
+        console.warn('An empty description was passed as an argument.');
+        return desc;
+    }
+
+    // Objectify the SDP for easier manipulation.
+    var session = transform.parse(desc.sdp);
+
+    // If the SDP contains no media, there's nothing to transform.
+    if (typeof session.media === 'undefined' ||
+        !Array.isArray(session.media) || session.media.length === 0) {
+        console.warn('The description has no media.');
+        return desc;
+    }
+
+    // Try some heuristics to "make sure" this is a Unified Plan SDP. Plan B
+    // SDP has a video, an audio and a data "channel" at most.
+    if (session.media.length <= 3 && session.media.every(function(m) {
+            return ['video', 'audio', 'data'].indexOf(m.mid) !== -1;
+        })) {
+        console.warn('This description does not look like Unified Plan.');
+        return desc;
+    }
+
+    //#endregion
+
+    // HACK https://bugzilla.mozilla.org/show_bug.cgi?id=1113443
+    var sdp = desc.sdp;
+    var rewrite = false;
+    for (var i = 0; i < session.media.length; i++) {
+        var uLine = session.media[i];
+        uLine.rtp.forEach(function(rtp) {
+            if (rtp.codec === 'NULL')
+            {
+                rewrite = true;
+                var offer = transform.parse(self.cache['offer']);
+                rtp.codec = offer.media[i].rtp[0].codec;
+            }
+        });
+    };
+    if (rewrite) {
+        sdp = transform.write(session);
+    }
+
+    // Unified Plan SDP is our "precious". Cache it for later use in the Plan B
+    // -> Unified Plan transformation.
+    this.cache[desc.type] = sdp;
+
+    //#region Convert from Unified Plan to Plan B.
+
+    // We rebuild the session.media array.
+    var media = session.media;
+    session.media = [];
+
+    // Associative array that maps channel types to channel objects for fast
+    // access to channel objects by their type, e.g. type2bl['audio']->channel
+    // obj.
+    var type2bl = {};
+
+    // Used to build the group:BUNDLE value after the channels construction
+    // loop.
+    var types = [];
+
+    // Implode the Unified Plan m-lines/tracks into Plan B channels.
+    media.forEach(function(uLine) {
+
+        // rtcp-mux is required in the Plan B SDP.
+        if ((typeof uLine.rtcpMux !== 'string' ||
+            uLine.rtcpMux !== 'rtcp-mux') &&
+            uLine.direction !== 'inactive') {
+            throw new Error('Cannot convert to Plan B because m-lines ' +
+                'without the rtcp-mux attribute were found.');
+        }
+
+        if (uLine.type === 'application') {
+            session.media.push(uLine);
+            types.push(uLine.mid);
+            return;
+        }
+
+        // If we don't have a channel for this uLine.type, then use this
+        // uLine as the channel basis.
+        if (typeof type2bl[uLine.type] === 'undefined') {
+            type2bl[uLine.type] = uLine;
+        }
+
+        // Add sources to the channel and handle a=msid.
+        if (typeof uLine.sources === 'object') {
+            Object.keys(uLine.sources).forEach(function(ssrc) {
+                if (typeof type2bl[uLine.type].sources !== 'object')
+                    type2bl[uLine.type].sources = {};
+
+                // Assign the sources to the channel.
+                type2bl[uLine.type].sources[ssrc] =
+                    uLine.sources[ssrc];
+
+                if (typeof uLine.msid !== 'undefined') {
+                    // In Plan B the msid is an SSRC attribute. Also, we don't
+                    // care about the obsolete label and mslabel attributes.
+                    //
+                    // Note that it is not guaranteed that the uLine will
+                    // have an msid. recvonly channels in particular don't have
+                    // one.
+                    type2bl[uLine.type].sources[ssrc].msid =
+                        uLine.msid;
+                }
+                // NOTE ssrcs in ssrc groups will share msids, as
+                // draft-uberti-rtcweb-plan-00 mandates.
+            });
+        }
+
+        // Add ssrc groups to the channel.
+        if (typeof uLine.ssrcGroups !== 'undefined' &&
+                Array.isArray(uLine.ssrcGroups)) {
+
+            // Create the ssrcGroups array, if it's not defined.
+            if (typeof type2bl[uLine.type].ssrcGroups === 'undefined' ||
+                    !Array.isArray(type2bl[uLine.type].ssrcGroups)) {
+                type2bl[uLine.type].ssrcGroups = [];
+            }
+
+            type2bl[uLine.type].ssrcGroups =
+                type2bl[uLine.type].ssrcGroups.concat(
+                    uLine.ssrcGroups);
+        }
+
+        if (type2bl[uLine.type] === uLine) {
+            // Copy ICE related stuff from the principal media line.
+            uLine.candidates = media[0].candidates;
+            uLine.iceUfrag = media[0].iceUfrag;
+            uLine.icePwd = media[0].icePwd;
+            uLine.fingerprint = media[0].fingerprint;
+
+            // Plan B mids are in ['audio', 'video', 'data']
+            uLine.mid = uLine.type;
+
+            // Plan B doesn't support/need the bundle-only attribute.
+            delete uLine.bundleOnly;
+
+            // In Plan B the msid is an SSRC attribute.
+            delete uLine.msid;
+
+            // Used to build the group:BUNDLE value after this loop.
+            types.push(uLine.type);
+
+            // Add the channel to the new media array.
+            session.media.push(uLine);
+        }
+    });
+
+    // We regenerate the BUNDLE group with the new mids.
+    session.groups.some(function(group) {
+        if (group.type === 'BUNDLE') {
+            group.mids = types.join(' ');
+            return true;
+        }
+    });
+
+    // msid semantic
+    session.msidSemantic = {
+        semantic: 'WMS',
+        token: '*'
+    };
+
+    var resStr = transform.write(session);
+
+    return new RTCSessionDescription({
+        type: desc.type,
+        sdp: resStr
+    });
+
+    //#endregion
+};
+
+/**
+ * This method transforms a Plan B SDP to an equivalent Unified Plan SDP. A
+ * PeerConnection wrapper transforms the SDP to Unified Plan before passing it
+ * to FF.
+ *
+ * @param desc
+ * @returns {*}
+ */
+Interop.prototype.toUnifiedPlan = function(desc) {
+    var self = this;
+    //#region Preliminary input validation.
+
+    if (typeof desc !== 'object' || desc === null ||
+        typeof desc.sdp !== 'string') {
+        console.warn('An empty description was passed as an argument.');
+        return desc;
+    }
+
+    var session = transform.parse(desc.sdp);
+
+    // If the SDP contains no media, there's nothing to transform.
+    if (typeof session.media === 'undefined' ||
+        !Array.isArray(session.media) || session.media.length === 0) {
+        console.warn('The description has no media.');
+        return desc;
+    }
+
+    // Try some heuristics to "make sure" this is a Plan B SDP. Plan B SDP has
+    // a video, an audio and a data "channel" at most.
+    if (session.media.length > 3 || !session.media.every(function(m) {
+            return ['video', 'audio', 'data'].indexOf(m.mid) !== -1;
+        })) {
+        console.warn('This description does not look like Plan B.');
+        return desc;
+    }
+
+    // Make sure this Plan B SDP can be converted to a Unified Plan SDP.
+    var mids = [];
+    session.media.forEach(function(m) {
+        mids.push(m.mid);
+    });
+
+    var hasBundle = false;
+    if (typeof session.groups !== 'undefined' &&
+        Array.isArray(session.groups)) {
+        hasBundle = session.groups.every(function(g) {
+            return g.type !== 'BUNDLE' ||
+                arrayEquals.apply(g.mids.sort(), [mids.sort()]);
+        });
+    }
+
+    if (!hasBundle) {
+        throw new Error("Cannot convert to Unified Plan because m-lines that" +
+            " are not bundled were found.");
+    }
+
+    //#endregion
+
+
+    //#region Convert from Plan B to Unified Plan.
+
+    // Unfortunately, a Plan B offer/answer doesn't have enough information to
+    // rebuild an equivalent Unified Plan offer/answer.
+    //
+    // For example, if this is a local answer (in Unified Plan style) that we
+    // convert to Plan B prior to handing it over to the application (the
+    // PeerConnection wrapper called us, for instance, after a successful
+    // createAnswer), we want to remember the m-line at which we've seen the
+    // (local) SSRC. That's because when the application wants to do call the
+    // SLD method, forcing us to do the inverse transformation (from Plan B to
+    // Unified Plan), we need to know to which m-line to assign the (local)
+    // SSRC. We also need to know all the other m-lines that the original
+    // answer had and include them in the transformed answer as well.
+    //
+    // Another example is if this is a remote offer that we convert to Plan B
+    // prior to giving it to the application, we want to remember the mid at
+    // which we've seen the (remote) SSRC.
+    //
+    // In the iteration that follows, we use the cached Unified Plan (if it
+    // exists) to assign mids to ssrcs.
+
+    var cached;
+    if (typeof this.cache[desc.type] !== 'undefined') {
+        cached = transform.parse(this.cache[desc.type]);
+    }
+
+    var recvonlySsrcs = {
+        audio: {},
+        video: {}
+    };
+
+    // A helper map that sends mids to m-line objects. We use it later to
+    // rebuild the Unified Plan style session.media array.
+    var mid2ul = {};
+    session.media.forEach(function(bLine) {
+        if ((typeof bLine.rtcpMux !== 'string' ||
+            bLine.rtcpMux !== 'rtcp-mux') &&
+            bLine.direction !== 'inactive') {
+            throw new Error("Cannot convert to Unified Plan because m-lines " +
+                "without the rtcp-mux attribute were found.");
+        }
+
+        if (bLine.type === 'application') {
+            mid2ul[bLine.mid] = bLine;
+            return;
+        }
+
+        // With rtcp-mux and bundle all the channels should have the same ICE
+        // stuff.
+        var sources = bLine.sources;
+        var ssrcGroups = bLine.ssrcGroups;
+        var candidates = bLine.candidates;
+        var iceUfrag = bLine.iceUfrag;
+        var icePwd = bLine.icePwd;
+        var fingerprint = bLine.fingerprint;
+        var port = bLine.port;
+
+        // We'll use the "bLine" object as a prototype for each new "mLine"
+        // that we create, but first we need to clean it up a bit.
+        delete bLine.sources;
+        delete bLine.ssrcGroups;
+        delete bLine.candidates;
+        delete bLine.iceUfrag;
+        delete bLine.icePwd;
+        delete bLine.fingerprint;
+        delete bLine.port;
+        delete bLine.mid;
+
+        // inverted ssrc group map
+        var ssrc2group = {};
+        if (typeof ssrcGroups !== 'undefined' && Array.isArray(ssrcGroups)) {
+            ssrcGroups.forEach(function (ssrcGroup) {
+
+                // TODO(gp) find out how to receive simulcast with FF. For the
+                // time being, hide it.
+                if (ssrcGroup.semantics === 'SIM') {
+                    return;
+                }
+
+                // XXX This might brake if an SSRC is in more than one group
+                // for some reason.
+                if (typeof ssrcGroup.ssrcs !== 'undefined' &&
+                    Array.isArray(ssrcGroup.ssrcs)) {
+                    ssrcGroup.ssrcs.forEach(function (ssrc) {
+                        if (typeof ssrc2group[ssrc] === 'undefined') {
+                            ssrc2group[ssrc] = [];
+                        }
+
+                        ssrc2group[ssrc].push(ssrcGroup);
+                    });
+                }
+            });
+        }
+
+        // ssrc to m-line index.
+        var ssrc2ml = {};
+
+        if (typeof sources === 'object') {
+
+            // Explode the Plan B channel sources with one m-line per source.
+            Object.keys(sources).forEach(function(ssrc) {
+
+                // The (unified) m-line for this SSRC. We either create it from
+                // scratch or, if it's a grouped SSRC, we re-use a related
+                // mline. In other words, if the source is grouped with another
+                // source, put the two together in the same m-line.
+                var uLine;
+
+                // We assume here that we are the answerer in the O/A, so any
+                // offers which we translate come from the remote side, while
+                // answers are local. So the check below is to make that we
+                // handle receive-only SSRCs in a special way only if they come
+                // from the remote side.
+                if (desc.type==='offer') {
+                    // We want to detect SSRCs which are used by a remote peer
+                    // in an m-line with direction=recvonly (i.e. they are
+                    // being used for RTCP only).
+                    // This information would have gotten lost if the remote
+                    // peer used Unified Plan and their local description was
+                    // translated to Plan B. So we use the lack of an MSID
+                    // attribute to deduce a "receive only" SSRC.
+                    if (!sources[ssrc].msid) {
+                        recvonlySsrcs[bLine.type][ssrc] = sources[ssrc];
+                        // Receive-only SSRCs must not create new m-lines. We
+                        // will assign them to an existing m-line later.
+                        return;
+                    }
+                }
+
+                if (typeof ssrc2group[ssrc] !== 'undefined' &&
+                    Array.isArray(ssrc2group[ssrc])) {
+                    ssrc2group[ssrc].some(function (ssrcGroup) {
+                        // ssrcGroup.ssrcs *is* an Array, no need to check
+                        // again here.
+                        return ssrcGroup.ssrcs.some(function (related) {
+                            if (typeof ssrc2ml[related] === 'object') {
+                                uLine = ssrc2ml[related];
+                                return true;
+                            }
+                        });
+                    });
+                }
+
+                if (typeof uLine === 'object') {
+                    // the m-line already exists. Just add the source.
+                    uLine.sources[ssrc] = sources[ssrc];
+                    delete sources[ssrc].msid;
+                } else {
+                    // Use the "bLine" as a prototype for the "uLine".
+                    uLine = Object.create(bLine);
+                    ssrc2ml[ssrc] = uLine;
+
+                    if (typeof sources[ssrc].msid !== 'undefined') {
+                        // Assign the msid of the source to the m-line. Note
+                        // that it is not guaranteed that the source will have
+                        // msid. In particular "recvonly" sources don't have an
+                        // msid. Note that "recvonly" is a term only defined
+                        // for m-lines.
+                        uLine.msid = sources[ssrc].msid;
+                        uLine.direction = 'sendrecv';
+                        delete sources[ssrc].msid;
+                    }
+
+                    // We assign one SSRC per media line.
+                    uLine.sources = {};
+                    uLine.sources[ssrc] = sources[ssrc];
+                    uLine.ssrcGroups = ssrc2group[ssrc];
+
+                    // Use the cached Unified Plan SDP (if it exists) to assign
+                    // SSRCs to mids.
+                    if (typeof cached !== 'undefined' &&
+                        typeof cached.media !== 'undefined' &&
+                        Array.isArray(cached.media)) {
+
+                        cached.media.forEach(function (m) {
+                            if (typeof m.sources === 'object') {
+                                Object.keys(m.sources).forEach(function (s) {
+                                    if (s === ssrc) {
+                                        uLine.mid = m.mid;
+                                    }
+                                });
+                            }
+                        });
+                    }
+
+                    if (typeof uLine.mid === 'undefined') {
+
+                        // If this is an SSRC that we see for the first time
+                        // assign it a new mid. This is typically the case when
+                        // this method is called to transform a remote
+                        // description for the first time or when there is a
+                        // new SSRC in the remote description because a new
+                        // peer has joined the conference. Local SSRCs should
+                        // have already been added to the map in the toPlanB
+                        // method.
+                        //
+                        // Because FF generates answers in Unified Plan style,
+                        // we MUST already have a cached answer with all the
+                        // local SSRCs mapped to some m-line/mid.
+
+                        if (desc.type === 'answer') {
+                            throw new Error("An unmapped SSRC was found.");
+                        }
+
+                        uLine.mid = [bLine.type, '-', ssrc].join('');
+                    }
+
+                    // Include the candidates in the 1st media line.
+                    uLine.candidates = candidates;
+                    uLine.iceUfrag = iceUfrag;
+                    uLine.icePwd = icePwd;
+                    uLine.fingerprint = fingerprint;
+                    uLine.port = port;
+
+                    mid2ul[uLine.mid] = uLine;
+                }
+            });
+        }
+    });
+
+    // Rebuild the media array in the right order and add the missing mLines
+    // (missing from the Plan B SDP).
+    session.media = [];
+    mids = []; // reuse
+
+    if (desc.type === 'answer') {
+
+        // The media lines in the answer must match the media lines in the
+        // offer. The order is important too. Here we assume that Firefox is
+        // the answerer, so we merely have to use the reconstructed (unified)
+        // answer to update the cached (unified) answer accordingly.
+        //
+        // In the general case, one would have to use the cached (unified)
+        // offer to find the m-lines that are missing from the reconstructed
+        // answer, potentially grabbing them from the cached (unified) answer.
+        // One has to be careful with this approach because inactive m-lines do
+        // not always have an mid, making it tricky (impossible?) to find where
+        // exactly and which m-lines are missing from the reconstructed answer.
+
+        for (var i = 0; i < cached.media.length; i++) {
+            var uLine = cached.media[i];
+
+            if (typeof mid2ul[uLine.mid] === 'undefined') {
+
+                // The mid isn't in the reconstructed (unified) answer.
+                // This is either a (unified) m-line containing a remote
+                // track only, or a (unified) m-line containing a remote
+                // track and a local track that has been removed.
+                // In either case, it MUST exist in the cached
+                // (unified) answer.
+                //
+                // In case this is a removed local track, clean-up
+                // the (unified) m-line and make sure it's 'recvonly' or
+                // 'inactive'.
+
+                delete uLine.msid;
+                delete uLine.sources;
+                delete uLine.ssrcGroups;
+                if (!uLine.direction
+                    || uLine.direction === 'sendrecv')
+                    uLine.direction = 'recvonly';
+                else if (uLine.direction === 'sendonly')
+                    uLine.direction = 'inactive';
+            } else {
+                // This is an (unified) m-line/channel that contains a local
+                // track (sendrecv or sendonly channel) or it's a unified
+                // recvonly m-line/channel. In either case, since we're
+                // going from PlanB -> Unified Plan this m-line MUST
+                // exist in the cached answer.
+            }
+
+            session.media.push(uLine);
+
+            if (typeof uLine.mid === 'string') {
+                // inactive lines don't/may not have an mid.
+                mids.push(uLine.mid);
+            }
+        }
+    } else {
+
+        // SDP offer/answer (and the JSEP spec) forbids removing an m-section
+        // under any circumstances. If we are no longer interested in sending a
+        // track, we just remove the msid and ssrc attributes and set it to
+        // either a=recvonly (as the reofferer, we must use recvonly if the
+        // other side was previously sending on the m-section, but we can also
+        // leave the possibility open if it wasn't previously in use), or
+        // a=inactive.
+
+        if (typeof cached !== 'undefined' &&
+            typeof cached.media !== 'undefined' &&
+            Array.isArray(cached.media)) {
+            cached.media.forEach(function(uLine) {
+                mids.push(uLine.mid);
+                if (typeof mid2ul[uLine.mid] !== 'undefined') {
+                    session.media.push(mid2ul[uLine.mid]);
+                } else {
+                    delete uLine.msid;
+                    delete uLine.sources;
+                    delete uLine.ssrcGroups;
+                    if (!uLine.direction
+                        || uLine.direction === 'sendrecv')
+                        uLine.direction = 'recvonly';
+                    if (!uLine.direction
+                        || uLine.direction === 'sendonly')
+                        uLine.direction = 'inactive';
+                    session.media.push(uLine);
+                }
+            });
+        }
+
+        // Add all the remaining (new) m-lines of the transformed SDP.
+        Object.keys(mid2ul).forEach(function(mid) {
+            if (mids.indexOf(mid) === -1) {
+                mids.push(mid);
+                if (mid2ul[mid].direction === 'recvonly') {
+                    // This is a remote recvonly channel. Add its SSRC to the
+                    // appropriate sendrecv or sendonly channel.
+                    // TODO(gp) what if we don't have sendrecv/sendonly
+                    // channel?
+
+                    session.media.some(function (uLine) {
+                        if ((uLine.direction === 'sendrecv' ||
+                            uLine.direction === 'sendonly') &&
+                            uLine.type === mid2ul[mid].type) {
+
+                            // mid2ul[mid] shouldn't have any ssrc-groups
+                            Object.keys(mid2ul[mid].sources).forEach(
+                                function (ssrc) {
+                                uLine.sources[ssrc] =
+                                    mid2ul[mid].sources[ssrc];
+                            });
+
+                            return true;
+                        }
+                    });
+                } else {
+                    session.media.push(mid2ul[mid]);
+                }
+            }
+        });
+    }
+
+    // After we have constructed the Plan Unified m-lines we can figure out
+    // where (in which m-line) to place the 'recvonly SSRCs'.
+    // Note: we assume here that we are the answerer in the O/A, so any offers
+    // which we translate come from the remote side, while answers are local
+    // (and so our last local description is cached as an 'answer').
+    ["audio", "video"].forEach(function (type) {
+        if (!session || !session.media || !Array.isArray(session.media))
+            return;
+
+        var idx = null;
+        if (Object.keys(recvonlySsrcs[type]).length > 0) {
+            idx = self.getFirstSendingIndexFromAnswer(type);
+            if (idx === null){
+                // If this is the first offer we receive, we don't have a
+                // cached answer. Assume that we will be sending media using
+                // the first m-line for each media type.
+
+                for (var i = 0; i < session.media.length; i++) {
+                    if (session.media[i].type === type) {
+                        idx = i;
+                        break;
+                    }
+                }
+            }
+        }
+
+        if (idx && session.media.length > idx) {
+            var mLine = session.media[idx];
+            Object.keys(recvonlySsrcs[type]).forEach(function(ssrc) {
+                if (mLine.sources && mLine.sources[ssrc]) {
+                    console.warn("Replacing an existing SSRC.");
+                }
+                if (!mLine.sources) {
+                    mLine.sources = {};
+                }
+
+                mLine.sources[ssrc] = recvonlySsrcs[type][ssrc];
+            });
+        }
+    });
+
+    // We regenerate the BUNDLE group (since we regenerated the mids)
+    session.groups.some(function(group) {
+        if (group.type === 'BUNDLE') {
+            group.mids = mids.join(' ');
+            return true;
+        }
+    });
+
+    // msid semantic
+    session.msidSemantic = {
+        semantic: 'WMS',
+        token: '*'
+    };
+
+    var resStr = transform.write(session);
+
+    // Cache the transformed SDP (Unified Plan) for later re-use in this
+    // function.
+    this.cache[desc.type] = resStr;
+
+    return new RTCSessionDescription({
+        type: desc.type,
+        sdp: resStr
+    });
+
+    //#endregion
+};
+
+
+/***/ }),
+/* 209 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* Copyright @ 2015 Atlassian Pty Ltd
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+var transform = __webpack_require__(210);
+
+exports.write = function(session, opts) {
+
+  if (typeof session !== 'undefined' &&
+      typeof session.media !== 'undefined' &&
+      Array.isArray(session.media)) {
+
+    session.media.forEach(function (mLine) {
+      // expand sources to ssrcs
+      if (typeof mLine.sources !== 'undefined' &&
+        Object.keys(mLine.sources).length !== 0) {
+          mLine.ssrcs = [];
+          Object.keys(mLine.sources).forEach(function (ssrc) {
+            var source = mLine.sources[ssrc];
+            Object.keys(source).forEach(function (attribute) {
+              mLine.ssrcs.push({
+                id: ssrc,
+                attribute: attribute,
+                value: source[attribute]
+              });
+            });
+          });
+          delete mLine.sources;
+        }
+
+      // join ssrcs in ssrc groups
+      if (typeof mLine.ssrcGroups !== 'undefined' &&
+        Array.isArray(mLine.ssrcGroups)) {
+          mLine.ssrcGroups.forEach(function (ssrcGroup) {
+            if (typeof ssrcGroup.ssrcs !== 'undefined' &&
+                Array.isArray(ssrcGroup.ssrcs)) {
+              ssrcGroup.ssrcs = ssrcGroup.ssrcs.join(' ');
+            }
+          });
+        }
+    });
+  }
+
+  // join group mids
+  if (typeof session !== 'undefined' &&
+      typeof session.groups !== 'undefined' && Array.isArray(session.groups)) {
+
+    session.groups.forEach(function (g) {
+      if (typeof g.mids !== 'undefined' && Array.isArray(g.mids)) {
+        g.mids = g.mids.join(' ');
+      }
+    });
+  }
+
+  return transform.write(session, opts);
+};
+
+exports.parse = function(sdp) {
+  var session = transform.parse(sdp);
+
+  if (typeof session !== 'undefined' && typeof session.media !== 'undefined' &&
+      Array.isArray(session.media)) {
+
+    session.media.forEach(function (mLine) {
+      // group sources attributes by ssrc
+      if (typeof mLine.ssrcs !== 'undefined' && Array.isArray(mLine.ssrcs)) {
+        mLine.sources = {};
+        mLine.ssrcs.forEach(function (ssrc) {
+          if (!mLine.sources[ssrc.id])
+          mLine.sources[ssrc.id] = {};
+        mLine.sources[ssrc.id][ssrc.attribute] = ssrc.value;
+        });
+
+        delete mLine.ssrcs;
+      }
+
+      // split ssrcs in ssrc groups
+      if (typeof mLine.ssrcGroups !== 'undefined' &&
+        Array.isArray(mLine.ssrcGroups)) {
+          mLine.ssrcGroups.forEach(function (ssrcGroup) {
+            if (typeof ssrcGroup.ssrcs === 'string') {
+              ssrcGroup.ssrcs = ssrcGroup.ssrcs.split(' ');
+            }
+          });
+        }
+    });
+  }
+  // split group mids
+  if (typeof session !== 'undefined' &&
+      typeof session.groups !== 'undefined' && Array.isArray(session.groups)) {
+
+    session.groups.forEach(function (g) {
+      if (typeof g.mids === 'string') {
+        g.mids = g.mids.split(' ');
+      }
+    });
+  }
+
+  return session;
+};
+
+
+
+/***/ }),
+/* 210 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var parser = __webpack_require__(211);
+var writer = __webpack_require__(212);
+
+exports.write = writer;
+exports.parse = parser.parse;
+exports.parseFmtpConfig = parser.parseFmtpConfig;
+exports.parsePayloads = parser.parsePayloads;
+exports.parseRemoteCandidates = parser.parseRemoteCandidates;
+
+
+/***/ }),
+/* 211 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var toIntIfInt = function (v) {
+  return String(Number(v)) === v ? Number(v) : v;
+};
+
+var attachProperties = function (match, location, names, rawName) {
+  if (rawName && !names) {
+    location[rawName] = toIntIfInt(match[1]);
+  }
+  else {
+    for (var i = 0; i < names.length; i += 1) {
+      if (match[i+1] != null) {
+        location[names[i]] = toIntIfInt(match[i+1]);
+      }
+    }
+  }
+};
+
+var parseReg = function (obj, location, content) {
+  var needsBlank = obj.name && obj.names;
+  if (obj.push && !location[obj.push]) {
+    location[obj.push] = [];
+  }
+  else if (needsBlank && !location[obj.name]) {
+    location[obj.name] = {};
+  }
+  var keyLocation = obj.push ?
+    {} :  // blank object that will be pushed
+    needsBlank ? location[obj.name] : location; // otherwise, named location or root
+
+  attachProperties(content.match(obj.reg), keyLocation, obj.names, obj.name);
+
+  if (obj.push) {
+    location[obj.push].push(keyLocation);
+  }
+};
+
+var grammar = __webpack_require__(176);
+var validLine = RegExp.prototype.test.bind(/^([a-z])=(.*)/);
+
+exports.parse = function (sdp) {
+  var session = {}
+    , media = []
+    , location = session; // points at where properties go under (one of the above)
+
+  // parse lines we understand
+  sdp.split(/(\r\n|\r|\n)/).filter(validLine).forEach(function (l) {
+    var type = l[0];
+    var content = l.slice(2);
+    if (type === 'm') {
+      media.push({rtp: [], fmtp: []});
+      location = media[media.length-1]; // point at latest media line
+    }
+
+    for (var j = 0; j < (grammar[type] || []).length; j += 1) {
+      var obj = grammar[type][j];
+      if (obj.reg.test(content)) {
+        return parseReg(obj, location, content);
+      }
+    }
+  });
+
+  session.media = media; // link it up
+  return session;
+};
+
+var fmtpReducer = function (acc, expr) {
+  var s = expr.split('=');
+  if (s.length === 2) {
+    acc[s[0]] = toIntIfInt(s[1]);
+  }
+  return acc;
+};
+
+exports.parseFmtpConfig = function (str) {
+  return str.split(/\;\s?/).reduce(fmtpReducer, {});
+};
+
+exports.parsePayloads = function (str) {
+  return str.split(' ').map(Number);
+};
+
+exports.parseRemoteCandidates = function (str) {
+  var candidates = [];
+  var parts = str.split(' ').map(toIntIfInt);
+  for (var i = 0; i < parts.length; i += 3) {
+    candidates.push({
+      component: parts[i],
+      ip: parts[i + 1],
+      port: parts[i + 2]
+    });
+  }
+  return candidates;
+};
+
+
+/***/ }),
+/* 212 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var grammar = __webpack_require__(176);
+
+// customized util.format - discards excess arguments and can void middle ones
+var formatRegExp = /%[sdv%]/g;
+var format = function (formatStr) {
+  var i = 1;
+  var args = arguments;
+  var len = args.length;
+  return formatStr.replace(formatRegExp, function (x) {
+    if (i >= len) {
+      return x; // missing argument
+    }
+    var arg = args[i];
+    i += 1;
+    switch (x) {
+      case '%%':
+        return '%';
+      case '%s':
+        return String(arg);
+      case '%d':
+        return Number(arg);
+      case '%v':
+        return '';
+    }
+  });
+  // NB: we discard excess arguments - they are typically undefined from makeLine
+};
+
+var makeLine = function (type, obj, location) {
+  var str = obj.format instanceof Function ?
+    (obj.format(obj.push ? location : location[obj.name])) :
+    obj.format;
+
+  var args = [type + '=' + str];
+  if (obj.names) {
+    for (var i = 0; i < obj.names.length; i += 1) {
+      var n = obj.names[i];
+      if (obj.name) {
+        args.push(location[obj.name][n]);
+      }
+      else { // for mLine and push attributes
+        args.push(location[obj.names[i]]);
+      }
+    }
+  }
+  else {
+    args.push(location[obj.name]);
+  }
+  return format.apply(null, args);
+};
+
+// RFC specified order
+// TODO: extend this with all the rest
+var defaultOuterOrder = [
+  'v', 'o', 's', 'i',
+  'u', 'e', 'p', 'c',
+  'b', 't', 'r', 'z', 'a'
+];
+var defaultInnerOrder = ['i', 'c', 'b', 'a'];
+
+
+module.exports = function (session, opts) {
+  opts = opts || {};
+  // ensure certain properties exist
+  if (session.version == null) {
+    session.version = 0; // "v=0" must be there (only defined version atm)
+  }
+  if (session.name == null) {
+    session.name = " "; // "s= " must be there if no meaningful name set
+  }
+  session.media.forEach(function (mLine) {
+    if (mLine.payloads == null) {
+      mLine.payloads = "";
+    }
+  });
+
+  var outerOrder = opts.outerOrder || defaultOuterOrder;
+  var innerOrder = opts.innerOrder || defaultInnerOrder;
+  var sdp = [];
+
+  // loop through outerOrder for matching properties on session
+  outerOrder.forEach(function (type) {
+    grammar[type].forEach(function (obj) {
+      if (obj.name in session && session[obj.name] != null) {
+        sdp.push(makeLine(type, obj, session));
+      }
+      else if (obj.push in session && session[obj.push] != null) {
+        session[obj.push].forEach(function (el) {
+          sdp.push(makeLine(type, obj, el));
+        });
+      }
+    });
+  });
+
+  // then for each media line, follow the innerOrder
+  session.media.forEach(function (mLine) {
+    sdp.push(makeLine('m', grammar.m[0], mLine));
+
+    innerOrder.forEach(function (type) {
+      grammar[type].forEach(function (obj) {
+        if (obj.name in mLine && mLine[obj.name] != null) {
+          sdp.push(makeLine(type, obj, mLine));
+        }
+        else if (obj.push in mLine && mLine[obj.push] != null) {
+          mLine[obj.push].forEach(function (el) {
+            sdp.push(makeLine(type, obj, el));
+          });
+        }
+      });
+    });
+  });
+
+  return sdp.join('\r\n') + '\r\n';
+};
+
+
+/***/ }),
+/* 213 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (immutable) */ __webpack_exports__["calculateClientPower"] = calculateClientPower;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_core_js_math_log2__ = __webpack_require__(288);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_core_js_math_log2___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_babel_runtime_core_js_math_log2__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_log__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_common_argCheck__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_common_emitter__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_common_utils__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_webrtc_dataHub__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_webrtc_attachmentManager__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_conference_raft__ = __webpack_require__(186);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_conference_switcher__ = __webpack_require__(262);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_conference_meshTopology__ = __webpack_require__(153);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_conference_conferencePeers__ = __webpack_require__(261);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_conference_conferenceConnectionPool__ = __webpack_require__(260);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_conference_conferenceConnection__ = __webpack_require__(259);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_conference_voiceActivityDetector__ = __webpack_require__(263);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var TAG = 'conference';
+
+var SIGNALING_STATE_SEARCHING = 'searching';
+var SIGNALING_STATE_JOINING = 'joining';
+var SIGNALING_STATE_MEMBER = 'member';
+var SIGNALING_STATE_CLOSED = 'closed';
+
+// We haven't found a cluster to join yet
+var CONNECTION_STATE_SIGNALING = 'signaling';
+// Connecting to the cluster
+var CONNECTION_STATE_CONNECTING = 'connecting';
+// Connected to at least one other member of the current cluster
+var CONNECTION_STATE_CONNECTED = 'connected';
+// Duh
+var CONNECTION_STATE_CLOSED = 'closed';
+
+var MEMBER_ADD_TTL_MS = 20 * 1000;
+
+function calculateClientPower(navigator) {
+  if (navigator.hardwareConcurrency) {
+    return __WEBPACK_IMPORTED_MODULE_6_babel_runtime_core_js_math_log2___default()(navigator.hardwareConcurrency) | 0;
+  } else if (navigator.userAgent.match(/iPad|iPhone/)) {
+    return 2;
+  } else {
+    return 2;
+  }
+}
+
+var switcherAttachPoint = '__c3-switcher';
+
+/**
+ * A peer-to-peer WebRTC call between multiple users.
+ *
+ * The main role of the conference is to manage a set of connections to other
+ * peers in the conference. Just like with {@link Call}, functionality is
+ * added via {@link RtcComponent}s that are attached to the conference
+ * using {@link Conference#attach}. An exception to this is the {@link Switcher},
+ * which provides specialized media streaming capabilities for conferences.
+ *
+ * A conference always happens within a {@link Room}, and there's is only
+ * a single conference in a room at a given time. Any member of the room
+ * that calls {@link Room#startConference} will join the conference, as long
+ * as they have permission to do so, which is default.
+ *
+ * @example <caption>Example of starting a conference with switching, broadcasting and data sharing.</caption>
+ * let conference = room.startConference({
+ *   switcherMode: 'automatic', // Use voice-activated switching
+ * })
+ *
+ * let mediaSource = new cct.DeviceSource({
+ *   audio: true,
+ *   video: true,
+ * })
+ *
+ * // We use a splitter to get hold of separate audio and video streams
+ * let streamSplitter = new cct.StreamSplitter()
+ * mediaSource.connect(streamSplitter)
+ *
+ * // The conference switcher can send a single high-quality media stream
+ * streamSplitter.videoOutput.connect(conference.switcher)
+ * // It also receives a high-quality video stream from the current speaker.
+ * conference.switcher.connect(largeVideoView)
+ *
+ * // See MediaBroadcaster for how to broadcast audio
+ *
+ * // Use a DataShare to share data with all participants.
+ * let data = new cct.DataShare()
+ * conference.attach('test-data', data)
+ * data.on('update', ({key, value}) => console.log(`updated test-data:s ${key}=${value}`))
+ * data.set('some-key', 'some-value')
+ *
+ * @abstract
+ * @class Conference
+ * @extends EventEmitter
+ */
+
+var Conference = function (_EmitterMixin) {
+  __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default()(Conference, _EmitterMixin);
+
+  __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass___default()(Conference, null, [{
+    key: 'create',
+    value: function create(config) {
+      __WEBPACK_IMPORTED_MODULE_8_common_argCheck__["a" /* default */].options('Conference.create', 'config', config).optString('userId').optArray('iceServers').optFunc('iceCandidateFilter').optString('switcherMode').func('onSignalingMessage');
+
+      var _config$userId = config.userId,
+          userId = _config$userId === undefined ? 'self' : _config$userId,
+          _config$iceServers = config.iceServers,
+          iceServers = _config$iceServers === undefined ? null : _config$iceServers,
+          _config$iceCandidateF = config.iceCandidateFilter,
+          iceCandidateFilter = _config$iceCandidateF === undefined ? null : _config$iceCandidateF,
+          switcherMode = config.switcherMode,
+          onSignalingMessage = config.onSignalingMessage;
+
+
+      return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_10_common_utils__["priv"])(Conference, {
+        userId: userId,
+        iceServers: iceServers,
+        iceCandidateFilter: iceCandidateFilter,
+        switcherMode: switcherMode,
+        onSignalingMessage: onSignalingMessage
+      });
+    }
+  }]);
+
+  function Conference(priv, deps) {
+    __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default()(this, Conference);
+
+    var _this = __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (Conference.__proto__ || __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default()(Conference)).call(this));
+
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_10_common_utils__["assertPriv"])('Conference', priv);
+
+    _this._onRaftStateChange = _this._onRaftStateChange.bind(_this);
+    _this._onRaftMembersChange = _this._onRaftMembersChange.bind(_this);
+    _this._onRaftLeadershipChange = _this._onRaftLeadershipChange.bind(_this);
+    _this._onAttachmentUpdate = _this._onAttachmentUpdate.bind(_this);
+    _this._onPeersUpdate = _this._onPeersUpdate.bind(_this);
+    _this._onDisconnected = _this._onDisconnected.bind(_this);
+    _this._invitePeer = _this._invitePeer.bind(_this);
+
+    // this._id = randomString(16)
+    _this._connectionState = CONNECTION_STATE_SIGNALING;
+    _this._signalingState = null;
+    _this._joiningCluster = null;
+    _this._ownId = deps.userId;
+    _this._onClosed = deps.onClosed;
+    _this._iceServers = deps.iceServers;
+    _this._onSignalingMessage = deps.onSignalingMessage;
+    _this._iceCandidateFilter = deps.iceCandidateFilter;
+    _this._statsFormatterFactory = deps.statsFormatterFactory;
+
+    _this._peers = new __WEBPACK_IMPORTED_MODULE_16_conference_conferencePeers__["a" /* default */]({
+      ownId: _this._ownId,
+      onUpdate: _this._onPeersUpdate
+    });
+
+    _this._voiceActivityDetector = new __WEBPACK_IMPORTED_MODULE_19_conference_voiceActivityDetector__["a" /* default */]({
+      active: __WEBPACK_IMPORTED_MODULE_14_conference_switcher__["a" /* default */].modeUsesVoiceDetection(deps.switcherMode)
+    });
+
+    _this._meshTopology = new __WEBPACK_IMPORTED_MODULE_15_conference_meshTopology__["c" /* default */]({
+      power: calculateClientPower(navigator),
+      ownId: _this._ownId,
+      voiceActivityDetector: _this._voiceActivityDetector
+    });
+
+    _this._connectionPool = new __WEBPACK_IMPORTED_MODULE_17_conference_conferenceConnectionPool__["a" /* default */]({
+      ownId: _this._ownId,
+      connectionFactory: _this._createConnection.bind(_this),
+      meshTopology: _this._meshTopology,
+      onRaftMessage: function onRaftMessage(raftId, message) {
+        return _this._raft.handleMessage(raftId, message);
+      },
+      onDisconnected: _this._onDisconnected,
+      onInvite: _this._invitePeer,
+      onBestConnection: function onBestConnection(connection) {
+        if (connection) {
+          _this._voiceActivityDetector.setPeerConnection(connection._peerConnection);
+        } else {
+          _this._voiceActivityDetector.setPeerConnection(null);
+        }
+      }
+    });
+
+    _this._raft = new __WEBPACK_IMPORTED_MODULE_13_conference_raft__["a" /* default */]({
+      id: _this._ownId,
+      meshTopology: _this._meshTopology,
+      onMessage: _this._connectionPool.handleRaftMessage,
+      onStateChange: _this._onRaftStateChange,
+      onMembersChange: _this._onRaftMembersChange,
+      onLeadershipChange: _this._onRaftLeadershipChange,
+      onReplicationDeadlock: _this._onDisconnected
+    });
+
+    _this._switcher = new __WEBPACK_IMPORTED_MODULE_14_conference_switcher__["a" /* default */]({
+      ownId: _this._ownId,
+      raft: _this._raft,
+      mode: deps.switcherMode,
+      voiceActivityDetector: _this._voiceActivityDetector
+    });
+
+    _this._attachmentManager = new __WEBPACK_IMPORTED_MODULE_12_webrtc_attachmentManager__["b" /* default */]({
+      ownId: _this._ownId,
+      type: 'conference',
+      dataHub: new __WEBPACK_IMPORTED_MODULE_11_webrtc_dataHub__["b" /* default */](),
+      onUpdate: _this._onAttachmentUpdate
+    });
+
+    _this._attachmentManager.attach(switcherAttachPoint, _this._switcher._component);
+    return _this;
+  }
+
+  /**
+   * Emitted when there is an error within the conference, e.g. the signaling fails.
+   *
+   * @event Conference#error
+   * @param {Error} error - The error.
+   */
+
+  __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass___default()(Conference, [{
+    key: 'toString',
+    value: function toString() {
+      return 'conference{ownId=' + this._ownId + ',state=' + this._signalingState + '}';
+    }
+
+    /**
+     * Attach a component that will be shared in the conference.
+     *
+     * @function Conference#attach
+     * @param {string} name - Name of the attachment point.
+     * @param {RtcComponent} component - A component to attach.
+     */
+
+  }, {
+    key: 'attach',
+    value: function attach(name, component) {
+      if (name === switcherAttachPoint) {
+        __WEBPACK_IMPORTED_MODULE_8_common_argCheck__["a" /* default */].error('Conference.attach', 'name', 'not use reserved name ' + name);
+      }
+      if (!this._attachmentManager) {
+        __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].error(TAG, 'Tried to attach component at \'' + name + '\' on a closed conference.');
+      } else {
+        this._attachmentManager.attach(name, component);
+      }
+    }
+
+    /**
+     * Detach a component that was previously attached. If the component argument
+     * is given and it does not match the currently attached component, a `TypeError`
+     * will be thrown.
+     *
+     * @function Conference#detach
+     * @param {string} name - Name of the attachment point.
+     * @param {RtcComponent} [component] - An optional specific component to detach.
+     */
+
+  }, {
+    key: 'detach',
+    value: function detach(name, component) {
+      if (name === switcherAttachPoint) {
+        __WEBPACK_IMPORTED_MODULE_8_common_argCheck__["a" /* default */].error('Conference.detach', 'name', 'not use reserved name ' + name);
+      }
+      if (!this._attachmentManager) {
+        __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].error(TAG, 'Tried to detach component at \'' + name + '\' from a closed conference.');
+      } else {
+        this._attachmentManager.detach(name, component);
+      }
+    }
+
+    /**
+     * The client's own user id in the conference, this is what other members
+     * will see as `peerId`. This will be the same as the logged in user ID.
+     *
+     * @member {UserId} Conference#ownId
+     */
+
+  }, {
+    key: 'start',
+
+
+    /**
+     * Start an incoming conference. This only needs to be called if listening
+     * to the conference events on a client or room.
+     *
+     * @param {Object} options - Options object.
+     * @param {ConferenceSwitcherMode} [options.switcherMode] - The default switcher mode for this conference.
+     */
+    value: function start() {
+      var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+      if (this._signalingState !== null) {
+        return __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].warning(TAG, 'tried to start conference in wrong state: ' + this._signalingState);
+      }
+      __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].debug(TAG, this, 'starting conference');
+      this._connectionPool.start();
+      this._switcher._setDefaultMode(options.switcherMode);
+      this._startSearch();
+    }
+
+    /**
+     * Leave the conference, remove all attachments, and cleanup all resources.
+     *
+     * Note that like {@link Call#close}, this does not signal the other
+     * participants in the conference. To do a room-wide conference start/stop,
+     * one should use application specific signaling, e.g. using room state.
+    */
+
+  }, {
+    key: 'close',
+    value: function close() {
+      if (this._signalingState !== SIGNALING_STATE_CLOSED) {
+        __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].debug(TAG, 'closing ' + this);
+        if (this._onClosed) {
+          this._onClosed();
+        }
+        this._setSignalingState(SIGNALING_STATE_CLOSED);
+        this._raft.stop();
+        this._raft = null;
+        this._connectionPool.stop();
+        this._connectionPool = null;
+        this._peers._cleanup();
+        this._peers = null;
+        this._attachmentManager.cleanup();
+        this._attachmentManager = null;
+        this._emit('closed', {
+          reason: 'closed',
+          source: 'self',
+          conference: this
+        });
+        this._clearListeners();
+      }
+    }
+  }, {
+    key: '_onAttachmentUpdate',
+    value: function _onAttachmentUpdate() {
+      var _this2 = this;
+
+      this._connectionPool.connections.forEach(function (connection, peerId) {
+        var streams = _this2._attachmentManager.getLocalStreamsForPeer(peerId);
+        connection._updateLocalStreams(streams);
+      });
+    }
+
+    // Join message
+    // {type: 'search', browser: <string>, [multiOffer: <offer>]}
+    //
+    // Connect message
+    // {type: 'invite', [multiAnswer: <answer>]}
+    //
+    // multiOffer and multiAnswer reuses the same certificate for multiple peer connections, avoiding
+    // an RTT and speeding up setup time
+    //
+    // Connection signaling
+    // {type: 'connection'}
+
+  }, {
+    key: 'handleSignalingMessage',
+    value: function handleSignalingMessage(peerId, message) {
+      if (this._signalingState === null || this._signalingState === SIGNALING_STATE_CLOSED) {
+        return __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].verbose(TAG, this, 'ignoring signaling message for stopped conference');
+      }
+
+      var type = message.type;
+
+      if (!type) {
+        __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].warning(TAG, this, 'got signaling message without type from ' + peerId);
+        return;
+      }
+
+      if (type === 'search') {
+        return this._handleSearchMessage(peerId, message);
+      } else if (type === 'invite') {
+        return this._handleInviteMessage(peerId, message);
+      } else if (type === 'connection') {
+        return this._connectionPool.handleConnectionMessage(peerId, message);
+      }
+    }
+  }, {
+    key: '_handleSearchMessage',
+    value: function _handleSearchMessage(peerId, message) {
+      if (this._signalingState === SIGNALING_STATE_SEARCHING) {
+        __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].info(TAG, this, 'got search message from ' + peerId + ' while searching, creating new cluster');
+
+        // An invite message is sent to the peer,
+        this._invitePeer(peerId);
+        this._setSignalingState(SIGNALING_STATE_MEMBER);
+      } else if (this._signalingState === SIGNALING_STATE_JOINING) {
+        __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].info(TAG, this, 'got search message from ' + peerId + ' while joining, ignoring');
+        // If we are currently joining a cluster, we only add the searching peer to the member waitlist
+        // If we then become leader while the member is still on the waitlist
+        // FIXME: a connection needs to be set up to the peer if we become leader
+        this._raft.addPeer(peerId, { waitlistTtlMs: MEMBER_ADD_TTL_MS });
+        this._connectionPool.addGhostConnection(peerId, { ttlMs: MEMBER_ADD_TTL_MS });
+      } else if (this._signalingState === SIGNALING_STATE_MEMBER) {
+        __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].debug(TAG, this, 'got search message from ' + peerId + ' as ' + (this._raft.isLeader ? 'leader' : 'member'));
+        if (this._raft.isLeader) {
+          // An invite message is sent to the peer,
+          this._invitePeer(peerId);
+        } else {
+          // Keep track of the peer in case we become leader within the TTL
+          this._raft.addPeer(peerId, { waitlistTtlMs: MEMBER_ADD_TTL_MS });
+          this._connectionPool.addGhostConnection(peerId, { ttlMs: MEMBER_ADD_TTL_MS });
+        }
+      }
+    }
+  }, {
+    key: '_getClusterInfo',
+    value: function _getClusterInfo() {
+      if (this._joiningCluster) {
+        return this._joiningCluster;
+      }
+      return {
+        id: this._raft.get('clusterId'),
+        size: this._raft.members.size,
+        term: this._raft.term
+      };
+    }
+  }, {
+    key: '_compareClusters',
+    value: function _compareClusters(clusterA, clusterB) {
+      if (clusterA.size !== clusterB.size) {
+        return clusterB.size - clusterA.size;
+      } else if (clusterA.id !== clusterB.id) {
+        return clusterA.id.localeCompare(clusterB.id);
+      } else {
+        return clusterB.term - clusterA.term;
+      }
+    }
+  }, {
+    key: '_joinCluster',
+    value: function _joinCluster(_ref) {
+      var leaderId = _ref.leaderId,
+          cluster = _ref.cluster;
+
+      __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].debug(TAG, this, 'joining cluster led by ' + leaderId + ': ' + __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default()(cluster));
+      this._setSignalingState(SIGNALING_STATE_JOINING);
+      this._joiningCluster = cluster;
+      this._raft.startPassive();
+      this._connectionPool.connectToClusterLeader(leaderId);
+      this._peers._setPeers([leaderId], this._connectionPool.connections);
+    }
+  }, {
+    key: '_handleInviteMessage',
+    value: function _handleInviteMessage(peerId, message) {
+      if (message.recipient === this._ownId) {
+        var cluster = message.cluster;
+
+        __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].debug(TAG, this, 'received invite in state ' + this._signalingState + ' for ' + __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default()(cluster));
+        if (this._signalingState === SIGNALING_STATE_SEARCHING) {
+          this._joinCluster({ leaderId: peerId, cluster: cluster });
+        } else if (this._signalingState === SIGNALING_STATE_JOINING || this._signalingState === SIGNALING_STATE_MEMBER) {
+          // we are already joining a cluster, so we need to figure out if we should abort that process
+          // and accept the new invite instead. For now we just error out
+          var ownCluster = this._getClusterInfo();
+          var compareResult = this._compareClusters(ownCluster, cluster);
+          if (compareResult > 0) {
+            __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].info(TAG, this, 'left existing cluster to join cluster of ' + peerId + ', ' + ('old: ' + __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default()(ownCluster) + ', new: ' + __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default()(cluster) + ', result: ' + compareResult));
+            this._joinCluster({ leaderId: peerId, cluster: cluster });
+          }
+        }
+      } else {
+        if (this._signalingState === SIGNALING_STATE_JOINING || this._signalingState === SIGNALING_STATE_MEMBER) {
+          var _cluster = message.cluster;
+
+          var _ownCluster = this._getClusterInfo();
+          var _compareResult = this._compareClusters(_ownCluster, _cluster);
+          if (_compareResult > 0) {
+            __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].info(TAG, this, 'saw invite from other cluster with higher priority' + (', abanding ' + __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default()(_ownCluster) + ' for ' + __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default()(_cluster)));
+            this._joinCluster({ leaderId: peerId, cluster: _cluster });
+          }
+        }
+      }
+    }
+  }, {
+    key: '_onRaftStateChange',
+    value: function _onRaftStateChange() {
+      this._switcher._handleStateChange();
+    }
+  }, {
+    key: '_onRaftMembersChange',
+    value: function _onRaftMembersChange(peerIds) {
+      var _this3 = this;
+
+      this._switcher._setMembers(peerIds);
+      this._connectionPool.setExpectedConnections(peerIds);
+
+      var connections = this._connectionPool.connections;
+
+      this._peers._setPeers(peerIds, connections);
+
+      var isMember = peerIds.has(this._ownId);
+      connections.forEach(function (connection, peerId) {
+        var isPaused = !isMember || !_this3._raft.members.has(peerId);
+        connection.setPausedState(isPaused);
+        _this3._attachmentManager.setPeerPausedState(peerId, isPaused);
+      });
+
+      if (this._signalingState === SIGNALING_STATE_MEMBER) {
+        // If we lost membership it means we're considered disconnected by the cluster
+        // and need to rejoin.
+        if (!isMember) {
+          __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].info(TAG, this, 'got new cluster members in connected state without self present');
+          this._onDisconnected();
+        }
+      } else if (this._signalingState === SIGNALING_STATE_JOINING) {
+        if (isMember) {
+          __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].info(TAG, this, 'got new cluster members with itself as member, promoting to member');
+          this._setSignalingState(SIGNALING_STATE_MEMBER);
+        }
+      }
+    }
+  }, {
+    key: '_onRaftLeadershipChange',
+    value: function _onRaftLeadershipChange(isLeader) {
+      __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].info(TAG, this, (isLeader ? 'got' : 'lost') + ' cluster leadership');
+      this._switcher._handleLeadershipChange(isLeader);
+      if (isLeader) {
+        this._connectionPool.materializeGhostConnections();
+      }
+    }
+  }, {
+    key: '_onPeersUpdate',
+    value: function _onPeersUpdate() {
+      if (this._connectionState === CONNECTION_STATE_CONNECTING) {
+        if (this._peers._hasConnection()) {
+          this._setConnectionState(CONNECTION_STATE_CONNECTED);
+        }
+      } else if (this._connectionState === CONNECTION_STATE_CONNECTED) {
+        if (!this._peers._hasConnection()) {
+          this._setConnectionState(CONNECTION_STATE_CONNECTING);
+        }
+      }
+    }
+  }, {
+    key: '_setSignalingState',
+    value: function _setSignalingState(newSignalingState) {
+      if (this._signalingState === SIGNALING_STATE_CLOSED) {
+        return;
+      }
+      this._signalingState = newSignalingState;
+
+      if (newSignalingState !== SIGNALING_STATE_JOINING) {
+        this._joiningCluster = null;
+      }
+
+      var newConnectionState = null;
+
+      if (newSignalingState === SIGNALING_STATE_SEARCHING) {
+        if (this._connectionState !== CONNECTION_STATE_SIGNALING) {
+          newConnectionState = CONNECTION_STATE_SIGNALING;
+        }
+      } else if (newSignalingState === SIGNALING_STATE_JOINING) {
+        if (this._connectionState !== CONNECTION_STATE_SIGNALING) {
+          newConnectionState = CONNECTION_STATE_SIGNALING;
+        }
+      } else if (newSignalingState === SIGNALING_STATE_MEMBER) {
+        if (this._connectionState === CONNECTION_STATE_SIGNALING) {
+          if (this._peers._hasConnection()) {
+            newConnectionState = CONNECTION_STATE_CONNECTED;
+          } else {
+            newConnectionState = CONNECTION_STATE_CONNECTING;
+          }
+        }
+      } else if (newSignalingState === SIGNALING_STATE_CLOSED) {
+        newConnectionState = CONNECTION_STATE_CLOSED;
+      }
+
+      if (newConnectionState) {
+        this._setConnectionState(newConnectionState);
+      }
+    }
+  }, {
+    key: '_setConnectionState',
+    value: function _setConnectionState(newConnectionState) {
+      var oldConnectionState = this._connectionState;
+      this._connectionState = newConnectionState;
+      this._emit('connectionState', newConnectionState, oldConnectionState);
+    }
+  }, {
+    key: '_onDisconnected',
+    value: function _onDisconnected() {
+      // We keep the connection pool going on disconnects, which means that we don't kill
+      // existing connections that we are trying to set up. That means that triggering a
+      // disconnect is quite cheack, there's only ome matrix signaling overhead.
+      // Because of that we can keep disconnect timeouts low.
+
+      this._raft.stop();
+      this._peers._clear();
+
+      __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].debug(TAG, this, 'resetting conference due to disconnect');
+      this._startSearch();
+    }
+  }, {
+    key: '_startSearch',
+    value: function _startSearch() {
+      __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].debug(TAG, this, 'is starting search');
+      // We start in active state with no other peers, which will immediately make us leader
+      this._raft.start();
+      var clusterId = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_10_common_utils__["randomString"])(16);
+      // While being leader, we set and commit the clusterId, which should then never be touched for
+      // the history of this cluster's log.
+      this._raft.set('clusterId', clusterId);
+
+      this._switcher._initializeLeader();
+
+      this._setSignalingState(SIGNALING_STATE_SEARCHING);
+      this._onSignalingMessage({
+        type: 'search',
+        browser: __WEBPACK_IMPORTED_MODULE_10_common_utils__["browser"],
+        cluster: this._getClusterInfo()
+      });
+    }
+  }, {
+    key: '_invitePeer',
+    value: function _invitePeer(peerId) {
+      __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].debug(TAG, this, 'inviting ' + peerId + ' to cluster');
+      this._raft.addPeer(peerId, { waitlistTtlMs: MEMBER_ADD_TTL_MS });
+      this._onSignalingMessage({
+        type: 'invite',
+        browser: __WEBPACK_IMPORTED_MODULE_10_common_utils__["browser"],
+        recipient: peerId,
+        cluster: this._getClusterInfo()
+      });
+      this._connectionPool.ensureTemporaryConnection(peerId);
+    }
+  }, {
+    key: '_createConnection',
+    value: function _createConnection(_ref2) {
+      var _this4 = this;
+
+      var peerId = _ref2.peerId,
+          peerLinkInfo = _ref2.peerLinkInfo;
+
+      __WEBPACK_IMPORTED_MODULE_8_common_argCheck__["a" /* default */].string('Conference._createConnection', 'peerId', peerId);
+
+      var conferencePeer = this._peers.get(peerId) || null;
+
+      var connection = new __WEBPACK_IMPORTED_MODULE_18_conference_conferenceConnection__["a" /* default */]({
+        ownId: this._ownId,
+        peerId: peerId,
+        peerLinkInfo: peerLinkInfo,
+        conferencePeer: conferencePeer,
+        offer: null,
+        iceServers: this._iceServers,
+        iceCandidateFilter: this._iceCandidateFilter,
+        statsFormatter: this._statsFormatterFactory && this._statsFormatterFactory(peerId),
+        attachmentManager: this._attachmentManager,
+        onSignalingMessage: function onSignalingMessage(message) {
+          _this4._onSignalingMessage({
+            type: 'connection',
+            recipient: peerId,
+            content: message
+          });
+        }
+      });
+
+      var isPaused = !this._raft.members.has(peerId);
+      connection.setPausedState(isPaused);
+      this._attachmentManager.setPeerPausedState(peerId, isPaused);
+
+      if (conferencePeer) {
+        connection._setConferencePeer(conferencePeer);
+      }
+
+      return connection;
+    }
+  }, {
+    key: 'ownId',
+    get: function get() {
+      return this._ownId;
+    }
+
+    /**
+     * A map representing the conference peers.
+     *
+     * @member {ConferencePeers} Conference#peers
+     */
+
+  }, {
+    key: 'peers',
+    get: function get() {
+      return this._peers;
+    }
+
+    /**
+     * The {@link ConferenceSwitcher} instance for this conference.
+     *
+     * Conferences always have a single switcher instance associated with them.
+     * As long as the switcher mode is set to `'off'`, which is default, the switcher
+     * will not consume any resources.
+     *
+     * @member {ConferenceSwitcher} Conference#switcher
+     */
+
+  }, {
+    key: 'switcher',
+    get: function get() {
+      return this._switcher;
+    }
+
+    /**
+     * Emitted when the connection state of the conference changes.
+     *
+     * @event Conference#connectionState
+     * @param {PeerConnectionState} connectionState - The new connection state.
+     * @param {PeerConnectionState} oldConnectionState - The old connection state.
+     */
+
+    /**
+     * The connection state of the conference.
+     *
+     * @readonly
+     * @member {PeerConnectionState} Conference#connectionState
+     */
+
+  }, {
+    key: 'connectionState',
+    get: function get() {
+      return this._connectionState;
+    }
+
+    /**
+     * True if the conference has been closed.
+     *
+     * A closed conference can not be started again, and will have had all attachments removed. It will
+     * alse have been removed from {@link Room#conference}, so that a new conference can be started in the room.
+     *
+     * @member {boolean} Conference#closed
+     */
+
+  }, {
+    key: 'closed',
+    get: function get() {
+      return this._signalingState === SIGNALING_STATE_CLOSED;
+    }
+
+    /**
+     * True if the conference is stopped. This is the initial state for incoming conferences.
+     *
+     * Stopped conferences will keep all attachments and state, but will not have any connections to
+     * other peers.
+     *
+     * @member {boolean} Conference#stopped
+     */
+
+  }, {
+    key: 'stopped',
+    get: function get() {
+      return this._signalingState === null;
+    }
+  }]);
+
+  return Conference;
+}(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9_common_emitter__["a" /* default */])(null));
+
+/* harmony default export */ __webpack_exports__["default"] = (Conference);
+
+/***/ }),
+/* 214 */,
+/* 215 */,
+/* 216 */,
+/* 217 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = RoomQuery;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_common_log__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_common_emitter__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_common_utils__ = __webpack_require__(13);
+
+
+
+
+
+
+/**
+ * Emitted when the result of the query has changed.
+ *
+ * @event RoomQuery#update
+ * @param {Array<*>} rows - The resulting rows, MUST NOT be modified.
+ */
+
+/**
+ * Emitted when a row is added to the result of the query.
+ *
+ * @event RoomQuery#added
+ * @param {*} row - The added row
+ */
+
+/**
+ * Emitted when a row is removed from the result of the query.
+ *
+ * @event RoomQuery#removed
+ * @param {*} row - The removed row
+ */
+
+/**
+ * Represents a live query that selects a subset of all rooms and transforms
+ * them using a map function.
+ *
+ * Whenever a room receives an event, the map function is run for every query.
+ * If the map function returns a falsy value, it is ignored. If the value is
+ * truthy, the value is added to the resulting rows.
+ *
+ * This is an example of a map function that lists all public rooms that the user is
+ * a member of:
+ *
+ * ```js
+ * function (room) {
+ *     if (room.membership === 'member' && room.visibility === 'public') {
+ *         return room;
+ *     }
+ * }
+ * ```
+ *
+ * Whenever the value returned by the map function changes, an `'update'` event is
+ * emitted, as well as `'added'` and/or `'removed'` events.
+ * The value is considered changed if it switches between truthy and falsy, or
+ * if the id property of the value changes.
+ * If multiple return values are bundled in an object, it is important to
+ * include an id property to avoid unnecessary change events.
+ *
+ * This is an example of a map function that lists all rooms to which the user has
+ * been invited, as well as the inviting user:
+ *
+ * ```js
+ * function (room) {
+ *     if (room.membership === 'invited') {
+ *         return {
+ *             id: room.invitedBy.id,
+ *             user: room.invitedBy,
+ *             room: room,
+ *         };
+ *     }
+ * }
+ * ```
+ *
+ * @abstract
+ * @class RoomQuery
+ * @extends EventEmitter
+ */
+
+function RoomQuery(priv, mapFunction) {
+  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_common_utils__["assertPriv"])('RoomQuery', priv);
+  var self = this;
+  var rows = [];
+  var items = [];
+  var stateChangeFunctions = [];
+  var stopped = false;
+  var deferredEmit = 0;
+
+  /**
+   * The resulting rows of the RoomQuery, MUST NOT be modified.
+   * @readonly
+   * @member {Array<*>} RoomQuery#rows
+   */
+  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_common_utils__["getter"])(this, 'rows', function () {
+    return items;
+  });
+
+  /**
+   * Stops the query and frees all resources.
+   *
+   * @function
+   * @name RoomQuery#stop
+   */
+  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_common_utils__["prop"])(this, 'stop', function () {
+    stopped = true;
+    rows = [];
+    items = [];
+    stateChangeFunctions = [];
+    self._emit('update', items);
+    self._clearListeners('update');
+    self._clearListeners('added');
+    self._clearListeners('removed');
+  });
+
+  /**
+   * Forces the map function to be rerun for all rooms.
+   *
+   * @function
+   * @name RoomQuery#forceUpdate
+   */
+  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_common_utils__["prop"])(this, 'forceUpdate', function () {
+    if (stopped) {
+      return;
+    }
+    stateChangeFunctions.forEach(function (fn) {
+      fn();
+    });
+  });
+
+  function handleNewRoom(room) {
+    if (stopped) {
+      return;
+    }
+    var item = mapFunction(room);
+    var row = null;
+    if (item) {
+      row = {
+        item: item
+      };
+      addRow(row);
+    }
+    var stateChangeFunction = onStateChangeFunction(room, row);
+    stateChangeFunctions.push(stateChangeFunction);
+    room._registerQuery(stateChangeFunction);
+    return true;
+  }
+
+  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_common_utils__["hiddenProp"])(this, '_handleNewRoom', handleNewRoom);
+
+  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_common_utils__["hiddenProp"])(this, '_clear', function () {
+    if (stopped) {
+      return;
+    }
+    rows = [];
+    items = [];
+    self._emit('update', items);
+  });
+
+  function deferEmit() {
+    if (!deferredEmit) {
+      deferredEmit = setTimeout(function () {
+        if (stopped) {
+          return;
+        }
+        self._emit('update', items);
+        deferredEmit = 0;
+      });
+    }
+  }
+
+  function addRow(row) {
+    rows.push(row);
+    items.push(row.item);
+    self._emit('added', row.item);
+    deferEmit();
+  }
+
+  function removeRow(row) {
+    var index = rows.indexOf(row);
+    if (index === -1) {
+      __WEBPACK_IMPORTED_MODULE_0_common_log__["default"].error('room-query', 'RoomQuery removeRow: room does not exist', row.item);
+    } else {
+      rows.splice(index, 1);
+      items.splice(index, 1);
+      self._emit('removed', row.item);
+      deferEmit();
+    }
+  }
+
+  function onStateChangeFunction(room, row) {
+    return function onStateChange() {
+      if (stopped) {
+        return true;
+      }
+
+      var newItem = mapFunction(room);
+      if (row) {
+        if (newItem) {
+          if (newItem === row.item) {
+            return;
+          } else if (newItem.id === row.item.id) {
+            return;
+          }
+        }
+        removeRow(row);
+      } else if (!newItem) {
+        return;
+      }
+
+      var newRow = null;
+      if (newItem) {
+        newRow = {
+          item: newItem
+        };
+        addRow(newRow);
+      }
+      row = newRow;
+    };
+  }
+}
+
+__WEBPACK_IMPORTED_MODULE_1_common_emitter__["a" /* default */].call(RoomQuery.prototype);
+
+/***/ }),
+/* 218 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = RoomState;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_keys__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_keys___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_keys__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_typeof__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_typeof___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_typeof__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_common_argCheck__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_common_emitter__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_common_utils__ = __webpack_require__(13);
+
+
+
+
+
+
+
+
+/**
+ * Emitted when the default value of the room state is changed.
+ *
+ * @event RoomState#value
+ * @param {JsonTypes} value - The new value.
+ * @param {JsonTypes} oldValue - The old value, if any.
+ */
+
+/**
+ * Emitted when any value but the default value is changed.
+ *
+ * @event RoomState#update
+ * @param {Object} change
+ * @param {string} change.key - The key whose value was changed.
+ * @param {JsonTypes} change.value - The new value that the key is now associated with.
+ * @param {JsonTypes} change.oldValue - The value that the key was previously associated with, if any.
+ */
+
+/**
+ * Emitted when the value associated with the given key is changed.
+ *
+ * @event RoomState#update:&lt;key&gt;
+ * @param {JsonTypes} value - The new value that the key is now associated with.
+ * @param {JsonTypes} oldValue - The value that the key was previously associated with, if any.
+ */
+
+// eslint-disable-next-line
+/**
+ * Represents a state in a room identified by a state type, and synchronized between all clients.
+ *
+ * Each room state is a key-value pair store that emits events when values are changed.
+ *
+ * The room state also has a default value which can be accessed by omitting the
+ *  key parameter to any of the methods. The default value is handy for simple states
+ *  such as setting a hex color for the room.
+ *
+ * @abstract
+ * @class RoomState
+ * @extends EventEmitter
+ */
+function RoomState(priv, type, room, setState) {
+  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4_common_utils__["assertPriv"])('RoomState', priv);
+  var self = this;
+  var values = {};
+
+  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4_common_utils__["hiddenProp"])(this, '_set', function (key, value) {
+    key = '' + key;
+    if (value && '__value__' in value) {
+      value = value.__value__;
+    }
+    var oldValue = values[key];
+    values[key] = value;
+    if (key === '') {
+      this._emit('value', value, oldValue);
+    } else {
+      this._emit('update:' + key, value, oldValue);
+    }
+    this._emit('update', {
+      key: key,
+      value: value,
+      oldValue: oldValue
+    });
+  });
+
+  /**
+   * The type of the RoomState
+   * @readonly
+   * @member {string} RoomState#type
+   */
+  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4_common_utils__["prop"])(this, 'type', type);
+
+  /**
+   * The room that the RoomState is derived from
+   * @readonly
+   * @member {Room} RoomState#room
+   */
+  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4_common_utils__["prop"])(this, 'room', room);
+
+  /**
+   * Returns true if the key has been set
+   *
+   * @name RoomState#has
+   * @function
+   * @param {string} [key] - The key to test if it has been set.
+   * @returns {boolean} - True if the key has been set, false otherwise
+   */
+  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4_common_utils__["prop"])(this, 'has', function (key) {
+    if (!__WEBPACK_IMPORTED_MODULE_2_common_argCheck__["a" /* default */].optString('RoomState.has', 'key', key)) {
+      key = '';
+    }
+    return key in values;
+  });
+
+  /**
+   * Gets the value for the corresponding key.
+   *
+   * If the key is omitted the default value of the RoomState will returned instead
+   *
+   * @name RoomState#get
+   * @function
+   * @param {string} [key] - The key whose associated value should be returned,
+   *  or omitted if the default value is desired instead.
+   * @returns {JsonTypes} - The value associated with the key
+   */
+  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4_common_utils__["prop"])(this, 'get', function (key) {
+    if (!__WEBPACK_IMPORTED_MODULE_2_common_argCheck__["a" /* default */].optString('RoomState.get', 'key', key)) {
+      key = '';
+    }
+    return values[key];
+  });
+
+  /**
+   * Sets the value that a key should be associated with. This will override any
+   * existing association with the key.
+   *
+   * If the key is omitted the value of the RoomState will set instead.
+   *
+   * **NOTE:**
+   * It is best to avoid relying on the returned promise to modify application state,
+   * e.g. UI updates, as that will lead to race conditions and undefined behaviour.
+   * It is better to use the returned promise for feedback that the state was changed
+   * was successfully, and tie application state changes an 'update' event handler.
+   * This is due to the fact that state changes are received via the event stream, but
+   * the returned promise is resolved when the request is returned, and those two events
+   * can happen in any order.
+   *
+   * ##### Errors:
+   * - {@link TooLargeError} - The serialized value is too large, as in it occupies too many bytes.
+   * - {@link NotAllowedError} - The user must be a member of the room and have enough power level.
+   * - {@link GuestAccessError} - Guest access is not allowed.
+   * - {@link AuthenticationError} - The client must be authenticated to use this method.
+   *
+   * <i style="color: red;">Privacy warning: Do not pass private user information to this method</i>
+   *
+   * @name RoomState#set
+   * @function
+   * @param {string} [key] - The key that should be associated with the value.
+   * @param {JsonTypes} value - The value that should be associated with the key.
+   * @returns {Promise<RoomState, CctError>} - The room state
+   */
+  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4_common_utils__["prop"])(this, 'set', function (key, value) {
+    __WEBPACK_IMPORTED_MODULE_2_common_argCheck__["a" /* default */].count('RoomState.set', 1, arguments.length);
+    if (arguments.length === 1) {
+      value = key;
+      key = '';
+    } else {
+      __WEBPACK_IMPORTED_MODULE_2_common_argCheck__["a" /* default */].string('RoomState.get', 'key', key);
+    }
+    if ((typeof value === 'undefined' ? 'undefined' : __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_typeof___default()(value)) !== 'object' || value === null || Array.isArray(value)) {
+      value = {
+        __value__: value
+      };
+    }
+    return setState(key, value).then(function () {
+      return self;
+    });
+  });
+
+  /**
+   * A list of all keys who are associated to a value
+   *
+   * @readonly
+   * @member {string[]} RoomState#keys
+   */
+  __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4_common_utils__["getter"])(this, 'keys', function () {
+    return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_keys___default()(values).filter(function (x) {
+      return x;
+    });
+  });
+}
+
+RoomState.prototype.toString = function () {
+  return 'RoomState{type=' + this.type + ', value=' + this.get() + ', keys=' + this.keys + '}';
+};
+
+__WEBPACK_IMPORTED_MODULE_3_common_emitter__["a" /* default */].call(RoomState.prototype);
+
+/***/ }),
+/* 219 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export getChromeMediaSourceId */
+/* unused harmony export getChromeScreenConstraints */
+/* unused harmony export getChromeMediaSourceIdEx */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_promise__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_promise__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_log__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_argCheck__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_common_errors__ = __webpack_require__(146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_media_common__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_media_concreteMediaSource__ = __webpack_require__(164);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var TAG = 'chrome-screen-source';
+
+function getChromeMediaSourceId(extensionId, sourceTypes) {
+  return new __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_promise___default.a(function (resolve, reject) {
+    var installedStatusTimeout = setTimeout(function () {
+      window.removeEventListener('message', onMessage);
+      var error = new __WEBPACK_IMPORTED_MODULE_8_common_errors__["b" /* NotFoundError */]('Screen sharing extension not installed');
+      error.reason = new Error('Extension did not respond to install status check');
+      reject(error);
+    }, 1000);
+    var onMessage = function onMessage(event) {
+      var data = event.data;
+      if (data.extensionId === extensionId) {
+        switch (data.message) {
+          case 'extensionIsInstalled':
+            clearTimeout(installedStatusTimeout);
+            window.postMessage({
+              extensionId: extensionId, sourceTypes: sourceTypes,
+              message: 'requestChromeMediaSourceId'
+            }, '*');
+            break;
+          case 'chromeMediaSourceId':
+            window.removeEventListener('message', onMessage);
+            var sourceId = data.content;
+            if (sourceId) {
+              resolve(sourceId);
+            } else {
+              // user denied the request
+              reject(new __WEBPACK_IMPORTED_MODULE_8_common_errors__["c" /* NotAllowedError */]('The user denied the request to share the screen'));
+            }
+        }
+      }
+    };
+
+    window.addEventListener('message', onMessage);
+    window.postMessage({
+      extensionId: extensionId,
+      message: 'getInstalledStatus'
+    }, '*');
+  });
+}
+
+function getChromeScreenConstraints() {
+  var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+      _ref$audio = _ref.audio,
+      audio = _ref$audio === undefined ? false : _ref$audio,
+      video = _ref.video,
+      sourceId = _ref.sourceId;
+
+  if (!video) {
+    video = {};
+  }
+  if (!(video.width || video.height)) {
+    video.width = { max: window.screen.width };
+    video.height = { max: window.screen.height };
+  }
+  video.chromeMediaSourceId = { exact: sourceId };
+  video.chromeMediaSource = { exact: 'desktop' };
+
+  return { audio: audio, video: video };
+}
+
+function _sendChromeMessage(extensionId, message) {
+  return new __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_promise___default.a(function (resolve, reject) {
+    window.chrome.runtime.sendMessage(extensionId, message, function (response) {
+      if (response) {
+        resolve(response);
+      } else {
+        var error = new Error('No response received');
+        error.name = 'NotFoundError';
+        reject(error);
+      }
+    });
+  });
+}
+
+function getChromeMediaSourceIdEx(extensionId, sourceTypes) {
+  return new __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_promise___default.a(function (resolve, reject) {
+    var installedStatusTimeout = setTimeout(function () {
+      var error = new __WEBPACK_IMPORTED_MODULE_8_common_errors__["b" /* NotFoundError */]('Screen sharing extension not installed');
+      error.reason = new Error('Extension did not respond to install status check');
+      reject(error);
+    }, 1000);
+
+    _sendChromeMessage(extensionId, {
+      extensionId: extensionId,
+      message: 'getInstalledStatus'
+    }).then(function (response) {
+      clearTimeout(installedStatusTimeout);
+      return response;
+    }).then(_sendChromeMessage(extensionId, {
+      extensionId: extensionId,
+      sourceTypes: sourceTypes,
+      message: 'requestChromeMediaSourceId'
+    }).then(function (response) {
+      var sourceId = response.content;
+      if (sourceId) {
+        resolve(sourceId);
+      } else {
+        // user denied the request
+        reject(new __WEBPACK_IMPORTED_MODULE_8_common_errors__["c" /* NotAllowedError */]('The user denied the request to share the screen'));
+      }
+    }).catch(function (error) {
+      return reject(error);
+    })).catch(function (error) {
+      return reject(error);
+    });
+  });
+}
+
+/**
+ * Internal media node for acquiring a Chrome screen sharing stream.
+ *
+ * @private
+ * @class ChromeScreenSource
+ * @extends ConcreteMediaSource
+ * @param {Object} options - Options object.
+ * @param {string} options.chromeExtensionId - The id of the chrome extension to use.
+ * @param {ScreenSharingType|null} [options.type=null] - The screen sharing type to use. Specifying
+ *   null will let the user choose either screen or window.
+ * @param {boolean} [options.audio=false] - Whether desktop audio should be captured as well.
+ * @param {Object} [options.video] - Constraints for the video, defaults to max resolution and no
+ *   framerate limit.
+ */
+
+var ChromeScreenSource = function (_ConcreteMediaSource) {
+  __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default()(ChromeScreenSource, _ConcreteMediaSource);
+
+  function ChromeScreenSource(options) {
+    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, ChromeScreenSource);
+
+    var _this = __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (ChromeScreenSource.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(ChromeScreenSource)).call(this));
+
+    __WEBPACK_IMPORTED_MODULE_7_common_argCheck__["a" /* default */].options('ChromeScreenSource constructor', 'options', options).string('chromeExtensionId').optString('type').optBoolean('audio').optObject('video');
+
+    var sourceTypes = options.type ? [options.type] : ['screen', 'window'];
+
+    getChromeMediaSourceIdEx(options.chromeExtensionId, sourceTypes).then(function (sourceId) {
+      return getChromeScreenConstraints({
+        sourceId: sourceId,
+        type: options.type,
+        audio: options.audio,
+        video: options.video
+      });
+    }).then(function (constraints) {
+      return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9_media_common__["f" /* getUserMedia */])(constraints);
+    }).then(function (stream) {
+      return _this.setStream(stream);
+    }, function (error) {
+      if (error.name && error.name === 'NotFoundError') {
+        __WEBPACK_IMPORTED_MODULE_6_common_log__["default"].warning('deprecated', 'This Extension implementation will be DEPRICATED in later release');
+        var p2 = getChromeMediaSourceId(options.chromeExtensionId, sourceTypes);
+        _this._handleExtensionId(p2, options).catch(function () {
+          _this.setError(error);
+        });
+      } else {
+        _this.setError(error);
+      }
+    }).catch(function (error) {
+      __WEBPACK_IMPORTED_MODULE_6_common_log__["default"].error(TAG, 'unexpected error in ChromeScreenSource: ' + error);
+    });
+    return _this;
+  }
+
+  __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(ChromeScreenSource, [{
+    key: '_handleExtensionId',
+    value: function _handleExtensionId(promise, options) {
+      var _this2 = this;
+
+      return promise.then(function (sourceId) {
+        return getChromeScreenConstraints({
+          sourceId: sourceId,
+          type: options.type,
+          audio: options.audio,
+          video: options.video
+        });
+      }).then(function (constraints) {
+        return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9_media_common__["f" /* getUserMedia */])(constraints);
+      }).then(function (stream) {
+        return _this2.setStream(stream);
+      }, function (error) {
+        return _this2.setError(error);
+      }).catch(function (error) {
+        __WEBPACK_IMPORTED_MODULE_6_common_log__["default"].error(TAG, 'unexpected error in ChromeScreenSource: ' + error);
+      });
+    }
+  }]);
+
+  return ChromeScreenSource;
+}(__WEBPACK_IMPORTED_MODULE_10_media_concreteMediaSource__["a" /* default */]);
+
+/* harmony default export */ __webpack_exports__["a"] = (ChromeScreenSource);
+
+/***/ }),
+/* 220 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_common_log__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_common_argCheck__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_errors__ = __webpack_require__(146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_media_common__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_media_concreteMediaSource__ = __webpack_require__(164);
+
+
+
+
+
+
+
+
+
+
+
+
+
+var TAG = 'firefox-screen-source';
+var ERROR_TIME_BREAKPOINT_MS = 100;
+
+/**
+ * Internal media node for acquiring a Firefox screen sharing stream.
+ *
+ * @private
+ * @class FirefoxScreenSource
+ * @extends ConcreteMediaSource
+ * @param {Object} [options] - Optional options object.
+ * @param {ScreenSharingType} [options.type='window'] - The screen sharing type to use.
+ *   The difference between window and application is that application will show all application windows
+ *   at once, while window only shows a single window. e.g. only a single Firefox window or all open Firefox
+ *   windows.
+ * @param {boolean} [options.audio=false] - Whether audio should be requested as well.
+ * @param {Object} [options.video] - Constraints for the video, defaults to max resolution and no
+ *   framerate limit.
+ */
+
+var FirefoxScreenSource = function (_ConcreteMediaSource) {
+  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(FirefoxScreenSource, _ConcreteMediaSource);
+
+  function FirefoxScreenSource(options) {
+    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, FirefoxScreenSource);
+
+    var _this = __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (FirefoxScreenSource.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(FirefoxScreenSource)).call(this));
+
+    var audio = options.audio || false;
+    var video = options.video || {};
+    var type = options.type || 'window';
+
+    __WEBPACK_IMPORTED_MODULE_5_common_argCheck__["a" /* default */].optBoolean('FirefoxScreenSource constructor', 'options.audio', audio);
+    __WEBPACK_IMPORTED_MODULE_5_common_argCheck__["a" /* default */].optObject('FirefoxScreenSource constructor', 'options.video', video);
+    __WEBPACK_IMPORTED_MODULE_5_common_argCheck__["a" /* default */].optString('FirefoxScreenSource constructor', 'options.type', type);
+
+    if (!video.mediaSource) {
+      video.mediaSource = type;
+    }
+    var startTime = Date.now();
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_7_media_common__["f" /* getUserMedia */])({ audio: audio, video: video }).then(function (stream) {
+      return _this.setStream(stream);
+    }, function (error) {
+      if (error.name === 'NotAllowedError') {
+        var actualError;
+        // If the diff is too short we can assume it's not the user...
+        var timeToError = Date.now() - startTime;
+        if (timeToError < ERROR_TIME_BREAKPOINT_MS) {
+          if (location.protocol !== 'https:') {
+            actualError = new __WEBPACK_IMPORTED_MODULE_6_common_errors__["c" /* NotAllowedError */]('Screen sharing is only allowed over HTTPS');
+          } else {
+            var msg = 'Screen sharing is not allowed on this domain, it needs to be added to ' + 'the media.getusermedia.screensharing.allowed_domains preference in about:config, ' + 'either manually or using an extension.';
+            actualError = new __WEBPACK_IMPORTED_MODULE_6_common_errors__["b" /* NotFoundError */](msg);
+          }
+        } else {
+          actualError = new __WEBPACK_IMPORTED_MODULE_6_common_errors__["c" /* NotAllowedError */]('The user denied the request to share the screen');
+        }
+        actualError.reason = error.reason;
+        error = actualError;
+      }
+      _this.setError(error);
+    }).catch(function (error) {
+      __WEBPACK_IMPORTED_MODULE_4_common_log__["default"].error(TAG, 'unexpected error in FirefoxScreenSource: ' + error);
+    });
+    return _this;
+  }
+
+  return FirefoxScreenSource;
+}(__WEBPACK_IMPORTED_MODULE_8_media_concreteMediaSource__["a" /* default */]);
+
+/* harmony default export */ __webpack_exports__["a"] = (FirefoxScreenSource);
+
+/***/ }),
+/* 221 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_common_log__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_emitter__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_media_streamSink__ = __webpack_require__(182);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_media_mediaNode__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_media_muteFilter__ = __webpack_require__(180);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var TAG = 'media-tee';
+
+/**
+ * A simple {@link MediaNode} that can be used to expose media together with the basic utilities
+ * of emitting stream events, exposing a stream stream property, and a mute property.
+ *
+ * @class MediaTee
+ * @extends ConnectMixin
+ */
+
+var MediaTee = function (_EmitterMixin) {
+  __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default()(MediaTee, _EmitterMixin);
+
+  function MediaTee() {
+    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, MediaTee);
+
+    var _this = __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (MediaTee.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(MediaTee)).call(this));
+
+    _this._streamSink = new __WEBPACK_IMPORTED_MODULE_7_media_streamSink__["a" /* default */]({ onStream: function onStream(stream) {
+        return _this._emit('stream', stream);
+      } });
+    _this._muteFilter = new __WEBPACK_IMPORTED_MODULE_9_media_muteFilter__["a" /* default */]();
+    _this._muteFilter.connect(_this._streamSink);
+    return _this;
+  }
+
+  /**
+   * Emitted whenever the stream is changed.
+   *
+   * @event MediaTee#stream
+   * @param {?MediaStream} stream - The media stream, or null.
+   */
+
+  __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(MediaTee, [{
+    key: 'sink',
+    set: function set(target) {
+      __WEBPACK_IMPORTED_MODULE_5_common_log__["default"].error(TAG, 'mediaTee.sink is removed, just connect directly to the sink instead');
+    }
+
+    /**
+     * The tee's current media stream, or null.
+     *
+     * @readonly
+     * @member {MediaStream} MediaTee#stream
+     */
+
+  }, {
+    key: 'stream',
+    get: function get() {
+      return this._streamSink.stream;
+    }
+
+    /**
+     * The input of the media tee.
+     *
+     * @readonly
+     * @member {MediaNodeInput} MediaTee#input
+     */
+
+  }, {
+    key: 'input',
+    get: function get() {
+      return this._muteFilter;
+    }
+
+    /**
+     * The output of the media tee.
+     *
+     * @readonly
+     * @member {MediaNodeOutput} MediaTee#output
+     */
+
+  }, {
+    key: 'output',
+    get: function get() {
+      return this._muteFilter;
+    }
+
+    /**
+     * Mute property as documented in {@link MuteFilter#mute}.
+     *
+     * @member {Object} MediaTee#mute
+     */
+
+  }, {
+    key: 'mute',
+    get: function get() {
+      return this._muteFilter.mute;
+    },
+    set: function set(value) {
+      this._muteFilter.mute = value;
+    }
+  }]);
+
+  return MediaTee;
+}(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_common_emitter__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_8_media_mediaNode__["a" /* default */].connectMixin()));
+
+/* harmony default export */ __webpack_exports__["a"] = (MediaTee);
+
+/***/ }),
+/* 222 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_common_log__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_common_argCheck__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_media_common__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_media_concreteMediaSource__ = __webpack_require__(164);
+
+
+
+
+
+
+
+
+
+
+
+
+var TAG = 'user-media-source';
+
+/**
+ * Low level media node that wraps a `getUserMedia` call. Applications will typically want to use
+ * {@link DeviceSource} or {@link ScreenSource} instead.
+ *
+ * @class UserMediaSource
+ * @extends ConcreteMediaSource
+ * @param {Object} [options] - Optional options object.
+ * @param {Object} [options.constraints] - Constraints passed to `getUserMedia`.
+ * @param {boolean|Object} [options.constraints.audio=true] - Set to `true` if audio is desired, or a
+ *  {@link http://w3c.github.io/mediacapture-main/getusermedia.html#idl-def-MediaTrackConstraints MediaTrackConstraints}
+ *  object if more detailed constraints is required.
+ * @param {boolean|Object} [options.constraints.video=true] - Set to `true` if video is desired, or a
+ *  {@link http://w3c.github.io/mediacapture-main/getusermedia.html#idl-def-MediaTrackConstraints MediaTrackConstraints}
+ *  object if more detailed configuration is required.
+ */
+
+var UserMediaSource = function (_ConcreteMediaSource) {
+  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(UserMediaSource, _ConcreteMediaSource);
+
+  function UserMediaSource() {
+    var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, UserMediaSource);
+
+    __WEBPACK_IMPORTED_MODULE_5_common_argCheck__["a" /* default */].optOptions('UserMediaSource constructor', 'options', options).optObject('constraints');
+    var _options$constraints = options.constraints,
+        constraints = _options$constraints === undefined ? { audio: true, video: true } : _options$constraints;
+
+    var _this = __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (UserMediaSource.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(UserMediaSource)).call(this));
+
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_media_common__["f" /* getUserMedia */])(constraints).then(function (stream) {
+      return _this.setStream(stream);
+    }, function (error) {
+      return _this.setError(error);
+    }).catch(function (error) {
+      __WEBPACK_IMPORTED_MODULE_4_common_log__["default"].error(TAG, 'unexpected error in UserMediaSource: ' + error);
+    });
+    return _this;
+  }
+
+  /**
+   * @private
+   * @function UserMediaSource#setStream
+   */
+
+  /**
+   * @private
+   * @function UserMediaSource#setError
+   */
+
+
+  return UserMediaSource;
+}(__WEBPACK_IMPORTED_MODULE_7_media_concreteMediaSource__["a" /* default */]);
+
+/* harmony default export */ __webpack_exports__["a"] = (UserMediaSource);
+
+/***/ }),
+/* 223 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_log__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_argCheck__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_webrtc_utils__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_media_mediaFilter__ = __webpack_require__(179);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var TAG = 'web-audio-filter';
+
+/**
+ * A base class for media filter nodes that wish to use the WebAudio APIs.
+ *
+ * @class WebAudioFilter
+ * @extends MediaFilter
+ * @param {Object} [options] - Optional options object
+ * @param {AudioContext} [options.context] - Audio context to use within this media node,
+ *   which must not be closed as while the filter is still being used.
+ *   If omitted, an internal context will be used.
+ */
+
+var WebAudioFilter = function (_MediaFilter) {
+  __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default()(WebAudioFilter, _MediaFilter);
+
+  function WebAudioFilter() {
+    var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+    __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default()(this, WebAudioFilter);
+
+    var _this = __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn___default()(this, (WebAudioFilter.__proto__ || __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default()(WebAudioFilter)).call(this));
+
+    __WEBPACK_IMPORTED_MODULE_7_common_argCheck__["a" /* default */].optOptions('WebAudioFilter constructor', 'options', options).optInstance('context', __WEBPACK_IMPORTED_MODULE_8_webrtc_utils__["AudioContext"]);
+
+    if (options.context) {
+      _this._releaseContext = false;
+      _this._audioContext = options.context;
+    } else {
+      _this._releaseContext = true;
+      _this._audioContext = null;
+    }
+
+    _this._source = null;
+    _this._destination = null;
+    return _this;
+  }
+
+  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass___default()(WebAudioFilter, [{
+    key: 'onStream',
+    value: function onStream(stream, oldStream) {
+      if (this._source) {
+        this._source.disconnect();
+        this._source = null;
+      }
+      if (stream) {
+        if (this._releaseContext) {
+          this._audioContext = __WEBPACK_IMPORTED_MODULE_8_webrtc_utils__["audioContextUtil"].get();
+        }
+        this._source = this._audioContext.createMediaStreamSource(stream);
+        this._destination = this._audioContext.createMediaStreamDestination();
+        this.setStream(this._destination.stream);
+      } else {
+        if (this._audioContext && this._releaseContext) {
+          __WEBPACK_IMPORTED_MODULE_8_webrtc_utils__["audioContextUtil"].release();
+          this._audioContext = null;
+        }
+        this._destination = null;
+        this.setStream(null);
+      }
+
+      try {
+        this.onAudioSource(this._source, this._destination, this._audioContext);
+      } catch (error) {
+        __WEBPACK_IMPORTED_MODULE_6_common_log__["default"].error(TAG, 'Error thrown in WebAudioFilter.onAudioSource: ' + error);
+      }
+    }
+  }, {
+    key: 'onAudioSource',
+    value: function onAudioSource(source, destination, context) {
+      if (source) {
+        if (this.onSetupFilter) {
+          try {
+            var result = this.onSetupFilter(context);
+            if (result instanceof AudioNode) {
+              source.connect(result);
+              result.connect(destination);
+            } else if (Array.isArray(result)) {
+              var _result = __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray___default()(result, 2),
+                  input = _result[0],
+                  output = _result[1];
+
+              if (!(input instanceof AudioNode)) {
+                throw new TypeError('returned input node must be an AudioNode');
+              }
+              if (!(output instanceof AudioNode)) {
+                throw new TypeError('returned output node must be an AudioNode');
+              }
+              source.connect(input);
+              output.connect(destination);
+            } else {
+              throw new TypeError('return value must be an AudioNode or array of [input, output] nodes');
+            }
+          } catch (error) {
+            __WEBPACK_IMPORTED_MODULE_6_common_log__["default"].error(TAG, 'Error thrown in WebAudioFilter.onSetupFilter: ' + error);
+          }
+        } else {
+          __WEBPACK_IMPORTED_MODULE_6_common_log__["default"].warning(TAG, 'WebAudioFilter should override onAudioSource(source, destination, context) ' + 'or implement onSetupFilter(context)');
+        }
+      } else {
+        if (this.onTeardownFilter) {
+          try {
+            this.onTeardownFilter(context);
+          } catch (error) {
+            __WEBPACK_IMPORTED_MODULE_6_common_log__["default"].error(TAG, 'Error thrown in WebAudioFilter.onTeardownFilter: ' + error);
+          }
+        }
+      }
+    }
+  }, {
+    key: 'context',
+    get: function get() {
+      return this._audioContext;
+    }
+  }, {
+    key: 'audioSource',
+    get: function get() {
+      return this._source;
+    }
+  }, {
+    key: 'audioDestination',
+    get: function get() {
+      return this._destination;
+    }
+  }]);
+
+  return WebAudioFilter;
+}(__WEBPACK_IMPORTED_MODULE_9_media_mediaFilter__["a" /* default */]);
+
+/* harmony default export */ __webpack_exports__["a"] = (WebAudioFilter);
+
+/***/ }),
+/* 224 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_common_argCheck__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_utils__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_webrtc_utils__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_media_mediaSource__ = __webpack_require__(145);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * A base class for media source nodes that wish to use the WebAudio APIs.
+ *
+ * @class WebAudioSource
+ * @extends MediaSource
+ * @param {Object} [options] - Optional options object
+ * @param {AudioContext} [options.context] - Audio context to use within this media node,
+ *   which must not be closed as while the filter is still being used.
+ *   If omitted, an internal context will be used.
+ */
+
+var WebAudioSource = function (_MediaSource) {
+  __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default()(WebAudioSource, _MediaSource);
+
+  function WebAudioSource() {
+    var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, WebAudioSource);
+
+    var _this = __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (WebAudioSource.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(WebAudioSource)).call(this));
+
+    __WEBPACK_IMPORTED_MODULE_5_common_argCheck__["a" /* default */].optOptions('WebAudioSource constructor', 'options', options).optInstance('context', __WEBPACK_IMPORTED_MODULE_7_webrtc_utils__["AudioContext"]);
+
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_common_utils__["registerInstance"])('webAudioSource', _this);
+
+    if (options.context) {
+      _this._releaseContext = false;
+      _this._audioContext = options.context;
+    } else {
+      _this._releaseContext = true;
+      _this._audioContext = __WEBPACK_IMPORTED_MODULE_7_webrtc_utils__["audioContextUtil"].get();
+    }
+
+    _this._destination = _this._audioContext.createMediaStreamDestination();
+    _this.setStream(_this._destination.stream);
+    return _this;
+  }
+
+  /**
+   * The audio context that is used within this media node.
+   */
+
+
+  __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(WebAudioSource, [{
+    key: 'stop',
+
+
+    /**
+     * Stops the source and cleans up all resources. This has to be called once the source
+     * is no longer used in order to clean up resources.
+     *
+     * Calling this method multiple times has no effect.
+     */
+    value: function stop() {
+      if (this._stopped) {
+        return;
+      }
+      this._stopped = true;
+      __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_common_utils__["unregisterInstance"])('webAudioSource', this);
+      this.setStream(null);
+      this._destination = null;
+      if (this._releaseContext) {
+        __WEBPACK_IMPORTED_MODULE_7_webrtc_utils__["audioContextUtil"].release();
+        this._audioContext = null;
+      }
+    }
+
+    /**
+     * @private
+     * @function WebAudioSource#setStream
+     */
+
+  }, {
+    key: 'context',
+    get: function get() {
+      return this._audioContext;
+    }
+
+    /**
+     * The web audio media stream destination node, whose stream is set as the output stream
+     * of this source. Audio nodes should be connected to this node in order to generate an output.
+     *
+     * This property should only be accessed by subclasses of the web audio source.
+     */
+
+  }, {
+    key: 'audioDestination',
+    get: function get() {
+      return this._destination;
+    }
+  }]);
+
+  return WebAudioSource;
+}(__WEBPACK_IMPORTED_MODULE_8_media_mediaSource__["a" /* default */]);
+
+/* harmony default export */ __webpack_exports__["a"] = (WebAudioSource);
+
+/***/ }),
+/* 225 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_map__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_createClass__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_createClass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_log__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_common_argCheck__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_common_emitter__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_common_utils__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_webrtc_errors__ = __webpack_require__(161);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_webrtc_utils__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_webrtc_peerConnectionProxy__ = __webpack_require__(162);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_webrtc_dataHub__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_webrtc_dataChannelMonitor__ = __webpack_require__(232);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_webrtc_attachmentManager__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_webrtc_components__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_webrtc_signaler__ = __webpack_require__(233);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_datamux_datamux__ = __webpack_require__(227);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_media_mediaNode__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_media_mediaNodeInput__ = __webpack_require__(131);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var TAG = 'call';
+
+var PEER_SWITCH_TIMEOUT_MS = 5000;
+
+/**
+ * A WebRTC call to a single peer.
+ *
+ * The call only manages the connection to a single peer. Functionality is added by attaching
+ * different {@link RtcComponent}s using {@link Call#attach}.
+ *
+ * @abstract
+ * @class Call
+ * @extends EventEmitter
+ */
+
+var Call = function (_EmitterMixin) {
+  __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits___default()(Call, _EmitterMixin);
+
+  __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_createClass___default()(Call, null, [{
+    key: 'create',
+
+    /**
+     * Emitted when the call is closed. Closing the call is permanent, and removes it from the
+     * active calls in a room.
+     * @event Call#closed
+     * @param {object} info - Information about who closed the call and how.
+     * @param {string} info.reason -
+     * An identifier for the reason that the call closed
+     * * `closed` - The call was closed locally.
+     * * `hangup` - Someone hangs up the call, can be caused by both parties.
+     * @param {string} info.source - Who caused the call to close
+     * * `self` - The call was closed locally.
+     * * `peer` - The call was closed by the peer.
+     * @param {Call} info.call - The call that was closed
+     */
+
+    /**
+     * Emitted when the connection state of the call changes.
+     *
+     * @event Call#connectionState
+     * @param {PeerConnectionState} connectionState - The new connection state.
+     */
+
+    /**
+     * Emitted when the call error state is changed.
+     *
+     * @event Call#error
+     * @param {(ConnectionFailedError|ConnectionLostError)?} error - The new error state.
+     */
+
+    /**
+     * Emitted when there is a signaling error.
+     *
+     * @event Call#signalingError
+     * @param {ConnectionSignalingError} signalingError - A signaling error.
+     */
+
+    value: function create(config) {
+      __WEBPACK_IMPORTED_MODULE_8_common_argCheck__["a" /* default */].options('Call.create', 'config', config).func('onSignalingMessage').optString('userId').optString('peerId').optArray('iceServers').optFunc('iceCandidateFilter').optObject('receivedOffer');
+
+      var onSignalingMessage = config.onSignalingMessage,
+          _config$userId = config.userId,
+          userId = _config$userId === undefined ? 'self' : _config$userId,
+          _config$peerId = config.peerId,
+          peerId = _config$peerId === undefined ? 'peer' : _config$peerId,
+          _config$iceServers = config.iceServers,
+          iceServers = _config$iceServers === undefined ? null : _config$iceServers,
+          _config$iceCandidateF = config.iceCandidateFilter,
+          iceCandidateFilter = _config$iceCandidateF === undefined ? null : _config$iceCandidateF,
+          _config$receivedOffer = config.receivedOffer,
+          receivedOffer = _config$receivedOffer === undefined ? null : _config$receivedOffer;
+
+
+      if (userId === peerId) {
+        __WEBPACK_IMPORTED_MODULE_8_common_argCheck__["a" /* default */].error('Call.create', 'config', 'not have identical userId and peerId');
+      }
+
+      return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_10_common_utils__["priv"])(Call, { onSignalingMessage: onSignalingMessage, userId: userId, peerId: peerId, iceServers: iceServers, iceCandidateFilter: iceCandidateFilter, receivedOffer: receivedOffer });
+    }
+  }]);
+
+  function Call(priv, deps) {
+    __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck___default()(this, Call);
+
+    var _this = __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn___default()(this, (Call.__proto__ || __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of___default()(Call)).call(this));
+
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_10_common_utils__["assertPriv"])('Call', priv);
+    _this._ownId = deps.userId || null;
+    _this._peerId = deps.peerId || null;
+    _this._isPassive = !deps.peerId;
+    _this._onClosed = deps.onClosed;
+    _this._statsFormatter = deps.statsFormatter;
+
+    _this._disconnectTimeoutId = 0;
+
+    _this._attachmentManager = new __WEBPACK_IMPORTED_MODULE_16_webrtc_attachmentManager__["b" /* default */]({
+      ownId: deps.userId,
+      type: 'call',
+      dataHub: new __WEBPACK_IMPORTED_MODULE_14_webrtc_dataHub__["b" /* default */](),
+      onUpdate: _this._onAttachmentUpdate.bind(_this)
+    });
+
+    _this._datamux = new __WEBPACK_IMPORTED_MODULE_19_datamux_datamux__["a" /* default */]({
+      onChannel: function onChannel(channel) {
+        return _this._attachmentManager.handlePeerChannel(_this._peerId, channel);
+      },
+      onConnect: function onConnect() {
+        return _this._signaler.handleDataChannelConnect();
+      },
+      onDisconnect: function onDisconnect(reason) {
+        return _this._signaler.handleDataChannelDisconnect(reason);
+      }
+    });
+
+    // All builtin channels should be created here
+    var renegotiationChannel = _this._datamux.createChannel({
+      builtin: true,
+      label: 'cct.call',
+      protocol: 'cct.call.v0'
+    });
+    _this._attachmentChannels = {
+      negotiationChannel: _this._datamux.createChannel({
+        builtin: true,
+        label: 'cct.call.attach-map',
+        protocol: 'cct.call.attach-map.v0'
+      }),
+      dataHubChannel: _this._datamux.createChannel({
+        builtin: true,
+        label: 'cct.attach.data',
+        protocol: 'cct.attach.data.v0'
+      }),
+      messagingChannel: _this._datamux.createChannel({
+        builtin: true,
+        label: 'cct.attach.messaging',
+        protocol: 'cct.attach.messaging.v0'
+      })
+    };
+
+    _this._peerConnectionConfiguration = {
+      iceServers: deps.iceServers,
+      iceCandidateFilter: deps.iceCandidateFilter,
+      statsFormatter: deps.statsFormatter
+    };
+
+    _this._onAddRemoteStream = _this._onRemoteStreamChange.bind(_this, 'got');
+    _this._onRemoveRemoteStream = _this._onRemoteStreamChange.bind(_this, 'lost');
+
+    _this._signaler = new __WEBPACK_IMPORTED_MODULE_18_webrtc_signaler__["a" /* default */]({
+      label: _this._ownId + '=>' + _this._peerId,
+      receivedOffer: deps.offer,
+      renegotiationChannel: renegotiationChannel,
+      onMessage: deps.onSignalingMessage,
+      onSignalingError: _this._onSignalingError.bind(_this),
+      onErrorStateChange: _this._onErrorStateChange.bind(_this),
+      onConnectionStateChange: _this._onConnectionStateChange.bind(_this),
+      onCreatePeerConnection: _this._createPeerConnection.bind(_this)
+    });
+    return _this;
+  }
+
+  __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_createClass___default()(Call, [{
+    key: 'toString',
+    value: function toString() {
+      return 'call{id=' + this.id + ',' + this._peerConnection + '}';
+    }
+  }, {
+    key: '_onErrorStateChange',
+    value: function _onErrorStateChange(error) {
+      this._emit('errorState', error);
+      this._emit('error', error);
+      if (error && this._statsFormatter) {
+        this._statsFormatter.handleStats([{
+          timestamp: Date.now(),
+          pcId: this._peerConnection && this._peerConnection.id,
+          sourceId: 'errorState',
+          name: error.name,
+          message: error.message
+        }]);
+      }
+    }
+  }, {
+    key: '_onConnectionStateChange',
+    value: function _onConnectionStateChange(state, prevState) {
+      if (state === 'connected') {
+        this._emit('connected', this);
+      }
+      if (prevState === 'connected') {
+        this._emit('disconnected', this);
+      }
+      this._emit('connectionState', state, prevState);
+    }
+  }, {
+    key: '_onSignalingError',
+    value: function _onSignalingError(error) {
+      var signalingError = new __WEBPACK_IMPORTED_MODULE_11_webrtc_errors__["e" /* ConnectionSignalingError */](error);
+      this._emit({
+        eventType: 'signalingError',
+        defaultHandler: function defaultHandler() {
+          __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].error(TAG, 'unhandled call signaling error', signalingError);
+        }
+      }, signalingError);
+      if (this._statsFormatter) {
+        this._statsFormatter.handleStats([{
+          timestamp: Date.now(),
+          pcId: this._peerConnection && this._peerConnection.id,
+          sourceId: 'signalingError',
+          name: error.name,
+          message: error.message
+        }]);
+      }
+    }
+
+    /**
+     * Attaches an {@link RtcComponent} to the call. If the peer attaches a compatible component
+     * to the same attachment point, the two components will be paired together.
+     *
+     * A common use case is for two peers to each attach a {@link DataShare} to 'data'.
+     * Once the call has connected, both peers will be able to use the attached DataShare to share data.
+     *
+     * The attachment point name can be any string, although excessively long names should be avoided.
+     *
+     * This method can be called at any point during a call, but will have no effect if the call is closed.
+     *
+     * @param  {string} name - The attachment point where the component should be attached.
+     * @param  {RtcComponent} component - An RtcComponent instance to attach.
+     */
+
+  }, {
+    key: 'attach',
+    value: function attach(name, component) {
+      if (!this._attachmentManager) {
+        __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].debug(TAG, 'Tried to attach component at \'' + name + '\' on a closed call.');
+      } else {
+        this._attachmentManager.attach(name, component);
+      }
+    }
+
+    /**
+     * Detaches the {@link RtcComponent} currently attached to the given attachment point.
+     * If no component is currently attached, an error will be thrown. If the component argument is
+     * given and it does not match the currently attached component, an error will be thrown.
+     *
+     * This method can be called at any point during a call, but will have no effect if the call is closed.
+     *
+     * @param {string} name - The attachment point from where the component should be detached.
+     * @param {RtcComponent} [component] - An RtcComponent instance that is expected to be attached
+     *   at the point.
+     */
+
+  }, {
+    key: 'detach',
+    value: function detach(name, component) {
+      if (!this._attachmentManager) {
+        __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].debug(TAG, 'Tried to detach component at \'' + name + '\' from a closed call.');
+      } else {
+        this._attachmentManager.detach(name, component);
+      }
+    }
+
+    /**
+     * A object containing all the attachments of the call.
+     *
+     * @readonly
+     * @member {Object<RtcComponent>} Call#attachments
+     */
+
+  }, {
+    key: '_getMediaPipe',
+    value: function _getMediaPipe(name) {
+      if (!this._attachmentManager) {
+        return new __WEBPACK_IMPORTED_MODULE_17_webrtc_components__["d" /* PeerMediaPipe */]();
+      }
+      var pipe = this._attachmentManager.getAttachments()[name];
+      if (pipe && !(pipe instanceof __WEBPACK_IMPORTED_MODULE_17_webrtc_components__["d" /* PeerMediaPipe */])) {
+        throw new Error('Attachment conflict for ' + name + ', another component is attached.');
+      } else if (!pipe) {
+        pipe = new __WEBPACK_IMPORTED_MODULE_17_webrtc_components__["d" /* PeerMediaPipe */]();
+        this._attachmentManager.attach(name, pipe);
+      }
+      return pipe;
+    }
+
+    /**
+     * Returns a {@link MediaTee} that represents a remote source with a specific name.
+     *
+     * This method is guaranteed to always return a {@link MediaTee}, unless the call is closed.
+     * If there is no remote source with the given name, it will be created.
+     *
+     * Under the hood this method will ensure that a {@link PeerMediaPipe} component is attached to the given point.
+     *
+     * @example <caption>Rendering a remote stream to a &lt;video&gt; element</caption>
+     *
+     * call.getRemoteSource('main').connect(videoElement)
+     *
+     * @function Call#getRemoteSource
+     * @param {string} name - The name of the remote source to return.
+     * @returns {MediaTee} A media tee that forwards the remote stream.
+     */
+
+  }, {
+    key: 'getRemoteSource',
+    value: function getRemoteSource(name) {
+      return this._getMediaPipe(name).output;
+    }
+
+    /**
+     * Sets or removes a local media source that will be streamed to the peer.
+     *
+     * Under the hood this method will ensure that a {@link MediaPipe} component is attached to the given point.
+     *
+     * @function Call#setLocalSource
+     * @param {string} name - The name of the stream, e.g. 'main'.
+     * @param {?MediaNode} source - The media source.
+     */
+
+  }, {
+    key: 'setLocalSource',
+    value: function setLocalSource(name, source) {
+      if (arguments.length < 2) {
+        throw new TypeError('Call.setLocalSource: requires at least 2 arguments');
+      }
+      if (typeof name !== 'string') {
+        throw new TypeError('Call.setLocalSource: name has to be a string');
+      }
+      if (source) {
+        __WEBPACK_IMPORTED_MODULE_20_media_mediaNode__["a" /* default */].connect(source, this._getMediaPipe(name));
+      } else {
+        var input = __WEBPACK_IMPORTED_MODULE_21_media_mediaNodeInput__["a" /* default */].resolve(this._getMediaPipe(name));
+        if (input.target) {
+          input.target.disconnect(input);
+        }
+      }
+    }
+  }, {
+    key: '_onAttachmentUpdate',
+    value: function _onAttachmentUpdate() {
+      var _this2 = this;
+
+      if (!this._peerConnection) {
+        return;
+      }
+      if (!this.peerId) {
+        return __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].error(TAG, 'got attachment update while no peer id was set');
+      }
+      var streams = this._attachmentManager.getLocalStreamsForPeer(this.peerId);
+      var currentStreams = this._peerConnection.getLocalStreams();
+
+      var _streamDiff = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_12_webrtc_utils__["streamDiff"])(currentStreams, streams),
+          _streamDiff2 = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray___default()(_streamDiff, 2),
+          added = _streamDiff2[0],
+          removed = _streamDiff2[1];
+
+      added.forEach(function (stream) {
+        return _this2._peerConnection.addStream(stream);
+      });
+      removed.forEach(function (stream) {
+        return _this2._peerConnection.removeStream(stream);
+      });
+    }
+  }, {
+    key: '_onRemoteStreamChange',
+    value: function _onRemoteStreamChange(op, event) {
+      var stream = event.stream;
+
+      __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].debug(TAG, op + ' remote stream \'' + stream.id + ':\'', stream);
+      var streams = this._peerConnection.getRemoteStreams();
+      this._attachmentManager.setRemoteStreamsForPeer(this.peerId, streams);
+    }
+  }, {
+    key: '_setPeerId',
+    value: function _setPeerId(peerId) {
+      if (this._peerId !== peerId) {
+        this._oldPeers = this._oldPeers || new __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_map___default.a();
+        var now = Date.now();
+        var switchTimeout = this._oldPeers.get(peerId);
+        if (now < switchTimeout) {
+          __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].info(TAG, this, 'ignoring peer change from ' + this._peerId + ' to ' + peerId + ', timeout has not expired');
+          return false;
+        }
+        this._oldPeers.set(peerId, now + PEER_SWITCH_TIMEOUT_MS);
+
+        if (this._peerId) {
+          __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].info(TAG, this, 'changed peer, sending hangup to old peer');
+          this._signaler.sendHangup();
+        }
+
+        this._reset();
+        this._peerId = peerId;
+        this._emit('peerId', peerId);
+        if (this._statsFormatter) {
+          this._statsFormatter.setPeerId(peerId);
+        }
+      }
+      return true;
+    }
+  }, {
+    key: 'handleSignalingMessage',
+    value: function handleSignalingMessage(message) {
+      __WEBPACK_IMPORTED_MODULE_8_common_argCheck__["a" /* default */].object('Call.handleSignalingMessage', 'message', message);
+      try {
+        this._signaler.handleMessage(message);
+      } catch (error) {
+        if (error.message === 'hangup') {
+          if (this._signaler.transitionToClosed()) {
+            this._closeCall('hangup', 'peer');
+          }
+        } else {
+          __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].error(TAG, this + ' error when handling signaling message: ' + error);
+        }
+      }
+    }
+  }, {
+    key: '_createPeerConnection',
+    value: function _createPeerConnection() {
+      __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].verbose(TAG, this + ' replacing peer connection');
+      this._reset();
+
+      this._peerConnection = __WEBPACK_IMPORTED_MODULE_13_webrtc_peerConnectionProxy__["a" /* default */].create(this._peerConnectionConfiguration);
+      if (this._statsFormatter) {
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_15_webrtc_dataChannelMonitor__["a" /* default */])(this._peerConnection, this._statsFormatter);
+      }
+      var dataChannelFactory = this._peerConnection.createDataChannel.bind(this._peerConnection);
+      this._datamux.createDataChannels(dataChannelFactory);
+      this._attachmentManager.setDatamuxForPeer(this._peerId, this._datamux, this._attachmentChannels);
+      this._onAttachmentUpdate();
+      this._peerConnection.addEventListener('addstream', this._onAddRemoteStream);
+      this._peerConnection.addEventListener('removestream', this._onRemoveRemoteStream);
+
+      this._emit('peerConnection', this._peerConnection);
+
+      return this._peerConnection;
+    }
+
+    // Members
+
+    /**
+     * The id of the call.
+     *
+     * This is not guaranteed to be constant, as it can be changed due to negotiation
+     * conflicts. If the id is changed, an `'id` event will be emitted.
+     *
+     * @readonly
+     * @member {string} Call#id
+     */
+
+  }, {
+    key: 'hangup',
+
+
+    // Methods
+    /**
+     * Signal to the peer that the call is has been hung up, and then stop the call.
+     *
+     * When a call is hung up all components will be detached, and all resources cleaned up. It will
+     * not be possible to start the call again.
+     *
+     * @function Call#hangup
+     * @returns {Promise<Room>} A promise that is resolved if the hangup event is sent successfully.
+     */
+    value: function hangup() {
+      if (this._signaler.transitionToClosed()) {
+        this._signaler.sendHangup();
+        this._closeCall('hangup', 'self');
+      }
+    }
+    /**
+     * Abruptly close the call without signaling to the peer.
+     *
+     * When a call is hung up all components will be detached, and all resources cleaned up. It will
+     * not be possible to start the call again.
+     *
+     * @function Call#close
+     */
+
+  }, {
+    key: 'close',
+    value: function close() {
+      if (this._signaler.transitionToClosed()) {
+        this._closeCall('closed', 'self');
+      }
+    }
+    /**
+     * Starts an incoming call, or tries to reconnect the call if the connection has failed.
+     *
+     * @function Call#start
+     */
+
+  }, {
+    key: 'start',
+    value: function start() {
+      this._signaler.start();
+      return this;
+    }
+  }, {
+    key: '_closeCall',
+    value: function _closeCall(reason, source) {
+      this._reset();
+      this._datamux.cleanup();
+      this._attachmentManager.cleanup();
+      this._attachmentManager = null;
+      if (this._onClosed) {
+        this._onClosed(this);
+      }
+      __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].info(TAG, 'closed call: ' + this);
+      this._emit('closed', {
+        reason: reason,
+        source: source,
+        call: this
+      });
+    }
+  }, {
+    key: '_reset',
+    value: function _reset() {
+      if (this._peerConnection) {
+        this._peerConnection.removeEventListener('addstream', this._onAddRemoteStream);
+        this._peerConnection.removeEventListener('removestream', this._onRemoveRemoteStream);
+      }
+      this._signaler.reset();
+      try {
+        if (this._peerConnection && this._peerConnection.signalingState !== 'closed') {
+          this._peerConnection.close();
+        }
+      } catch (e) {
+        __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].error(TAG, 'failed to close peer connection: ', e);
+      }
+      this._peerConnection = null;
+      this._datamux.reset();
+      this._attachmentManager.cleanupPeer(this.peerId);
+    }
+  }, {
+    key: 'attachments',
+    get: function get() {
+      return this._attachmentManager.getAttachments();
+    }
+  }, {
+    key: 'id',
+    get: function get() {
+      return this._signaler.ticket;
+    }
+
+    // these two are added in callRegistry.js
+    /**
+     * The room that the call is taking place in.
+     *
+     * @readonly
+     * @member {Room} Call#room
+     */
+    /**
+     * The peer that the call is connecting to.
+     *
+     * @readonly
+     * @member {User} Call#peer
+     */
+
+    /**
+     * Your own id that the peer will see as {@link Call#peerId}.
+     *
+     * @readonly
+     * @member {string} Call#ownId
+     */
+
+  }, {
+    key: 'ownId',
+    get: function get() {
+      return this._ownId;
+    }
+
+    /**
+     * The id of the peer that the call is connecting to.
+     *
+     * @readonly
+     * @member {string} Call#peerId
+     */
+
+  }, {
+    key: 'peerId',
+    get: function get() {
+      return this._peerId;
+    }
+
+    /**
+     * The state of the signalling channel, `true` if the channel is open, `false` otherwise.
+     *
+     * @readonly
+     * @member {boolean} Call#connected
+     */
+
+  }, {
+    key: 'connected',
+    get: function get() {
+      return this._signaler.isConnected();
+    }
+
+    /**
+     * Whether the call is closed or not. A closed call cannot be started again.
+     *
+     * @readonly
+     * @member {boolean} Call#closed
+     */
+
+  }, {
+    key: 'closed',
+    get: function get() {
+      return this._signaler.closed;
+    }
+
+    /**
+     * Whether the call is stopped or not. The initial state of incoming calls is stopped,
+     * and calls will also transition to the stopped state if the connection has failed.
+     *
+     * @readonly
+     * @member {boolean} Call#stopped
+     */
+
+  }, {
+    key: 'stopped',
+    get: function get() {
+      return this._signaler.stopped;
+    }
+
+    /**
+     * The connection state of the call.
+     *
+     * @readonly
+     * @member {PeerConnectionState} Call#connectionState
+     */
+
+  }, {
+    key: 'connectionState',
+    get: function get() {
+      return this._signaler.connectionState;
+    }
+
+    /**
+     * An error describing why the call connection is failing, or null if there is no error.
+     * Will always be null if {@link Call#connectionState} is `'connected'` or `'closed'`.
+     *
+     * @readonly
+     * @member {(ConnectionFailedError|ConnectionLostError)?} Call#errorState
+     */
+
+  }, {
+    key: 'errorState',
+    get: function get() {
+      return this._signaler.errorState;
+    }
+  }, {
+    key: 'error',
+    get: function get() {
+      __WEBPACK_IMPORTED_MODULE_7_common_log__["default"].warning('deprecated', 'call.error is deprecated, use call.errorState instead');
+      return this._signaler.errorState;
+    }
+  }]);
+
+  return Call;
+}(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9_common_emitter__["a" /* default */])(null));
+
+/* harmony default export */ __webpack_exports__["default"] = (Call);
+
+
+Call._deprecatedEvents = {
+  // FIXME: remove once call.error is removed
+  error: function error(funcName) {
+    return 'call.' + funcName + '(\'error\', ...) is deprecated, use call.' + funcName + '(\'errorState\', ...) instead';
+  }
+};
+
+/***/ }),
 /* 226 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return FileTransfer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return FileDownload; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ = __webpack_require__(291);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ = __webpack_require__(292);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_createClass__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_log__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_common_argCheck__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_common_emitter__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_common_emitter__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_common_queue__ = __webpack_require__(159);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_common_utils__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_webrtc_errors__ = __webpack_require__(161);
@@ -26436,7 +26436,7 @@ var FileDownload = function (_EmitterMixin3) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_math_sign__ = __webpack_require__(288);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_math_sign__ = __webpack_require__(289);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_math_sign___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_math_sign__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray__);
@@ -26444,7 +26444,7 @@ var FileDownload = function (_EmitterMixin3) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_typeof___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_typeof__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_json_stringify__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_json_stringify___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_json_stringify__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_promise__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_promise__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_promise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_map__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_map__);
@@ -26455,15 +26455,15 @@ var FileDownload = function (_EmitterMixin3) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_common_log__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_common_argCheck__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_common_utils__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_datamux_channelDriver__ = __webpack_require__(268);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_datamux_channelController__ = __webpack_require__(267);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_datamux_registry__ = __webpack_require__(269);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_datamux_channel__ = __webpack_require__(266);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_datamux_activityTracker__ = __webpack_require__(263);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_datamux_bandwidthEstimation__ = __webpack_require__(264);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_datamux_buffers__ = __webpack_require__(265);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_datamux_channelDriver__ = __webpack_require__(269);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_datamux_channelController__ = __webpack_require__(268);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_datamux_registry__ = __webpack_require__(270);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_datamux_channel__ = __webpack_require__(267);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_datamux_activityTracker__ = __webpack_require__(264);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_datamux_bandwidthEstimation__ = __webpack_require__(265);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_datamux_buffers__ = __webpack_require__(266);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_datamux_transfer__ = __webpack_require__(228);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_datamux_constants__ = __webpack_require__(182);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_datamux_constants__ = __webpack_require__(184);
 
 
 // This module contains the main datamux implementation,
@@ -27346,7 +27346,7 @@ var DataChannelMultiplexer = function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_toArray__ = __webpack_require__(89);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_toArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_toArray__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_promise__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_promise__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_promise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck__);
@@ -27357,7 +27357,7 @@ var DataChannelMultiplexer = function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_log__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_utils__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_webrtc_errors__ = __webpack_require__(161);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_datamux_constants__ = __webpack_require__(182);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_datamux_constants__ = __webpack_require__(184);
 
 
 // This module contains classes and utils for transferring
@@ -28270,7 +28270,7 @@ monitorDataChannels.MONITOR_INTERVAL = 1000;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_defineProperty__ = __webpack_require__(88);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_defineProperty___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_defineProperty__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_extends__ = __webpack_require__(290);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_extends__ = __webpack_require__(291);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_extends__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck__);
@@ -28280,7 +28280,7 @@ monitorDataChannels.MONITOR_INTERVAL = 1000;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_webrtc_errors__ = __webpack_require__(161);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_utils__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_webrtc_candidater__ = __webpack_require__(230);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_webrtc_renegotiator__ = __webpack_require__(285);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_webrtc_renegotiator__ = __webpack_require__(286);
 
 
 
@@ -28778,7 +28778,7 @@ var Signaler = function () {
 /* 234 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(294), __esModule: true };
+module.exports = { "default": __webpack_require__(295), __esModule: true };
 
 /***/ }),
 /* 235 */
@@ -28838,12 +28838,12 @@ module.exports = g;
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = Auth;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_common_argCheck__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_common_utils__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_common_request__ = __webpack_require__(166);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_matrix_errors__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_common_request__ = __webpack_require__(167);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_matrix_errors__ = __webpack_require__(197);
 
 
 
@@ -29129,25 +29129,25 @@ Auth._createHmac = function (_ref) {
 /* harmony export (immutable) */ __webpack_exports__["a"] = Client;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_common_log__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_common_argCheck__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_common_emitter__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_common_reporter__ = __webpack_require__(257);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_request__ = __webpack_require__(166);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_errors__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_common_emitter__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_common_reporter__ = __webpack_require__(258);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_request__ = __webpack_require__(167);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_errors__ = __webpack_require__(146);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_common_utils__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_matrix_accountData__ = __webpack_require__(185);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_matrix_callRegistry__ = __webpack_require__(275);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_matrix_resources__ = __webpack_require__(165);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_matrix_roomQuery__ = __webpack_require__(216);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_matrix_roomRegistry__ = __webpack_require__(276);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_matrix_syncStream__ = __webpack_require__(277);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_matrix_userRegistry__ = __webpack_require__(197);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_matrix_errors__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_matrix_ids__ = __webpack_require__(168);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_matrix_powerLevels__ = __webpack_require__(186);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_matrix_accountData__ = __webpack_require__(187);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_matrix_callRegistry__ = __webpack_require__(276);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_matrix_resources__ = __webpack_require__(166);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_matrix_roomQuery__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_matrix_roomRegistry__ = __webpack_require__(277);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_matrix_syncStream__ = __webpack_require__(278);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_matrix_userRegistry__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_matrix_errors__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_matrix_ids__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_matrix_powerLevels__ = __webpack_require__(188);
 
 
 
@@ -30211,26 +30211,26 @@ __WEBPACK_IMPORTED_MODULE_4_common_emitter__["a" /* default */].call(Client.prot
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_get__ = __webpack_require__(69);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_get___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_get__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_log__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_common_argCheck__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_common_emitter__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_common_emitter__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_common_utils__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_webrtc_utils__ = __webpack_require__(66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_media_webAudioSource__ = __webpack_require__(223);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_media_webAudioSource__ = __webpack_require__(224);
 
 
 
@@ -30457,18 +30457,18 @@ var AudioBufferSource = function (_EmitterMixin) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_common_emitter__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_media_webAudioFilter__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_common_emitter__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_media_webAudioFilter__ = __webpack_require__(223);
 
 
 
@@ -30622,19 +30622,19 @@ var AudioMeter = function (_EmitterMixin) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_log__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_media_mediaSource__ = __webpack_require__(144);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_media_mediaNode__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_media_mediaSource__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_media_mediaNode__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_webrtc_utils__ = __webpack_require__(66);
 
 
@@ -30739,11 +30739,11 @@ var AudioMixer = function (_MediaSource) {
 
 "use strict";
 /* unused harmony export DeviceInfo */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck__);
@@ -30751,12 +30751,12 @@ var AudioMixer = function (_MediaSource) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_common_log__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_argCheck__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_emitter__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_emitter__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_common_utils__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_media_mediaNode__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_media_mediaNode__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_media_muteFilter__ = __webpack_require__(180);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_media_passthrough__ = __webpack_require__(181);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_media_userMediaSource__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_media_userMediaSource__ = __webpack_require__(222);
 
 
 
@@ -31122,11 +31122,11 @@ __WEBPACK_IMPORTED_MODULE_7_common_emitter__["a" /* default */].call(DeviceSourc
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck__);
@@ -31134,8 +31134,8 @@ __WEBPACK_IMPORTED_MODULE_7_common_emitter__["a" /* default */].call(DeviceSourc
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_common_log__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_argCheck__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_emitter__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_media_mediaSink__ = __webpack_require__(153);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_emitter__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_media_mediaSink__ = __webpack_require__(150);
 
 
 
@@ -31322,27 +31322,27 @@ var Recorder = function (_EmitterMixin) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_log__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_argCheck__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_common_emitter__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_common_emitter__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_common_utils__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_webrtc_utils__ = __webpack_require__(66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_media_chromeScreenSource__ = __webpack_require__(218);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_media_firefoxScreenSource__ = __webpack_require__(219);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_media_temasysScreenSource__ = __webpack_require__(283);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_media_mediaNode__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_media_chromeScreenSource__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_media_firefoxScreenSource__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_media_temasysScreenSource__ = __webpack_require__(284);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_media_mediaNode__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_media_muteFilter__ = __webpack_require__(180);
 
 
@@ -31722,21 +31722,21 @@ var ScreenSource = function (_EmitterMixin) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_webrtc_utils__ = __webpack_require__(66);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_media_mediaNodeInput__ = __webpack_require__(131);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_media_mediaSource__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_media_mediaSource__ = __webpack_require__(145);
 
 
 
@@ -31849,7 +31849,272 @@ var StreamMerger = function (_MediaSource) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_symbol__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_symbol___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_symbol__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_log__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_utils__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_common_emitter__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_media_mediaSink__ = __webpack_require__(150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_media_streamSource__ = __webpack_require__(183);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_media_htmlSink__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_media_streamSink__ = __webpack_require__(182);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_media_dummySource__ = __webpack_require__(165);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_webrtc_components__ = __webpack_require__(193);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var TAG = 'tab-sharing-sink';
+
+var replacement = __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_symbol___default()('sink-replacement');
+
+/**
+ * A media sink that renders to a target HTML media element, either `<audio>` or `<video>`.
+ *
+ * @class HtmlSink
+ * @extends MediaSink
+ * @param {Object} [options] - Optional options object.
+ * @param {external:HTMLMediaElement} target - The target HTML element.
+ */
+
+var TabSharingSink = function (_EmitterMixin) {
+  __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default()(TabSharingSink, _EmitterMixin);
+
+  function TabSharingSink(_ref) {
+    var _ref$target = _ref.target,
+        target = _ref$target === undefined ? null : _ref$target,
+        iceServers = _ref.iceServers,
+        call = _ref.call,
+        onStream = _ref.onStream;
+
+    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, TabSharingSink);
+
+    var _this = __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (TabSharingSink.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(TabSharingSink)).call(this));
+
+    if (onStream) {
+      _this._onStream = onStream;
+    }
+    _this._sinkSource = new __WEBPACK_IMPORTED_MODULE_10_media_streamSource__["a" /* default */]();
+    _this._tabSink = new __WEBPACK_IMPORTED_MODULE_11_media_htmlSink__["default"]();
+    var bail = 0;
+    while (target && target[replacement] && bail < 5) {
+      target = target[replacement];
+      bail += 1;
+    }
+    if (bail >= 5) {
+      __WEBPACK_IMPORTED_MODULE_6_common_log__["default"].error(TAG, 'HtmlSink got stuck in element replacement loop');
+    }
+    _this._target = target;
+    _this._iceServers = iceServers;
+    _this._call = call;
+    _this._tabSink.target = target;
+    _this._refreshSink = _this._refreshSink.bind(_this);
+    _this._refreshTick = null;
+    return _this;
+  }
+
+  /**
+   * The target HTML element to render to.
+   *
+   * This can be updated at any time.
+   *
+   * @member {external:HTMLMediaElement} HtmlSink#target
+   */
+
+
+  __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(TabSharingSink, [{
+    key: 'connectSink',
+    value: function connectSink() {
+      this._proxySource = new __WEBPACK_IMPORTED_MODULE_14_webrtc_components__["f" /* ProxySource */]({
+        connectionConfig: {
+          iceServers: this._iceServers,
+          iceCandidateFilter: function iceCandidateFilter(info) {
+            return info.type === 'relay';
+          }
+        }
+      });
+      this._proxySourceForwarder = new __WEBPACK_IMPORTED_MODULE_12_media_streamSink__["a" /* default */]({ onStream: this._onStream.bind(this) });
+      this._proxySource.connect(this._proxySourceForwarder);
+      this._call.attach('content-proxy', this._proxySource);
+
+      this._streamSource = new __WEBPACK_IMPORTED_MODULE_14_webrtc_components__["d" /* PeerMediaPipe */]();
+      if (__WEBPACK_IMPORTED_MODULE_7_common_utils__["isChrome"]) {
+        this._dummySource = new __WEBPACK_IMPORTED_MODULE_13_media_dummySource__["a" /* default */]({ video: true }); // So that recvonly chrome -> firefox works
+        this._dummySource.connect(this._streamSource);
+      }
+
+      this._mediaSourceForwarder = new __WEBPACK_IMPORTED_MODULE_12_media_streamSink__["a" /* default */]({ onStream: this._onStream.bind(this) });
+      this._streamSource.connect(this._mediaSourceForwarder);
+      this._call.attach('content-stream', this._streamSource);
+
+      this._remoteVideoSizer = new __WEBPACK_IMPORTED_MODULE_14_webrtc_components__["b" /* DataShare */]();
+      this._remoteVideoSizer.on('update:size', this._onRemoteVideoSize);
+      this._call.attach('content-size', this._remoteVideoSizer);
+
+      this._scroller = new __WEBPACK_IMPORTED_MODULE_14_webrtc_components__["b" /* DataShare */]();
+      this._call.attach('scroller', this._scroller);
+      this._scroller.set('scroll', { x: 0, y: 0 });
+
+      this._onStream = this._onStream.bind(this);
+      this._cleanup = this._cleanup.bind(this);
+    }
+  }, {
+    key: 'cleanSink',
+    value: function cleanSink() {
+      return this._cleanup();
+    }
+  }, {
+    key: '_hasTarget',
+    value: function _hasTarget(target) {
+      if (this._target === target) {
+        return true;
+      } else if (this._target === target[replacement]) {
+        return true;
+      }
+      return false;
+    }
+
+    // eslint-disable-next-line
+    /**
+     * @private
+     */
+
+  }, {
+    key: '_onStream',
+    value: function _onStream(stream) {
+      if (this._onStream) {
+        this._onStream(stream);
+      }
+      this._emit('stream', stream);
+    }
+  }, {
+    key: '_handleWindowResize',
+    value: function _handleWindowResize() {}
+  }, {
+    key: '_onRemoteVideoSize',
+    value: function _onRemoteVideoSize() {}
+  }, {
+    key: '_cleanup',
+    value: function _cleanup() {
+      if (this._target && this._target instanceof HTMLMediaElement) {
+        if (this._target.srcObject) {
+          this._target.srcObject = null;
+        } else if (this._target.src) {
+          this._target.src = '';
+        }
+      } else {
+        this._target = window.attachMediaStream(this._target, null);
+      }
+
+      if (this._dummySource) {
+        this._dummySource.disconnect(this._streamSource);
+        try {
+          this._dummySource.stop();
+        } catch (error) {/* libcct 0.18.7 is a bit broken */}
+        this._dummySource = null;
+      }
+      this._proxySource.disconnect(this._proxySourceForwarder);
+      this._streamSource.disconnect(this._mediaSourceForwarder);
+      if (!this._call.closed) {
+        this._call.detach('scroller', this._scroller);
+        this._call.detach('content-proxy', this._proxySource);
+        this._call.detach('content-stream', this._streamSource);
+        this._call.detach('content-size', this._remoteVideoSizer);
+      }
+      this._remoteVideoSizer.off('update:size', this._onRemoteVideoSize);
+      this._remoteVideoSizer = null;
+      this._source = null;
+      this._scroller = null;
+      this._proxySource = null;
+      this._streamSource = null;
+      this._proxySourceForwarder = null;
+      this._mediaSourceForwarder = null;
+    }
+  }, {
+    key: '_assign',
+    value: function _assign() {
+      if (this.stream) {
+        try {
+          var originalElement = this._target;
+          this._target = window.attachMediaStream(this._target, this.stream);
+          if (originalElement instanceof HTMLMediaElement) {
+            originalElement[replacement] = this._target;
+          }
+        } catch (error) {
+          __WEBPACK_IMPORTED_MODULE_6_common_log__["default"].info(TAG, 'Error when assigning html sink stream: ' + error);
+        }
+        try {
+          var result = this._target.play();
+          if (result && result.catch) {
+            result.catch(function (error) {
+              __WEBPACK_IMPORTED_MODULE_6_common_log__["default"].debug(TAG, 'Failed to play stream, ' + error);
+            });
+          }
+        } catch (error) {
+          __WEBPACK_IMPORTED_MODULE_6_common_log__["default"].info(TAG, 'Error when playing html sink stream: ' + error);
+        }
+      }
+    }
+  }, {
+    key: '_refreshSink',
+    value: function _refreshSink() {
+      if (this._target) {
+        this._cleanup();
+        this._assign();
+      }
+    }
+  }, {
+    key: 'target',
+    get: function get() {
+      return this._target;
+    },
+    set: function set(target) {
+      if (this._target) {
+        this._cleanup();
+      }
+      this._target = target || null;
+      if (target) {
+        this._assign();
+      }
+    }
+  }]);
+
+  return TabSharingSink;
+}(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_8_common_emitter__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_9_media_mediaSink__["a" /* default */]));
+
+/* harmony default export */ __webpack_exports__["a"] = (TabSharingSink);
+
+/***/ }),
+/* 251 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
@@ -31857,7 +32122,7 @@ var StreamMerger = function (_MediaSource) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_common_argCheck__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_media_common__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_media_htmlSink__ = __webpack_require__(146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_media_htmlSink__ = __webpack_require__(144);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_media_streamSplitter__ = __webpack_require__(191);
 
 
@@ -31983,19 +32248,19 @@ var VideoFrameCapture = function () {
 /* harmony default export */ __webpack_exports__["a"] = (VideoFrameCapture);
 
 /***/ }),
-/* 251 */,
-/* 252 */
+/* 252 */,
+/* 253 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export StreamConnection */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StreamPublisher; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return StreamSubscriber; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck__);
@@ -32003,15 +32268,15 @@ var VideoFrameCapture = function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_common_log__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_argCheck__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_emitter__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_emitter__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_common_utils__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_matrix_room__ = __webpack_require__(187);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_matrix_room__ = __webpack_require__(189);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_webrtc_rtcComponent__ = __webpack_require__(160);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_webrtc_peerConnectionProxy__ = __webpack_require__(162);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_webrtc_errors__ = __webpack_require__(161);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_media_mediaNode__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_media_streamSink__ = __webpack_require__(189);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_media_streamSource__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_media_mediaNode__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_media_streamSink__ = __webpack_require__(182);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_media_streamSource__ = __webpack_require__(183);
 
 
 
@@ -32708,7 +32973,7 @@ var StreamSubscriber = function (_MediaNode$connectMix) {
 }(__WEBPACK_IMPORTED_MODULE_13_media_mediaNode__["a" /* default */].connectMixin(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_7_common_emitter__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_10_webrtc_rtcComponent__["a" /* default */])));
 
 /***/ }),
-/* 253 */
+/* 254 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -32716,22 +32981,22 @@ var StreamSubscriber = function (_MediaNode$connectMix) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_toConsumableArray__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_map__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_log__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_common_emitter__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_common_emitter__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_common_argCheck__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_common_utils__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_media_scaledCanvasFilter__ = __webpack_require__(280);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_media_temasysCanvasFilter__ = __webpack_require__(282);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_media_scaledCanvasFilter__ = __webpack_require__(281);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_media_temasysCanvasFilter__ = __webpack_require__(283);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_webrtc_rtcComponent__ = __webpack_require__(160);
 
 
@@ -33158,7 +33423,7 @@ var ThumbnailBroadcaster = function (_RtcComponent) {
 /* harmony default export */ __webpack_exports__["a"] = (ThumbnailBroadcaster);
 
 /***/ }),
-/* 254 */
+/* 255 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -33166,7 +33431,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "version", function() { return version; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_common_argCheck__ = __webpack_require__(12);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "_argCheck", function() { return __WEBPACK_IMPORTED_MODULE_0_common_argCheck__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_common_emitter__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_common_emitter__ = __webpack_require__(34);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "_EmitterMixin", function() { return __WEBPACK_IMPORTED_MODULE_1_common_emitter__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_common_queue__ = __webpack_require__(159);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "_AsyncQueue", function() { return __WEBPACK_IMPORTED_MODULE_2_common_queue__["a"]; });
@@ -33178,48 +33443,48 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_webrtc_utils__ = __webpack_require__(66);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "webRtcReady", function() { return __WEBPACK_IMPORTED_MODULE_5_webrtc_utils__["webRtcReady"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "_AdapterJS", function() { return __WEBPACK_IMPORTED_MODULE_5_webrtc_utils__["AdapterJS"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_matrix_accountData__ = __webpack_require__(185);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_matrix_accountData__ = __webpack_require__(187);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "AccountData", function() { return __WEBPACK_IMPORTED_MODULE_6_matrix_accountData__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_matrix_auth__ = __webpack_require__(241);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Auth", function() { return __WEBPACK_IMPORTED_MODULE_7_matrix_auth__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_matrix_client__ = __webpack_require__(242);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Client", function() { return __WEBPACK_IMPORTED_MODULE_8_matrix_client__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_matrix_resources__ = __webpack_require__(165);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_matrix_resources__ = __webpack_require__(166);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "ImageResource", function() { return __WEBPACK_IMPORTED_MODULE_9_matrix_resources__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "ImageUpload", function() { return __WEBPACK_IMPORTED_MODULE_9_matrix_resources__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_matrix_powerLevels__ = __webpack_require__(186);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_matrix_powerLevels__ = __webpack_require__(188);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "PowerLevelsEdit", function() { return __WEBPACK_IMPORTED_MODULE_10_matrix_powerLevels__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "PowerLevelsReader", function() { return __WEBPACK_IMPORTED_MODULE_10_matrix_powerLevels__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_matrix_room__ = __webpack_require__(187);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_matrix_room__ = __webpack_require__(189);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Room", function() { return __WEBPACK_IMPORTED_MODULE_11_matrix_room__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_matrix_roomQuery__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_matrix_roomQuery__ = __webpack_require__(217);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "RoomQuery", function() { return __WEBPACK_IMPORTED_MODULE_12_matrix_roomQuery__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_matrix_roomState__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_matrix_roomState__ = __webpack_require__(218);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "RoomState", function() { return __WEBPACK_IMPORTED_MODULE_13_matrix_roomState__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_matrix_user__ = __webpack_require__(188);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_matrix_user__ = __webpack_require__(190);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "User", function() { return __WEBPACK_IMPORTED_MODULE_14_matrix_user__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_webrtc_call__ = __webpack_require__(224);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_webrtc_call__ = __webpack_require__(225);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Call", function() { return __WEBPACK_IMPORTED_MODULE_15_webrtc_call__["default"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_webrtc_fileRef__ = __webpack_require__(226);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "FileRef", function() { return __WEBPACK_IMPORTED_MODULE_16_webrtc_fileRef__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "FileTransfer", function() { return __WEBPACK_IMPORTED_MODULE_16_webrtc_fileRef__["b"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "FileDownload", function() { return __WEBPACK_IMPORTED_MODULE_16_webrtc_fileRef__["c"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_webrtc_dataHub__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_webrtc_dataHub__ = __webpack_require__(194);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "AttachData", function() { return __WEBPACK_IMPORTED_MODULE_17_webrtc_dataHub__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_webrtc_rtcComponent__ = __webpack_require__(160);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "RtcComponent", function() { return __WEBPACK_IMPORTED_MODULE_18_webrtc_rtcComponent__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_webrtc_attachmentManager__ = __webpack_require__(192);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "RtcPeer", function() { return __WEBPACK_IMPORTED_MODULE_19_webrtc_attachmentManager__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_webrtc_components__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_webrtc_components__ = __webpack_require__(193);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MediaBroadcaster", function() { return __WEBPACK_IMPORTED_MODULE_20_webrtc_components__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "DataShare", function() { return __WEBPACK_IMPORTED_MODULE_20_webrtc_components__["b"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "FileShare", function() { return __WEBPACK_IMPORTED_MODULE_20_webrtc_components__["c"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "PeerMediaPipe", function() { return __WEBPACK_IMPORTED_MODULE_20_webrtc_components__["d"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "ProxySink", function() { return __WEBPACK_IMPORTED_MODULE_20_webrtc_components__["e"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "ProxySource", function() { return __WEBPACK_IMPORTED_MODULE_20_webrtc_components__["f"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_webrtc_thumbnailBroadcaster__ = __webpack_require__(253);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_webrtc_thumbnailBroadcaster__ = __webpack_require__(254);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "ThumbnailBroadcaster", function() { return __WEBPACK_IMPORTED_MODULE_21_webrtc_thumbnailBroadcaster__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_webrtc_streamPubSub__ = __webpack_require__(252);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_webrtc_streamPubSub__ = __webpack_require__(253);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "StreamPublisher", function() { return __WEBPACK_IMPORTED_MODULE_22_webrtc_streamPubSub__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "StreamSubscriber", function() { return __WEBPACK_IMPORTED_MODULE_22_webrtc_streamPubSub__["b"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23_media_audioBufferSource__ = __webpack_require__(243);
@@ -33228,7 +33493,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "AudioMeter", function() { return __WEBPACK_IMPORTED_MODULE_24_media_audioMeter__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25_media_audioMixer__ = __webpack_require__(245);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "AudioMixer", function() { return __WEBPACK_IMPORTED_MODULE_25_media_audioMixer__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26_media_chromeScreenSource__ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26_media_chromeScreenSource__ = __webpack_require__(219);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "ChromeScreenSource", function() { return __WEBPACK_IMPORTED_MODULE_26_media_chromeScreenSource__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27_media_common__ = __webpack_require__(92);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "isMediaNode", function() { return __WEBPACK_IMPORTED_MODULE_27_media_common__["d"]; });
@@ -33238,25 +33503,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "ConcreteMediaSource", function() { return __WEBPACK_IMPORTED_MODULE_28_media_concreteMediaSource__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29_media_deviceSource__ = __webpack_require__(246);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "DeviceSource", function() { return __WEBPACK_IMPORTED_MODULE_29_media_deviceSource__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30_media_dummySource__ = __webpack_require__(178);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30_media_dummySource__ = __webpack_require__(165);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "DummySource", function() { return __WEBPACK_IMPORTED_MODULE_30_media_dummySource__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31_media_firefoxScreenSource__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31_media_firefoxScreenSource__ = __webpack_require__(220);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "FirefoxScreenSource", function() { return __WEBPACK_IMPORTED_MODULE_31_media_firefoxScreenSource__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32_media_htmlSink__ = __webpack_require__(146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32_media_htmlSink__ = __webpack_require__(144);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "HtmlSink", function() { return __WEBPACK_IMPORTED_MODULE_32_media_htmlSink__["default"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_33_media_mediaFilter__ = __webpack_require__(179);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MediaFilter", function() { return __WEBPACK_IMPORTED_MODULE_33_media_mediaFilter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34_media_mediaNode__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34_media_mediaNode__ = __webpack_require__(87);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MediaNode", function() { return __WEBPACK_IMPORTED_MODULE_34_media_mediaNode__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_35_media_mediaNodeInput__ = __webpack_require__(131);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MediaNodeInput", function() { return __WEBPACK_IMPORTED_MODULE_35_media_mediaNodeInput__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_36_media_mediaNodeOutput__ = __webpack_require__(149);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MediaNodeOutput", function() { return __WEBPACK_IMPORTED_MODULE_36_media_mediaNodeOutput__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37_media_mediaSink__ = __webpack_require__(153);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37_media_mediaSink__ = __webpack_require__(150);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MediaSink", function() { return __WEBPACK_IMPORTED_MODULE_37_media_mediaSink__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38_media_mediaSource__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38_media_mediaSource__ = __webpack_require__(145);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MediaSource", function() { return __WEBPACK_IMPORTED_MODULE_38_media_mediaSource__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39_media_mediaTee__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39_media_mediaTee__ = __webpack_require__(221);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MediaTee", function() { return __WEBPACK_IMPORTED_MODULE_39_media_mediaTee__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_40_media_muteFilter__ = __webpack_require__(180);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MuteFilter", function() { return __WEBPACK_IMPORTED_MODULE_40_media_muteFilter__["a"]; });
@@ -33268,22 +33533,24 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "ScreenSource", function() { return __WEBPACK_IMPORTED_MODULE_43_media_screenSource__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_44_media_streamMerger__ = __webpack_require__(249);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "StreamMerger", function() { return __WEBPACK_IMPORTED_MODULE_44_media_streamMerger__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45_media_streamSink__ = __webpack_require__(189);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45_media_streamSink__ = __webpack_require__(182);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "StreamSink", function() { return __WEBPACK_IMPORTED_MODULE_45_media_streamSink__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46_media_streamSource__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46_media_streamSource__ = __webpack_require__(183);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "StreamSource", function() { return __WEBPACK_IMPORTED_MODULE_46_media_streamSource__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_47_media_streamSplitter__ = __webpack_require__(191);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "StreamSplitter", function() { return __WEBPACK_IMPORTED_MODULE_47_media_streamSplitter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48_media_userMediaSource__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48_media_userMediaSource__ = __webpack_require__(222);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "UserMediaSource", function() { return __WEBPACK_IMPORTED_MODULE_48_media_userMediaSource__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49_media_videoFrameCapture__ = __webpack_require__(250);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49_media_videoFrameCapture__ = __webpack_require__(251);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "VideoFrameCapture", function() { return __WEBPACK_IMPORTED_MODULE_49_media_videoFrameCapture__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_50_media_webAudioFilter__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_50_media_webAudioFilter__ = __webpack_require__(223);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "WebAudioFilter", function() { return __WEBPACK_IMPORTED_MODULE_50_media_webAudioFilter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51_media_webAudioSource__ = __webpack_require__(223);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51_media_webAudioSource__ = __webpack_require__(224);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "WebAudioSource", function() { return __WEBPACK_IMPORTED_MODULE_51_media_webAudioSource__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_52_conference_conference__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_52_conference_conference__ = __webpack_require__(213);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Conference", function() { return __WEBPACK_IMPORTED_MODULE_52_conference_conference__["default"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_53_media_tabSharingSink__ = __webpack_require__(250);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "TabSharingSink", function() { return __WEBPACK_IMPORTED_MODULE_53_media_tabSharingSink__["a"]; });
 
 /**
  * The top level C3 Web SDK namespace.
@@ -33408,7 +33675,8 @@ if (window.cordova && window.cordova.plugins && window.cordova.plugins.iosrtc) {
  * @property {string} synapseTargetVersion - Target synapse version, versions past this
  *   could break backwards compatability.
  */
-var version = {"commit":"955aa13fe5ff4786d71cc49c1bd8873f1aaa9140\n","number":"0.19.8","synapseMinVersion":"0.14.0","synapseTargetVersion":"0.14.0"};
+var version = {"commit":"ef67e543076d4ec0e71daed5d58a43ad1b417816\n","number":"0.19.8","synapseMinVersion":"0.14.0","synapseTargetVersion":"0.14.0"};
+
 
 
 
@@ -33465,9 +33733,9 @@ var version = {"commit":"955aa13fe5ff4786d71cc49c1bd8873f1aaa9140\n","number":"0
 
 
 /***/ }),
-/* 255 */,
 /* 256 */,
-/* 257 */
+/* 257 */,
+/* 258 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -33475,7 +33743,7 @@ var version = {"commit":"955aa13fe5ff4786d71cc49c1bd8873f1aaa9140\n","number":"0
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_common_log__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_common_request__ = __webpack_require__(166);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_common_request__ = __webpack_require__(167);
 
 
 
@@ -33615,7 +33883,7 @@ Reporter.prototype.flattenTimeSeries = function (sources) {
 };
 
 /***/ }),
-/* 258 */
+/* 259 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -33929,7 +34197,7 @@ var ConferenceConnection = function () {
 /* harmony default export */ __webpack_exports__["a"] = (ConferenceConnection);
 
 /***/ }),
-/* 259 */
+/* 260 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34370,7 +34638,7 @@ var ConferenceConnectionPool = function () {
 /* harmony default export */ __webpack_exports__["a"] = (ConferenceConnectionPool);
 
 /***/ }),
-/* 260 */
+/* 261 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34381,17 +34649,17 @@ var ConferenceConnectionPool = function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_set___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_set__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_get__ = __webpack_require__(69);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_get___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_get__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_core_js_object_get_prototype_of__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_classCallCheck__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_createClass__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_babel_runtime_helpers_inherits__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_common_emitter__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_common_emitter__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_common_utils__ = __webpack_require__(13);
 
 
@@ -34716,17 +34984,17 @@ var ConferencePeers = function (_EmitterMixin2) {
 /* harmony default export */ __webpack_exports__["a"] = (ConferencePeers);
 
 /***/ }),
-/* 261 */
+/* 262 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_defineProperty__ = __webpack_require__(88);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_defineProperty___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_defineProperty__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_set__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_set___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_set__);
@@ -34740,9 +35008,9 @@ var ConferencePeers = function (_EmitterMixin2) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_babel_runtime_helpers_createClass__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_common_log__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_common_argCheck__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_common_emitter__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_common_emitter__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_common_utils__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_media_mediaNode__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_media_mediaNode__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_media_passthrough__ = __webpack_require__(181);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_webrtc_rtcComponent__ = __webpack_require__(160);
 
@@ -35760,7 +36028,7 @@ var ConferenceSwitcher = function (_EventEmitter) {
 /* harmony default export */ __webpack_exports__["a"] = (ConferenceSwitcher);
 
 /***/ }),
-/* 262 */
+/* 263 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36207,7 +36475,7 @@ var VoiceActivityDetector = function () {
 /* harmony default export */ __webpack_exports__["a"] = (VoiceActivityDetector);
 
 /***/ }),
-/* 263 */
+/* 264 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36423,7 +36691,7 @@ var ActivityTracker = function () {
 /* harmony default export */ __webpack_exports__["a"] = (ActivityTracker);
 
 /***/ }),
-/* 264 */
+/* 265 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36568,7 +36836,7 @@ var BandwidthEstimator = function () {
 }();
 
 /***/ }),
-/* 265 */
+/* 266 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36576,17 +36844,17 @@ var BandwidthEstimator = function () {
 /* unused harmony export TransferBuffer */
 /* unused harmony export MessageBuffer */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PrioritizedBuffer; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_datamux_constants__ = __webpack_require__(182);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_datamux_constants__ = __webpack_require__(184);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_datamux_transfer__ = __webpack_require__(228);
 
 
@@ -36877,28 +37145,28 @@ var PrioritizedBuffer = function (_SendBuffer3) {
 }(SendBuffer);
 
 /***/ }),
-/* 266 */
+/* 267 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export ReceiveQueue */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_object_get_prototype_of__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_log__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_common_argCheck__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_common_emitter__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_common_emitter__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_common_utils__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_webrtc_errors__ = __webpack_require__(161);
 
@@ -37489,7 +37757,7 @@ var ReceiveQueue = function () {
 }();
 
 /***/ }),
-/* 267 */
+/* 268 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -37501,7 +37769,7 @@ var ReceiveQueue = function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_common_log__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_common_utils__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_common_argCheck__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_datamux_constants__ = __webpack_require__(182);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_datamux_constants__ = __webpack_require__(184);
 
 
 // This modules contains classes used to move data from
@@ -37861,13 +38129,13 @@ var ChannelController = function () {
 /* harmony default export */ __webpack_exports__["a"] = (ChannelController);
 
 /***/ }),
-/* 268 */
+/* 269 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export DEFAULT_LOW_THRESHOLD */
 /* unused harmony export DEFAULT_HIGH_THRESHOLD */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
@@ -38042,7 +38310,7 @@ var ChannelDriver = function () {
 /* harmony default export */ __webpack_exports__["a"] = (ChannelDriver);
 
 /***/ }),
-/* 269 */
+/* 270 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -38466,18 +38734,18 @@ var MuxChannelRegistry = function () {
 /* harmony default export */ __webpack_exports__["a"] = (MuxChannelRegistry);
 
 /***/ }),
-/* 270 */,
 /* 271 */,
 /* 272 */,
 /* 273 */,
 /* 274 */,
-/* 275 */
+/* 275 */,
+/* 276 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export CallStore */
 /* harmony export (immutable) */ __webpack_exports__["a"] = CallRegistry;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_define_properties__ = __webpack_require__(183);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_define_properties__ = __webpack_require__(185);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_define_properties___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_define_properties__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_json_stringify__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_json_stringify___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_json_stringify__);
@@ -38502,10 +38770,10 @@ var StatsFormatter;
 
 if (true) {
   /* global require:false */
-  Call = __webpack_require__(224).default;
-  StatsFormatter = __webpack_require__(200).default;
+  Call = __webpack_require__(225).default;
+  StatsFormatter = __webpack_require__(201).default;
 
-  Conference = __webpack_require__(212).default;
+  Conference = __webpack_require__(213).default;
 }
 
 var TAG = 'call-registry';
@@ -38899,11 +39167,11 @@ CallRegistry.prototype = {
 };
 
 /***/ }),
-/* 276 */
+/* 277 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_json_stringify__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_json_stringify___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_json_stringify__);
@@ -38914,7 +39182,7 @@ CallRegistry.prototype = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_common_log__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_common_argCheck__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_utils__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_matrix_room__ = __webpack_require__(187);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_matrix_room__ = __webpack_require__(189);
 
 
 
@@ -39118,7 +39386,7 @@ var RoomRegistry = function () {
 /* harmony default export */ __webpack_exports__["a"] = (RoomRegistry);
 
 /***/ }),
-/* 277 */
+/* 278 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -39126,7 +39394,7 @@ var RoomRegistry = function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_common_log__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_common_request__ = __webpack_require__(166);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_common_request__ = __webpack_require__(167);
 
 
 
@@ -39276,26 +39544,26 @@ SyncStream.prototype = {
 };
 
 /***/ }),
-/* 278 */
+/* 279 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_common_log__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_argCheck__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_media_common__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_media_htmlSink__ = __webpack_require__(146);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_media_mediaNode__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_media_canvasSource__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_media_htmlSink__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_media_mediaNode__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_media_canvasSource__ = __webpack_require__(280);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_media_streamSplitter__ = __webpack_require__(191);
 
 
@@ -39435,23 +39703,23 @@ var CanvasFilter = function (_MediaNode$connectMix) {
 /* harmony default export */ __webpack_exports__["a"] = (CanvasFilter);
 
 /***/ }),
-/* 279 */
+/* 280 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_common_argCheck__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_media_common__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_media_mediaSource__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_media_mediaSource__ = __webpack_require__(145);
 
 
 
@@ -39526,23 +39794,23 @@ var CanvasSource = function (_MediaSource) {
 /* harmony default export */ __webpack_exports__["a"] = (CanvasSource);
 
 /***/ }),
-/* 280 */
+/* 281 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_common_log__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_emitter__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_media_canvasFilter__ = __webpack_require__(278);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_emitter__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_media_canvasFilter__ = __webpack_require__(279);
 
 
 
@@ -39680,7 +39948,7 @@ var ScaledCanvasFilter = function (_EmitterMixin) {
 /* harmony default export */ __webpack_exports__["a"] = (ScaledCanvasFilter);
 
 /***/ }),
-/* 281 */
+/* 282 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -39730,23 +39998,23 @@ var ScreenSourceInfo = function () {
 /* harmony default export */ __webpack_exports__["a"] = (ScreenSourceInfo);
 
 /***/ }),
-/* 282 */
+/* 283 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_common_log__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_emitter__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_media_htmlSink__ = __webpack_require__(146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_emitter__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_media_htmlSink__ = __webpack_require__(144);
 
 
 
@@ -39925,21 +40193,21 @@ var TemasysCanvasFilter = function (_EmitterMixin) {
 /* harmony default export */ __webpack_exports__["a"] = (TemasysCanvasFilter);
 
 /***/ }),
-/* 283 */
+/* 284 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_argCheck__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_log__ = __webpack_require__(3);
@@ -39947,7 +40215,7 @@ var TemasysCanvasFilter = function (_EmitterMixin) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_webrtc_utils__ = __webpack_require__(66);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_media_common__ = __webpack_require__(92);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_media_concreteMediaSource__ = __webpack_require__(164);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_media_screenSourceInfo__ = __webpack_require__(281);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_media_screenSourceInfo__ = __webpack_require__(282);
 
 
 
@@ -40103,8 +40371,8 @@ var TemasysScreenSource = function (_ConcreteMediaSource) {
 /* harmony default export */ __webpack_exports__["a"] = (TemasysScreenSource);
 
 /***/ }),
-/* 284 */,
-/* 285 */
+/* 285 */,
+/* 286 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -40365,13 +40633,7 @@ var Renegotiator = function () {
 /* harmony default export */ __webpack_exports__["a"] = (Renegotiator);
 
 /***/ }),
-/* 286 */,
-/* 287 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(292), __esModule: true };
-
-/***/ }),
+/* 287 */,
 /* 288 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -40381,10 +40643,16 @@ module.exports = { "default": __webpack_require__(293), __esModule: true };
 /* 289 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(295), __esModule: true };
+module.exports = { "default": __webpack_require__(294), __esModule: true };
 
 /***/ }),
 /* 290 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(296), __esModule: true };
+
+/***/ }),
+/* 291 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40413,42 +40681,42 @@ exports.default = _assign2.default || function (target) {
 };
 
 /***/ }),
-/* 291 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(303);
-
-
-/***/ }),
 /* 292 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(297);
-module.exports = __webpack_require__(0).Math.log2;
+module.exports = __webpack_require__(304);
+
 
 /***/ }),
 /* 293 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(298);
-module.exports = __webpack_require__(0).Math.sign;
+module.exports = __webpack_require__(0).Math.log2;
 
 /***/ }),
 /* 294 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(299);
-module.exports = __webpack_require__(0).Object.entries;
+module.exports = __webpack_require__(0).Math.sign;
 
 /***/ }),
 /* 295 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(300);
-module.exports = __webpack_require__(0).Object.values;
+module.exports = __webpack_require__(0).Object.entries;
 
 /***/ }),
 /* 296 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(301);
+module.exports = __webpack_require__(0).Object.values;
+
+/***/ }),
+/* 297 */
 /***/ (function(module, exports) {
 
 // 20.2.2.28 Math.sign(x)
@@ -40457,11 +40725,11 @@ module.exports = Math.sign || function sign(x){
 };
 
 /***/ }),
-/* 297 */
+/* 298 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 20.2.2.22 Math.log2(x)
-var $export = __webpack_require__(6);
+var $export = __webpack_require__(7);
 
 $export($export.S, 'Math', {
   log2: function log2(x){
@@ -40470,20 +40738,20 @@ $export($export.S, 'Math', {
 });
 
 /***/ }),
-/* 298 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 20.2.2.28 Math.sign(x)
-var $export = __webpack_require__(6);
-
-$export($export.S, 'Math', {sign: __webpack_require__(296)});
-
-/***/ }),
 /* 299 */
 /***/ (function(module, exports, __webpack_require__) {
 
+// 20.2.2.28 Math.sign(x)
+var $export = __webpack_require__(7);
+
+$export($export.S, 'Math', {sign: __webpack_require__(297)});
+
+/***/ }),
+/* 300 */
+/***/ (function(module, exports, __webpack_require__) {
+
 // https://github.com/tc39/proposal-object-values-entries
-var $export  = __webpack_require__(6)
+var $export  = __webpack_require__(7)
   , $entries = __webpack_require__(235)(true);
 
 $export($export.S, 'Object', {
@@ -40493,11 +40761,11 @@ $export($export.S, 'Object', {
 });
 
 /***/ }),
-/* 300 */
+/* 301 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://github.com/tc39/proposal-object-values-entries
-var $export = __webpack_require__(6)
+var $export = __webpack_require__(7)
   , $values = __webpack_require__(235)(false);
 
 $export($export.S, 'Object', {
@@ -40507,8 +40775,8 @@ $export($export.S, 'Object', {
 });
 
 /***/ }),
-/* 301 */,
-/* 302 */
+/* 302 */,
+/* 303 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -40698,7 +40966,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 303 */
+/* 304 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {// This method of obtaining a reference to the global object needs to be
@@ -40719,7 +40987,7 @@ var oldRuntime = hadRuntime && g.regeneratorRuntime;
 // Force reevalutation of runtime.js.
 g.regeneratorRuntime = undefined;
 
-module.exports = __webpack_require__(304);
+module.exports = __webpack_require__(305);
 
 if (hadRuntime) {
   // Restore the original runtime.
@@ -40736,7 +41004,7 @@ if (hadRuntime) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(236)))
 
 /***/ }),
-/* 304 */
+/* 305 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {/**
@@ -41423,7 +41691,7 @@ if (hadRuntime) {
   typeof self === "object" ? self : this
 );
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(236), __webpack_require__(302)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(236), __webpack_require__(303)))
 
 /***/ })
 /******/ ]);
