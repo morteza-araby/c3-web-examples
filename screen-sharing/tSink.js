@@ -37,6 +37,7 @@ function handleReceiveTabButtonClick () {
 		sinkSource = null
 		call.getRemoteSource('media').disconnect()
 		call.hangup()
+		call = null
 		return
 	}
 	

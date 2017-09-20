@@ -3,7 +3,6 @@ var tabSource = null
 var _scroller = null
 var _contentSize = null
 var port = null
-var tabSharingExtensionLink = null
 //var extensionId = 'cecejnhbkmfgeealnbgbmgfcpdllgaao' // Spaces Tab Sharing
 //var extensionId = extensionId // My test extension 
 let pageActionConditions = [{
@@ -70,20 +69,6 @@ function uninstallExtension () {
 	})
 }
 
-function startWindowSizeObserver(contentSize) {
-  let onWindowResize = makeThrottler(40, () => {
-    contentSize.set('size', {
-      w: window.innerWidth,
-      h: window.innerHeight,
-    })
-  })
-  let stop = () => {
-    window.removeEventListener('resize', onWindowResize)
-  }
-  window.addEventListener('resize', onWindowResize)
-  onWindowResize()
-  return stop
-}
 
 function handleTabButtonClick () {
 	// getExtensionVersion().then(version => {
@@ -110,15 +95,15 @@ function handleTabButtonClick () {
 		if (!call.closed) {
 			_scroller = new cct.DataShare()
 			call.attach('scroller', _scroller)
-			_scroller.on('update:scroll', _onRemoteScroll)
+			//_scroller.on('update:scroll', _onRemoteScroll)
 
 			_contentSize = new cct.DataShare()
 			call.attach('content-size', _contentSize)
 
 			// chrome extension passes window size from content script
-			 if (!window.chrome) {
-			   this._stopWindowSizeObserver = startWindowSizeObserver(this._contentSize)
-			}
+			// if (!window.chrome) {
+			//   this._stopWindowSizeObserver = startWindowSizeObserver(this._contentSize)
+			// }
 		}
 
 
@@ -141,15 +126,66 @@ function startTabSharing ({ extensionId, call }) {
 			pageActionConditions: pageActionConditions,
 		}
 
-
-		tabSharingExtensionLink = new cct.TabSharingExtensionLink({extensionId, options, iceServers})
-		tabSharingExtensionLink.startShare()
-		tabSharingExtensionLink.on('contentSize', function(contentSize){
-			_contentSize = contentSize
+		port = window.chrome.runtime.connect(extensionId, {
+			name: `options:${JSON.stringify(options)}`
 		})
 
+		let proxySink = new cct.ProxySink()
 
-		call.attach('content-proxy', tabSharingExtensionLink)
+		port.onMessage.addListener((msg) => {
+			console.debug('TabSharing', 'proxy message:', msg)
+			if (msg.type === 'haveStream') {
+				port.postMessage({
+					type: 'startCall',
+					content: iceServers,
+				})
+			} else if (msg.type === 'offer') {
+				proxySink.setOffer(msg.content)
+			} else if (msg.type === 'candidate') {
+				proxySink.addCandidate(msg.content)
+			} else if (msg.type === 'lostStream') {
+				proxySink.setOffer(null)
+				//setState({state: 'ready'})
+				console.info('TabSharing', ' lostStream')
+			} else if (msg.type === 'size') {
+				if (_contentSize) {
+					_contentSize.set('size', msg.content)
+				}
+			}
+		})
+
+		proxySink.on('candidate', (candidate) => {
+			console.debug('TabSharing', 'proxy candidate:', candidate)
+			port.postMessage({
+				type: 'candidate',
+				content: candidate,
+			})
+		})
+
+		proxySink.on('answer', (answer) => {
+			console.debug('TabSharing', 'proxy answer:', answer)
+			port.postMessage({
+				type: 'answer',
+				content: answer,
+			})
+			// props.onStartSharing && props.onStartSharing()
+			// setState({state: 'sharing'})			
+		})
+
+		proxySink.on('connected', () => {
+			port.postMessage({
+				type: 'startCall',
+				content: iceServers,
+			})
+			console.info('TabSharing', 'startCall')
+		})
+
+		port.onDisconnect.addListener(() => {
+			console.error('TabSharing', 'port disconnected')
+			port = null
+		})
+
+		call.attach('content-proxy', proxySink)
 		console.log('################### CONNECT TO CALL')
 
 
@@ -177,22 +213,90 @@ function stopTabSharing () {
 			call.detach('scroller', _scroller)
 		}
 	}
-	if (_scroller) {
-		_scroller.off('update:scroll', _onRemoteScroll)
-	}
-	if (_stopWindowSizeObserver) {
-		_stopWindowSizeObserver()
-		_stopWindowSizeObserver = null
-	}
+	// if (_scroller) {
+	// 	_scroller.off('update:scroll', _onRemoteScroll)
+	// }
+	// if (_stopWindowSizeObserver) {
+	// 	_stopWindowSizeObserver()
+	// 	_stopWindowSizeObserver = null
+	// }
 	try {
 		console.debug('Example', 'ending screen sharing')
 		if (window.chrome) {
-			tabSharingExtensionLink.endShare()
-		} 
+			if (port) {
+				port.postMessage({
+					type: 'endCall',
+				})
+				port.disconnect()
+			}
+			port = null
+		} else {
+			source.stop()
+			_source = null
+		}
 	} catch (error) {
 		console.error('Example', 'failed to disconnect screen sharing extension port:', error)
 	}
 }
+
+
+/** This part is for screen sharing */
+function startTabSharingXX (constraints) {
+	let tabSink = new cct.HtmlSink()
+	tabSink.target = el.tabSharingVideo
+
+	el.tabButton.textContent = STOP_TAB_SHARING
+	el.tabButton.disabled = false
+	el.error.textContent = ''
+	el.video.style.display = 'none'
+
+	fetchChromeScreenSource()
+		.then(source => {
+			tabSource = source
+			source.connect(new cct.StreamSink({
+				onStream: stream => {
+					if (!stream) { // Stream was removed
+						onStopSharing()
+						el.tabButton.textContent = 'Start Tab Sharing'
+					}
+					source.connect(tabSink)
+					console.info('example', 'screen sharing started successfully')
+				},
+			}))
+		}).catch(error => {
+			if (error.name === 'NotFoundError') {
+				console.error('Not found extension:', error)
+			} else {
+				console.error('Failed to do tab sharing: ', error)
+			}
+		})
+}
+function onStopSharing () {
+	//call.setLocalSource('content', null)
+	if (tabSource) {
+		tabSource.stop()
+		tabSource = null
+	}
+}
+
+function fetchChromeScreenSource () {
+	return sendChromeMessage({
+		type: 'requestMediaSourceId',
+		sourceTypes: ['window'],
+	}).then(({ sourceId }) => {
+		let source = new cct.DeviceSource({
+			video: {
+				chromeMediaSourceId: { exact: sourceId },
+				chromeMediaSource: { exact: 'desktop' },
+				width: { max: window.screen.width },
+				height: { max: window.screen.height },
+				frameRate: 5,
+			},
+		})
+		return source.promise.then(() => source)
+	})
+}
+
 
 function sendChromeMessage (message) {
 	//let extensionId = 'cecejnhbkmfgeealnbgbmgfcpdllgaao' // Spaces Tab Sharing
@@ -208,19 +312,4 @@ function sendChromeMessage (message) {
 			}
 		})
 	})
-}
-
-function _onRemoteScroll(value) {
-	let {x, y} = value
-	// Some extra input validation since it's a sensitive area
-	x = Number(x)
-	y = Number(y)
-	let msg = {
-		type: 'scrollBy',
-		content: {x, y},
-	}
-
-	//Send to extension to handle
-	tabSharingExtensionLink.sendMessage(msg)
-	
 }
