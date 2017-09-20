@@ -451,7 +451,7 @@ log.defaultHandler = defaultHandler;
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var store      = __webpack_require__(53)('wks')
+var store      = __webpack_require__(54)('wks')
   , uid        = __webpack_require__(38)
   , Symbol     = __webpack_require__(5).Symbol
   , USE_SYMBOL = typeof Symbol == 'function';
@@ -612,7 +612,7 @@ exports.default = function (self, call) {
 
 var anObject       = __webpack_require__(14)
   , IE8_DOM_DEFINE = __webpack_require__(70)
-  , toPrimitive    = __webpack_require__(55)
+  , toPrimitive    = __webpack_require__(56)
   , dP             = Object.defineProperty;
 
 exports.f = __webpack_require__(11) ? Object.defineProperty : function defineProperty(O, P, Attributes){
@@ -1787,7 +1787,7 @@ module.exports = function(exec){
 var $at  = __webpack_require__(117)(true);
 
 // 21.1.3.27 String.prototype[@@iterator]()
-__webpack_require__(49)(String, 'String', function(iterated){
+__webpack_require__(50)(String, 'String', function(iterated){
   this._t = String(iterated); // target
   this._i = 0;                // next index
 // 21.1.5.2.1 %StringIteratorPrototype%.next()
@@ -1819,7 +1819,7 @@ module.exports = {};
 
 // 19.1.2.14 / 15.2.3.14 Object.keys(O)
 var $keys       = __webpack_require__(77)
-  , enumBugKeys = __webpack_require__(48);
+  , enumBugKeys = __webpack_require__(49);
 
 module.exports = Object.keys || function keys(O){
   return $keys(O, enumBugKeys);
@@ -1934,7 +1934,7 @@ var _iterator = __webpack_require__(94);
 
 var _iterator2 = _interopRequireDefault(_iterator);
 
-var _symbol = __webpack_require__(86);
+var _symbol = __webpack_require__(87);
 
 var _symbol2 = _interopRequireDefault(_symbol);
 
@@ -1971,7 +1971,7 @@ exports.default = typeof _symbol2.default === "function" && _typeof(_iterator2.d
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_babel_runtime_core_js_object_assign__ = __webpack_require__(163);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_babel_runtime_core_js_object_assign___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_babel_runtime_core_js_object_assign__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_babel_runtime_core_js_object_get_own_property_names__ = __webpack_require__(170);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_babel_runtime_core_js_object_get_own_property_names__ = __webpack_require__(169);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_babel_runtime_core_js_object_get_own_property_names___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_babel_runtime_core_js_object_get_own_property_names__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_babel_runtime_core_js_object_create__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_babel_runtime_core_js_object_create___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_babel_runtime_core_js_object_create__);
@@ -2285,8 +2285,8 @@ module.exports = function(it){
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
 var anObject    = __webpack_require__(14)
   , dPs         = __webpack_require__(95)
-  , enumBugKeys = __webpack_require__(48)
-  , IE_PROTO    = __webpack_require__(52)('IE_PROTO')
+  , enumBugKeys = __webpack_require__(49)
+  , IE_PROTO    = __webpack_require__(53)('IE_PROTO')
   , Empty       = function(){ /* empty */ }
   , PROTOTYPE   = 'prototype';
 
@@ -2330,7 +2330,7 @@ module.exports = Object.create || function create(O, Properties){
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.15 ToLength
-var toInteger = __webpack_require__(54)
+var toInteger = __webpack_require__(55)
   , min       = Math.min;
 module.exports = function(it){
   return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
@@ -2355,7 +2355,7 @@ module.exports = function(key){
 
 exports.__esModule = true;
 
-var _isIterable2 = __webpack_require__(154);
+var _isIterable2 = __webpack_require__(155);
 
 var _isIterable3 = _interopRequireDefault(_isIterable2);
 
@@ -2508,6 +2508,12 @@ module.exports = { "default": __webpack_require__(99), __esModule: true };
 
 /***/ }),
 /* 48 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(148), __esModule: true };
+
+/***/ }),
+/* 49 */
 /***/ (function(module, exports) {
 
 // IE 8- don't enum bug keys
@@ -2516,7 +2522,7 @@ module.exports = (
 ).split(',');
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2592,7 +2598,7 @@ module.exports = function(Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCED
 };
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var META     = __webpack_require__(38)('meta')
@@ -2650,13 +2656,13 @@ var meta = module.exports = {
 };
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var pIE            = __webpack_require__(43)
   , createDesc     = __webpack_require__(27)
   , toIObject      = __webpack_require__(15)
-  , toPrimitive    = __webpack_require__(55)
+  , toPrimitive    = __webpack_require__(56)
   , has            = __webpack_require__(19)
   , IE8_DOM_DEFINE = __webpack_require__(70)
   , gOPD           = Object.getOwnPropertyDescriptor;
@@ -2671,17 +2677,17 @@ exports.f = __webpack_require__(11) ? gOPD : function getOwnPropertyDescriptor(O
 };
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var shared = __webpack_require__(53)('keys')
+var shared = __webpack_require__(54)('keys')
   , uid    = __webpack_require__(38);
 module.exports = function(key){
   return shared[key] || (shared[key] = uid(key));
 };
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var global = __webpack_require__(5)
@@ -2692,7 +2698,7 @@ module.exports = function(key){
 };
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports) {
 
 // 7.1.4 ToInteger
@@ -2703,7 +2709,7 @@ module.exports = function(it){
 };
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.1 ToPrimitive(input [, PreferredType])
@@ -2720,13 +2726,13 @@ module.exports = function(it, S){
 };
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var global         = __webpack_require__(5)
   , core           = __webpack_require__(0)
   , LIBRARY        = __webpack_require__(41)
-  , wksExt         = __webpack_require__(57)
+  , wksExt         = __webpack_require__(58)
   , defineProperty = __webpack_require__(10).f;
 module.exports = function(name){
   var $Symbol = core.Symbol || (core.Symbol = LIBRARY ? {} : global.Symbol || {});
@@ -2734,16 +2740,10 @@ module.exports = function(name){
 };
 
 /***/ }),
-/* 57 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports.f = __webpack_require__(4);
-
-/***/ }),
 /* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(148), __esModule: true };
+exports.f = __webpack_require__(4);
 
 /***/ }),
 /* 59 */
@@ -3230,7 +3230,7 @@ module.exports = function(done, value){
 
 // 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
 var $keys      = __webpack_require__(77)
-  , hiddenKeys = __webpack_require__(48).concat('length', 'prototype');
+  , hiddenKeys = __webpack_require__(49).concat('length', 'prototype');
 
 exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O){
   return $keys(O, hiddenKeys);
@@ -3243,7 +3243,7 @@ exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O){
 // 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
 var has         = __webpack_require__(19)
   , toObject    = __webpack_require__(26)
-  , IE_PROTO    = __webpack_require__(52)('IE_PROTO')
+  , IE_PROTO    = __webpack_require__(53)('IE_PROTO')
   , ObjectProto = Object.prototype;
 
 module.exports = Object.getPrototypeOf || function(O){
@@ -3261,7 +3261,7 @@ module.exports = Object.getPrototypeOf || function(O){
 var has          = __webpack_require__(19)
   , toIObject    = __webpack_require__(15)
   , arrayIndexOf = __webpack_require__(108)(false)
-  , IE_PROTO     = __webpack_require__(52)('IE_PROTO');
+  , IE_PROTO     = __webpack_require__(53)('IE_PROTO');
 
 module.exports = function(object, names){
   var O      = toIObject(object)
@@ -3301,11 +3301,11 @@ var dP          = __webpack_require__(10).f
   , anInstance  = __webpack_require__(59)
   , defined     = __webpack_require__(35)
   , forOf       = __webpack_require__(40)
-  , $iterDefine = __webpack_require__(49)
+  , $iterDefine = __webpack_require__(50)
   , step        = __webpack_require__(74)
   , setSpecies  = __webpack_require__(85)
   , DESCRIPTORS = __webpack_require__(11)
-  , fastKey     = __webpack_require__(50).fastKey
+  , fastKey     = __webpack_require__(51).fastKey
   , SIZE        = DESCRIPTORS ? '_s' : 'size';
 
 var getEntry = function(that, key){
@@ -3458,7 +3458,7 @@ module.exports = function(NAME){
 
 var global         = __webpack_require__(5)
   , $export        = __webpack_require__(7)
-  , meta           = __webpack_require__(50)
+  , meta           = __webpack_require__(51)
   , fails          = __webpack_require__(21)
   , hide           = __webpack_require__(16)
   , redefineAll    = __webpack_require__(61)
@@ -3569,12 +3569,6 @@ module.exports = function(KEY){
 
 /***/ }),
 /* 86 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(104), __esModule: true };
-
-/***/ }),
-/* 87 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4064,6 +4058,12 @@ var OutputMap = function (_PortMap2) {
 }(PortMap);
 
 /***/ }),
+/* 87 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(104), __esModule: true };
+
+/***/ }),
 /* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4239,10 +4239,10 @@ module.exports.f = function getOwnPropertyNames(it){
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_symbol__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_symbol__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_symbol___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_symbol__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_queue__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_errors__ = __webpack_require__(146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_queue__ = __webpack_require__(160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_errors__ = __webpack_require__(145);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_webrtc_utils__ = __webpack_require__(66);
 
 
@@ -4464,7 +4464,7 @@ module.exports = __webpack_require__(0).Symbol;
 
 __webpack_require__(22);
 __webpack_require__(29);
-module.exports = __webpack_require__(57).f('iterator');
+module.exports = __webpack_require__(58).f('iterator');
 
 /***/ }),
 /* 106 */
@@ -4676,7 +4676,7 @@ module.exports = {
   set: Object.setPrototypeOf || ('__proto__' in {} ? // eslint-disable-line
     function(test, buggy, set){
       try {
-        set = __webpack_require__(18)(Function.call, __webpack_require__(51).f(Object.prototype, '__proto__').set, 2);
+        set = __webpack_require__(18)(Function.call, __webpack_require__(52).f(Object.prototype, '__proto__').set, 2);
         set(test, []);
         buggy = !(test instanceof Array);
       } catch(e){ buggy = true; }
@@ -4694,7 +4694,7 @@ module.exports = {
 /* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var toInteger = __webpack_require__(54)
+var toInteger = __webpack_require__(55)
   , defined   = __webpack_require__(35);
 // true  -> String#at
 // false -> String#codePointAt
@@ -4716,7 +4716,7 @@ module.exports = function(TO_STRING){
 /* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var toInteger = __webpack_require__(54)
+var toInteger = __webpack_require__(55)
   , max       = Math.max
   , min       = Math.min;
 module.exports = function(index, length){
@@ -4783,7 +4783,7 @@ var addToUnscopables = __webpack_require__(106)
 // 22.1.3.13 Array.prototype.keys()
 // 22.1.3.29 Array.prototype.values()
 // 22.1.3.30 Array.prototype[@@iterator]()
-module.exports = __webpack_require__(49)(Array, 'Array', function(iterated, kind){
+module.exports = __webpack_require__(50)(Array, 'Array', function(iterated, kind){
   this._t = toIObject(iterated); // target
   this._i = 0;                   // next index
   this._k = kind;                // kind
@@ -4830,7 +4830,7 @@ $export($export.S + $export.F * !__webpack_require__(11), 'Object', {definePrope
 
 // 19.1.2.6 Object.getOwnPropertyDescriptor(O, P)
 var toIObject                 = __webpack_require__(15)
-  , $getOwnPropertyDescriptor = __webpack_require__(51).f;
+  , $getOwnPropertyDescriptor = __webpack_require__(52).f;
 
 __webpack_require__(46)('getOwnPropertyDescriptor', function(){
   return function getOwnPropertyDescriptor(it, key){
@@ -4890,24 +4890,24 @@ var global         = __webpack_require__(5)
   , DESCRIPTORS    = __webpack_require__(11)
   , $export        = __webpack_require__(7)
   , redefine       = __webpack_require__(78)
-  , META           = __webpack_require__(50).KEY
+  , META           = __webpack_require__(51).KEY
   , $fails         = __webpack_require__(21)
-  , shared         = __webpack_require__(53)
+  , shared         = __webpack_require__(54)
   , setToStringTag = __webpack_require__(28)
   , uid            = __webpack_require__(38)
   , wks            = __webpack_require__(4)
-  , wksExt         = __webpack_require__(57)
-  , wksDefine      = __webpack_require__(56)
+  , wksExt         = __webpack_require__(58)
+  , wksDefine      = __webpack_require__(57)
   , keyOf          = __webpack_require__(115)
   , enumKeys       = __webpack_require__(113)
   , isArray        = __webpack_require__(72)
   , anObject       = __webpack_require__(14)
   , toIObject      = __webpack_require__(15)
-  , toPrimitive    = __webpack_require__(55)
+  , toPrimitive    = __webpack_require__(56)
   , createDesc     = __webpack_require__(27)
   , _create        = __webpack_require__(36)
   , gOPNExt        = __webpack_require__(91)
-  , $GOPD          = __webpack_require__(51)
+  , $GOPD          = __webpack_require__(52)
   , $DP            = __webpack_require__(10)
   , $keys          = __webpack_require__(25)
   , gOPD           = $GOPD.f
@@ -5132,13 +5132,13 @@ $export($export.P + $export.R, 'Set', {toJSON: __webpack_require__(81)('Set')});
 /* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(56)('asyncIterator');
+__webpack_require__(57)('asyncIterator');
 
 /***/ }),
 /* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(56)('observable');
+__webpack_require__(57)('observable');
 
 /***/ }),
 /* 131 */
@@ -5840,6 +5840,295 @@ $export($export.P + $export.R, 'Map', {toJSON: __webpack_require__(81)('Map')});
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_media_mediaNode__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_media_mediaNodeOutput__ = __webpack_require__(149);
+
+
+
+
+
+
+
+
+
+
+/**
+ * A base class for media nodes with a single output and no input. Typically used to represent nodes
+ * that generate streams, or as a base for nodes with multiple inputs.
+ *
+ * The subclass should call the `setStream` method to update the output stream.
+ *
+ * @class MediaSource
+ * @extends MediaNode
+ * @extends ConnectMixin
+ */
+
+var MediaSource = function (_MediaNode$connectMix) {
+  __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default()(MediaSource, _MediaNode$connectMix);
+
+  function MediaSource() {
+    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, MediaSource);
+
+    var _this = __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (MediaSource.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(MediaSource)).call(this));
+
+    _this._output = new __WEBPACK_IMPORTED_MODULE_6_media_mediaNodeOutput__["a" /* default */]({
+      name: 'default',
+      parent: _this
+    });
+    return _this;
+  }
+
+  /**
+   * The current output stream.
+   *
+   * @readonly
+   * @member {MediaStream} MediaSource#stream
+   */
+
+
+  __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(MediaSource, [{
+    key: 'setStream',
+
+
+    /**
+     * Sets the current output stream.
+     *
+     * This should only be called by the subclass implementation, not from outside the media node.
+     *
+     * @param {?MediaStream} stream - The new output stream, or null.
+     */
+    value: function setStream(stream) {
+      this._output.setStream(stream);
+    }
+  }, {
+    key: 'stream',
+    get: function get() {
+      return this._output.stream;
+    }
+
+    /**
+     * The output.
+     *
+     * @readonly
+     * @member {MediaNodeOutput} MediaSource#output
+     */
+
+  }, {
+    key: 'output',
+    get: function get() {
+      return this._output;
+    }
+  }]);
+
+  return MediaSource;
+}(__WEBPACK_IMPORTED_MODULE_5_media_mediaNode__["a" /* default */].connectMixin(__WEBPACK_IMPORTED_MODULE_5_media_mediaNode__["a" /* default */]));
+
+/* harmony default export */ __webpack_exports__["a"] = (MediaSource);
+
+/***/ }),
+/* 145 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = CctError;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return NotAllowedError; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return NotFoundError; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return UnknownError; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_object_create__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_object_create___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_object_create__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_define_properties__ = __webpack_require__(184);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_define_properties___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_define_properties__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_argCheck__ = __webpack_require__(12);
+
+
+
+
+
+
+
+
+
+
+/**
+ * Base class for all custom errors in the library.
+ *
+ * The main purpose of this class is to provide a cross-browser way to
+ * subclass errors and have proper stack traces.
+ *
+ * It is safe to subclass this error in a babel environment, as opposed
+ * to subclassing the `Error` builtin.
+ *
+ * The static `errorName` property is used to determine the default name
+ * for instances of each subclass. The property is used to avoid problems
+ * minification and should be set by all subclasses.
+ *
+ * @class CctError
+ * @extends Error
+ *
+ * @example
+ * class MyError extends CctError {
+ *   constructor() {
+ *     super('This is my error')
+ *   }
+ * }
+ * MyError.errorName = 'MyError'
+ */
+
+// Need to do some trickery here to allow subclassing later on
+// http://stackoverflow.com/questions/33870684
+function CctError(message) {
+  __WEBPACK_IMPORTED_MODULE_6_common_argCheck__["a" /* default */].stringOrEmpty('CctError constructor', 'message', message);
+  __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_define_properties___default()(this, {
+    message: {
+      configurable: true,
+      enumerable: true,
+      value: message
+    }
+  });
+  if (Error.captureStackTrace) {
+    Error.captureStackTrace(this, this.constructor);
+  } else {
+    var stack = new Error(message).stack;
+    // IE11 does not initialize 'Error.stack' until the object is thrown.
+    if (!stack) {
+      try {
+        throw new Error();
+      } catch (e) {
+        stack = e.stack;
+      }
+    }
+    Object.defineProperty(this, 'stack', {
+      configurable: true,
+      enumerable: false,
+      value: stack
+    });
+  }
+}
+CctError.errorName = 'CctError';
+
+CctError.prototype = __WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_object_create___default()(Error.prototype, {
+  constructor: { value: CctError },
+
+  /**
+   * The name of the error. Will always be set to the name of the class
+   * unless something else is indicated.
+   *
+   * @readonly
+   * @member {string} CctError#name
+   */
+  name: {
+    get: function get() {
+      return this.constructor.errorName;
+    }
+  },
+
+  /**
+   * Error objects are by default JSON serialized as `{"name":<name>,"message":<message>}`
+   *
+   * @method CctError#toJson
+   * @returns {Object} - JSON representation of the error.
+   */
+  toJSON: {
+    value: function value() {
+      return {
+        name: this.name,
+        message: this.message
+      };
+    }
+  },
+  toString: {
+    value: function value() {
+      return this.name + ': ' + this.message;
+    }
+  }
+});
+
+/**
+ * The requested action could not be performed because it is not allowed, e.g. the
+ * authenticated user doesn't have enough power level, or a user media request was denied.
+ *
+ * Actions that are not allowed because the user has a guest account result in a
+ * {@link GuestAccessError} instead of this.
+ *
+ * @class NotAllowedError
+ * @extends CctError
+ */
+var NotAllowedError = function (_CctError) {
+  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(NotAllowedError, _CctError);
+
+  function NotAllowedError() {
+    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, NotAllowedError);
+
+    return __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (NotAllowedError.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(NotAllowedError)).apply(this, arguments));
+  }
+
+  return NotAllowedError;
+}(CctError);
+NotAllowedError.errorName = 'NotAllowedError';
+
+/**
+ * The requested resource could not be found, e.g. when looking up a room by alias
+ * or requesting a media source.
+ *
+ * @class NotFoundError
+ * @extends CctError
+ */
+var NotFoundError = function (_CctError2) {
+  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(NotFoundError, _CctError2);
+
+  function NotFoundError() {
+    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, NotFoundError);
+
+    return __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (NotFoundError.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(NotFoundError)).apply(this, arguments));
+  }
+
+  return NotFoundError;
+}(CctError);
+NotFoundError.errorName = 'NotFoundError';
+
+/**
+ * The cause of the error could not be determined. Seeing this error is in itself an error
+ * because the real error reason should always be possible to determine.
+ *
+ * @class UnknownError
+ * @extends CctError
+ */
+var UnknownError = function (_CctError3) {
+  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(UnknownError, _CctError3);
+
+  function UnknownError() {
+    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, UnknownError);
+
+    return __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (UnknownError.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(UnknownError)).apply(this, arguments));
+  }
+
+  return UnknownError;
+}(CctError);
+UnknownError.errorName = 'UnknownError';
+
+/***/ }),
+/* 146 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__);
@@ -5853,10 +6142,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_core_js_symbol__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_core_js_symbol__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_core_js_symbol___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_babel_runtime_core_js_symbol__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_log__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_media_mediaSink__ = __webpack_require__(150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_media_mediaSink__ = __webpack_require__(154);
 
 
 
@@ -6034,295 +6323,6 @@ var HtmlSink = function (_MediaSink) {
 /* harmony default export */ __webpack_exports__["default"] = (HtmlSink);
 
 /***/ }),
-/* 145 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_media_mediaNode__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_media_mediaNodeOutput__ = __webpack_require__(149);
-
-
-
-
-
-
-
-
-
-
-/**
- * A base class for media nodes with a single output and no input. Typically used to represent nodes
- * that generate streams, or as a base for nodes with multiple inputs.
- *
- * The subclass should call the `setStream` method to update the output stream.
- *
- * @class MediaSource
- * @extends MediaNode
- * @extends ConnectMixin
- */
-
-var MediaSource = function (_MediaNode$connectMix) {
-  __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default()(MediaSource, _MediaNode$connectMix);
-
-  function MediaSource() {
-    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, MediaSource);
-
-    var _this = __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (MediaSource.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(MediaSource)).call(this));
-
-    _this._output = new __WEBPACK_IMPORTED_MODULE_6_media_mediaNodeOutput__["a" /* default */]({
-      name: 'default',
-      parent: _this
-    });
-    return _this;
-  }
-
-  /**
-   * The current output stream.
-   *
-   * @readonly
-   * @member {MediaStream} MediaSource#stream
-   */
-
-
-  __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(MediaSource, [{
-    key: 'setStream',
-
-
-    /**
-     * Sets the current output stream.
-     *
-     * This should only be called by the subclass implementation, not from outside the media node.
-     *
-     * @param {?MediaStream} stream - The new output stream, or null.
-     */
-    value: function setStream(stream) {
-      this._output.setStream(stream);
-    }
-  }, {
-    key: 'stream',
-    get: function get() {
-      return this._output.stream;
-    }
-
-    /**
-     * The output.
-     *
-     * @readonly
-     * @member {MediaNodeOutput} MediaSource#output
-     */
-
-  }, {
-    key: 'output',
-    get: function get() {
-      return this._output;
-    }
-  }]);
-
-  return MediaSource;
-}(__WEBPACK_IMPORTED_MODULE_5_media_mediaNode__["a" /* default */].connectMixin(__WEBPACK_IMPORTED_MODULE_5_media_mediaNode__["a" /* default */]));
-
-/* harmony default export */ __webpack_exports__["a"] = (MediaSource);
-
-/***/ }),
-/* 146 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = CctError;
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return NotAllowedError; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return NotFoundError; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return UnknownError; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_object_create__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_object_create___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_object_create__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_define_properties__ = __webpack_require__(185);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_define_properties___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_define_properties__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_common_argCheck__ = __webpack_require__(12);
-
-
-
-
-
-
-
-
-
-
-/**
- * Base class for all custom errors in the library.
- *
- * The main purpose of this class is to provide a cross-browser way to
- * subclass errors and have proper stack traces.
- *
- * It is safe to subclass this error in a babel environment, as opposed
- * to subclassing the `Error` builtin.
- *
- * The static `errorName` property is used to determine the default name
- * for instances of each subclass. The property is used to avoid problems
- * minification and should be set by all subclasses.
- *
- * @class CctError
- * @extends Error
- *
- * @example
- * class MyError extends CctError {
- *   constructor() {
- *     super('This is my error')
- *   }
- * }
- * MyError.errorName = 'MyError'
- */
-
-// Need to do some trickery here to allow subclassing later on
-// http://stackoverflow.com/questions/33870684
-function CctError(message) {
-  __WEBPACK_IMPORTED_MODULE_6_common_argCheck__["a" /* default */].stringOrEmpty('CctError constructor', 'message', message);
-  __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_define_properties___default()(this, {
-    message: {
-      configurable: true,
-      enumerable: true,
-      value: message
-    }
-  });
-  if (Error.captureStackTrace) {
-    Error.captureStackTrace(this, this.constructor);
-  } else {
-    var stack = new Error(message).stack;
-    // IE11 does not initialize 'Error.stack' until the object is thrown.
-    if (!stack) {
-      try {
-        throw new Error();
-      } catch (e) {
-        stack = e.stack;
-      }
-    }
-    Object.defineProperty(this, 'stack', {
-      configurable: true,
-      enumerable: false,
-      value: stack
-    });
-  }
-}
-CctError.errorName = 'CctError';
-
-CctError.prototype = __WEBPACK_IMPORTED_MODULE_4_babel_runtime_core_js_object_create___default()(Error.prototype, {
-  constructor: { value: CctError },
-
-  /**
-   * The name of the error. Will always be set to the name of the class
-   * unless something else is indicated.
-   *
-   * @readonly
-   * @member {string} CctError#name
-   */
-  name: {
-    get: function get() {
-      return this.constructor.errorName;
-    }
-  },
-
-  /**
-   * Error objects are by default JSON serialized as `{"name":<name>,"message":<message>}`
-   *
-   * @method CctError#toJson
-   * @returns {Object} - JSON representation of the error.
-   */
-  toJSON: {
-    value: function value() {
-      return {
-        name: this.name,
-        message: this.message
-      };
-    }
-  },
-  toString: {
-    value: function value() {
-      return this.name + ': ' + this.message;
-    }
-  }
-});
-
-/**
- * The requested action could not be performed because it is not allowed, e.g. the
- * authenticated user doesn't have enough power level, or a user media request was denied.
- *
- * Actions that are not allowed because the user has a guest account result in a
- * {@link GuestAccessError} instead of this.
- *
- * @class NotAllowedError
- * @extends CctError
- */
-var NotAllowedError = function (_CctError) {
-  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(NotAllowedError, _CctError);
-
-  function NotAllowedError() {
-    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, NotAllowedError);
-
-    return __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (NotAllowedError.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(NotAllowedError)).apply(this, arguments));
-  }
-
-  return NotAllowedError;
-}(CctError);
-NotAllowedError.errorName = 'NotAllowedError';
-
-/**
- * The requested resource could not be found, e.g. when looking up a room by alias
- * or requesting a media source.
- *
- * @class NotFoundError
- * @extends CctError
- */
-var NotFoundError = function (_CctError2) {
-  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(NotFoundError, _CctError2);
-
-  function NotFoundError() {
-    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, NotFoundError);
-
-    return __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (NotFoundError.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(NotFoundError)).apply(this, arguments));
-  }
-
-  return NotFoundError;
-}(CctError);
-NotFoundError.errorName = 'NotFoundError';
-
-/**
- * The cause of the error could not be determined. Seeing this error is in itself an error
- * because the real error reason should always be possible to determine.
- *
- * @class UnknownError
- * @extends CctError
- */
-var UnknownError = function (_CctError3) {
-  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(UnknownError, _CctError3);
-
-  function UnknownError() {
-    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, UnknownError);
-
-    return __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_possibleConstructorReturn___default()(this, (UnknownError.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(UnknownError)).apply(this, arguments));
-  }
-
-  return UnknownError;
-}(CctError);
-UnknownError.errorName = 'UnknownError';
-
-/***/ }),
 /* 147 */,
 /* 148 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -6432,7 +6432,7 @@ var MediaNodeOutput = function () {
 
       if (target instanceof HTMLElement) {
         // require here to avoid circular dependency
-        var HtmlSink = __webpack_require__(144).default;
+        var HtmlSink = __webpack_require__(146).default;
         var sink = new HtmlSink({ target: target });
         this.connect(sink);
         return;
@@ -6483,7 +6483,7 @@ var MediaNodeOutput = function () {
         // Iterate through the targets and find html sinks with the input as target
         this._targets.forEach(function (possibleSinkInput) {
           // require here to avoid circular dependency
-          var HtmlSink = __webpack_require__(144).default;
+          var HtmlSink = __webpack_require__(146).default;
           var isHtmlSink = possibleSinkInput._parent instanceof HtmlSink;
           var sinkHasTargetAsTarget = possibleSinkInput._parent._hasTarget(target);
           if (isHtmlSink && sinkHasTargetAsTarget) {
@@ -6626,7 +6626,16 @@ var MediaNodeOutput = function () {
 /* harmony default export */ __webpack_exports__["a"] = (MediaNodeOutput);
 
 /***/ }),
-/* 150 */
+/* 150 */,
+/* 151 */,
+/* 152 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(156), __esModule: true };
+
+/***/ }),
+/* 153 */,
+/* 154 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6641,7 +6650,7 @@ var MediaNodeOutput = function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_common_log__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_media_mediaNode__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_media_mediaNode__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_media_mediaNodeInput__ = __webpack_require__(131);
 
 
@@ -6741,26 +6750,10 @@ var MediaSink = function (_MediaNode) {
 /* harmony default export */ __webpack_exports__["a"] = (MediaSink);
 
 /***/ }),
-/* 151 */,
-/* 152 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(155), __esModule: true };
-
-/***/ }),
-/* 153 */,
-/* 154 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(156), __esModule: true };
-
-/***/ }),
 /* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(29);
-__webpack_require__(22);
-module.exports = __webpack_require__(157);
+module.exports = { "default": __webpack_require__(157), __esModule: true };
 
 /***/ }),
 /* 156 */
@@ -6774,6 +6767,14 @@ module.exports = __webpack_require__(158);
 /* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(29);
+__webpack_require__(22);
+module.exports = __webpack_require__(159);
+
+/***/ }),
+/* 158 */
+/***/ (function(module, exports, __webpack_require__) {
+
 var anObject = __webpack_require__(14)
   , get      = __webpack_require__(65);
 module.exports = __webpack_require__(0).getIterator = function(it){
@@ -6783,7 +6784,7 @@ module.exports = __webpack_require__(0).getIterator = function(it){
 };
 
 /***/ }),
-/* 158 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var classof   = __webpack_require__(44)
@@ -6797,7 +6798,7 @@ module.exports = __webpack_require__(0).isIterable = function(it){
 };
 
 /***/ }),
-/* 159 */
+/* 160 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6951,7 +6952,6 @@ var AsyncPipe = function () {
 }();
 
 /***/ }),
-/* 160 */,
 /* 161 */,
 /* 162 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -6961,7 +6961,7 @@ var AsyncPipe = function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_slicedToArray__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_json_stringify__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_json_stringify__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_json_stringify___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_core_js_json_stringify__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_classCallCheck__);
@@ -6973,7 +6973,7 @@ var AsyncPipe = function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_common_emitter__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_common_utils__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_webrtc_peerConnectionMonitor__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_media_dummySource__ = __webpack_require__(165);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_media_dummySource__ = __webpack_require__(178);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_webrtc_utils__ = __webpack_require__(66);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_webrtc_sdpTransform__ = __webpack_require__(200);
 
@@ -7694,178 +7694,38 @@ function makeError(funcName, message, reason) {
 /* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(171), __esModule: true };
+module.exports = { "default": __webpack_require__(170), __esModule: true };
 
 /***/ }),
 /* 164 */,
-/* 165 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_media_mediaSource__ = __webpack_require__(145);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_webrtc_utils__ = __webpack_require__(66);
-
-
-
-
-
-
-
-
-
-
-
-/**
- * A dummy source that can generate a silent audio stream and a 1x1 black video stream.
- *
- * Useful for testing and working around browser bugs where streams have to be present.
- *
- * @class DummySource
- * @extends MediaSource
- * @param {Object} [options] - Optional options object
- * @param {boolean} [options.video=true] - Whether to generate dummy video.
- * @param {boolean} [options.audio=true] - Whether to generate dummy audio.
- */
-
-var DummySource = function (_MediaSource) {
-  __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default()(DummySource, _MediaSource);
-
-  function DummySource() {
-    var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : { audio: true, video: true },
-        audio = _ref.audio,
-        video = _ref.video;
-
-    __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default()(this, DummySource);
-
-    var _this = __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn___default()(this, (DummySource.__proto__ || __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default()(DummySource)).call(this));
-
-    var tracks = [];
-    if (audio) {
-      _this._audioContext = __WEBPACK_IMPORTED_MODULE_7_webrtc_utils__["audioContextUtil"].get();
-      _this._destination = _this._audioContext.createMediaStreamDestination();
-
-      var _this$_destination$st = _this._destination.stream.getTracks(),
-          _this$_destination$st2 = __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray___default()(_this$_destination$st, 1),
-          track = _this$_destination$st2[0];
-      // track.enabled = false
-
-
-      tracks.push(track);
-
-      _this._silence = _this._audioContext.createBufferSource();
-      _this._silence.connect(_this._destination, 0, 0);
-    }
-    if (video) {
-      _this._canvas = document.createElement('canvas');
-      _this._canvas.style.width = '1px';
-      _this._canvas.style.height = '1px';
-      _this._canvas.width = 1;
-      _this._canvas.height = 1;
-
-      // Otherwise Firefox will complain about the canvas not being initialized
-      _this._canvas.getContext('2d');
-
-      var stream = _this._canvas.captureStream(1);
-
-      var _stream$getTracks = stream.getTracks(),
-          _stream$getTracks2 = __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray___default()(_stream$getTracks, 1),
-          _track = _stream$getTracks2[0];
-      // track.enabled = false
-
-
-      tracks.push(_track);
-    }
-    _this._stream = new MediaStream(tracks);
-    _this.setStream(_this._stream);
-    return _this;
-  }
-
-  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass___default()(DummySource, [{
-    key: 'stop',
-
-
-    /**
-     * Stops the source and cleans up all resources. This has to be called once the source
-     * is no longer used in order to clean up resources.
-     *
-     * Calling this method multiple times has no effect.
-     */
-    value: function stop() {
-      if (this._stream) {
-        this.setStream(null);
-        this._stream.getTracks().forEach(function (track) {
-          return track.stop();
-        });
-        this._stream = null;
-        this._canvas = null;
-        if (this._audioContext) {
-          __WEBPACK_IMPORTED_MODULE_7_webrtc_utils__["audioContextUtil"].release();
-          this._audioContext = null;
-          this._destination = null;
-          this._silence.stop();
-          this._silence = null;
-        }
-      }
-    }
-
-    /**
-     * @private
-     * @function DummySource#setStream
-     */
-
-  }, {
-    key: 'output',
-    get: function get() {
-      return this._output;
-    }
-  }]);
-
-  return DummySource;
-}(__WEBPACK_IMPORTED_MODULE_6_media_mediaSource__["a" /* default */]);
-
-/* harmony default export */ __webpack_exports__["a"] = (DummySource);
-
-/***/ }),
+/* 165 */,
 /* 166 */,
 /* 167 */,
 /* 168 */,
-/* 169 */,
+/* 169 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(171), __esModule: true };
+
+/***/ }),
 /* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(172), __esModule: true };
+__webpack_require__(173);
+module.exports = __webpack_require__(0).Object.assign;
 
 /***/ }),
 /* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(174);
-module.exports = __webpack_require__(0).Object.assign;
-
-/***/ }),
-/* 172 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(175);
 var $Object = __webpack_require__(0).Object;
 module.exports = function getOwnPropertyNames(it){
   return $Object.getOwnPropertyNames(it);
 };
 
 /***/ }),
-/* 173 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7904,16 +7764,16 @@ module.exports = !$assign || __webpack_require__(21)(function(){
 } : $assign;
 
 /***/ }),
-/* 174 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.3.1 Object.assign(target, source)
 var $export = __webpack_require__(7);
 
-$export($export.S + $export.F, 'Object', {assign: __webpack_require__(173)});
+$export($export.S + $export.F, 'Object', {assign: __webpack_require__(172)});
 
 /***/ }),
-/* 175 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.7 Object.getOwnPropertyNames(O)
@@ -7922,7 +7782,7 @@ __webpack_require__(46)('getOwnPropertyNames', function(){
 });
 
 /***/ }),
-/* 176 */
+/* 175 */
 /***/ (function(module, exports) {
 
 var grammar = module.exports = {
@@ -8185,20 +8045,160 @@ Object.keys(grammar).forEach(function (key) {
 
 
 /***/ }),
+/* 176 */,
 /* 177 */,
-/* 178 */,
+/* 178 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_media_mediaSource__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_webrtc_utils__ = __webpack_require__(66);
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * A dummy source that can generate a silent audio stream and a 1x1 black video stream.
+ *
+ * Useful for testing and working around browser bugs where streams have to be present.
+ *
+ * @class DummySource
+ * @extends MediaSource
+ * @param {Object} [options] - Optional options object
+ * @param {boolean} [options.video=true] - Whether to generate dummy video.
+ * @param {boolean} [options.audio=true] - Whether to generate dummy audio.
+ */
+
+var DummySource = function (_MediaSource) {
+  __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default()(DummySource, _MediaSource);
+
+  function DummySource() {
+    var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : { audio: true, video: true },
+        audio = _ref.audio,
+        video = _ref.video;
+
+    __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default()(this, DummySource);
+
+    var _this = __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn___default()(this, (DummySource.__proto__ || __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default()(DummySource)).call(this));
+
+    var tracks = [];
+    if (audio) {
+      _this._audioContext = __WEBPACK_IMPORTED_MODULE_7_webrtc_utils__["audioContextUtil"].get();
+      _this._destination = _this._audioContext.createMediaStreamDestination();
+
+      var _this$_destination$st = _this._destination.stream.getTracks(),
+          _this$_destination$st2 = __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray___default()(_this$_destination$st, 1),
+          track = _this$_destination$st2[0];
+      // track.enabled = false
+
+
+      tracks.push(track);
+
+      _this._silence = _this._audioContext.createBufferSource();
+      _this._silence.connect(_this._destination, 0, 0);
+    }
+    if (video) {
+      _this._canvas = document.createElement('canvas');
+      _this._canvas.style.width = '1px';
+      _this._canvas.style.height = '1px';
+      _this._canvas.width = 1;
+      _this._canvas.height = 1;
+
+      // Otherwise Firefox will complain about the canvas not being initialized
+      _this._canvas.getContext('2d');
+
+      var stream = _this._canvas.captureStream(1);
+
+      var _stream$getTracks = stream.getTracks(),
+          _stream$getTracks2 = __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_slicedToArray___default()(_stream$getTracks, 1),
+          _track = _stream$getTracks2[0];
+      // track.enabled = false
+
+
+      tracks.push(_track);
+    }
+    _this._stream = new MediaStream(tracks);
+    _this.setStream(_this._stream);
+    return _this;
+  }
+
+  __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass___default()(DummySource, [{
+    key: 'stop',
+
+
+    /**
+     * Stops the source and cleans up all resources. This has to be called once the source
+     * is no longer used in order to clean up resources.
+     *
+     * Calling this method multiple times has no effect.
+     */
+    value: function stop() {
+      if (this._stream) {
+        this.setStream(null);
+        this._stream.getTracks().forEach(function (track) {
+          return track.stop();
+        });
+        this._stream = null;
+        this._canvas = null;
+        if (this._audioContext) {
+          __WEBPACK_IMPORTED_MODULE_7_webrtc_utils__["audioContextUtil"].release();
+          this._audioContext = null;
+          this._destination = null;
+          this._silence.stop();
+          this._silence = null;
+        }
+      }
+    }
+
+    /**
+     * @private
+     * @function DummySource#setStream
+     */
+
+  }, {
+    key: 'output',
+    get: function get() {
+      return this._output;
+    }
+  }]);
+
+  return DummySource;
+}(__WEBPACK_IMPORTED_MODULE_6_media_mediaSource__["a" /* default */]);
+
+/* harmony default export */ __webpack_exports__["a"] = (DummySource);
+
+/***/ }),
 /* 179 */,
 /* 180 */,
 /* 181 */,
 /* 182 */,
 /* 183 */,
-/* 184 */,
-/* 185 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = { "default": __webpack_require__(203), __esModule: true };
 
 /***/ }),
+/* 185 */,
 /* 186 */,
 /* 187 */,
 /* 188 */,
@@ -10125,7 +10125,7 @@ var parseReg = function (obj, location, content) {
   }
 };
 
-var grammar = __webpack_require__(176);
+var grammar = __webpack_require__(175);
 var validLine = RegExp.prototype.test.bind(/^([a-z])=(.*)/);
 
 exports.parse = function (sdp) {
@@ -10188,7 +10188,7 @@ exports.parseRemoteCandidates = function (str) {
 /* 212 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var grammar = __webpack_require__(176);
+var grammar = __webpack_require__(175);
 
 // customized util.format - discards excess arguments and can void middle ones
 var formatRegExp = /%[sdv%]/g;
@@ -10344,12 +10344,13 @@ module.exports = function (session, opts) {
 /* 249 */,
 /* 250 */,
 /* 251 */,
-/* 252 */
+/* 252 */,
+/* 253 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = startTabSharing;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_webrtc_peerConnectionProxy__ = __webpack_require__(162);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_common_log__ = __webpack_require__(3);
@@ -10362,6 +10363,7 @@ module.exports = function (session, opts) {
 var activePort = null;
 var activeTab = null;
 var peerConnection = null;
+var loaded = false;
 
 var DOMAIN_REGEX = /^[a-z]+:\/\/(?:[^@]+@)?([^:\/]+)/i;
 var DEFAULT_SCREEN_SOURCE_TYPES = ['screen', 'window'];
@@ -10578,7 +10580,7 @@ function startTabSharing() {
       }
       activeTab.stream.getVideoTracks()[0].stop();
       if (activeTab.stream.active) {
-        console.error('failed to stop media stream:', activeTab.stream);
+        __WEBPACK_IMPORTED_MODULE_2_common_log__["default"].error('failed to stop media stream:', activeTab.stream);
       }
       activeTab.stream = null;
     }
@@ -10588,10 +10590,10 @@ function startTabSharing() {
   function startCall(iceServers) {
     __WEBPACK_IMPORTED_MODULE_2_common_log__["default"].debug(TAG, 'iceServers: ', __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default()(iceServers, 0, 4));
     if (!activeTab) {
-      return console.warn('tried to start call without active tab');
+      return __WEBPACK_IMPORTED_MODULE_2_common_log__["default"].warning(TAG, 'tried to start call without active tab');
     }
     if (!activeTab.stream) {
-      return console.warn('tried to start call without active stream');
+      return __WEBPACK_IMPORTED_MODULE_2_common_log__["default"].warning(TAG, 'tried to start call without active stream');
     }
     if (peerConnection) {
       closePeerConnection();
@@ -10699,7 +10701,7 @@ function startTabSharing() {
 
   function send(type, content) {
     if (!activePort) {
-      return console.warn('could not send ' + type + ', no active port');
+      return __WEBPACK_IMPORTED_MODULE_2_common_log__["default"].warning(TAG, 'could not send ' + type + ', no active port');
     }
     activePort.postMessage({
       type: type,
@@ -10737,10 +10739,21 @@ function startTabSharing() {
     var pcConfig = { iceServers: iceServers, rtcpMuxPolicy: rtcpMuxPolicy, bundlePolicy: bundlePolicy, iceTransportPolicy: iceTransportPolicy };
     return new __WEBPACK_IMPORTED_MODULE_1_webrtc_peerConnectionProxy__["a" /* default */](pcConfig, StatsFormatter, iceCandidateFilter);
   }
+
+  function makeThrottler(ms, callback) {
+    var timeoutId;
+    return function () {
+      if (!timeoutId) {
+        timeoutId = setTimeout(function () {
+          timeoutId = 0;
+          callback();
+        }, ms);
+      }
+    };
+  }
 }
 
 /***/ }),
-/* 253 */,
 /* 254 */,
 /* 255 */,
 /* 256 */,
@@ -10750,9 +10763,14 @@ function startTabSharing() {
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (immutable) */ __webpack_exports__["startScreenSharing"] = startScreenSharing;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tabSharing__ = __webpack_require__(252);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tabSharing__ = __webpack_require__(253);
 /* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "startTabSharing", function() { return __WEBPACK_IMPORTED_MODULE_0__tabSharing__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_common_log__ = __webpack_require__(3);
 
+
+
+
+var TAG = 'chrome-extension';
 
 function startScreenSharing() {
   var DEFAULT_SOURCE_TYPES = ['screen', 'window'];
@@ -10776,7 +10794,7 @@ function startScreenSharing() {
   }
 
   window.chrome.runtime.onMessageExternal.addListener(function (request, sender, sendResponse) {
-    console.log('got external message:', request);
+    __WEBPACK_IMPORTED_MODULE_1_common_log__["default"].debug(TAG, 'got external message:', request);
     if (request.message === 'version') {
       var version = window.chrome.runtime.getManifest().version;
       sendResponse({ version: version });

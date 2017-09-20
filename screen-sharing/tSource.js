@@ -4,6 +4,7 @@ var _scroller = null
 var _contentSize = null
 var port = null
 var tabSharingExtensionLink = null
+var _stopWindowSizeObserver = null
 //var extensionId = 'cecejnhbkmfgeealnbgbmgfcpdllgaao' // Spaces Tab Sharing
 //var extensionId = extensionId // My test extension 
 let pageActionConditions = [{
@@ -117,7 +118,7 @@ function handleTabButtonClick () {
 
 			// chrome extension passes window size from content script
 			 if (!window.chrome) {
-			   this._stopWindowSizeObserver = startWindowSizeObserver(this._contentSize)
+			   _stopWindowSizeObserver = startWindowSizeObserver(this._contentSize)
 			}
 		}
 
