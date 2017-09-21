@@ -14,7 +14,6 @@ function connectCall () {
 
 			} else {
 				el.exampleStatus.textContent = ''
-				el.tabReceiveButton.disabled = false
 			}
 		})
 
@@ -43,7 +42,6 @@ function handleReceiveTabButtonClick () {
 	
 
 	el.tabReceiveButton.textContent = STOP_RECEIVE_TAB_SHARING
-	el.tabReceiveButton.disabled = false
 	connectCall().then(call => {
 		sinkWillMount({
 			extensionId,
@@ -58,6 +56,7 @@ sinkSource = new cct.StreamSource()
 	let tabSink = new cct.HtmlSink()
 	tabSink.target = el.tabSharingVideo
 	el.video.style.display = 'none'
+	el.tabButton.disabled = true
 
 	const onStream = () => {
 		let stream1 = _tabSourceForwarder.stream
@@ -105,9 +104,8 @@ sinkSource = new cct.StreamSource()
 }
 
 function sinkWillUnmount () {
-	el.video.style.display = 'block'
-	el.button.textContent = START_SHARING_TEXT
-	el.button.disabled = false	
+	el.video.style.display = 'block'	
+	el.tabButton.disabled = false	
 
 	window.removeEventListener('resize', _handleWindowResize)
 	if (_dummySource) {

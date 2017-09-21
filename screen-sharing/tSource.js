@@ -52,6 +52,8 @@ function getExtensionVersion () {
 				error.name = 'ExtensionNotInstalledError'
 				reject(error)
 			}
+		}).catch(error => {
+			reject(error)
 		})
 	})
 }
@@ -117,9 +119,9 @@ function handleTabButtonClick () {
 			call.attach('content-size', _contentSize)
 
 			// chrome extension passes window size from content script
-			 if (!window.chrome) {
-			   _stopWindowSizeObserver = startWindowSizeObserver(this._contentSize)
-			}
+			  if (!window.chrome) {
+			    _stopWindowSizeObserver = startWindowSizeObserver(this._contentSize)
+			 }
 		}
 
 
@@ -130,10 +132,10 @@ function handleTabButtonClick () {
 	})
 }
 
-function startTabSharing ({ extensionId, call }) {
-	el.video.style.display = 'none'
+function startTabSharing ({ extensionId, call }) {	
 	el.tabButton.textContent = STOP_TAB_SHARING
 	el.tabButton.disabled = false
+	el.tabReceiveButton.disabled = true
 
 	return getExtensionVersion().then(() => {
 		console.log('#### Extension OK')
@@ -145,8 +147,10 @@ function startTabSharing ({ extensionId, call }) {
 
 		tabSharingExtensionLink = new cct.TabSharingExtensionLink({extensionId, options, iceServers})
 		tabSharingExtensionLink.startShare()
-		tabSharingExtensionLink.on('contentSize', function(contentSize){
-			_contentSize = contentSize
+		tabSharingExtensionLink.on('contentSize', function(size){
+			if(_contentSize){
+				_contentSize.set('size',size)
+			}
 		})
 
 
@@ -190,6 +194,7 @@ function stopTabSharing () {
 		if (window.chrome) {
 			tabSharingExtensionLink.endShare()
 		} 
+		el.tabReceiveButton.disabled = false
 	} catch (error) {
 		console.error('Example', 'failed to disconnect screen sharing extension port:', error)
 	}
@@ -204,7 +209,7 @@ function sendChromeMessage (message) {
 				resolve(response)
 			} else {
 				let error = new Error('No response received')
-				error.name = 'NotFoundError'
+				error.name = 'ExtensionNotInstalledError'
 				reject(error)
 			}
 		})

@@ -104,23 +104,33 @@
       </div>
 
       <div style="display:flex; flex-direction:column">
-        <div style="display:flex; ">
-          <select id="source-type-selection"></select>
-          <button id="sharing-button" disabled>Start screen sharing</button>
-        </div>
-        <button id="tab-sharing-button" disabled style="align-self:left; margin: 20px;margin-left:100px; padding: 1rem;">Start tab sharing</button>
-        <br />
-        <button id="tab-sharing-Receive-button" disabled style="align-self:left; margin: 20px;margin-left:100px; padding: 1rem;">Receive tab sharing</button>
-        <br />        
-        <div class="margins">
-            <div id="result" style="border:1px solid black"></div>
-            <h1 id="exampleStatus">Waiting for peer to join</h1>
-          <div class="peer-link">
-            <h3 class="peer-link-title"></h3>
-            <input class="peer-link-input" type="url" value="" size="55">
-            <div class="peer-link-connection-state"></div>
+        <section>
+          <div class="about">
+            <div style="display:flex; ">
+              <select id="source-type-selection"></select>
+              <button id="sharing-button" disabled>Start screen sharing</button>
+            </div>
           </div>
-        </div>
+        </section>
+
+        <section>
+          <div class="about">
+            <button id="tab-sharing-button" disabled style="align-self:left; margin: 20px; padding: 1rem;">Start tab sharing</button>
+            
+            <button id="tab-sharing-Receive-button" disabled style="align-self:left; margin: 20px; padding: 1rem;">Receive tab sharing</button>
+            <div class="margins">
+              <div id="result" style="border:1px solid black"></div>
+              <h1 id="exampleStatus">Waiting for peer to join</h1>
+              <div class="peer-link">
+                <h3 class="peer-link-title"></h3>
+                <input class="peer-link-input" type="url" value="" size="55">
+                <div class="peer-link-connection-state"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
       </div>
       <div id="error-display"></div>
       <br>
@@ -163,16 +173,22 @@
 
 var iceServers = EXAMPLE_UTILS_ICE_SERVERS
 var extensionId = 'abcpimlhcobaaehifeglfgkenpnnffkk'
-// [{
-//   url: 'turn:turn.demo.c3.ericsson.net:443?transport=tcp',
-//   username: 'c3-turn',
-//   credential: 'see-three',
-// }, {
-//   url: 'turn:turn.demo.c3.ericsson.net:443?transport=udp',
-//   username: 'c3-turn',
-//   credential: 'see-three',
-// }]
 
+getExtensionVersion().then(() => {   
+    el.button.disabled = false
+    el.tabButton.disabled = false
+    el.tabReceiveButton.disabled = false         
+}).catch(error => {
+		if (error.name === 'ExtensionNotInstalledError') {
+      el.error.textContent = 'No Extenstion detected'
+      
+      el.button.disabled = true
+      el.tabButton.disabled = true
+      el.tabReceiveButton.disabled = true
+		} else {
+			el.error.textContent = 'chrome screen sharing failed:' + JSON.stringify(error)
+		}
+	})
 
     var START_SHARING_TEXT = 'Start screen sharing'
     var STOP_SHARING_TEXT = 'Stop screen sharing'
