@@ -5,7 +5,9 @@
   "manifest_version": 2,
   "icons": {
     "48" : "icon48.png",
-    "128" : "icon128.png"
+    "128" : "icon128.png",
+    "49": "icon48_off.png",
+    "129": "icon128_off.png"
   },
   "externally_connectable": {
     // Extension and app IDs. If this field is not specified, no
@@ -21,7 +23,8 @@
       "*://*.ericsson.com/*",
       "*://*.ericsson.net/*",
       "*://c3.development.net/*",
-      "*://147.214.168.101/*"
+      "*://localhost:*/*",
+      "*://example.com/*"
     ],
     // Indicates that the extension would like to make use of the TLS
     // channel ID of the web page connecting to it. The web page must
@@ -39,14 +42,17 @@
   "permissions": [
     "http://*/*",
     "https://*/*",
+    "https://example.com/*",
+    "https://c3.development.net/*",
     "tabs",
     "activeTab",
     "tabCapture",
     "desktopCapture",
-    "notifications",
-    "declarativeContent"
+    "declarativeContent"   
   ],
   "page_action": {
-    "default_title": "Start sharing this tab"
+    "default_title": "Start sharing this tab",
+    "start_title": "Start sharing this tab",
+    "stop_title": "Stop sharing this tab"
   }
 }
